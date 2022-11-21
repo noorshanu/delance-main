@@ -5,13 +5,15 @@ function Hero() {
   return (
     <>
     <section className='hero'>
+      <div className='side-1'>
+      &nbsp; </div>
       <div className='container'>
         <div className='row justify-content-center'>
         <div className='col-md-6'>
-          <h1>Creating space for better world to work together</h1>
+          <h1>Creating space for better world to work <span className='green'>together</span></h1>
           <div className='hero-btn'>
-            <a href="/">Sign up</a>
-            <a href="/">Explore</a>
+            <a href="/" className='hero-btn-1'>Sign up</a>
+            <a href="/" className='hero-btn-2'>Explore</a>
           </div>
         </div>
         <div className='col-md-6 text-end align-items-center'>
