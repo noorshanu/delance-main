@@ -1,9 +1,33 @@
-import React from 'react'
+import React from "react";
 
 function Feauters() {
   return (
-    <div>Feauters</div>
-  )
+    <section className="features">
+      <div className="container text-center">
+        <div className="feat-header">
+          <h1>Features</h1>
+        </div>
+      </div>
+      <div className="container">
+        <div className="row justify-content-center align-items-center">
+          <div className="col-md-4">
+            <div className="feat-box">
+              <img
+                src="https://ik.imagekit.io/cforcrypto/Dework/icons/Group_31.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1669061373660"
+                alt=""
+              />
+              <h3>Business simplified</h3>
+              <p>
+                Post a job or apply for one in a minute. No browser plugins, 3rd
+                party apps, credit card details, or wallet-linking necessary.{" "}
+              </p>
+              <p>Fast, efficient & easy the way blockchain is meant to be</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
 
-export default Feauters
+export default Feauters;
