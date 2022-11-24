@@ -1,0 +1,27 @@
+.border-down p{
+    font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 104.4%;
+/* identical to box height, or 26px */
+
+text-transform: capitalize;
+
+color: #000000;
+}
+.border-down hr{
+    color: #00A652;
+    height: 3px;
+
+
+}
+.why-us-box{
+    background: linear-gradient(180deg, #FFFFFF 0%, #DADADA 100%);
+border: 3px solid #00A652;
+border-radius: 37px;
+}
+.content-2{
+    text-align: center;
+    background: linear-gradient(180deg, #00BD5D 0%, #006632 100%);
+border-radius: 37px;
+}
