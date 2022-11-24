@@ -17,7 +17,7 @@ function Hero() {
           </div>
         </div>
         <div className='col-md-6 text-end align-items-center'>
-          <img className='hero-img' src='https://ik.imagekit.io/cforcrypto/Dework/image_1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669013136326' alt=""/>
+          <img className='hero-img' src='https://ik.imagekit.io/cforcrypto/Dework/Asset_1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669269508514' alt=""/>
           
         </div>
         </div>
