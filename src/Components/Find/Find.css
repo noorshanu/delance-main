@@ -1,0 +1,49 @@
+.find{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.header-img img{
+    width: 100%;
+    margin-top: -116px;
+    position: absolute;
+    padding-top: 0%;
+    overflow: hidden;
+
+}
+.bg-dework{
+    background-image: url('https://ik.imagekit.io/cforcrypto/Dework/Mask_group.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669269929745');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.d-work-box{
+    background: linear-gradient(180deg, #58FFAA 0%, #00A652 86.47%);
+    box-shadow: 0px 15px 43px rgb(0 0 0 / 45%);
+    border-radius: 19px 17px;
+    width: 394px;
+    height: 100%;
+    transform: matrix(1, 0.1, 0, 1, 0, 0);
+    padding: 4% 3% 6% 4%;
+    color: #fff;
+}
+.de-work-btn-box{
+    background: linear-gradient(180deg, #E3E3E3 0%, #FFFFFF 99.72%);
+    box-shadow: 0px 15px 82px rgb(0 0 0 / 45%);
+    border-radius: 10px;
+    transform: matrix(1, -0.1, 0, 1, 0, 0);
+    width: 264px;
+    z-index: 2;
+    font-size: 14px;
+    padding: 10px 10px;
+    text-align: center;
+    margin-left: 52px;
+    margin-top: -55px;
+}
+.de-work-btn-box h1{
+    font-style: italic;
+font-weight: 700;
+font-size: 28px;
+line-height: 138.4%;
+}
