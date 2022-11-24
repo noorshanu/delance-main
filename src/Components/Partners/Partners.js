@@ -5,7 +5,7 @@ function Partners() {
   return (
     <section className='partners'>
       <div className='container'>
-        <div>
+        <div className='part-head text-center'>
           <h1>Featured In</h1>
         </div>
 
@@ -78,7 +78,7 @@ function Partners() {
         
       </div>
       
-      Partners</section>
+     </section>
   )
 }
 
