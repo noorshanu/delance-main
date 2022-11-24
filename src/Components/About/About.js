@@ -49,6 +49,7 @@ function About() {
           </div>
 
           <div className="col-md-6">
+            <img src="https://ik.imagekit.io/cforcrypto/Dework/Asset_2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669269508409" alt=""/>
             <div className="about-details">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
