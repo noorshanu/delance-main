@@ -166,7 +166,7 @@ function WhyUs() {
                 </div>
                 <div className="up-work">
                   <p style={{marginBottom:'0px'}}>3.5%</p>
-                  <p className="each">(Each milestone)</p>
+                  {/* <p className="each">(Each milestone)</p> */}
                   <hr />
                 </div>
                 <div className="">

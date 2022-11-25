@@ -114,10 +114,10 @@
   .short-dis p{
     font-size: 11px;
     line-height: 11px;
-    margin: 10px;
+    margin: 2px;
 }
 .each{
     font-size: 8px !important;
     line-height: 11px !important;
-    margin: 10px;
+    margin: 2px;
 }
