@@ -106,64 +106,82 @@ system</p>
                 </div>
               <div className=''>
                   <p>3%</p>
-                  
+                  <hr/>
                 </div>
                 <div className=''>
                   <p>10%</p>
-                  
+                  <hr/>
                 </div>
                 <div className=''>
                   <p>Min payout $100</p>
                   <p>(2.75% fee for withdrawal for currency conversion)</p>
-                  
+                  <hr/>
                 </div>
                 <div className=''>
                   <p>No</p>
-                  
+                  <hr/>
                 </div>
                 <div className=''>
                   <p>No</p>
-                  
+                  <hr/>
                 </div>
                 <div className=''>
                   <p>No/partial</p>
-                  
+                  <hr/>
                 </div>
                 <div className=''>
                   <p>No</p>
-                  
+                  <hr/>
                 </div>
                 <div className=''>
                   <p>No</p>
+                  <hr/>
                   
                 </div>
               </div>
               
               </div>
               <div className='col-md-2'>
-                <div className='content-3'>
+                <div className='content-3 text-center'>
                   <div  className='why-content-img-head'>
                     <img src="https://ik.imagekit.io/cforcrypto/Dework/image_9.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669366389048" alt="" />
                   </div>
-                <div className=''>
-                  <p>Client Fee</p>
+                <div className='up-work'>
+                  <p>3.5%</p>
+                  <span>(Each milestone)</span>
+                  <hr/>
                   
                 </div>
                 <div className=''>
-                  <p>Client Fee</p>
+                  <p>20%</p>
+                  <hr/>
                   
                 </div>
                 <div className=''>
-                  <p>Client Fee</p>
+                  <p>Min payout $100</p>
+                  <span>(5% fee for withdrawal for currency conversion)</span>
+                  <hr/>
                   
                 </div>
                 <div className=''>
-                  <p>Client Fee</p>
-                  
+                  <p>No</p>
+                  <hr/>
                 </div>
                 <div className=''>
-                  <p>Client Fee</p>
-                  
+                  <p>No</p>
+                  <hr/>
+                </div>
+                <div className=''>
+                  <p>No/partial</p>
+                  <hr/>
+                </div>
+                <div className=''>
+                  <p>No</p>
+                  <hr/>
+                </div>
+                <div className=''>
+                  <p>No</p>
+                  <hr/>
                 </div>
                 </div>
               
@@ -173,25 +191,42 @@ system</p>
                   <div  className='why-content-img-head'>
                     <img src="https://ik.imagekit.io/cforcrypto/Dework/image_10.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669366388768" alt="" />
                   </div>
-                <div className=''>
-                  <p>Client Fee</p>
+                  <div className='up-work'>
+                  <p>20%</p>
+                 
+                  <hr/>
                   
                 </div>
                 <div className=''>
-                  <p>Client Fee</p>
+                  <p>20%</p>
+                  <hr/>
                   
                 </div>
                 <div className=''>
-                  <p>Client Fee</p>
+                  <p>Min payout $100</p>
+                  <span>(5% fee for withdrawal for currency conversion)</span>
+                  <hr/>
                   
                 </div>
                 <div className=''>
-                  <p>Client Fee</p>
-                  
+                  <p>No</p>
+                  <hr/>
                 </div>
                 <div className=''>
-                  <p>Client Fee</p>
-                  
+                  <p>No</p>
+                  <hr/>
+                </div>
+                <div className=''>
+                  <p>No/partial</p>
+                  <hr/>
+                </div>
+                <div className=''>
+                  <p>No</p>
+                  <hr/>
+                </div>
+                <div className=''>
+                  <p>No</p>
+                  <hr/>
                 </div>
                 </div>
               
