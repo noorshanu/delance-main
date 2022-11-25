@@ -15,17 +15,16 @@ function Find() {
           <div className="d-work-box">
             <p>
               {" "}
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Dework” is a project that creates unique contents on Metaverse
+              technology that is a huge trend around the world. Its aim is to
+              move people to another dimension within the digital universe.
+             
             </p>
 
             <p>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-              cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id est laborum.
+            Metaverse - where buyers can interact with freelancers in the
+              office space and have a discussion through voice or video
+              conference call in the meeting room.
             </p>
           </div>
           <div className="de-work-btn-box">

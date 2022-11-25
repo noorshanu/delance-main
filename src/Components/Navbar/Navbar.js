@@ -35,16 +35,12 @@ function Navbar() {
               <a href="#feature">Features</a>
             </li>
            
-            <li>
-              <a href="#toko">Tokenomics</a>
-            </li>
+           
             
             <li>
-              <a href="#road">Roadmap</a>
+              <a href="#road">NFT marketplace</a>
             </li>
-            <li>
-              <a href="#team">Team</a>
-            </li>
+            
             <li>
               <a href="#team">Explore</a>
             </li>
