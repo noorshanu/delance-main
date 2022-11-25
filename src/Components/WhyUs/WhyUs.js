@@ -121,7 +121,7 @@ function WhyUs() {
                   <p>10%</p>
                   <hr />
                 </div>
-                <div className="">
+                <div className="short-dis">
                   <p>Min payout $100</p>
                   <p>(2.75% fee for withdrawal for currency conversion)</p>
                   <hr />
@@ -146,6 +146,14 @@ function WhyUs() {
                   <p>No</p>
                   <hr />
                 </div>
+                <div className="">
+                  <p>No</p>
+                  <hr />
+                </div>
+                <div className="">
+                  <p>No</p>
+                  <hr />
+                </div>
               </div>
             </div>
             <div className="col-md-2">
@@ -157,17 +165,17 @@ function WhyUs() {
                   />
                 </div>
                 <div className="up-work">
-                  <p>3.5%</p>
-                  <span>(Each milestone)</span>
+                  <p style={{marginBottom:'0px'}}>3.5%</p>
+                  <p className="each">(Each milestone)</p>
                   <hr />
                 </div>
                 <div className="">
                   <p>20%</p>
                   <hr />
                 </div>
-                <div className="">
+                <div className="short-dis">
                   <p>Min payout $100</p>
-                  <span>(5% fee for withdrawal for currency conversion)</span>
+                  <p>(5% fee for withdrawal for currency conversion)</p>
                   <hr />
                 </div>
                 <div className="">
@@ -180,6 +188,14 @@ function WhyUs() {
                 </div>
                 <div className="">
                   <p>No/partial</p>
+                  <hr />
+                </div>
+                <div className="">
+                  <p>No</p>
+                  <hr />
+                </div>
+                <div className="">
+                  <p>No</p>
                   <hr />
                 </div>
                 <div className="">
@@ -209,9 +225,9 @@ function WhyUs() {
                   <p>20%</p>
                   <hr />
                 </div>
-                <div className="">
+                <div className="short-dis">
                   <p>Min payout $100</p>
-                  <span>(5% fee for withdrawal for currency conversion)</span>
+                  <p>(5% fee for withdrawal for currency conversion)</p>
                   <hr />
                 </div>
                 <div className="">
@@ -224,6 +240,14 @@ function WhyUs() {
                 </div>
                 <div className="">
                   <p>No/partial</p>
+                  <hr />
+                </div>
+                <div className="">
+                  <p>No</p>
+                  <hr />
+                </div>
+                <div className="">
+                  <p>No</p>
                   <hr />
                 </div>
                 <div className="">
