@@ -57,28 +57,44 @@ system</p>
               
             </div>
             <div className='col-md-2'>
-              <div className='content-2'>
+              <div className='content-2 text-center'>
+                <div>
+                  <img src="https://ik.imagekit.io/cforcrypto/Dework/Group_40.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669352347680" alt=""/>
+                </div>
               <div className=''>
-                  <p>Client Fee</p>
+                  <p>2%</p>
+                  <hr/>
                   
                 </div>
                 <div className=''>
-                  <p>Client Fee</p>
+                  <p>10%</p>
+                  <hr/>
                   
                 </div>
                 <div className=''>
-                  <p>Client Fee</p>
-                  
+                  <p>Crypto/Instant</p>
+                  <hr/>
                 </div>
                 <div className=''>
-                  <p>Client Fee</p>
-                  
+                  <p>Yes</p>
+                  <hr/>
                 </div>
                 <div className=''>
-                  <p>Client Fee</p>
-                  
+                  <p>Yes</p>
+                  <hr/>
                 </div>
-                
+                <div className=''>
+                  <p>Yes</p>
+                  <hr/>
+                </div>
+                <div className=''>
+                  <p>Yes</p>
+                  <hr/>
+                </div>
+                <div className=''>
+                  <p>Yes</p>
+                  <hr/>
+                </div>
               </div>
               
             </div>

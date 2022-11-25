@@ -52,10 +52,8 @@ function About() {
             <img src="https://ik.imagekit.io/cforcrypto/Dework/Asset_2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669269508409" alt=""/>
             <div className="about-details">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.{" "}
+              Dework is a freelancing and Recruitment platform based on Web3. DeWork is one such decentralized platform that is redefining how freelancers connect with potential employers and buyers. Based on Web3, we are attempting to create a new freelance economy that removes intermediaries, gives freelancers full ownership of their work, and ensures the ownership of purchased digital work for buyers. It entails a metaverse with micro-communities where buyers and sellers of creative works can meet, discuss ideas, network, and form bonds, and an NFT marketplace. 
+
               </p>
               <img src="https://ik.imagekit.io/cforcrypto/Dework/Rectangle_103.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669060785239" alt=""/>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
