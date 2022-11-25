@@ -5,8 +5,9 @@
 .side-about{
   position: absolute;
   right: 0;
-  height: 250px;
+  height: 246px;
   margin-top: -12%;
+  width: auto;
 }
 img{
   width: 100%;
