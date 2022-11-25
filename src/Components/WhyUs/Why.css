@@ -23,7 +23,7 @@
 }
 .border-down hr {
   color: #00a652;
-  height: 12px;
+  height: 6px;
   width: 75px;
   border-top: 2.5px solid;
   opacity: 1.25;
@@ -54,7 +54,7 @@
 }
 .content-2 hr {
   color: white;
-  height: 12px;
+  height: 6px;
   width: 89px;
   text-align: center;
   margin-left: auto;
@@ -93,7 +93,7 @@
 
 .content-3 hr {
     color: rgb(0, 0, 0);
-    height: 12px;
+    height: 6px;
     width: 89px;
     text-align: center;
     margin-left: auto;

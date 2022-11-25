@@ -18,7 +18,7 @@
   text-align: start;
 }
 .feat-img img {
-  height: 120px;
+  height: 80px;
   width: auto;
 }
 .feat-box {
@@ -28,7 +28,7 @@
 .feat-box h3 {
   font-style: normal;
   font-weight: 600;
-  font-size: 34px;
+  font-size: 28px;
   line-height: 104.4%;
   padding-top: 1%;
   padding-bottom: 1%;
