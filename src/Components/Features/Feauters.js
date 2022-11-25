@@ -6,6 +6,7 @@ function Feauters() {
     <section className="features">
       <div className="container text-center">
         <div className="feat-header">
+          <img src="https://ik.imagekit.io/cforcrypto/Dework/Group_2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669366346851" alt="" className="feat-side"/>
           <h1>Features</h1>
         </div>
       </div>

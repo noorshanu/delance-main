@@ -1,56 +1,61 @@
-.features{
-    padding-top: 1%;
-    padding-bottom: 5%;
+.features {
+  padding-top: 1%;
+  padding-bottom: 5%;
 }
-.feat-header h1{
-    font-style: normal;
-font-weight: 800;
-font-size: 120px;
-line-height: 138.4%;
-/* identical to box height, or 277px */
+.feat-header h1 {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 120px;
+  line-height: 138.4%;
+  /* identical to box height, or 277px */
 
-text-align: center;
+  text-align: center;
 
-color: rgba(0, 0, 0, 0.09);
+  color: rgba(0, 0, 0, 0.09);
 }
 
 .feat-img {
-    text-align: start;
+  text-align: start;
 }
-.feat-img img{
-    height: 120px;
+.feat-img img {
+  height: 120px;
+  width: auto;
+}
+.feat-box {
+  padding: 10%;
+  height: 100%;
+}
+.feat-box h3 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 104.4%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+
+  text-transform: capitalize;
+
+  color: #000000;
+}
+
+.feat-box p {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 104.4%;
+  padding-top: 1%;
+
+  color: #000000;
+}
+.black {
+  color: #000000;
+  font-weight: 500;
+}
+
+.feat-side{
+    position: absolute;
+    height: 66px;
     width: auto;
+    left: 31%;
+    margin-top: 11px;
 }
-.feat-box{
-    padding: 10%;
-    height: 100%;
-}
-.feat-box h3{
-font-style: normal;
-font-weight: 600;
-font-size: 34px;
-line-height: 104.4%;
-padding-top: 1%;
-padding-bottom: 1%;
-
-text-transform: capitalize;
-
-color: #000000;
-}
-
-.feat-box p{
-    font-style: normal;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 104.4%;
-    padding-top: 1%;
-   
-    
-
-    
-    color: #000000;
-    }
-    .black{
-        color: #000000;
-        font-weight: 500;
-    }
