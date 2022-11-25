@@ -1,4 +1,5 @@
 import React from "react";
+import './Features.css'
 
 function Feauters() {
   return (
@@ -13,7 +14,7 @@ function Feauters() {
           <div className="col-md-4">
             <div className="feat-box">
               <img
-                src="https://ik.imagekit.io/cforcrypto/Dework/icons/Group_31.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1669061373660"
+                src="https://ik.imagekit.io/cforcrypto/Dework/icons/business_simplified.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669269537380"
                 alt=""
               />
               <h3>Business simplified</h3>
@@ -27,7 +28,7 @@ function Feauters() {
           <div className="col-md-4">
             <div className="feat-box">
               <img
-                src="https://ik.imagekit.io/cforcrypto/Dework/icons/Group_31.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1669061373660"
+                src="https://ik.imagekit.io/cforcrypto/Dework/icons/transperancy.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669269537287"
                 alt=""
               />
               <h3>Tranceparency</h3>
@@ -40,7 +41,7 @@ function Feauters() {
           <div className="col-md-4">
             <div className="feat-box">
               <img
-                src="https://ik.imagekit.io/cforcrypto/Dework/icons/Group_31.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1669061373660"
+                src="https://ik.imagekit.io/cforcrypto/Dework/icons/escrow.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669269537335"
                 alt=""
               />
               <h3>Escrow</h3>
