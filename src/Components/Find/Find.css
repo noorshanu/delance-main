@@ -11,9 +11,10 @@
 
 }
 .bg-dework{
-    background-image: url('https://ik.imagekit.io/cforcrypto/Dework/Mask_group.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669269929745');
+    background-color: rgba(0, 0, 0, 0.393);
+    background-image: url('https://ik.imagekit.io/cforcrypto/Dework/doc_2022-11-25_21-58-56.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1669394272452');
     background-size: cover;
-    background-position: center;
+    /* background-position: center; */
     background-repeat: no-repeat;
     padding-top: 5%;
     padding-bottom: 5%;
