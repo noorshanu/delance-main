@@ -5,6 +5,8 @@ import {
   FaMedium,
   FaTelegramPlane,
   FaLinkedin,
+  FaDiscord,
+  FaInstagram
 
 } from "react-icons/fa";
 import './Footer.css'
@@ -38,6 +40,12 @@ function Footer() {
                   </a>
                   <a href="https://www.linkedin.com/company/dework-live" target="_blank" rel="noreferrer">
                     <FaLinkedin />
+                  </a>
+                  <a href="https://discord.gg/vhH3Sbt9NQ" target="_blank" rel="noreferrer">
+                    <FaDiscord />
+                  </a>
+                  <a href="https://www.instagram.com/deworkofficial/" target="_blank" rel="noreferrer">
+                    <FaInstagram/>
                   </a>
                 </div>
             
