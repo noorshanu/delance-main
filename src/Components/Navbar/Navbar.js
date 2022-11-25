@@ -42,7 +42,7 @@ function Navbar() {
             </li>
             
             <li>
-              <a href="#team">Explore</a>
+              <a href="#team" className="explore-btn">Explore</a>
             </li>
           </ul>
         </div>
