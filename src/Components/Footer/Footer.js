@@ -44,8 +44,11 @@ function Footer() {
           </div>
 
           <div className='col-md-3 col-6' >
-          <a href="/" className='hero-btn-1'>Sign up</a>
+            <div className='foot-btn-grup'>
+            <a href="/" className='hero-btn-1'>Sign up</a>
             <a href="/" className='hero-btn-2'>Explore</a>
+            </div>
+        
             
             </div>
 
