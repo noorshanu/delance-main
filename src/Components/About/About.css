@@ -66,3 +66,15 @@ padding-top: 6%;
 .ab-2-img{
     height: 75px;
 }
+
+@media (max-width:768px) {
+
+    .about-head-1{
+        font-size: 48px;
+    }
+    .side-about {
+        position: absolute;
+        right: 0;
+        height: 70px;}
+    
+}

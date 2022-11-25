@@ -121,3 +121,20 @@
     line-height: 11px !important;
     margin: 2px;
 }
+
+@media (max-width:768px) {
+  .why-us-head h1 {
+
+    font-size: 44px;
+  }
+  .content {
+  
+    text-align: center;
+  }
+  .border-down hr {
+  
+    margin-right: auto;
+    margin-left: auto;
+}
+  
+}

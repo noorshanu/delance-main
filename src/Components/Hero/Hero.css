@@ -71,3 +71,21 @@
   filter: blur(180px);
   z-index: -20;
 }
+@media (max-width:768px) {
+  .hero h1{
+    font-size: 48px;
+  }
+  .hero-img{
+    height: 260px;
+  }
+  .side-1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 253px;
+    height: 194px;
+  }
+  .side-2 {
+    display: none;
+  }
+}

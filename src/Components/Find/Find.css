@@ -48,3 +48,39 @@ font-weight: 700;
 font-size: 28px;
 line-height: 138.4%;
 }
+@media (max-width:768px) {
+    .d-work-box{
+        width: 337px;
+        height: 100%;
+        transform: unset;
+    }
+
+    .de-work-btn-box {
+        background: linear-gradient(180deg, #E3E3E3 0%, #FFFFFF 99.72%);
+        box-shadow: 0px 15px 82px rgb(0 0 0 / 45%);
+        border-radius: 10px;
+        transform: matrix(1, -0.1, 0, 1, 0, 0);
+        width: 211px;
+        z-index: 2;
+        font-size: 14px;
+        padding: 10px 10px;
+        text-align: center;
+        margin-left: 52px;
+        margin-top: -29px;
+    }
+
+    .de-work-btn-box h1 {
+        font-style: italic;
+        font-weight: 700;
+        font-size: 23px;
+        line-height: 138.4%;
+    }
+    .header-img img {
+        width: 100%;
+        margin-top: -29px;
+        position: absolute;
+        padding-top: 0%;
+        overflow: hidden;
+    }
+    
+}

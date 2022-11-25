@@ -30,3 +30,17 @@ text-align: center;
 
 color: #0000008f;
 }
+
+@media (max-width:768px) {
+    .fox {
+        width: auto;
+        height: 96px;
+    }
+    .insider {
+        height: 96px;
+        width: auto;
+    }
+    .enter{
+        height: 96px;
+    }
+}

@@ -59,3 +59,20 @@
     left: 31%;
     margin-top: 11px;
 }
+
+@media (max-width:768px) {
+  .feat-header h1 {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 55px;}
+
+    .feat-side{
+      position: absolute;
+      height: 44px;
+      width: auto;
+      left: 15%;
+      margin-top: 11px;
+      z-index: -3;
+  }
+  
+}
