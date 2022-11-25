@@ -58,7 +58,7 @@ system</p>
             </div>
             <div className='col-md-2'>
               <div className='content-2 text-center'>
-                <div>
+                <div className='why-content-img-head'>
                   <img src="https://ik.imagekit.io/cforcrypto/Dework/Group_40.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669352347680" alt=""/>
                 </div>
               <div className=''>
@@ -95,15 +95,15 @@ system</p>
                   <p>Yes</p>
                   <hr/>
                 </div>
-                <div className=''>
-                  <p>Yes</p>
-                  <hr/>
-                </div>
+              
               </div>
               
             </div>
             <div className='col-md-2'>
-              <div>
+              <div className='content-3'>
+              <div className='why-content-img-head'>
+                  <img src="https://ik.imagekit.io/cforcrypto/Dework/image_8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669366389254" alt=""/>
+                </div>
               <div className=''>
                   <p>Client Fee</p>
                   
@@ -128,7 +128,10 @@ system</p>
               
               </div>
               <div className='col-md-2'>
-                <div>
+                <div className='content-3'>
+                  <div  className='why-content-img-head'>
+                    <img src="https://ik.imagekit.io/cforcrypto/Dework/image_9.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669366389048" alt="" />
+                  </div>
                 <div className=''>
                   <p>Client Fee</p>
                   
