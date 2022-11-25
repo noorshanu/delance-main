@@ -156,7 +156,10 @@ system</p>
               
               </div>
               <div className='col-md-2'>
-                <div>
+              <div className='content-3'>
+                  <div  className='why-content-img-head'>
+                    <img src="https://ik.imagekit.io/cforcrypto/Dework/image_10.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669366388768" alt="" />
+                  </div>
                 <div className=''>
                   <p>Client Fee</p>
                   
