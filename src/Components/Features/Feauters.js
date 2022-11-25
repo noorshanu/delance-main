@@ -72,7 +72,7 @@ function Feauters() {
             </div>
           </div>
         </div>
-        <div className="row justify-content-center align-items-center">
+        <div className="row justify-content-center align-items-center mtf-60">
           <div className="col-md-4">
             <div className="feat-box">
               <div className="feat-img">
