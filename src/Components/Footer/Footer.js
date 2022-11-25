@@ -7,18 +7,19 @@ import {
   FaYoutube,
 
 } from "react-icons/fa";
+import './Footer.css'
 
 function Footer() {
   return (
     <>
     <footer className='footer'>
-      <div className='container'>
+      <div className='container border-foot-top'>
         <div className='row justify-content-center align-items-center'>
           <div className='col-md-3 col-6' >
-            <div>
+            <div className='footer-logo'>
               <img src="https://ik.imagekit.io/cforcrypto/Dework/WhatsApp_Image_2022-11-05_at_8.21_1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669013135558" alt="foot-logo"/>
             </div>
-            <p>Conect With The Community</p>
+            <p className='sc-1'>Conect With The Community</p>
             <div className="foot-social">
                   <a href="https://twitter.com/AFUN_Verse" target="_blank" rel="noreferrer">
                     <FaTwitter />
@@ -87,8 +88,9 @@ function Footer() {
             </div>
           
         </div>
-        
+      
       </div>
+      <p className='foot-bottom-text'>2022© DeWork Inc. | All Rights Reserved </p>
     </footer>
     
     </>

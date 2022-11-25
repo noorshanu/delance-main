@@ -1,0 +1,37 @@
+.border-foot-top{
+    border-top: 4px solid #00A652;
+  
+    padding-top: 3%;
+    padding-bottom: 2%;
+    border-bottom: 2px solid #6C6C6C;
+}
+.footer-logo img{
+    width: auto;
+    margin-bottom: 4%;
+}
+.foot-social{
+    display: flex;
+    gap: 1.5rem;
+}
+.foot-social a{
+    font-size: 19px;
+    color: #6C6C6C;
+}
+.sc-1{
+    font-size: 14px;
+    color: #6C6C6C;
+}
+.foot-link a p{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19px;
+    color: #6C6C6C;
+}
+.foot-bottom-text{
+    font-size: 14px;
+    font-weight: 500;
+    color: #6C6C6C;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
