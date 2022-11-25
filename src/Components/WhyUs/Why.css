@@ -1,73 +1,73 @@
-.why-us-head h1{
-    font-style: normal;
-font-weight: 800;
-font-size: 65px;
-line-height: 138.4%;
-/* identical to box height, or 208px */
+.why-us-head h1 {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 65px;
+  line-height: 138.4%;
+  /* identical to box height, or 208px */
 
-text-align: center;
+  text-align: center;
 
-color: rgba(0, 0, 0, 0.43);
+  color: rgba(0, 0, 0, 0.43);
 }
 
+.border-down p {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 104.4%;
+  /* identical to box height, or 26px */
 
-.border-down p{
-    font-style: normal;
-font-weight: 600;
-font-size: 18px;
-line-height: 104.4%;
-/* identical to box height, or 26px */
+  text-transform: capitalize;
 
-text-transform: capitalize;
+  color: #000000;
+}
+.border-down hr {
+  color: #00a652;
+  height: 14px;
+  width: 75px;
+  border-top: 2.5px solid;
+  opacity: 1.25;
+}
+.why-us-box {
+  background: linear-gradient(180deg, #ffffff 0%, #dadada 100%);
+  border: 3px solid #00a652;
+  border-radius: 25px;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+.content-2 {
+  text-align: center;
+  background: linear-gradient(180deg, #00bd5d 0%, #006632 100%);
+  border-radius: 37px;
+height: 100%;
+  color: #fff;
+}
+.content-2 img {
+  height: 37px;
+  width: 124px;
+}
+.content-2 hr {
+  color: white;
+  height: 14px;
+  width: 89px;
+  text-align: center;
+  margin: auto;
+  border-top: 2.5px solid;
+  opacity: 1;
+}
+.content-2 p {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 104.4%;
 
-color: #000000;
-}
-.border-down hr{
-    color: #00A652;
-    height: 14px;
-    width: 75px;
-    border-top: 2.5px solid;
-    opacity: 1.25;
 
+  text-transform: capitalize;
 
+  color: #ffffff;
 }
-.why-us-box{
-    background: linear-gradient(180deg, #FFFFFF 0%, #DADADA 100%);
-border: 3px solid #00A652;
-border-radius: 37px;
-}
-.content-2{
-    text-align: center;
-    background: linear-gradient(180deg, #00BD5D 0%, #006632 100%);
-border-radius: 37px;
-
-color: #fff;
-}
-.content-2 img{
-    height: 37px;
-    width: 124px;
-}
-.content-2 hr{
-    color: white;
-    height: 14px;
-    width: 89px;
-    text-align: center;
-    margin: auto;
-    border-top: 2.5px solid;
-    opacity: 1;
-}
-.content-2 p{
-        font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 104.4%;
-    /* identical to box height, or 26px */
-    
-    text-transform: capitalize;
-    
-    color: #ffffff;
-    
-}
-.content{
-
+.content {
+    height: 100%;
 }

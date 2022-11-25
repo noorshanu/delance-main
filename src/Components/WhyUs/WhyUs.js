@@ -100,28 +100,41 @@ system</p>
               
             </div>
             <div className='col-md-2'>
-              <div className='content-3'>
+              <div className='content-3 text-center'>
               <div className='why-content-img-head'>
                   <img src="https://ik.imagekit.io/cforcrypto/Dework/image_8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669366389254" alt=""/>
                 </div>
               <div className=''>
-                  <p>Client Fee</p>
+                  <p>3%</p>
                   
                 </div>
                 <div className=''>
-                  <p>Client Fee</p>
+                  <p>10%</p>
                   
                 </div>
                 <div className=''>
-                  <p>Client Fee</p>
+                  <p>Min payout $100</p>
+                  <p>(2.75% fee for withdrawal for currency conversion)</p>
                   
                 </div>
                 <div className=''>
-                  <p>Client Fee</p>
+                  <p>No</p>
                   
                 </div>
                 <div className=''>
-                  <p>Client Fee</p>
+                  <p>No</p>
+                  
+                </div>
+                <div className=''>
+                  <p>No/partial</p>
+                  
+                </div>
+                <div className=''>
+                  <p>No</p>
+                  
+                </div>
+                <div className=''>
+                  <p>No</p>
                   
                 </div>
               </div>
