@@ -26,25 +26,27 @@ function Navbar() {
         >
           <ul>
             <li>
-              <a href="#about">About</a>
+              <a href="#about">Home</a>
+            </li>
+            <li>
+              <a href="/">About</a>
             </li>
             <li>
               <a href="#feature">Features</a>
             </li>
-            <li>
-              <a href="/">Gameplay</a>
-            </li>
+           
             <li>
               <a href="#toko">Tokenomics</a>
             </li>
-            <li>
-              <a href="#nft">NFTs</a>
-            </li>
+            
             <li>
               <a href="#road">Roadmap</a>
             </li>
             <li>
-              <a href="#team">team</a>
+              <a href="#team">Team</a>
+            </li>
+            <li>
+              <a href="#team">Explore</a>
             </li>
           </ul>
         </div>

@@ -9,7 +9,7 @@ function About() {
           <div className="col-md-6">
             <h1>About Us</h1>
             <div className="about-topic">
-              <div className="d-flex">
+              <div className="d-flex gap-4">
                 <div>
                 <img src="https://ik.imagekit.io/cforcrypto/Dework/Rectangle_21.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669013135494" alt=""/>
                 </div>
@@ -21,7 +21,7 @@ function About() {
                 
               </div>
 
-              <div className="d-flex">
+              <div className="d-flex gap-4">
                 <div>
                   <img src="https://ik.imagekit.io/cforcrypto/Dework/Rectangle_21.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669013135494" alt=""/>
                 </div>
@@ -33,7 +33,7 @@ function About() {
                 
               </div>
 
-              <div className="d-flex">
+              <div className="d-flex gap-4">
                 <div>
                 <img src="https://ik.imagekit.io/cforcrypto/Dework/Rectangle_21.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669013135494" alt=""/>
                 </div>
