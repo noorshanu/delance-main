@@ -61,3 +61,13 @@
   filter: blur(180px);
   z-index: -20;
 }
+
+.side-2 {
+  position: absolute;
+  left: 0;
+  width: 409px;
+  height: 246px;
+  background: #00a652;
+  filter: blur(180px);
+  z-index: -20;
+}

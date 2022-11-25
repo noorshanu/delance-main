@@ -24,6 +24,8 @@ function Hero() {
    
         
       </div>
+      <div className='side-2'>
+      &nbsp; </div>
     </section>
     </>
   )
