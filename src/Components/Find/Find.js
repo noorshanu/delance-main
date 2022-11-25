@@ -28,7 +28,7 @@ function Find() {
             </p>
           </div>
           <div className="de-work-btn-box">
-            <h1>START NOW</h1>
+            <h1><a href="/">DEMO</a></h1>
           </div>
         </div>
       </div>

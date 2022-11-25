@@ -32,7 +32,7 @@ function About() {
                 </div>
                 <div>
                   <p className="ab-p1">Only </p>
-                  <p className="ab-p2">1% Commision</p>
+                  <p className="ab-p2">2% Commision</p>
                   <p className="ab-p3">Lowest In The Industry</p>
                 </div>
               </div>
