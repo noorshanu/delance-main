@@ -4,7 +4,7 @@ import {
   FaFacebookSquare,
   FaMedium,
   FaTelegramPlane,
-  FaYoutube,
+  FaLinkedin,
 
 } from "react-icons/fa";
 import './Footer.css'
@@ -21,23 +21,23 @@ function Footer() {
             </div>
             <p className='sc-1'>Conect With The Community</p>
             <div className="foot-social">
-                  <a href="https://twitter.com/AFUN_Verse" target="_blank" rel="noreferrer">
+                  <a href="https://twitter.com/Deworkofficial" target="_blank" rel="noreferrer">
                     <FaTwitter />
                   </a>
                   <a
-                    href="https://www.facebook.com/profile.php?id=100087203265007"
+                    href="https://www.facebook.com/profile.php?id=100087266006183"
                     target="_blank" rel="noreferrer"
                   >
                     <FaFacebookSquare />
                   </a>
-                  <a href="/" target="_blank" rel="noreferrer">
+                  <a href="https://medium.com/@deworkOfficial" target="_blank" rel="noreferrer">
                     <FaMedium />
                   </a>
-                  <a href="/" target="_blank" rel="noreferrer">
+                  <a href="https://t.me/deworkcommunity" target="_blank" rel="noreferrer">
                     <FaTelegramPlane />
                   </a>
-                  <a href="/" target="_blank" rel="noreferrer">
-                    <FaYoutube />
+                  <a href="https://www.linkedin.com/company/dework-live" target="_blank" rel="noreferrer">
+                    <FaLinkedin />
                   </a>
                 </div>
             

@@ -25,9 +25,7 @@ function Navbar() {
           }
         >
           <ul>
-            <li>
-              <a href="#about">Home</a>
-            </li>
+           
             <li>
               <a href="/">About</a>
             </li>
@@ -35,7 +33,9 @@ function Navbar() {
               <a href="#feature">Features</a>
             </li>
            
-           
+           <li>
+            <a href="https://docs.dework.live/" target='_blank' rel="noreferrer">Whitepaper</a>
+           </li>
             
             <li>
               <a href="#road">NFT marketplace</a>
