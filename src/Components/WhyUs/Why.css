@@ -1,3 +1,16 @@
+.why-us-head h1{
+    font-style: normal;
+font-weight: 800;
+font-size: 65px;
+line-height: 138.4%;
+/* identical to box height, or 208px */
+
+text-align: center;
+
+color: rgba(0, 0, 0, 0.43);
+}
+
+
 .border-down p{
     font-style: normal;
 font-weight: 600;

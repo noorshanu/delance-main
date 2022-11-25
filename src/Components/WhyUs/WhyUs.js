@@ -5,7 +5,7 @@ function WhyUs() {
   return (
     <section className='why-us'>
         <div  className='container'>
-        <div className='why-us-head'>
+        <div className='why-us-head text-center'>
             <h1>Why DeWork</h1>
             
         </div>   
