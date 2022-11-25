@@ -9,3 +9,60 @@
 .about h1{
     color: #fff;
 }
+.ab-p1{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 91.9%;
+    color: #FFFFFF;
+}
+.ab-p2{
+    font-style: normal;
+font-weight: 800;
+font-size: 32px;
+line-height: 101.9%;
+/* identical to box height, or 51px */
+
+
+color: #58FFAA !important;
+
+}
+.ab-p3{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 91.9%;
+    color: #FFFFFF;
+}
+.ab-img img{
+    height: 84px;
+}
+.ab-pd{
+    padding-top: 1%;
+    padding-bottom: 2%;
+}
+.about-head-1{
+    font-style: normal;
+font-weight: 800;
+font-size: 75px;
+line-height: 138.4%;
+/* or 138px */
+
+
+color: #FFFFFF;
+}
+.about-details p{
+    font-style: normal;
+font-weight: 300;
+font-size: 14px;
+line-height: 138.4%;
+/* or 35px */
+
+
+color: #FFFFFF;
+padding-top: 6%;
+    padding-bottom: 4%;
+}
+.ab-2-img{
+    height: 75px;
+}
