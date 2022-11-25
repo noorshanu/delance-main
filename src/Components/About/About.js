@@ -6,7 +6,7 @@ function About() {
     <section className="about">
       <div className="container">
         <div className="row">
-          <div className="col-md-6">
+          <div className="col-md-5">
             <h1 className="about-head-1">About Us</h1>
             <div className="about-topic">
               <div className="d-flex gap-4 ab-pd">
@@ -53,7 +53,7 @@ function About() {
             </div>
           </div>
 
-          <div className="col-md-6">
+          <div className="col-md-7">
             <img
               src="https://ik.imagekit.io/cforcrypto/Dework/Asset_2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669269508409"
               alt=""
