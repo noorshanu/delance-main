@@ -61,8 +61,8 @@ function About() {
             />
             <div className="about-details">
               <p>
-                Dework is a freelancing and Recruitment platform based on Web3.
-                DeWork is one such decentralized platform that is redefining how
+              Deelance is a freelancing and Recruitment platform based on Web3.
+              Deelance is one such decentralized platform that is redefining how
                 freelancers connect with potential employers and buyers. Based
                 on Web3, we are attempting to create a new freelance economy
                 that removes intermediaries, gives freelancers full ownership of
