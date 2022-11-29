@@ -78,7 +78,7 @@ function About() {
               <p>
                 We want to revolutionize the traditional world of Freelancing.
                 in web3 freelancing will provide endless opportunities in the
-                future. That's why we started Dework to contribute to the
+                future. That's why we started Deelance to contribute to the
                 movement of creating a secure and sustainable future for the gig
                 economy. The freelancers experience many roadblocks and
                 obstacles that may affect their livelihood.

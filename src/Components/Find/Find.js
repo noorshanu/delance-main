@@ -15,7 +15,7 @@ function Find() {
           <div className="d-work-box">
             <p>
               {" "}
-              Dework” is a project that creates unique contents on Metaverse
+              Deelance ” is a project that creates unique contents on Metaverse
               technology that is a huge trend around the world. Its aim is to
               move people to another dimension within the digital universe.
              
