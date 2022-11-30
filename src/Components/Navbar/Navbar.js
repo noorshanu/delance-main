@@ -30,7 +30,7 @@ function Navbar() {
               <a href="/">About</a>
             </li>
             <li>
-              <a href="#feature">Features</a>
+              <a href="#feature">Team</a>
             </li>
            
            <li>
@@ -39,6 +39,12 @@ function Navbar() {
             
             <li>
               <a href="#road">NFT marketplace</a>
+            </li>
+            <li>
+              <a href="#road">Find Freelancer</a>
+            </li>
+            <li>
+              <a href="#road">Academy</a>
             </li>
             
             <li>

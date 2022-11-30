@@ -28,10 +28,10 @@ a {
    
     height: 30px;
     background-color: #0c171700;
-    display: grid;
-    
+    display: flex;
+    justify-content: space-between;
     border-bottom: 2px solid #06898e00;
-    grid-template-columns: 0.2rem 1fr 1fr 0.2rem;
+   
     padding-top: 1.5%;
   }
   
