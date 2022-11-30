@@ -13,7 +13,7 @@ function Navbar() {
           {" "}
           <div className="d-flex foot-logo">
             <img
-              src="https://ik.imagekit.io/cforcrypto/Dework/WhatsApp_Image_2022-11-05_at_8.21_1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669013135558"
+              src="https://ik.imagekit.io/cforcrypto/Dework/logo_new.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669805675437"
               alt=""
               className=""
             />
