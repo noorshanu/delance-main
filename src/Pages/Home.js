@@ -7,6 +7,7 @@ import Find from '../Components/Find/Find'
 import Partners from '../Components/Partners/Partners'
 import Footer from '../Components/Footer/Footer'
 import WhyUs from '../Components/WhyUs/WhyUs'
+import Tokenomic from 'Components/Token/Tokenomic'
 
 function Home() {
   return (
@@ -17,6 +18,7 @@ function Home() {
     <Features/>
     <Find/>
     <WhyUs/>
+    <Tokenomic/>
     <Partners/>
     <Footer/>
     </>

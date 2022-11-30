@@ -1,0 +1,19 @@
+.token-head{
+    text-align: center;
+}
+.token-head h1{
+    font-style: normal;
+    font-weight: 800;
+    font-size: 65px;
+    line-height: 138.4%;
+    text-align: center;
+    color: #fff;
+}
+.token-img{
+    padding: 5%;
+    width: auto;
+    height: 575px;
+}
+.token{
+    background: linear-gradient(180deg, #252525 0%, #000000 100%);
+}
