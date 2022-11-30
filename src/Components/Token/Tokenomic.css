@@ -4,7 +4,7 @@
 .token-head h1{
     font-style: normal;
     font-weight: 800;
-    font-size: 65px;
+    font-size: 55px;
     line-height: 138.4%;
     text-align: center;
     color: #fff;
@@ -12,7 +12,7 @@
 .token-img{
     padding: 5%;
     width: auto;
-    height: 575px;
+    height: 475px;
 }
 .token{
     background: #000;

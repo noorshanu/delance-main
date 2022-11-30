@@ -5,7 +5,7 @@
 .feat-header h1 {
   font-style: normal;
   font-weight: 800;
-  font-size: 120px;
+  font-size: 80px;
   line-height: 138.4%;
   /* identical to box height, or 277px */
 
@@ -15,10 +15,10 @@
 }
 
 .feat-img {
-  text-align: start;
+  text-align: center;
 }
 .feat-img img {
-  height: 80px;
+  height: 62px;
   width: auto;
 }
 .feat-box {
@@ -28,7 +28,8 @@
 .feat-box h3 {
   font-style: normal;
   font-weight: 600;
-  font-size: 28px;
+  font-size: 22px;
+  text-align: center;
   line-height: 104.4%;
   padding-top: 1%;
   padding-bottom: 1%;
@@ -41,8 +42,8 @@
 .feat-box p {
   font-style: normal;
   font-weight: 300;
-  font-size: 14px;
-  line-height: 104.4%;
+  font-size: 11px;
+  line-height: 94.4%;
   padding-top: 1%;
 
   color: #000000;
@@ -54,9 +55,9 @@
 
 .feat-side{
     position: absolute;
-    height: 66px;
+    height: 51px;
     width: auto;
-    left: 31%;
+    left: 34%;
     margin-top: 11px;
 }
 .mtf-60{

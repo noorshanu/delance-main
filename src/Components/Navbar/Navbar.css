@@ -9,7 +9,7 @@ a {
   }
   
   .logo img{
-      height: 55px;
+      height: 40px;
   }
   a:hover {
     color: #000000;
@@ -59,13 +59,13 @@ a {
   
 
   .explore-btn{
-    padding: 4.2% 35%;
+    padding: 4.2% 33%;
     background: linear-gradient(93.52deg, #00A652 0.78%, #006A34 102.15%, #58FFAA 102.16%);
 border: 0.5px solid #FFFFFF;
 box-shadow: 0px 7px 16px rgba(0, 0, 0, 0.4);
 border-radius: 5px;
 color: #fff !important;
-font-size: 16px !important;
+font-size: 13px !important;
 font-weight: 400 !important;
   }
   
@@ -85,7 +85,7 @@ font-weight: 400 !important;
   transition: 0.5s;
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 109%;
   text-transform: uppercase;
   color:  #00A652;

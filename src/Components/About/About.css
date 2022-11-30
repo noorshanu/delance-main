@@ -13,14 +13,14 @@
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
-    line-height: 91.9%;
+    line-height: 1.9%;
     color: #FFFFFF;
 }
 .ab-p2{
     font-style: normal;
 font-weight: 800;
-font-size: 32px;
-line-height: 101.9%;
+font-size: 24px;
+line-height: 80.9%;
 /* identical to box height, or 51px */
 
 
@@ -35,7 +35,7 @@ color: #58FFAA !important;
     color: #FFFFFF;
 }
 .ab-img img{
-    height: 84px;
+    height: 62px;
 }
 .ab-pd{
     padding-top: 1%;
@@ -44,7 +44,7 @@ color: #58FFAA !important;
 .about-head-1{
     font-style: normal;
 font-weight: 800;
-font-size: 75px;
+font-size: 55px;
 line-height: 138.4%;
 /* or 138px */
 
@@ -54,7 +54,7 @@ color: #FFFFFF;
 .about-details p{
     font-style: normal;
 font-weight: 300;
-font-size: 14px;
+font-size: 12px;
 line-height: 138.4%;
 /* or 35px */
 
@@ -64,7 +64,7 @@ padding-top: 6%;
     padding-bottom: 4%;
 }
 .ab-2-img{
-    height: 75px;
+    height: 62px;
 }
 
 @media (max-width:768px) {
