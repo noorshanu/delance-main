@@ -6,7 +6,7 @@ function Find() {
     <section className="find">
       <div className="header-img">
         <img
-          src="https://ik.imagekit.io/cforcrypto/Dework/freelance_in_metaverse.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669269508496"
+          src="https://ik.imagekit.io/cforcrypto/Dework/Asset_30.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669820958822"
           alt=""
         />
       </div>
