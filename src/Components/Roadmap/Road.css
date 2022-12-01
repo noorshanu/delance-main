@@ -27,9 +27,9 @@ color: #0000008f;
     border-radius: 48px 0px;
     width: 286px;
     height: 100%;
-    padding-top: 8%;
+    padding-top: 10%;
     padding-bottom: 2%;
-    padding-left: 1%;
+    padding-left: 8%;
     padding-right: 1%;
     filter:unset;
 }
@@ -39,11 +39,11 @@ box-shadow: inset 17px 16px 49px rgba(0, 0, 0, 0.25);
 border-radius: 48px;
 width: 286px;
     height: 100%;
-    padding-top: 8%;
+    padding-top: 10%;
     padding-bottom: 2%;
-    padding-left: 1%;
+    padding-left: 8%;
     padding-right: 1%;
-    filter: blur(3.5px);
+    filter: blur(2.5px);
 }
 .road-top h2{
     font-size: 22px;

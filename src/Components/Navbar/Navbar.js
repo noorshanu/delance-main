@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 
@@ -38,7 +38,7 @@ function Navbar() {
            </li>
             
             <li>
-              <a href="#road">NFT marketplace</a>
+              <NavLink to="/nft-market" target='_blank'>NFT marketplace</NavLink>
             </li>
             <li>
               <a href="#road">Find Job</a>
