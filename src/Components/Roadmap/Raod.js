@@ -46,16 +46,16 @@ export default function Raod() {
               <h2>Q4 2022 </h2>
               <p>( Nov-Dec )</p>
             </div>
-            <ul className="road-list">
-              <li><FaCheck className=""/>Initial Project Plan </li>
-              <li><FaCheck className="green"/>website Design  </li>
-              <li><FaCheck/>Website Live </li>
-              <li><FaCheck/>Initial Smart-contracts Deployment  </li>
-              <li><FaCheck/>Private Sale  </li>
-              <li><FaCheck/>Project Launch  </li>
-              <li><FaCheck/>Metaverse Demo   </li>
-              <li><FaCheck/>CMC and CG Listing   </li>
-            </ul>
+            <div className="road-list">
+              <p><FaCheck className="green"/>website Design  </p>
+              <p><FaCheck/>Website Live </p>
+              <p><FaCheck/>Initial Smart-contracts Deployment  </p>
+              <p><FaCheck className=""/>Initial Project Plan </p>
+              <p><FaCheck/>Private Sale  </p>
+              <p><FaCheck/>Project Launch  </p>
+              <p><FaCheck/>Metaverse Demo   </p>
+              <p><FaCheck/>CMC and CG Listing   </p>
+            </div>
 
           </div>
         </SwiperSlide>
@@ -65,16 +65,16 @@ export default function Raod() {
               <h2>Q4 2022 </h2>
               <p>( Nov-Dec )</p>
             </div>
-            <ul className="road-list">
-              <li><FaCheck className=""/>Initial Project Plan </li>
-              <li><FaCheck className="green"/>website Design  </li>
-              <li><FaCheck/>Website Live </li>
-              <li><FaCheck/>Initial Smart-contracts Deployment  </li>
-              <li><FaCheck/>Private Sale  </li>
-              <li><FaCheck/>Project Launch  </li>
-              <li><FaCheck/>Metaverse Demo   </li>
-              <li><FaCheck/>CMC and CG Listing   </li>
-            </ul>
+            <div className="road-list">
+              <p><FaCheck className="green"/>website Design  </p>
+              <p><FaCheck/>Website Live </p>
+              <p><FaCheck/>Initial Smart-contracts Deployment  </p>
+              <p><FaCheck className=""/>Initial Project Plan </p>
+              <p><FaCheck/>Private Sale  </p>
+              <p><FaCheck/>Project Launch  </p>
+              <p><FaCheck/>Metaverse Demo   </p>
+              <p><FaCheck/>CMC and CG Listing   </p>
+            </div>
 
           </div>
         </SwiperSlide>
@@ -84,16 +84,16 @@ export default function Raod() {
               <h2>Q4 2022 </h2>
               <p>( Nov-Dec )</p>
             </div>
-            <ul className="road-list">
-              <li><FaCheck className=""/>Initial Project Plan </li>
-              <li><FaCheck className="green"/>website Design  </li>
-              <li><FaCheck/>Website Live </li>
-              <li><FaCheck/>Initial Smart-contracts Deployment  </li>
-              <li><FaCheck/>Private Sale  </li>
-              <li><FaCheck/>Project Launch  </li>
-              <li><FaCheck/>Metaverse Demo   </li>
-              <li><FaCheck/>CMC and CG Listing   </li>
-            </ul>
+            <div className="road-list">
+              <p><FaCheck className="green"/>website Design  </p>
+              <p><FaCheck/>Website Live </p>
+              <p><FaCheck/>Initial Smart-contracts Deployment  </p>
+              <p><FaCheck className=""/>Initial Project Plan </p>
+              <p><FaCheck/>Private Sale  </p>
+              <p><FaCheck/>Project Launch  </p>
+              <p><FaCheck/>Metaverse Demo   </p>
+              <p><FaCheck/>CMC and CG Listing   </p>
+            </div>
 
           </div>
         </SwiperSlide>

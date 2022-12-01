@@ -41,7 +41,7 @@ function Navbar() {
               <a href="#road">NFT marketplace</a>
             </li>
             <li>
-              <a href="#road">Find Freelancer</a>
+              <a href="#road">Find Job</a>
             </li>
             <li>
               <a href="#road">Academy</a>
