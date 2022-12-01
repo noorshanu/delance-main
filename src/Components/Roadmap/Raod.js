@@ -33,7 +33,7 @@ export default function Raod() {
           stretch: 0,
           depth: 100,
           modifier: 1,
-          slideShadows: true,
+          slideShadows: false,
         }}
         pagination={true}
         navigation={true}
@@ -42,17 +42,19 @@ export default function Raod() {
       >
         <SwiperSlide>
           <div className="road-box">
-            <div className="road-top">
-              <h2>Q1 2023 </h2>
-              <p> ( Jan - March )</p>
+          <div className="road-top">
+              <h2>Q4 2022 </h2>
+              <p>( Nov-Dec )</p>
             </div>
             <div className="road-list">
-              <p><FaCheck className="green"/>NFT Launch  </p>
-              <p><FaCheck/>NFT MarketPlace </p>
-              <p><FaCheck/>Freelance Platform Launch </p>
-              <p><FaCheck className=""/>Exchanges Listing  </p>
-              <p><FaCheck/>Metaverse Development    </p>
-              
+              <p><FaCheck className="green"/>website Design  </p>
+              <p><FaCheck/>Website Live </p>
+              <p><FaCheck/>Initial Smart-contracts Deployment  </p>
+              <p><FaCheck className=""/>Initial Project Plan </p>
+              <p><FaCheck/>Private Sale  </p>
+              <p><FaCheck/>Project Launch  </p>
+              <p><FaCheck/>Metaverse Demo   </p>
+              <p><FaCheck/>CMC and CG Listing   </p>
             </div>
 
           </div>
@@ -74,21 +76,19 @@ export default function Raod() {
         </SwiperSlide>
         <SwiperSlide>
         <div className="road-box">
+         
             <div className="road-top">
-              <h2>Q4 2022 </h2>
-              <p>( Nov-Dec )</p>
+              <h2>Q1 2023 </h2>
+              <p> ( Jan - March )</p>
             </div>
             <div className="road-list">
-              <p><FaCheck className="green"/>website Design  </p>
-              <p><FaCheck/>Website Live </p>
-              <p><FaCheck/>Initial Smart-contracts Deployment  </p>
-              <p><FaCheck className=""/>Initial Project Plan </p>
-              <p><FaCheck/>Private Sale  </p>
-              <p><FaCheck/>Project Launch  </p>
-              <p><FaCheck/>Metaverse Demo   </p>
-              <p><FaCheck/>CMC and CG Listing   </p>
+              <p><FaCheck className="green"/>NFT Launch  </p>
+              <p><FaCheck/>NFT MarketPlace </p>
+              <p><FaCheck/>Freelance Platform Launch </p>
+              <p><FaCheck className=""/>Exchanges Listing  </p>
+              <p><FaCheck/>Metaverse Development    </p>
+              
             </div>
-
           </div>
         </SwiperSlide>
    
