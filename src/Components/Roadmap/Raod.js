@@ -9,6 +9,7 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper";
 
 import {FaCheck} from 'react-icons/fa'
+import {BsDot} from 'react-icons/bs'
 
 // import required modules
 import { EffectCoverflow, Pagination } from "swiper";
@@ -47,14 +48,14 @@ export default function Raod() {
               <p>( Nov-Dec )</p>
             </div>
             <div className="road-list">
-              <p><FaCheck className="green"/>website Design  </p>
-              <p><FaCheck/>Website Live </p>
-              <p><FaCheck/>Initial Smart-contracts Deployment  </p>
-              <p><FaCheck className=""/>Initial Project Plan </p>
-              <p><FaCheck/>Private Sale  </p>
-              <p><FaCheck/>Project Launch  </p>
-              <p><FaCheck/>Metaverse Demo   </p>
-              <p><FaCheck/>CMC and CG Listing   </p>
+              <p><FaCheck /> website Design  </p>
+              <p><FaCheck/> Website Live </p>
+              <p><FaCheck/> Initial Smart-contracts Deployment  </p>
+              <p><BsDot className=""/> Initial Project Plan </p>
+              <p><BsDot/> Private Sale  </p>
+              <p><BsDot/> Project Launch  </p>
+              <p><BsDot/> Metaverse Demo   </p>
+              <p><BsDot/> CMC and CG Listing   </p>
             </div>
 
           </div>
@@ -66,9 +67,9 @@ export default function Raod() {
               <p>( April -June )   </p>
             </div>
             <div className="road-list">
-              <p><FaCheck className="green"/>App development   </p>
-              <p><FaCheck/>Metaverse Integration to Main Platform </p>
-              <p><FaCheck/>Further Development   </p>
+              <p><BsDot /> App development   </p>
+              <p><BsDot/> Metaverse Integration to Main Platform </p>
+              <p><BsDot/> Further Development   </p>
             
             </div>
 
@@ -82,11 +83,11 @@ export default function Raod() {
               <p> ( Jan - March )</p>
             </div>
             <div className="road-list">
-              <p><FaCheck className="green"/>NFT Launch  </p>
-              <p><FaCheck/>NFT MarketPlace </p>
-              <p><FaCheck/>Freelance Platform Launch </p>
-              <p><FaCheck className=""/>Exchanges Listing  </p>
-              <p><FaCheck/>Metaverse Development    </p>
+              <p><BsDot /> NFT Launch  </p>
+              <p><BsDot/> NFT MarketPlace </p>
+              <p><BsDot/> Freelance Platform Launch </p>
+              <p><BsDot className=""/> Exchanges Listing  </p>
+              <p><BsDot/> Metaverse Development    </p>
               
             </div>
           </div>
