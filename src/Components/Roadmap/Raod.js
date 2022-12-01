@@ -46,36 +46,60 @@ export default function Raod() {
               <h2>Q4 2022 </h2>
               <p>( Nov-Dec )</p>
             </div>
-            <ul>
-              <li><FaCheck/>Initial Project Plan </li>
+            <ul className="road-list">
+              <li><FaCheck className=""/>Initial Project Plan </li>
+              <li><FaCheck className="green"/>website Design  </li>
+              <li><FaCheck/>Website Live </li>
+              <li><FaCheck/>Initial Smart-contracts Deployment  </li>
+              <li><FaCheck/>Private Sale  </li>
+              <li><FaCheck/>Project Launch  </li>
+              <li><FaCheck/>Metaverse Demo   </li>
+              <li><FaCheck/>CMC and CG Listing   </li>
             </ul>
 
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+        <div className="road-box">
+            <div className="road-top">
+              <h2>Q4 2022 </h2>
+              <p>( Nov-Dec )</p>
+            </div>
+            <ul className="road-list">
+              <li><FaCheck className=""/>Initial Project Plan </li>
+              <li><FaCheck className="green"/>website Design  </li>
+              <li><FaCheck/>Website Live </li>
+              <li><FaCheck/>Initial Smart-contracts Deployment  </li>
+              <li><FaCheck/>Private Sale  </li>
+              <li><FaCheck/>Project Launch  </li>
+              <li><FaCheck/>Metaverse Demo   </li>
+              <li><FaCheck/>CMC and CG Listing   </li>
+            </ul>
+
+          </div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+        <div className="road-box">
+            <div className="road-top">
+              <h2>Q4 2022 </h2>
+              <p>( Nov-Dec )</p>
+            </div>
+            <ul className="road-list">
+              <li><FaCheck className=""/>Initial Project Plan </li>
+              <li><FaCheck className="green"/>website Design  </li>
+              <li><FaCheck/>Website Live </li>
+              <li><FaCheck/>Initial Smart-contracts Deployment  </li>
+              <li><FaCheck/>Private Sale  </li>
+              <li><FaCheck/>Project Launch  </li>
+              <li><FaCheck/>Metaverse Demo   </li>
+              <li><FaCheck/>CMC and CG Listing   </li>
+            </ul>
+
+          </div>
         </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-        </SwiperSlide>
+   
+   
+  
       </Swiper>
 
             </div>

@@ -1,3 +1,39 @@
 .roadmap .swiper-slide{
     width: 300px;
+    background-color: transparent;
+}
+
+.swiper-slide-active .road-box{
+
+    background: linear-gradient(180deg, #00FF7E 0%, #00A652 100%);
+    box-shadow: inset 17px 16px 49px rgba(0, 0, 0, 0.25);
+    border-radius: 48px 0px;
+    width: 286px;
+    height: 100%;
+    padding-top: 8%;
+    padding-bottom: 2%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+.road-box{
+    background: linear-gradient(180deg, #FFFFFF 0%, #D0D0D0 100%);
+box-shadow: inset 17px 16px 49px rgba(0, 0, 0, 0.25);
+border-radius: 48px;
+width: 286px;
+    height: 100%;
+    padding-top: 8%;
+    padding-bottom: 2%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+.road-top h2{
+    font-size: 22px;
+    line-height: 11px;
+}
+.road-top p{
+    font-size: 13px;
+}
+.road-list li{
+    font-size: 13px;
+    line-height: 25px;
 }
