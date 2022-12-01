@@ -59,7 +59,7 @@ function WhyUs() {
               <div className="content-2 text-center">
                 <div className="why-content-img-head">
                   <img
-                    src="https://ik.imagekit.io/cforcrypto/Dework/Group_40.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669352347680"
+                    src="https://ik.imagekit.io/cforcrypto/Dework/features/white_v-8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669879313608"
                     alt=""
                   />
                 </div>
