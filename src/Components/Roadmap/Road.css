@@ -1,3 +1,20 @@
+.road-head h1{
+    font-style: normal;
+font-weight: 800;
+font-size: 55px;
+line-height: 138.4%;
+/* identical to box height, or 208px */
+
+text-align: center;
+padding-bottom: 2%;
+color: #0000008f;
+}
+.roadmap{
+    padding-top: 3%;
+    padding-bottom: 3%
+}
+
+
 .roadmap .swiper-slide{
     width: 300px;
     background-color: transparent;
