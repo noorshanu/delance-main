@@ -10,14 +10,19 @@
 .hero h1 {
   font-style: normal;
   font-weight: 500;
-  font-size: 55px;
+  font-size: 58px;
   line-height: 138.4%;
   /* or 104px */
 
   color: #000000;
 }
+.hero-sp-p{
+  font-size: 21px;
+    font-weight: 600;
+}
 .social-hero{
   gap: 1rem;
+  padding-bottom: 2%;
 }
 .social-hero a{
   font-size: 26px;

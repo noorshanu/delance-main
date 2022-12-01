@@ -22,8 +22,13 @@
   width: auto;
 }
 .feat-box {
-  padding: 10%;
-  height: 100%;
+  background: linear-gradient(180deg, #ffffff 0%, #dadada 100%);
+  border: 3px solid #00a652;
+  border-radius: 25px;
+  width: 288px;
+  padding-top: 3%;
+  padding-bottom: 2%;
+  height: 220px;
 }
 .feat-box h3 {
   font-style: normal;
@@ -41,12 +46,14 @@
 
 .feat-box p {
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 13px;
-  line-height: 94.4%;
+  line-height: 112.4%;
   padding-top: 1%;
   text-align: justify;
   color: #000000;
+  padding-left: 4%;
+  padding-right: 4%;
 }
 .black {
   color: #000000;
@@ -61,7 +68,8 @@
     margin-top: 11px;
 }
 .mtf-60{
-  margin-top: -58px;
+  margin-top: 20px;
+  padding-bottom: 3%;
 }
 @media (max-width:768px) {
   .feat-header h1 {

@@ -10,10 +10,12 @@
     color: #fff;
 }
 .token-img{
-    padding: 5%;
+    padding: 3%;
     width: auto;
-    height: 475px;
+    height: 510px;
 }
 .token{
     background: #000;
+    padding-top: 2%;
+    padding-bottom: 4%;
 }
