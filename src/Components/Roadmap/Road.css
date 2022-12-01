@@ -14,6 +14,7 @@
     padding-bottom: 2%;
     padding-left: 1%;
     padding-right: 1%;
+    filter:unset;
 }
 .road-box{
     background: linear-gradient(180deg, #FFFFFF 0%, #D0D0D0 100%);
@@ -25,6 +26,7 @@ width: 286px;
     padding-bottom: 2%;
     padding-left: 1%;
     padding-right: 1%;
+    filter: blur(3.5px);
 }
 .road-top h2{
     font-size: 22px;
