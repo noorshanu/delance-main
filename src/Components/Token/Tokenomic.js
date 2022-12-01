@@ -9,7 +9,7 @@ function Tokenomic() {
             <h1>Tokenomics</h1>
 
           </div>
-        <img src="https://ik.imagekit.io/cforcrypto/Dework/features/with_logo-8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669879313680" alt="" className='token-img'/>
+        <img src="https://ik.imagekit.io/cforcrypto/Dework/features/-w_logo-8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669889777261" alt="" className='token-img'/>
         </div>
         
         </section>
