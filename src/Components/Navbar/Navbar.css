@@ -55,6 +55,19 @@ a {
     align-items: center;
     gap: 2.5rem;
   }
+  .dropdown{
+    display: none;
+  }
+  .dropdown-display{
+    display: block;
+    position: absolute;
+    top: 9%;
+    margin-left: -26%;
+    background: #fff;
+    padding-left: 2%;
+    padding-bottom: 1%;
+    padding-right: 2%;
+  }
   
   
 

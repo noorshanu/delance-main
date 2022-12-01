@@ -5,6 +5,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 function Navbar() {
   const [showMediaIcons, setShowMediaIcons] = useState(false);
+  const [isOpen, setIsOpen] =useState(false)
 
   return (
     <>
@@ -27,6 +28,10 @@ function Navbar() {
           <ul>
            
             <li>
+              <a href="#drop" className="" onClick={()=>setIsOpen(!isOpen)}>About</a>
+            </li>
+            <div className={isOpen ?"dropdown-display" :"dropdown"}>
+            <li>
               <a href="/">About</a>
             </li>
             <li>
@@ -36,6 +41,8 @@ function Navbar() {
            <li>
             <a href="https://docs.dework.live/" target='_blank' rel="noreferrer">Whitepaper</a>
            </li>
+            </div>
+       
             
             <li>
               <NavLink to="/nft-market" target='_blank'>NFT marketplace</NavLink>
