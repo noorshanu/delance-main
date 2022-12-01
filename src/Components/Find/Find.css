@@ -31,7 +31,7 @@
     height: 100%;
    
     padding: 4% 3% 6% 4%;
-    color: #fff;
+    color: rgb(0, 0, 0);
 }
 .de-work-btn-box{
     background: linear-gradient(180deg, #E3E3E3 0%, #FFFFFF 99.72%);

@@ -4,8 +4,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
+import './Road.css'
+import "swiper/css/navigation";
+import { Navigation } from "swiper";
 
-
+import {FaCheck} from 'react-icons/fa'
 
 // import required modules
 import { EffectCoverflow, Pagination } from "swiper";
@@ -33,11 +36,21 @@ export default function Raod() {
           slideShadows: true,
         }}
         pagination={true}
-        modules={[EffectCoverflow, Pagination]}
+        navigation={true}
+        modules={[EffectCoverflow, Pagination,Navigation]}
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+          <div className="road-box">
+            <div className="road-top">
+              <h2>Q4 2022 </h2>
+              <p>( Nov-Dec )</p>
+            </div>
+            <ul>
+              <li><FaCheck/>Initial Project Plan </li>
+            </ul>
+
+          </div>
         </SwiperSlide>
         <SwiperSlide>
           <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
