@@ -8,6 +8,7 @@ import Partners from '../Components/Partners/Partners'
 import Footer from '../Components/Footer/Footer'
 import WhyUs from '../Components/WhyUs/WhyUs'
 import Tokenomic from 'Components/Token/Tokenomic'
+import Raod from 'Components/Roadmap/Raod'
 
 function Home() {
   return (
@@ -19,6 +20,7 @@ function Home() {
     <Find/>
     <WhyUs/>
     <Tokenomic/>
+    <Raod/>
     <Partners/>
     <Footer/>
     </>
