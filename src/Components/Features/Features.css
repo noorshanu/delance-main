@@ -45,8 +45,9 @@
 }
 
 .feat-box p {
+  font-family: auto;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 13px;
   line-height: 112.4%;
   padding-top: 1%;
@@ -84,6 +85,9 @@
       left: 15%;
       margin-top: 11px;
       z-index: -3;
+  }
+  .feat-box{
+    margin-bottom: 4%;
   }
   
 }

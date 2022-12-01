@@ -84,7 +84,7 @@
 }
 @media (max-width:768px) {
   .hero h1{
-    font-size: 48px;
+    font-size: 26px;
   }
   .hero-img{
     height: 260px;
@@ -99,4 +99,15 @@
   .side-2 {
     display: none;
   }
+  .hero-sp-p{
+    font-size: 14px;
+      font-weight: 600;
+  }
+  .social-hero a{
+    font-size: 14px;
+  }
+  .hero {
+    padding-top: 11%;
+    height: 62vh;
+}
 }

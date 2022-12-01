@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import { GiHamburgerMenu } from "react-icons/gi";
+import {FaAngleDown} from 'react-icons/fa'
 
 function Navbar() {
   const [showMediaIcons, setShowMediaIcons] = useState(false);
@@ -28,11 +29,11 @@ function Navbar() {
           <ul>
            
             <li>
-              <a href="#drop" className="" onClick={()=>setIsOpen(!isOpen)}>About</a>
+              <a href="#drop" className="" onClick={()=>setIsOpen(!isOpen)}>Home <FaAngleDown/></a>
             </li>
             <div className={isOpen ?"dropdown-display" :"dropdown"}>
             <li>
-              <a href="/">About</a>
+              <a href="/">About </a>
             </li>
             <li>
               <a href="#feature">Team</a>

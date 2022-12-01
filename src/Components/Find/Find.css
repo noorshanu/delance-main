@@ -58,7 +58,7 @@ line-height: 138.4%;
 }
 @media (max-width:768px) {
     .d-work-box{
-        width: 337px;
+        width: 290px;
         height: 100%;
         transform: unset;
     }
@@ -89,6 +89,7 @@ line-height: 138.4%;
         position: absolute;
         padding-top: 0%;
         overflow: hidden;
+        height: 4%;
     }
     
 }

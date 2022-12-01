@@ -48,5 +48,8 @@
     .foot-btn-grup   .hero-btn-2{
         transform: unset;
     }
+    .footer-logo img{
+        height: 36px;
+    }
     
 }

@@ -43,4 +43,8 @@ color: #0000008f;
     .enter{
         height: 96px;
     }
+    .part-head h1 {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 42px;}
 }
