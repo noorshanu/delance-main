@@ -1,4 +1,4 @@
-import React from 'react'
+import React ,{Suspense}from 'react'
 import './Hero.css'
 import {
   FaTwitter,
@@ -10,7 +10,12 @@ import {
   FaInstagram
 
 } from "react-icons/fa";
-
+import { Canvas } from "react-three-fiber";
+import { OrbitControls, useGLTF } from "@react-three/drei";
+function Model(props) {
+  const { scene } = useGLTF("./main.glb");
+  return <primitive object={scene} />;
+}
 function Hero() {
   return (
     <>
@@ -55,8 +60,14 @@ function Hero() {
           </div>
         </div>
         <div className='col-md-6 text-end align-items-center'>
-          <img className='hero-img' src='https://ik.imagekit.io/cforcrypto/Dework/Asset_1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669269508514' alt=""/>
-          
+          {/* <img className='hero-img' src='https://ik.imagekit.io/cforcrypto/Dework/Asset_1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669269508514' alt=""/> */}
+          <Canvas pixelRatio={[1, 2]} camera={{ position: [-15, 10, 40], fov: 60 }} style={{width:'100%',height:'450px'}} >
+      <ambientLight intensity={5} />
+      <Suspense fallback={null}>
+        <Model />
+      </Suspense>
+      <OrbitControls />
+    </Canvas>
         </div>
         </div>
    
