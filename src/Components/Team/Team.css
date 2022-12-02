@@ -50,3 +50,7 @@ color: #FFFFFF;
 .linked{
     text-align: end;
 }
+.team_details{
+    border-top: 1px solid #fff;
+    padding-top: 3%;
+}
