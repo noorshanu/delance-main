@@ -14,11 +14,14 @@ function Navbar() {
         <div className="logo">
           {" "}
           <div className="d-flex foot-logo">
+            <NavLink to='/'>
             <img
               src="https://ik.imagekit.io/cforcrypto/Dework/logo_new.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669805675437"
               alt=""
               className=""
             />
+            </NavLink>
+         
           </div>
         </div>
         <div
