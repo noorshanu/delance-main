@@ -60,7 +60,7 @@ function Hero() {
           </div>
         </div>
         <div className='col-md-6 text-end align-items-center'>
-          <img className='hero-img' src='https://ik.imagekit.io/cforcrypto/main.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669980122369' alt=""/>
+          <img className='hero-img' src='https://ik.imagekit.io/cforcrypto/Dework/find_jobs/Group_29.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1669981304630' alt=""/>
           {/* <Canvas pixelRatio={[1, 2]} camera={{ position: [-15, 10, 40], fov: 60 }} style={{width:'100%',height:'450px'}} >
       <ambientLight intensity={5} />
       <Suspense fallback={null}>
