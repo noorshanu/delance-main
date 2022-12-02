@@ -8,3 +8,23 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
     column-gap:30px;
 }
+.team-box{
+    border: 3px solid #00A652;
+    box-shadow: 4px 4px 15px 5px #00a652;
+    border-radius: 34px 0px;
+    padding: 5%;
+    height: 100%;
+}
+.box-img img{
+    width: 150px;
+    height: 150px;
+}
+.box-img h2{
+    font-style: normal;
+font-weight: 800;
+font-size: 20px;
+line-height: 37px;
+text-align: center;
+
+color: #00A652;
+}
