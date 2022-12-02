@@ -29,24 +29,49 @@ img{
 .academy-btn{
   display: flex;
   gap: 2rem;
+  padding-top: 4%;
+  padding-bottom: 4%;
 }
 .ad-btn-active{
-  padding: 1.2% 1%;
   background: linear-gradient(93.52deg, #00A652 0.78%, #006A34 102.15%, #58FFAA 102.16%);
   border: 0.5px solid #FFFFFF;
   box-shadow: 0px 7px 16px rgb(0 0 0 / 40%);
   border-radius: 5px;
   color: #fff !important;
-  font-size: 13px !important;
+  font-size: 18px !important;
   font-weight: 400 !important;
+  
+  padding: 8px 25px;
 }
 .ad-btn{
-padding: 1% 1%;
+
 background-color: rgba(163, 163, 163, 0.612);
 border: 0.5px solid #00A652;
 box-shadow: 0px 7px 16px rgb(0 0 0 / 40%);
   border-radius: 5px;
   color: #fff !important;
-  font-size: 13px !important;
+  font-size: 18px !important;
   font-weight: 400 !important;
+  
+  padding: 8px 25px;
+}
+.ad-p{
+  color: #00A652;
+  font-size: 28px;
+  font-weight: 500;
+
+}
+.academy-head h1{
+  font-size: 30px;
+  line-height: 40px;
+  color: #fff;
+}
+.record{
+  padding-top: 4%;
+  padding-bottom: 4%;
+}
+.record p{
+  color: #fff;
+  font-size: 26px;
+  font-weight: 400;
 }
