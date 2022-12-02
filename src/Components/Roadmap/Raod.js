@@ -62,26 +62,6 @@ export default function Raod() {
         </SwiperSlide>
         <SwiperSlide>
         <div className="road-box">
-         
-         <div className="road-top">
-           <h2>Q1 2023 </h2>
-           <p> ( Jan - March )</p>
-         </div>
-         <div className="road-list">
-           <p><GoPrimitiveDot /> NFT Launch  </p>
-           <p><GoPrimitiveDot/> NFT MarketPlace </p>
-           <p><GoPrimitiveDot/> Freelance Platform Launch </p>
-           <p><GoPrimitiveDot className=""/> Exchanges Listing  </p>
-           <p><GoPrimitiveDot/> Metaverse Development    </p>
-           
-         </div>
-       </div>
-       
-        </SwiperSlide>
-        <SwiperSlide>
-    
-        </SwiperSlide>
-        <div className="road-box">
             <div className="road-top">
               <h2>Q2 2023</h2>
               <p>( April -June )   </p>
@@ -94,6 +74,11 @@ export default function Raod() {
             </div>
 
           </div>
+        </SwiperSlide>
+        <SwiperSlide>
+    
+        </SwiperSlide>
+   
    
   
       </Swiper>
