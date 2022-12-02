@@ -11,11 +11,14 @@ function AcademyPage() {
 
             </div>
             <div className='academy-btn'>
-                <a href="/">All Courses</a>
-                <a href="/">Deelance App</a>
-                <a href="/">Token</a>
-                <a href="/">Generals</a>
+                <a href="/" className='ad-btn-active'>All Courses</a>
+                <a href="/" className='ad-btn'>Deelance App</a>
+                <a href="/" className='ad-btn'>Token</a>
+                <a href="/" className='ad-btn'>Generals</a>
                 
+            </div>
+            <div className='record'>
+                <p>Coming soon...</p>
             </div>
         </div>
 

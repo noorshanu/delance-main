@@ -26,3 +26,27 @@ img{
 .academy{
   padding-top: 10%;
 }
+.academy-btn{
+  display: flex;
+  gap: 2rem;
+}
+.ad-btn-active{
+  padding: 1.2% 1%;
+  background: linear-gradient(93.52deg, #00A652 0.78%, #006A34 102.15%, #58FFAA 102.16%);
+  border: 0.5px solid #FFFFFF;
+  box-shadow: 0px 7px 16px rgb(0 0 0 / 40%);
+  border-radius: 5px;
+  color: #fff !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+}
+.ad-btn{
+padding: 1% 1%;
+background-color: rgba(163, 163, 163, 0.612);
+border: 0.5px solid #00A652;
+box-shadow: 0px 7px 16px rgb(0 0 0 / 40%);
+  border-radius: 5px;
+  color: #fff !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+}
