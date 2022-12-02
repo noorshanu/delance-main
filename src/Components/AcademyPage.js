@@ -10,6 +10,13 @@ function AcademyPage() {
             <h1>Bondex is an ecosystem for both crypto natives as well as those who are entering the space for the first time. Here you will find the necessary tools and materials to get up to speed on the latest developments</h1>
 
             </div>
+            <div className='academy-btn'>
+                <a href="/">All Courses</a>
+                <a href="/">Deelance App</a>
+                <a href="/">Token</a>
+                <a href="/">Generals</a>
+                
+            </div>
         </div>
 
     </section>
