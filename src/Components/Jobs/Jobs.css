@@ -91,3 +91,16 @@ text-align: center;
 color: #FFFFFF;
 
 }
+.job-side-1{
+    position: absolute;
+    width: auto;
+    height: auto;
+    right: 0;
+}
+.job-side-2 {
+    position: absolute;
+    width: auto;
+    height: auto;
+   left: 0;
+   margin-top: -26%;
+}
