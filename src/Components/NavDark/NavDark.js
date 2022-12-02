@@ -55,7 +55,7 @@ function NavDark() {
               <NavLink to="/job-portal">Find Job</NavLink>
             </li>
             <li>
-              <NavLink to="academy">Academy</NavLink>
+              <NavLink to="/academy">Academy</NavLink>
             </li>
             
             <li>
