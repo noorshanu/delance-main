@@ -52,7 +52,7 @@ function Navbar() {
               <NavLink to="/job-portal" target='_blank'>Find Job</NavLink>
             </li>
             <li>
-              <a href="#road">Academy</a>
+              <NavLink to="academy" target='_blank'>Academy</NavLink>
             </li>
             
             <li>
