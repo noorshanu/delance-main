@@ -49,13 +49,13 @@ function NavDark() {
        
             
             <li>
-              <NavLink to="/nft-market" target='_blank'>NFT marketplace</NavLink>
+              <NavLink to="/nft-market" >NFT marketplace</NavLink>
             </li>
             <li>
-              <NavLink to="/job-portal" target='_blank'>Find Job</NavLink>
+              <NavLink to="/job-portal">Find Job</NavLink>
             </li>
             <li>
-              <NavLink to="academy" target='_blank'>Academy</NavLink>
+              <NavLink to="academy">Academy</NavLink>
             </li>
             
             <li>

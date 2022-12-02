@@ -6,6 +6,7 @@ function Jobs() {
     <>
     <section className='jobs'>
         <div className='container'>
+            <img className='job-side-1' src="https://ik.imagekit.io/cforcrypto/Dework/find_jobs/Asset_31.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669996455286" alt=""/>
             <div className='job-head'>
                 <h1>Find Jobs on your finguretips , Access to best jobs and leading professionals in the industry
 </h1>
@@ -39,6 +40,7 @@ function Jobs() {
                     </div>
                 
             </div>
+            <img className='job-side-2' src="https://ik.imagekit.io/cforcrypto/Dework/find_jobs/Asset_32.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669996455366" alt=""/>
             <div className='job-soon'>
                 <h1>Our job Portal is coming soon.....
 </h1>
