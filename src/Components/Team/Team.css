@@ -28,3 +28,25 @@ text-align: center;
 
 color: #00A652;
 }
+.box-img p{
+    font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 22px;
+text-align: center;
+
+color: #FFFFFF;
+}
+.team_details p{
+    font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 22px;
+text-align: center;
+
+color: #FFFFFF;
+
+}
+.linked{
+    text-align: end;
+}
