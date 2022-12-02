@@ -1,14 +1,15 @@
 import AcademyPage from 'Components/AcademyPage'
-import Footer from 'Components/Footer/Footer'
-import Navbar from 'Components/Navbar/Navbar'
+import FootDark from 'Components/FootDark/FootDark'
+
+import NavDark from 'Components/NavDark/NavDark'
 import React from 'react'
 
 function Academy() {
   return (
     <div className='dark'>
-        <Navbar/>
+     <NavDark/>
         <AcademyPage/>
-        <Footer/>
+        <FootDark/>
     </div>
   )
 }

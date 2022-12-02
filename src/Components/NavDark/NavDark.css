@@ -1,0 +1,7 @@
+.menu-dark ul li:hover > a {
+  transform-origin: left;
+  color: rgb(255, 255, 255) !important;
+  text-decoration: wavy;
+  transition: 0.5s;
+}
+   

@@ -1,14 +1,14 @@
-import Footer from 'Components/Footer/Footer'
+import FootDark from 'Components/FootDark/FootDark'
 import Jobs from 'Components/Jobs/Jobs'
-import Navbar from 'Components/Navbar/Navbar'
+import NavDark from 'Components/NavDark/NavDark'
 import React from 'react'
 
 function JobPortal() {
   return (
     <div className='dark'>
-        <Navbar/>
+        <NavDark/>
         <Jobs/>
-        <Footer/>
+        <FootDark/>
     </div>
   )
 }
