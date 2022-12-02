@@ -39,7 +39,7 @@ function Navbar() {
               <a href="/">About </a>
             </li>
             <li>
-              <a href="#feature">Team</a>
+              <NavLink to="/team">Team</NavLink>
             </li>
            
            <li>
