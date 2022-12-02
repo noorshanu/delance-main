@@ -35,7 +35,7 @@ function Jobs() {
                     <div className='col-md-3 col-6'>
                     <div className='job-box-4'>
                     <img src="https://ik.imagekit.io/cforcrypto/Dework/find_jobs/multitasking-person_1.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1669980920923" alt=""/>
-                        <p>SEARCH EXPERTS CONDIDATES</p>
+                        <p>SEARCH EXPERTS</p>
                         </div>
                     </div>
                 
