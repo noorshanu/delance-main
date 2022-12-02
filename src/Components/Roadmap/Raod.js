@@ -51,7 +51,7 @@ export default function Raod() {
               <p><FaCheck /> website Design  </p>
               <p><FaCheck/> Website Live </p>
               <p><FaCheck/> Initial Smart-contracts Deployment  </p>
-              <p><GoPrimitiveDot className=""/> Initial Project Plan </p>
+              <p><FaCheck className=""/> Initial Project Plan </p>
               <p><GoPrimitiveDot/> Private Sale  </p>
               <p><GoPrimitiveDot/> Project Launch  </p>
               <p><GoPrimitiveDot/> Metaverse Demo   </p>

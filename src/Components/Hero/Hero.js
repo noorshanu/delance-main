@@ -13,7 +13,7 @@ import {
 import { Canvas } from "react-three-fiber";
 import { OrbitControls, useGLTF } from "@react-three/drei";
 function Model(props) {
-  const { scene } = useGLTF("./main.glb");
+  const { scene } = useGLTF("./main2.glb");
   return <primitive object={scene} />;
 }
 function Hero() {
