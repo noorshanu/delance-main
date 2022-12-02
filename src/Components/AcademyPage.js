@@ -12,9 +12,9 @@ function AcademyPage() {
             </div>
             <div className='academy-btn'>
                 <a href="/" className='ad-btn-active'>All Courses</a>
-                <a href="/" className='ad-btn'>Deelance App</a>
-                <a href="/" className='ad-btn'>Token</a>
-                <a href="/" className='ad-btn'>Generals</a>
+                <a href="/" className='ad-btn'>NFT MarketPlace</a>
+            
+                <a href="/" className='ad-btn'>Press Releases</a>
                 
             </div>
             <div className='record'>
