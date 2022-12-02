@@ -44,7 +44,7 @@ function FootDark() {
                   <FaFacebookSquare />
                 </a>
                 <a
-                  href="https://medium.com/@deeLancer"
+                  href="https://medium.com/@deeLance"
                   target="_blank"
                   rel="noreferrer"
                 >
