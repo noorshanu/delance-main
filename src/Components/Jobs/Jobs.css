@@ -1,4 +1,93 @@
 .jobs{
     padding-top: 10%;
-    padding-bottom: 5%;
+    padding-bottom: 1%;
+}
+.job-head h1{
+   
+font-style: normal;
+font-weight: 700;
+font-size: 51px;
+line-height: 88px;
+text-align: center;
+
+color: #FFFFFF;
+}
+.job-head{
+    padding-top: 2%;
+    padding-bottom: 3%;
+}
+.job-box img{
+    height: auto;
+    width: 199px;
+}
+.job-box p{
+    font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 38px;
+/* identical to box height */
+
+text-align: center;
+
+color: #FFFFFF;
+}
+.job-box-2 img{
+    width: auto;
+    height: 151px;
+}
+.job-box-2 p{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 38px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+}
+.job-box-3 img{
+    width: auto;
+    height: 150px;
+}
+.job-box-3 p{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 38px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+}
+.job-box-4 img{
+    width: auto;
+    height: 145px;
+}
+.job-box-4 p{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 38px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+}
+.job-soon{
+    text-align: center;
+    padding-top: 5%;
+}
+
+.job-soon h1{
+    font-style: normal;
+font-weight: 500;
+font-size: 35px;
+line-height: 52px;
+text-align: center;
+
+color: #FFFFFF;
+
 }
