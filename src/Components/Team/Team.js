@@ -22,7 +22,7 @@ function Team() {
         <div className="team-grid ">
           <div className="team-box">
             <div className="linked">
-              <FaLinkedin />{" "}
+              <a className="linked-in" href="/"><FaLinkedin/> </a>{" "}
             </div>
             <div className="text-center box-img">
               <img
@@ -47,7 +47,7 @@ function Team() {
 
           <div className="team-box">
             <div className="linked">
-              <FaLinkedin />{" "}
+              <a className="linked-in" href="/"><FaLinkedin/> </a>{" "}
             </div>
             <div className="text-center box-img">
               <img
@@ -72,7 +72,7 @@ function Team() {
 
           <div className="team-box">
             <div className="linked">
-              <FaLinkedin />{" "}
+              <a className="linked-in" href="/"><FaLinkedin/> </a>{" "}
             </div>
             <div className="text-center box-img">
               <img
