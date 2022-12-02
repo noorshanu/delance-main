@@ -3,8 +3,9 @@
  height: 100vh;
 }
 .hero-img {
-  height: 355px;
+  height: 513px;
   width: auto;
+  margin-top: -22px;
 
 }
 .hero h1 {

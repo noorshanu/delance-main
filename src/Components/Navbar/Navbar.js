@@ -49,7 +49,7 @@ function Navbar() {
               <NavLink to="/nft-market" target='_blank'>NFT marketplace</NavLink>
             </li>
             <li>
-              <a href="#road">Find Job</a>
+              <NavLink to="/job-portal" target='_blank'>Find Job</NavLink>
             </li>
             <li>
               <a href="#road">Academy</a>
