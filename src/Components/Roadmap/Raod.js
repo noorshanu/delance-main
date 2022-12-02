@@ -9,7 +9,7 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper";
 
 import {FaCheck} from 'react-icons/fa'
-import {BsDot} from 'react-icons/bs'
+import {GoPrimitiveDot} from 'react-icons/go'
 
 // import required modules
 import { EffectCoverflow, Pagination } from "swiper";
@@ -51,11 +51,11 @@ export default function Raod() {
               <p><FaCheck /> website Design  </p>
               <p><FaCheck/> Website Live </p>
               <p><FaCheck/> Initial Smart-contracts Deployment  </p>
-              <p><BsDot className=""/> Initial Project Plan </p>
-              <p><BsDot/> Private Sale  </p>
-              <p><BsDot/> Project Launch  </p>
-              <p><BsDot/> Metaverse Demo   </p>
-              <p><BsDot/> CMC and CG Listing   </p>
+              <p><GoPrimitiveDot className=""/> Initial Project Plan </p>
+              <p><GoPrimitiveDot/> Private Sale  </p>
+              <p><GoPrimitiveDot/> Project Launch  </p>
+              <p><GoPrimitiveDot/> Metaverse Demo   </p>
+              <p><GoPrimitiveDot/> CMC and CG Listing   </p>
             </div>
 
           </div>
@@ -67,9 +67,9 @@ export default function Raod() {
               <p>( April -June )   </p>
             </div>
             <div className="road-list">
-              <p><BsDot /> App development   </p>
-              <p><BsDot/> Metaverse Integration to Main Platform </p>
-              <p><BsDot/> Further Development   </p>
+              <p><GoPrimitiveDot /> App development   </p>
+              <p><GoPrimitiveDot/> Metaverse Integration to Main Platform </p>
+              <p><GoPrimitiveDot/> Further Development   </p>
             
             </div>
 
@@ -83,11 +83,11 @@ export default function Raod() {
               <p> ( Jan - March )</p>
             </div>
             <div className="road-list">
-              <p><BsDot /> NFT Launch  </p>
-              <p><BsDot/> NFT MarketPlace </p>
-              <p><BsDot/> Freelance Platform Launch </p>
-              <p><BsDot className=""/> Exchanges Listing  </p>
-              <p><BsDot/> Metaverse Development    </p>
+              <p><GoPrimitiveDot /> NFT Launch  </p>
+              <p><GoPrimitiveDot/> NFT MarketPlace </p>
+              <p><GoPrimitiveDot/> Freelance Platform Launch </p>
+              <p><GoPrimitiveDot className=""/> Exchanges Listing  </p>
+              <p><GoPrimitiveDot/> Metaverse Development    </p>
               
             </div>
           </div>
