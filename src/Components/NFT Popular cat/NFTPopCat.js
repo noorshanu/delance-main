@@ -27,7 +27,8 @@ function NFTPopCat() {
 
                 <div className="pop-cat-nft-box">                  
                   <div className="pop-cat-nft-img ">
-                   <img src="https://ik.imagekit.io/cforcrypto/Dework/nft_market/Vector-3.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670059984853" alt="" className="art"/>                   
+                  <img src="https://ik.imagekit.io/cforcrypto/Dework/nft_market/Vector.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670059984662" alt="" className="music"/>                   
+               
                   </div>
                   <div className="pop-cat-nft-text">
                       ART
@@ -36,7 +37,7 @@ function NFTPopCat() {
 
                 <div className="pop-cat-nft-box">                  
                   <div className="pop-cat-nft-img ">
-                    <img src="https://ik.imagekit.io/cforcrypto/Dework/nft_market/Vector.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670059984662" alt="" className="music"/>                   
+                  <img src="https://ik.imagekit.io/cforcrypto/Dework/nft_market/Vector-1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670059984626" alt="domain" className="domain"/>  
                   </div>
                   <div className="pop-cat-nft-text">
                       MUSIC
@@ -45,7 +46,8 @@ function NFTPopCat() {
 
                 <div className="pop-cat-nft-box">                  
                   <div className="pop-cat-nft-img ">
-                  <img src="https://ik.imagekit.io/cforcrypto/Dework/nft_market/Vector-1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670059984626" alt="domain" className="domain"/>                  
+                  <img src="https://ik.imagekit.io/cforcrypto/Dework/nft_market/Vector-3.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670059984853" alt="" className="art"/>    
+                
                   </div>
                   <div className="pop-cat-nft-text">
                       DOMAIN NAMES
@@ -63,7 +65,7 @@ function NFTPopCat() {
 
                 <div className="pop-cat-nft-box">                  
                   <div className="pop-cat-nft-img ">
-                    <GiCardExchange />                    
+                    <img src="https://ik.imagekit.io/cforcrypto/Dework/nft_market/Union.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670059984626" alt="" className="trend"/>                  
                   </div>
                   <div className="pop-cat-nft-text">
                       TRADING CARDS
@@ -72,7 +74,7 @@ function NFTPopCat() {
 
                 <div className="pop-cat-nft-box">                  
                   <div className="pop-cat-nft-img ">
-                    <CiCircleMore />                    
+                    <img src="https://ik.imagekit.io/cforcrypto/Dework/nft_market/Union-1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670059984638" alt="" className="more"/>                
                   </div>
                   <div className="pop-cat-nft-text">
                       MORE
