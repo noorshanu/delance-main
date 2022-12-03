@@ -3,15 +3,13 @@
   }
   
   .nft-trending-head h1 {
-    font-style: normal;
+    ont-style: normal;
     font-weight: 800;
-    font-size: 35px;
+    font-size: 45px;
     line-height: 138.4%;
-    /* identical to box height, or 208px */
-  
     text-align: center;
-  
-    color: #0000008f;
+    color: #ffffff;
+    padding-bottom: 2%;
   }
 
   .top-seller-head span{
