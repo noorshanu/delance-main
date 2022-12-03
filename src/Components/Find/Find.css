@@ -16,12 +16,12 @@
 }
 .bg-dework{
     background-color: rgba(0, 0, 0, 0.393);
-    background-image: url('https://ik.imagekit.io/cforcrypto/Dework/doc_2022-11-25_21-58-56.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1669394272452');
+    background-image: url('https://ik.imagekit.io/cforcrypto/Dework/2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670100793173');
     background-size: cover;
-    /* background-position: center; */
+    background-position: center;
     background-repeat: no-repeat;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding-top: 8%;
+    padding-bottom: 10%;
 }
 .d-work-box{
     background: linear-gradient(180deg, #58FFAA 0%, #00A652 86.47%);
