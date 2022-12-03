@@ -23,7 +23,7 @@ function Team() {
         <div className="mb-12">
               <div className="team-box">
                 <div className="linked">
-                  <a className="linked-in" href="/">
+                  <a className="linked-in" href="https://www.linkedin.com/in/suresh-joshi-61b3998" target='_blank' rel="noreferrer">
                     <FaLinkedin />{" "}
                   </a>{" "}
                 </div>
@@ -53,7 +53,7 @@ function Team() {
           <div className="mb-12">
             <div className="team-box">
               <div className="linked">
-                <a className="linked-in" href="/">
+                <a className="linked-in" href="https://www.linkedin.com/in/jagjeet-jena-a48452163" target='_blank' rel="noreferrer">
                   <FaLinkedin />{" "}
                 </a>{" "}
               </div>
@@ -81,7 +81,7 @@ function Team() {
           <div className="mb-12">
             <div className="team-box">
               <div className="linked">
-                <a className="linked-in" href="/">
+                <a className="linked-in" href="/" target='_blank' rel="noreferrer">
                   <FaLinkedin />{" "}
                 </a>{" "}
               </div>
@@ -110,7 +110,7 @@ function Team() {
           <div className="mb-12">
             <div className="team-box">
               <div className="linked">
-                <a className="linked-in" href="/">
+                <a className="linked-in" href="https://www.linkedin.com/in/suhaibt/" target='_blank' rel="noreferrer">
                   <FaLinkedin />{" "}
                 </a>{" "}
               </div>
@@ -139,7 +139,7 @@ function Team() {
           <div className="mb-12">
             <div className="team-box">
               <div className="linked">
-                <a className="linked-in" href="/">
+                <a className="linked-in" href="https://www.linkedin.com/in/deeba-965b49121"  target='_blank' rel="noreferrer">
                   <FaLinkedin />{" "}
                 </a>{" "}
               </div>
@@ -166,7 +166,7 @@ function Team() {
           <div className="mb-12">
             <div className="team-box">
               <div className="linked">
-                <a className="linked-in" href="/">
+                <a className="linked-in" href="https://www.linkedin.com/in/adnan-a-rahi-9a2573216/" target='_blank' rel="noreferrer">
                   <FaLinkedin />{" "}
                 </a>{" "}
               </div>
@@ -192,7 +192,7 @@ function Team() {
           <div className="mb-12">
             <div className="team-box">
               <div className="linked">
-                <a className="linked-in" href="/">
+                <a className="linked-in" href="https://www.linkedin.com/in/dommeti-d-329235257/" target='_blank' rel="noreferrer">
                   <FaLinkedin />{" "}
                 </a>{" "}
               </div>
@@ -223,7 +223,7 @@ function Team() {
           <div className="mb-12">
             <div className="team-box">
               <div className="linked">
-                <a className="linked-in" href="/">
+                <a className="linked-in" href="https://www.linkedin.com/in/gurpreetsingh993/" target='_blank' rel="noreferrer">
                   <FaLinkedin />{" "}
                 </a>{" "}
               </div>
@@ -249,7 +249,7 @@ function Team() {
           <div className="mb-12">
             <div className="team-box">
               <div className="linked">
-                <a className="linked-in" href="/">
+                <a className="linked-in" href="https://www.linkedin.com/in/noor-alam-aa722314b/" target='_blank' rel="noreferrer">
                   <FaLinkedin />{" "}
                 </a>{" "}
               </div>
@@ -276,7 +276,7 @@ function Team() {
           <div className="mb-12">
             <div className="team-box">
               <div className="linked">
-                <a className="linked-in" href="/">
+                <a className="linked-in" href="https://www.linkedin.com/in/visakh-john-thykoodan-8b4709172/" target='_blank' rel="noreferrer">
                   <FaLinkedin />{" "}
                 </a>{" "}
               </div>
