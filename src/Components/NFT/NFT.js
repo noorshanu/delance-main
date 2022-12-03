@@ -15,12 +15,12 @@ function NFT() {
                 Welcome to the future, you can buy and sell awesome artworks form here. The world largest digital marketplace for non-fungible tokens.
                 </h6>
                 <div className='nft-hero-btn'>
-                  <a href="/" className='nft-hero-btn-1'>Explore</a>
-                  <a href="/" className='nft-hero-btn-2'>Sell</a>
+                  <a href="/" className='nft-hero-btn-1'>Coming Soon..</a>
+                  <a href="/" className='nft-hero-btn-2'>Coming Soon..</a>
                 </div>
               </div>
               <div className='col-md-6 text-end align-items-center'>
-                <img className='hero-img' src='https://ik.imagekit.io/cforcrypto/Dework/Asset_1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669269508514' alt=""/>
+                <img className='hero-img' src='https://ik.imagekit.io/cforcrypto/Dework/nft_market/Asset_35.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670070227415' alt=""/>
               </div>            
         </div>    
       </div>
