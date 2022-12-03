@@ -33,7 +33,9 @@
     line-height: 39px;
   }
 
-
+.trending-nft-text-wrap{
+  color: #ffffff;
+}
 
   .margin-top-bottom-10px{
     margin: 5% 0;
@@ -53,8 +55,9 @@
   .trending-nft-outerbox{  
     border-radius: 10px;  
     
-    background: linear-gradient(white, white) padding-box,
-    linear-gradient(to left,  #00a652, transparent,  #00a652);
+    background: linear-gradient(black, black) padding-box,
+    linear-gradient(to left,  #00a652, black,  #00a652);
+    border-image-source: linear-gradient(89.18deg, #2BFF47 0.71%, rgba(241, 255, 5, 0) 35.23%, rgba(241, 255, 5, 0) 64.47%, #10FF50 99.29%);
     border: 3px solid transparent;
     padding: 20px 50px;
   }

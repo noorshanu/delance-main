@@ -1,6 +1,6 @@
 import React from "react";
 import "./NFTTrending.css";
-import { nftImg1 } from "../../assets/assets/images";
+
 
 function NFTTrending() {
   return (
@@ -19,7 +19,7 @@ function NFTTrending() {
               <div className="trending-nft-grid-container ">
 
                 <div className="trending-nft-box">                  
-                  <div className="trending-nf-img-green "><img src={nftImg1} /></div>
+                  <div className="trending-nf-img-green "><img src='https://ik.imagekit.io/cforcrypto/Dework/nft_market/Rectangle_138.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670059984626' alt="" /></div>
                   <div className="trending-nft-text-wrap">
                       <div className="">Defraudment <div>0.09 ETH  1/14</div></div>
                       <div>91</div>
@@ -27,7 +27,7 @@ function NFTTrending() {
                 </div>
 
                 <div className="trending-nft-box">                  
-                  <div className="trending-nf-img-yellow "><img src={nftImg1} /></div>
+                  <div className="trending-nf-img-yellow "><img src='https://ik.imagekit.io/cforcrypto/Dework/nft_market/Rectangle_139.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670059984666' alt="" /></div>
                   <div className="trending-nft-text-wrap">
                       <div className="">Defraudment <div>0.09 ETH  1/14</div></div>
                       <div>91</div>
@@ -35,7 +35,7 @@ function NFTTrending() {
                 </div>
 
                 <div className="trending-nft-box">                  
-                  <div className="trending-nf-img-green "><img src={nftImg1} /></div>
+                  <div className="trending-nf-img-green "><img src='https://ik.imagekit.io/cforcrypto/Dework/nft_market/Rectangle_140.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670059985040'  alt=""/></div>
                   <div className="trending-nft-text-wrap">
                       <div className="">Defraudment <div>0.09 ETH  1/14</div></div>
                       <div>91</div>
@@ -43,7 +43,7 @@ function NFTTrending() {
                 </div>
 
                 <div className="trending-nft-box">                  
-                  <div className="trending-nf-img-yellow"><img src={nftImg1} /></div>
+                  <div className="trending-nf-img-yellow"><img src='https://ik.imagekit.io/cforcrypto/Dework/nft_market/Rectangle_141.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670059984849' alt="" /></div>
                   <div className="trending-nft-text-wrap">
                       <div className="">Defraudment <div>0.09 ETH  1/14</div></div>
                       <div>91</div>

@@ -1,10 +1,6 @@
 import React from "react";
 import "./NFTPopCat.css";
 
-import {ImEarth} from 'react-icons/im';
-import {TbBrandMeta} from 'react-icons/tb';
-import {GiCardExchange} from 'react-icons/gi';
-import {CiCircleMore} from 'react-icons/ci';
 
 
 function NFTPopCat() {
