@@ -6,6 +6,7 @@ function Team() {
   return (
     <section className="team">
       <div className="container">
+      <img className='team-side-1' src="https://ik.imagekit.io/cforcrypto/Dework/find_jobs/Asset_31.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669996455286" alt=""/>
         <div className="team-head text-center">
           <h1>TEAM</h1>
           <div className="team-sub ">
@@ -18,8 +19,10 @@ function Team() {
             </p>
           </div>
         </div>
-
+        <img className='team-side-2' src="https://ik.imagekit.io/cforcrypto/Dework/find_jobs/Asset_32.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669996455366" alt=""/>
         <div className="team-grid ">
+
+          <div className="mb-12">
           <div className="team-box">
             <div className="linked">
               <a className="linked-in" href="/">
@@ -45,8 +48,9 @@ function Team() {
                 specialist team to make web3 Platform the home of freelancers.
               </p>
             </div>
-          </div>
+          </div></div>
 
+          <div className="mb-12">
           <div className="team-box">
             <div className="linked">
               <a className="linked-in" href="/">
@@ -71,8 +75,9 @@ function Team() {
                 project that exceeds all expectations.
               </p>
             </div>
-          </div>
+          </div></div>
 
+          <div className="mb-12">
           <div className="team-box">
             <div className="linked">
               <a className="linked-in" href="/">
@@ -97,10 +102,10 @@ function Team() {
                 platforms, my major work fields.
               </p>
             </div>
-          </div>
+          </div></div>
 
           {/* 2rd */}
-
+          <div className="mb-12">
           <div className="team-box">
             <div className="linked">
               <a className="linked-in" href="/">
@@ -126,8 +131,9 @@ function Team() {
                 expectations .
               </p>
             </div>
-          </div>
-
+          </div></div>
+          
+          <div className="mb-12">
           <div className="team-box">
             <div className="linked">
               <a className="linked-in" href="/">
@@ -149,8 +155,10 @@ function Team() {
 
               </p>
             </div>
-          </div>
+          </div></div>
+          
 
+          <div className="mb-12">
           <div className="team-box">
             <div className="linked">
               <a className="linked-in" href="/">
@@ -172,8 +180,10 @@ function Team() {
 
               </p>
             </div>
-          </div>
+          </div></div>
           {/* 3rd */}
+
+          <div className="mb-12">
           <div className="team-box">
             <div className="linked">
               <a className="linked-in" href="/">
@@ -195,8 +205,10 @@ function Team() {
 
               </p>
             </div>
-          </div>
+          </div></div>
 
+
+          <div className="mb-12">
          <div className="team-box">
             <div className="linked">
               <a className="linked-in" href="/">
@@ -218,9 +230,10 @@ function Team() {
 
               </p>
             </div>
-          </div>
+          </div></div>
 
-
+          
+          <div className="mb-12">
          <div className="team-box">
             <div className="linked">
               <a className="linked-in" href="/">
@@ -241,7 +254,7 @@ function Team() {
 
               </p>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
     </section>

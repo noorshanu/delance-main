@@ -1,5 +1,5 @@
 .team{
-    padding-top: 10%;
+    padding-top: 3%;
     padding-bottom: 5%;
 }
 
@@ -67,7 +67,7 @@ color: #FFFFFF;
 .team-head h1{
     font-style: normal;
 font-weight: 800;
-font-size: 80px;
+font-size: 55px;
 line-height: 120px;
 /* identical to box height */
 
@@ -77,8 +77,27 @@ color: #00A652;
 .team-sub p{
     font-style: normal;
     font-weight: 500;
-    font-size: 30px;
-    line-height: 52px;
+    font-size: 20px;
+    text-align: start;
+    line-height: 40px;
     color: #FFFFFF;
+    padding-bottom: 2%;
 
+}
+.mb-12{
+    margin-bottom: 12%;
+    margin-top: 5%;
+}
+.team-side-1{
+    position: absolute;
+    width: auto;
+    height: 226px;
+    right: 40px;
+}
+.team-side-2{
+    position: absolute;
+    width: auto;
+    height: 226px;
+    left: 35px;
+    margin-top: -18%;
 }
