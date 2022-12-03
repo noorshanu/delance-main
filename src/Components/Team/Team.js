@@ -8,7 +8,7 @@ function Team() {
       <div className="container">
         <div className="team-head text-center">
           <h1>TEAM</h1>
-          <div className="team-sub text-center">
+          <div className="team-sub ">
             <p>
               DeeLancer team is composed of people that worked as freelancers
               ,understand the frustrations and pain points people face web2
