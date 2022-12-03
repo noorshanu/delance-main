@@ -45,7 +45,7 @@ function NFTPopCat() {
 
                 <div className="pop-cat-nft-box">                  
                   <div className="pop-cat-nft-img ">
-                    <ImEarth />                    
+                  <img src="https://ik.imagekit.io/cforcrypto/Dework/nft_market/Vector-1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670059984626" alt="domain" className="domain"/>                  
                   </div>
                   <div className="pop-cat-nft-text">
                       DOMAIN NAMES
@@ -54,7 +54,7 @@ function NFTPopCat() {
 
                 <div className="pop-cat-nft-box">                  
                   <div className="pop-cat-nft-img ">
-                    <TbBrandMeta />                    
+                    <img src="https://ik.imagekit.io/cforcrypto/Dework/nft_market/Vector-2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670059984631" alt=""/>                   
                   </div>
                   <div className="pop-cat-nft-text">
                       VIRTUAL WORLDS
