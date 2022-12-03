@@ -101,3 +101,23 @@ color: #00A652;
     left: 35px;
     margin-top: -18%;
 }
+
+@media (max-width:768px) {
+    .team-sub p{
+        font-size: 16px;
+line-height: 29px;
+font-weight: 500;
+
+    }
+    .team-head h1 {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 38px;
+        line-height: 71px;
+    }
+    .team-grid {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        column-gap: 50px;
+      }
+}

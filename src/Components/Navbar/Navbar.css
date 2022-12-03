@@ -105,7 +105,7 @@ font-weight: 400 !important;
   }
   .menu-link ul li:hover > a {
     transform-origin: left;
-    color: rgb(0, 0, 0);
+    color: rgb(57, 227, 38);
     text-decoration: wavy;
     transition: 0.5s;
   }

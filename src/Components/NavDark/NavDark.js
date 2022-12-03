@@ -67,7 +67,7 @@ function NavDark() {
         </div>
         {/* hamburget menu start  */}
         <div className="hamburger-menu">
-          <a href="#home" onClick={() => setShowMediaIcons(!showMediaIcons)}>
+          <a href="#home" className="dark-a" onClick={() => setShowMediaIcons(!showMediaIcons)}>
             <GiHamburgerMenu />
           </a>
         </div>

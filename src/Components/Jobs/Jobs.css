@@ -106,13 +106,12 @@ color: #FFFFFF;
 }
 
 @media (max-width:768px) {
-    .job-side-1 {
-        display: none;
-      }
+   
       .job-head h1 {
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 28px;
+        font-size: 16px;
+        line-height: 29px;
+        font-weight: 500;
+        
         text-align: center;
         color: #FFFFFF;
       }
@@ -124,6 +123,10 @@ color: #FFFFFF;
         width: auto;
         height: 81px;
       }
+      .job-box-3 img {
+        width: auto;
+        height: 104px;
+      }
       .job-box-2 p {
         font-style: normal;
         font-weight: 600;
@@ -134,8 +137,29 @@ color: #FFFFFF;
         font-size: 10px;
       }
 
-      .job-side-2 {
-     display: none;
+      .job-box-3 p {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 11px;
       }
+      .job-box-4 p {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 11px;
+      }
+      
+      
+      
+      .job-box-4 img {
+        width: auto;
+        height: 106px;
+      }
+      .job-soon h1 {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 19px;
+      }
+
+   
     
 }

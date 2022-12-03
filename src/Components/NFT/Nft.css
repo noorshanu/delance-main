@@ -137,4 +137,53 @@ padding-bottom: 6%;
       padding-top: 11%;
       height: 62vh;
   }
+  .hero-nft h1 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+  }
+  .hero-nft h6 {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+  }
+
+  .nft-hero-btn-1 {
+   
+    font-size: 11px;
+  }
+  .nft-hero-btn-2{
+    font-size: 11px;
+  }
+  .pop-cat-head h1 {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 26px;
+  }
+  .pop-cat-grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 30px;
+  }
+  .nft-trending-head h1 {
+    
+    font-weight: 800;
+    font-size: 33px;
+  }
+  .trending-nft-grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .trending-nf-img-green {
+    padding: 8px 5px;
+    min-height: 88px;
+  }
+  .trending-nf-img-yellow {
+    padding: 8px 5px;
+    min-height: 88px;
+  }
+  .trending-nft-box {
+    font-size: 7px;
+    font-weight: 600;
+  }
   }

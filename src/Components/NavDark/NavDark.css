@@ -4,4 +4,11 @@
   text-decoration: wavy;
   transition: 0.5s;
 }
+
+.dark-a{
+  color: #fff;
+}
+.dark-a :hover {
+  color: #00a652;
+}
    

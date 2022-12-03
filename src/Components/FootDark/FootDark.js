@@ -18,7 +18,7 @@ function FootDark() {
         <div className="container border-foot-top">
           <div className="row justify-content-center align-items-center">
             <div className="col-md-3 col-6">
-              <div className="footer-logo foot-dark">
+              <div className="footerD-logo foot-dark">
                 <NavLink to='/'>
                 <img
                   src="https://ik.imagekit.io/cforcrypto/Dework/find_jobs/logo-white.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669995470971"
