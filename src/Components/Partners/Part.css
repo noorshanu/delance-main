@@ -56,4 +56,10 @@ color: #0000008f;
         font-style: normal;
         font-weight: 800;
         font-size: 28px;}
+        .partners .container{
+            width: 100% !important;
+        }
+         .text-end {
+            text-align: center!important;
+        }
 }
