@@ -76,10 +76,11 @@ color: #00A652;
 }
 .team-sub p{
     font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    text-align: start;
+    font-weight: 600;
+    font-size: 30px;
     line-height: 40px;
+    text-align: start;
+    
     color: #FFFFFF;
     padding-bottom: 2%;
 
