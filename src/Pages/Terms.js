@@ -12,20 +12,20 @@ function Terms() {
         <h2>Terms of Service</h2>
         <p>
           These Terms of Service govern your use of the website located at{" "}
-          <a href="https:// afunverse.com">https:// afunverse.com</a> and
-          any related services provided by afunverse.com LLC.{" "}
+          <a href="https:// https://deelance.com/">https:// https://deelance.com/</a> and
+          any related services provided by https://deelance.com/ LLC.{" "}
         </p>
         <p>
           By accessing{" "}
-          <a href="https:// afunverse.com  .com">https:// afunverse.com</a>,
+          <a href="https:// https://deelance.com/  .com">https:// https://deelance.com/</a>,
           you agree to abide by these Terms of Service and to comply with
           all applicable laws and regulations. If you do not agree with
           these Terms of Service, you are prohibited from using or accessing
-          this website or using any other services provided by afunverse.com
+          this website or using any other services provided by https://deelance.com/
           LLC.{" "}
         </p>
         <p>
-          We, afunverse.com .com LLC, reserve the right to review and amend
+          We, https://deelance.com/ .com LLC, reserve the right to review and amend
           any of these Terms of Service at our sole discretion. Upon doing
           so, we will update this page. Any changes to these Terms of
           Service will take effect immediately from the date of publication.{" "}
@@ -52,7 +52,7 @@ function Terms() {
           <li>
             knowingly or negligently use this website or any of its
             associated services in a way that abuses or disrupts our
-            networks or any other service afunverse.com LLC provides;
+            networks or any other service https://deelance.com/ LLC provides;
           </li>
           <li>
             use this website or its associated services to transmit or
@@ -80,7 +80,7 @@ function Terms() {
         <h3>Intellectual Property</h3>
         <p>
           The intellectual property in the materials contained in this
-          website are owned by or licensed to afunverse.com LLC and are
+          website are owned by or licensed to https://deelance.com/ LLC and are
           protected by applicable copyright and trademark law. We grant our
           users permission to download one copy of the materials for
           personal, non-commercial transitory use.{" "}
@@ -89,7 +89,7 @@ function Terms() {
           This constitutes the grant of a license, not a transfer of title.
           This license shall automatically terminate if you violate any of
           these restrictions or the Terms of Service, and may be terminated
-          by afunverse.com LLC at any time.{" "}
+          by https://deelance.com/ LLC at any time.{" "}
         </p>
         <h3>User-Generated Content</h3>
         <p>
@@ -123,7 +123,7 @@ function Terms() {
         <h3>Liability</h3>
         <p>
           Our website and the materials on our website are provided on an
-          'as is' basis. To the extent permitted by law, afunverse.com 
+          'as is' basis. To the extent permitted by law, https://deelance.com/ 
           LLC makes no warranties, expressed or implied, and hereby
           disclaims and negates all other warranties including, without
           limitation, implied warranties or conditions of merchantability,
@@ -131,10 +131,10 @@ function Terms() {
           intellectual property, or other violation of rights.{" "}
         </p>
         <p>
-          In no event shall afunverse.com LLC or its suppliers be
+          In no event shall https://deelance.com/ LLC or its suppliers be
           liable for any consequential loss suffered or incurred by you or
           any third party arising from the use or inability to use this
-          website or the materials on this website, even if afunverse.com
+          website or the materials on this website, even if https://deelance.com/
            LLC or an authorized representative has been notified, orally
           or in writing, of the possibility of such damage.{" "}
         </p>
@@ -155,7 +155,7 @@ function Terms() {
         <h3>Accuracy of Materials</h3>
         <p>
           The materials appearing on our website are not comprehensive and
-          are for general information purposes only. afunverse.com LLC
+          are for general information purposes only. https://deelance.com/ LLC
           does not warrant or make any representations concerning the
           accuracy, likely results, or reliability of the use of the
           materials on this website, or otherwise relating to such materials
@@ -164,10 +164,10 @@ function Terms() {
         <h3>Links</h3>
         <p>
           {" "}
-          afunverse.com  LLC has not reviewed all of the sites linked to
+          https://deelance.com/  LLC has not reviewed all of the sites linked to
           its website and is not responsible for the contents of any such
           linked site. The inclusion of any link does not imply endorsement,
-          approval, or control by afunverse.com .com LLC of the site. Use of
+          approval, or control by https://deelance.com/ .com LLC of the site. Use of
           any such linked site is at your own risk and we strongly advise
           you make your own investigations with respect to the suitability
           of those sites.{" "}

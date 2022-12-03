@@ -10,7 +10,7 @@ function Privacy() {
     <div className="container">
       <div className="pol">
       <h2>Privacy Policy</h2>
-<p>Your privacy is important to us. It is  afunverse.com   LLC&#39;s policy to respect your privacy and comply with any applicable law and regulation regarding any personal information we may collect about you, including across our website, <a href="https:// afunverse.com">https:// afunverse.com</a>, and other sites we own and operate. </p>
+<p>Your privacy is important to us. It is  https://deelance.com/   LLC&#39;s policy to respect your privacy and comply with any applicable law and regulation regarding any personal information we may collect about you, including across our website, <a href="https://deelance.com/">https://deelance.com/</a>, and other sites we own and operate. </p>
 <p>Personal information is any information about you which can be used to identify you. This includes information about you as a person (such as name, address, and date of birth), your devices, payment details, and even information about how you use a website or online service. </p>
 <p>In the event our site contains links to third-party sites and services, please be aware that those sites and services have their own privacy policies. After following a link to any third-party content, you should read their posted privacy policy information about how they collect and use personal information. This Privacy Policy does not apply to any of your activities after you leave our site. </p>
 <p>This policy is effective as of 29 July 2022. </p>
@@ -135,7 +135,7 @@ function Privacy() {
 <p>Where the disclosure of your personal information is solely subject to Australian privacy laws, you acknowledge that some third parties may not be regulated by the Privacy Act and the Australian Privacy Principles in the Privacy Act. You acknowledge that if any such third party engages in any act or practice that contravenes the Australian Privacy Principles, it would not be accountable under the Privacy Act, and you will not be able to seek redress under the Privacy Act. </p>
 <h3>Additional Disclosures for General Data Protection Regulation (GDPR) Compliance (EU)</h3>
 <h4>Data Controller / Data Processor</h4>
-<p>The GDPR distinguishes between organisations that process personal information for their own purposes (known as &ldquo;data controllers&rdquo;) and organizations that process personal information on behalf of other organizations (known as &ldquo;data processors&rdquo;). We,  afunverse.com   Technology Solutions LLC, located at the address provided in our Contact Us section, are a Data Controller and/or Processor with respect to the personal information you provide to us. </p>
+<p>The GDPR distinguishes between organisations that process personal information for their own purposes (known as &ldquo;data controllers&rdquo;) and organizations that process personal information on behalf of other organizations (known as &ldquo;data processors&rdquo;). We,  https://deelance.com/   Technology Solutions LLC, located at the address provided in our Contact Us section, are a Data Controller and/or Processor with respect to the personal information you provide to us. </p>
 <h4>Legal Bases for Processing Your Personal Information</h4>
 <p>We will only collect and use your personal information when we have a legal right to do so. In which case, we will collect and use your personal information lawfully, fairly, and in a transparent manner. If we seek your consent to process your personal information, and you are under 16 years of age, we will seek your parent or legal guardian’s consent to process your personal information for that specific purpose. </p>
 <p>Our lawful bases depend on the services you use and how you use them. This means we only collect and use your information on the following grounds: </p>
@@ -196,7 +196,7 @@ function Privacy() {
 <h3>Contact Us</h3>
 <p>For any questions or concerns regarding your privacy, you may contact us using the following details: </p>
 <p>Support<br />
-support@ afunverse.com  </p>
+support@ https://deelance.com/  </p>
 
 </div>
     </div>
