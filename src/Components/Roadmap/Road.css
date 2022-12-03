@@ -56,3 +56,19 @@ width: 312px;
     font-size: 16px;
     line-height: 15px;
 }
+
+@media (max-width:768px) {
+    .road-top h2 {
+        font-size: 18px;
+        line-height: 10px;
+    }
+    .roadmap .container{
+        width: 100% !important;
+    }
+    .swiper-slide-active .road-box{
+
+    }
+
+ 
+    
+}
