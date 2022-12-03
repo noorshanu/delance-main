@@ -1,20 +1,23 @@
-import React from "react";
-import MobWhyus from "./MobWhyus";
+import React from 'react'
 
-import "./Why.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
 
-function WhyUs() {
+import { Navigation } from "swiper";
+function MobWhyus() {
   return (
-    <section className="why-us">
-      <MobWhyus/>
-      <div className="container desktop-box-why">
+    <>
+    <div className="container-fluid mob-why-swiper ">
         <div className="why-us-head text-center">
           <h1>Why DeWork</h1>
         </div>
-        
-        <div className="why-us-box ">
-          <div className="row justify-content-center align-items-center">
-            <div className="col-md-3">
+    <div className='why-us-box'>
+    <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+        <SwiperSlide>
+            <div className='row justify-content-center align-items-center'>
+            <div className="col-md-3 col-6">
               <div className="content">
                 <div className="border-down">
                   <p>Client Fee</p>
@@ -59,7 +62,10 @@ function WhyUs() {
                 
               </div>
             </div>
-            <div className="col-md-2">
+
+
+
+            <div className="col-md-2 col-6">
               <div className="content-2 text-center">
                 <div className="why-content-img-head">
                   <img
@@ -109,7 +115,12 @@ function WhyUs() {
                 </div>
               </div>
             </div>
-            <div className="col-md-2">
+
+            </div>
+        </SwiperSlide>
+        <SwiperSlide>
+        <div className='row justify-content-center align-items-center'>
+        <div className="col-md-2 col-6">
               <div className="content-3 text-center">
                 <div className="why-content-img-head">
                   <img
@@ -160,7 +171,7 @@ function WhyUs() {
                 </div>
               </div>
             </div>
-            <div className="col-md-2">
+            <div className="col-md-2 col-6">
               <div className="content-3 text-center">
                 <div className="why-content-img-head">
                   <img
@@ -212,63 +223,14 @@ function WhyUs() {
                 </div>
               </div>
             </div>
-            <div className="col-md-2">
-              <div className="content-3">
-                <div className="why-content-img-head">
-                  <img
-                    src="https://ik.imagekit.io/cforcrypto/Dework/image_10.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669366388768"
-                    alt=""
-                  />
-                </div>
-                <div className="up-work">
-                  <p>20%</p>
-
-                  <hr />
-                </div>
-                <div className="">
-                  <p>20%</p>
-                  <hr />
-                </div>
-                <div className="short-dis">
-                  <p>Min payout $100</p>
-                  <p>(5% fee for withdrawal for currency conversion)</p>
-                  <hr />
-                </div>
-                <div className="">
-                  <p>No</p>
-                  <hr />
-                </div>
-                <div className="">
-                  <p>No</p>
-                  <hr />
-                </div>
-                <div className="">
-                  <p>No/partial</p>
-                  <hr />
-                </div>
-                <div className="">
-                  <p>No</p>
-                  <hr />
-                </div>
-                <div className="">
-                  <p>No</p>
-                  <hr />
-                </div>
-                <div className="">
-                  <p>No</p>
-                  <hr />
-                </div>
-                <div className="">
-                  <p>No</p>
-                  <hr />
-                </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+        </SwiperSlide>
+     
+      </Swiper>
+    </div>
+    </div>
+    </>
+  )
 }
 
-export default WhyUs;
+export default MobWhyus

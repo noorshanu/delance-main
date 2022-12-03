@@ -4,9 +4,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
 
-function Partners() {
+function PartnersMob() {
   return (
-    <section className='partners desktop-part'>
+    <section className='partners mob-part'>
       <div className='container'>
         <div className='part-head text-center'>
           <h1>Featured In</h1>
@@ -26,6 +26,12 @@ function Partners() {
             
           </div>
           </div>    
+        
+          </div>
+
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="row justify-content-center align-items-center">
           <div className='col-md-3 col-6'>
           <div className=''>
             <img src="https://ik.imagekit.io/cforcrypto/Dework/features/Bloomberg.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669269583303" alt="" className='insider'/>
@@ -38,8 +44,8 @@ function Partners() {
             
           </div>
           </div> 
+            
           </div>
-
         </SwiperSlide>
         <SwiperSlide>
         <div className='row justify-content-center align-items-center'>
@@ -62,12 +68,7 @@ function Partners() {
        </div> 
 
 
-       <div className='col-md-4 col-6'>
-       <div className='text-start'>
-         <img src="https://ik.imagekit.io/cforcrypto/Dework/features/coindesk.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669269582136" alt="" className='enter'/>
-         
-       </div>
-       </div> 
+       
        </div>
 
         </SwiperSlide>
@@ -94,6 +95,16 @@ function Partners() {
        </div> 
      </div>
         </SwiperSlide>
+        <SwiperSlide>
+          <div className="row justify-content-center align-items-center">
+          <div className='col-md-4 col-6'>
+       <div className='text-start'>
+         <img src="https://ik.imagekit.io/cforcrypto/Dework/features/coindesk.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669269582136" alt="" className='enter'/>
+         
+       </div>
+       </div> 
+          </div>
+        </SwiperSlide>
        
       </Swiper>
     
@@ -104,4 +115,4 @@ function Partners() {
   )
 }
 
-export default Partners
+export default PartnersMob

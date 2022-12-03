@@ -125,8 +125,17 @@
     line-height: 11px !important;
     margin: 2px;
 }
+.mob-why-swiper{
+  display: none;
+}
 
 @media (max-width:768px) {
+  .desktop-box-why{
+    display: none;
+  }
+  .mob-why-swiper{
+    display: block;
+  }
   .why-us-head h1 {
 
     font-size: 36px;

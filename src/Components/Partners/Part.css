@@ -30,21 +30,30 @@ text-align: center;
 
 color: #0000008f;
 }
+.mob-part{
+    display: none;
+}
 
 @media (max-width:768px) {
+    .desktop-part{
+        display: none;
+    }
+    .mob-part{
+        display: block;
+    }
     .fox {
         width: auto;
-        height: 96px;
+        height: 74px;
     }
     .insider {
-        height: 96px;
+        height: 74px;
         width: auto;
     }
     .enter{
-        height: 96px;
+        height: 74px;
     }
     .part-head h1 {
         font-style: normal;
         font-weight: 800;
-        font-size: 42px;}
+        font-size: 28px;}
 }
