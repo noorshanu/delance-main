@@ -45,16 +45,16 @@
 }
 
 .feat-box p {
-  font-family: auto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 112.4%;
-  padding-top: 1%;
-  text-align: justify;
-  color: #000000;
-  padding-left: 4%;
-  padding-right: 4%;
+     /* font-family: auto; */
+     font-style: normal;
+     font-weight: 500;
+     font-size: 13px;
+     line-height: 112.4%;
+     /* padding-top: 1%; */
+     /* text-align: justify; */
+     color: #000000;
+     padding-left: 6%;
+     padding-right: 6%;
 }
 .black {
   color: #000000;
