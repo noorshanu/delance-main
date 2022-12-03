@@ -30,9 +30,11 @@ function NavDark() {
           }
         >
           <ul>
-           
+          <li>
+              <NavLink to="/" >Home</NavLink>
+            </li>
             <li>
-              <a href="#drop" className="" onClick={()=>setIsOpen(!isOpen)}>Home <FaAngleDown/></a>
+              <a href="#drop" className="" onClick={()=>setIsOpen(!isOpen)}>About Us <FaAngleDown/></a>
             </li>
             <div className={isOpen ?"dropdown-display" :"dropdown"}>
             <li>

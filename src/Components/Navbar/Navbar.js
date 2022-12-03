@@ -30,9 +30,11 @@ function Navbar() {
           }
         >
           <ul>
-           
+          <li>
+              <NavLink to="/" >Home</NavLink>
+            </li>
             <li>
-              <a href="#drop" className="" onClick={()=>setIsOpen(!isOpen)}>Home <FaAngleDown/></a>
+              <a href="#drop" className="" onClick={()=>setIsOpen(!isOpen)}>About us <FaAngleDown/></a>
             </li>
             <div className={isOpen ?"dropdown-display" :"dropdown"}>
             <li>
