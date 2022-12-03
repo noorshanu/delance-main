@@ -1,8 +1,6 @@
 import React from "react";
 import "./NFTPopCat.css";
-import { nftImg1 } from "../../assets/assets/images";
-import { FaPaintBrush } from 'react-icons/fa';
-import { HiMusicNote } from 'react-icons/hi';
+
 import {ImEarth} from 'react-icons/im';
 import {TbBrandMeta} from 'react-icons/tb';
 import {GiCardExchange} from 'react-icons/gi';
@@ -13,7 +11,9 @@ function NFTPopCat() {
   return (
     <>
       <section className="pop-cat">
+     
         <div className="container ">
+        <img src="https://ik.imagekit.io/cforcrypto/Dework/Vector_6.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670059241889" alt="" className="border-green"/>
           {/* <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
         <SwiperSlide> */}
           <div className="pop-cat-head text-center ">
@@ -27,7 +27,7 @@ function NFTPopCat() {
 
                 <div className="pop-cat-nft-box">                  
                   <div className="pop-cat-nft-img ">
-                    <FaPaintBrush />                    
+                   <img src="https://ik.imagekit.io/cforcrypto/Dework/nft_market/Vector-3.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670059984853" alt="" className="art"/>                   
                   </div>
                   <div className="pop-cat-nft-text">
                       ART
@@ -36,7 +36,7 @@ function NFTPopCat() {
 
                 <div className="pop-cat-nft-box">                  
                   <div className="pop-cat-nft-img ">
-                    <HiMusicNote />                    
+                    <img src="https://ik.imagekit.io/cforcrypto/Dework/nft_market/Vector.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670059984662" alt="" className="music"/>                   
                   </div>
                   <div className="pop-cat-nft-text">
                       MUSIC
@@ -83,10 +83,8 @@ function NFTPopCat() {
               </div>
             </div>
           </div>
-          <div className="nft-border-dashed-cover">{ Array.from({ length:20}).map((_, index) => {
-            return(<span key={index} className ="nft-border-dashed"> </span>)
-          })
-        }</div>
+       
+         <img src="https://ik.imagekit.io/cforcrypto/Dework/Vector_6.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670059241889" alt="" className="border-green-2"/>
         </div>
       </section>
     </>
