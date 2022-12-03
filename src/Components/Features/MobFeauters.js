@@ -1,22 +1,20 @@
-import React from "react";
-import "./Features.css";
-import MobFeauters from "./MobFeauters";
+import React from 'react'
+import { Swiper, SwiperSlide } from "swiper/react";
 
-function Feauters() {
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+
+
+
+// import required modules
+import { Navigation } from "swiper";
+function MobFeauters() {
   return (
-    <section className="features">
-      <div className="container text-center">
-        <div className="feat-header">
-          <img
-            src="https://ik.imagekit.io/cforcrypto/Dework/Group_2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669366346851"
-            alt=""
-            className="feat-side"
-          />
-          <h1>Features</h1>
-        </div>
-      </div>
-      <MobFeauters className='mob-feat'/>
-      <div className="container desktop-feat">
+    <>
+    <Swiper navigation={true} modules={[Navigation]} className="mySwiper mob-feat">
+      <SwiperSlide>
+        <div className='container'>
         <div className="row justify-content-center align-items-center">
           <div className="col-md-4">
             <div className="feat-box">
@@ -38,6 +36,7 @@ function Feauters() {
               <p> </p>
             </div>
           </div>
+
           <div className="col-md-4">
             <div className="feat-box">
               <div className="feat-img">
@@ -58,6 +57,14 @@ function Feauters() {
               <p></p>
             </div>
           </div>
+      </div>
+            
+        </div>
+      </SwiperSlide>
+      <SwiperSlide>
+        <div className='container'>
+            <div className='row justify-content-center align-items-center'>
+      
           <div className="col-md-4">
             <div className="feat-box">
               <div className="feat-img">
@@ -79,8 +86,6 @@ function Feauters() {
               <p> </p>
             </div>
           </div>
-        </div>
-        <div className="row justify-content-center align-items-center mtf-60">
           <div className="col-md-4">
             <div className="feat-box">
               <div className="feat-img">
@@ -101,6 +106,14 @@ function Feauters() {
               <p></p>
             </div>
           </div>
+        
+            </div>
+        </div>
+      </SwiperSlide>
+      <SwiperSlide>
+        <div className='container'>
+        <div className="row justify-content-center align-items-center mtf-60">
+     
           <div className="col-md-4">
             <div className="feat-box">
               <div className="feat-img">
@@ -139,9 +152,13 @@ function Feauters() {
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  );
+        </div>
+      </SwiperSlide>
+    
+      
+    </Swiper>
+  </>
+  )
 }
 
-export default Feauters;
+export default MobFeauters
