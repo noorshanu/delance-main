@@ -2,6 +2,28 @@
     padding-top: 10%;
     padding-bottom: 5%;
 }
+.hero-nft h1{
+  font-style: normal;
+font-weight: 500;
+font-size: 65px;
+line-height: 110.9%;
+/* or 72px */
+
+text-transform: capitalize;
+
+color: #FFFFFF;
+}
+.hero-nft h6{
+  font-style: normal;
+font-weight: 300;
+font-size: 22px;
+line-height: 133.4%;
+/* or 29px */
+
+
+color: #FFFFFF;
+padding-bottom: 6%;
+}
 
 .hero {
     padding-top: 11%;

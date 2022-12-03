@@ -4,7 +4,7 @@ function NFT() {
   return (
     <>
     <section className='hero-nft'>
-      <h1 className=''>
+      <div className=''>
       <div className='container'>
         <div className='row justify-content-center'>
               <div className='col-md-6 '>
@@ -24,7 +24,7 @@ function NFT() {
               </div>            
         </div>    
       </div>
-      </h1>
+      </div>
     </section>
     </>
   )
