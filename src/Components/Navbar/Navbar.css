@@ -61,9 +61,9 @@ a {
   .dropdown-display{
     display: block;
     position: absolute;
-    top: 9%;
-    margin-left: -26%;
-    background: #fff;
+    top: 10%;
+    margin-left: -23%;
+    background: rgba(255, 255, 255, 0);
     padding-left: 2%;
     padding-bottom: 1%;
     padding-right: 2%;
