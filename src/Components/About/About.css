@@ -65,6 +65,10 @@ padding-top: 6%;
 }
 
 @media (max-width:768px) {
+    .about-details p{
+        font-weight: 400;
+font-size: 14px;
+    }
 
     .about-head-1{
         font-size: 48px;
