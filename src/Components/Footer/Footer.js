@@ -105,27 +105,27 @@ function Footer() {
                   <p>Community</p>
                 </a>
 
-                <a href="/" target="_terms">
+                <NavLink to="/terms" target="_blank">
                   <p>Terms</p>
-                </a>
+                </NavLink>
               </div>
             </div>
 
             <div className="col-md-3 col-6">
               <div className="foot-link">
-                <a href="/" target="_privacy">
+                <NavLink to="/privacy" target="_blank">
                   <p>Privacy</p>
-                </a>
-                <a href="/" target="_risk">
+                </NavLink>
+                <NavLink to="/risk" target="_blank">
                   <p>Risk Warning</p>
-                </a>
+                </NavLink>
                 <a href="/">
                   <p>Announcements</p>
                 </a>
 
-                <a href="/" target="_privacy">
+                <NavLink href="/privacy" target="_blank">
                   <p>Cookie Preferences</p>
-                </a>
+                </NavLink>
               </div>
             </div>
           </div>
