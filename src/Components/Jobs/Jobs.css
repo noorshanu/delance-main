@@ -104,3 +104,38 @@ color: #FFFFFF;
    left: 0;
    margin-top: -26%;
 }
+
+@media (max-width:768px) {
+    .job-side-1 {
+        display: none;
+      }
+      .job-head h1 {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 28px;
+        text-align: center;
+        color: #FFFFFF;
+      }
+      .job-box img{
+        width: 105px;
+      }
+
+      .job-box-2 img {
+        width: auto;
+        height: 81px;
+      }
+      .job-box-2 p {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 11px;}
+
+      .job-box p {
+        
+        font-size: 10px;
+      }
+
+      .job-side-2 {
+     display: none;
+      }
+    
+}
