@@ -70,4 +70,17 @@
     height: auto;
   }
 
-  
+  @media (max-width:768px) {
+    .pop-cat-grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 30px;
+    }
+
+    .pop-cat-head h1 {
+      font-style: normal;
+      font-weight: 800;
+      font-size: 26px;
+    }
+    
+  }

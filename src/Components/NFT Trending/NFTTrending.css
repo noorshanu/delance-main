@@ -92,4 +92,27 @@
     justify-content: space-between;
   }
 
-  
+  @media (max-width:768px) {
+    .nft-trending-head h1 {
+    
+      font-weight: 800;
+      font-size: 33px;
+    }
+    .trending-nft-grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .trending-nf-img-green {
+      padding: 8px 5px;
+      min-height: 88px;
+    }
+    .trending-nf-img-yellow {
+      padding: 8px 5px;
+      min-height: 88px;
+    }
+    .trending-nft-box {
+      font-size: 7px;
+      font-weight: 600;
+    }
+    
+  }
