@@ -131,7 +131,7 @@ function FootDark() {
           </div>
         </div>
         <p className="foot-bottom-text dark-p">
-          2022© DeWork Inc. | All Rights Reserved{" "}
+          2022© Deelance Inc. | All Rights Reserved{" "}
         </p>
       </footer>
     </>

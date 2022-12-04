@@ -131,7 +131,7 @@ function Footer() {
           </div>
         </div>
         <p className="foot-bottom-text">
-          2022© DeWork Inc. | All Rights Reserved{" "}
+          2022© Deelance Inc. | All Rights Reserved{" "}
         </p>
       </footer>
     </>

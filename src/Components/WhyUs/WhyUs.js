@@ -9,7 +9,7 @@ function WhyUs() {
       <MobWhyus/>
       <div className="container desktop-box-why">
         <div className="why-us-head text-center">
-          <h1>Why DeWork</h1>
+          <h1>Why Deelance</h1>
         </div>
         
         <div className="why-us-box ">
