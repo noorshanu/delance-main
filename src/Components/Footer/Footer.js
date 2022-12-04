@@ -113,7 +113,7 @@ function Footer() {
 
             <div className="col-md-3 col-6">
               <div className="foot-link">
-                <NavLink to="/privacy" target="_blank">
+                <NavLink to="/privacy-policy" target="_blank">
                   <p>Privacy</p>
                 </NavLink>
                 <NavLink to="/risk" target="_blank">
@@ -123,7 +123,7 @@ function Footer() {
                   <p>Announcements</p>
                 </a>
 
-                <NavLink href="/privacy" target="_blank">
+                <NavLink href="/privacy-policy" target="_blank">
                   <p>Cookie Preferences</p>
                 </NavLink>
               </div>

@@ -14,7 +14,7 @@ import "./FooterDark.css";
 function FootDark() {
   return (
     <>
-      <footer className="footer">
+      <footer className="footer footDark-1">
         <div className="container border-foot-top">
           <div className="row justify-content-center align-items-center">
             <div className="col-md-3 col-6">
@@ -113,7 +113,7 @@ function FootDark() {
 
             <div className="col-md-3 col-6">
               <div className="foot-link">
-              <NavLink to="/privacy" target="_blank">
+              <NavLink to="/privacy-policy" target="_blank">
                   <p>Privacy</p>
                 </NavLink>
                 <NavLink to="/risk" target="_blank">
@@ -123,7 +123,7 @@ function FootDark() {
                   <p>Announcements</p>
                 </a>
 
-                <NavLink href="/privacy" target="_blank">
+                <NavLink href="/privacy-policy" target="_blank">
                   <p>Cookie Preferences</p>
                 </NavLink>
               </div>

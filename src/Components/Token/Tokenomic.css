@@ -26,8 +26,9 @@
         font-size: 39px;
     }
     .token-img {
-        padding: 1%;
-        width: 367px;
+        width: 337px;
+        margin-left: -22px;
         height: 100%;
+        padding: 0px;
     }
 }

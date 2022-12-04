@@ -4,6 +4,7 @@ import React from 'react'
 
 function Terms() {
   return (
+    <>
     <div className='dark'>
         <NavDark/>
     <section class="mb-70px mt-200px">
@@ -195,8 +196,10 @@ function Terms() {
       </div>
     </div>
   </section>
-  <FootDark/>
+
   </div>
+    <FootDark/>
+    </>
   )
 }
 

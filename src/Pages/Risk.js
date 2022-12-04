@@ -4,8 +4,10 @@ import React from 'react'
 
 function Risk() {
   return (
+    <>
+
     <div className='dark'>
-        <NavDark/>
+    <NavDark/>
         <section className="mb-70px mt-200px">
     <div className="container">
       <div className="pol">
@@ -31,8 +33,10 @@ function Risk() {
         </div>
         </div>
 </section>
-<FootDark/>
+
     </div>
+    <FootDark/>
+   </>
   )
 }
 

@@ -10,7 +10,7 @@ function NavDark() {
 
   return (
     <>
-      <nav className="container main-nav">
+      <nav className="container main-nav nav-Dark-1">
         <div className="logo">
           {" "}
           <div className="d-flex foot-logo">

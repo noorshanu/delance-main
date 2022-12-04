@@ -5,11 +5,14 @@ import React from 'react'
 
 function JobPortal() {
   return (
+    <>
     <div className='dark'>
         <NavDark/>
         <Jobs/>
-        <FootDark/>
+       
     </div>
+    <FootDark/>
+    </>
   )
 }
 

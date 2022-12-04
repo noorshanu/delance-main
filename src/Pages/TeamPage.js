@@ -9,8 +9,9 @@ function TeamPage() {
     <div className='dark'>
         <NavDark/>
         <Team/>
-        <FootDark/>
+       
     </div>
+    <FootDark/>
     </>
     
   )

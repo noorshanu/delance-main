@@ -4,8 +4,10 @@ import React from 'react'
 
 function Privacy() {
   return (
+   <>
+  
        <div className='dark'>
-        <NavDark/>
+       <NavDark/>
 <section className="mb-70px mt-200px">
     <div className="container">
       <div className="pol">
@@ -201,8 +203,10 @@ support@ https://deelance.com/  </p>
 </div>
     </div>
 </section>
-<FootDark/>
+
 </div>
+<FootDark/>
+</>
   )
 }
 

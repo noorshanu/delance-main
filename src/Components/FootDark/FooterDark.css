@@ -8,7 +8,11 @@
 .dark-p{
     margin-bottom: 0px !important;
 }
+.footDark-1{
+  background-color: #000;
+}
 @media (max-width:768px) {
+ 
     .footerD-logo img{
       
             height: 26px;

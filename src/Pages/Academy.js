@@ -6,11 +6,15 @@ import React from 'react'
 
 function Academy() {
   return (
+    <>
+    
     <div className='dark'>
      <NavDark/>
         <AcademyPage/>
-        <FootDark/>
+       
     </div>
+    <FootDark/>
+    </>
   )
 }
 

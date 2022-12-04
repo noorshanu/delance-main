@@ -51,7 +51,7 @@ function About() {
                 </div>
               </div>
             </div>
-            <div style={{width:'180px'}}>
+            <div  className="main-sub-btn">
             <a href="#team" className="explore-btn">BUY</a>
             </div>
           </div>
