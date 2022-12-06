@@ -12,7 +12,7 @@ import {FaCheck} from 'react-icons/fa'
 import {GoPrimitiveDot} from 'react-icons/go'
 
 // import required modules
-import { EffectCoverflow, Pagination } from "swiper";
+import { Autoplay,EffectCoverflow, Pagination } from "swiper";
 
 export default function Raod() {
   return (
@@ -36,9 +36,13 @@ export default function Raod() {
           modifier: 1,
           slideShadows: false,
         }}
+        autoplay={{
+          delay: 3500,
+          disableOnInteraction: false,
+        }}
         pagination={true}
         navigation={true}
-        modules={[EffectCoverflow, Pagination,Navigation]}
+        modules={[EffectCoverflow, Pagination,Navigation,Autoplay,]}
         className="mySwiper"
       >
         <SwiperSlide>
