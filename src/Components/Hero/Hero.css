@@ -28,6 +28,9 @@
 .social-hero a{
   font-size: 26px;
 }
+.social-hero a:hover{
+  color: #00a652;
+}
 .green {
   color: #00a652;
   font-weight: 700;
