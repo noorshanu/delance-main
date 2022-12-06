@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import './Part.css'
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from "swiper";
+import {Autoplay, Navigation } from "swiper";
 
 function Partners() {
   return (
@@ -11,7 +11,10 @@ function Partners() {
         <div className='part-head text-center'>
           <h1>Featured In</h1>
         </div>
-        <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+        <Swiper  autoplay={{
+          delay: 3500,
+          disableOnInteraction: false,
+        }} navigation={true} modules={[Autoplay,Navigation]} className="mySwiper">
         <SwiperSlide>
         <div className='row justify-content-center align-items-center'>
         <div className='col-md-3 col-6'>
