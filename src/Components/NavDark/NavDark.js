@@ -61,7 +61,7 @@ function NavDark() {
             </li>
             
             <li>
-              <a href="#team" className="explore-btn">Explore</a>
+              <a href="#team" className="explore-btn">Find Freelancer</a>
             </li>
           </ul>
         </div>

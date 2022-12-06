@@ -84,10 +84,10 @@ function Footer() {
             <div className="col-md-3 col-6">
               <div className="foot-btn-grup">
                 <a href="/" className="hero-btn-1">
-                  Sign up
+                 Buy Now
                 </a>
                 <a href="/" className="hero-btn-2">
-                  Explore
+                  Find job
                 </a>
               </div>
             </div>

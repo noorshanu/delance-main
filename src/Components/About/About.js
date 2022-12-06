@@ -94,7 +94,7 @@ function About() {
         className="side-about"
       />
        <div  className="main-sub-btn">
-            <a href="#team" className="explore-btn">BUY</a>
+            <a href="#team" className="explore-btn">BUY NOW</a>
             </div>
     </section>
   );
