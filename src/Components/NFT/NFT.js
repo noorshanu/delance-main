@@ -16,7 +16,7 @@ function NFT() {
                 </h6>
                 <div className='nft-hero-btn'>
                   <a href="/" className='nft-hero-btn-1'>Coming Soon..</a>
-                  <a href="/" className='nft-hero-btn-2'>Coming Soon..</a>
+                  {/* <a href="/" className='nft-hero-btn-2'>Coming Soon..</a> */}
                 </div>
               </div>
               <div className='col-md-6 text-end align-items-center'>
