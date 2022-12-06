@@ -64,6 +64,9 @@ color: #FFFFFF;
 .linked-in{
     color: #00A652;
 }
+.linked-in:hover{
+    color: #0e76a8;
+}
 .team-head h1{
     font-style: normal;
 font-weight: 800;
