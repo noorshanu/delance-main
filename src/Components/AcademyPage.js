@@ -15,6 +15,7 @@ function AcademyPage() {
                 <a href="/" className='ad-btn'>NFT MarketPlace</a>
             
                 <a href="/" className='ad-btn'>Press Releases</a>
+                <a href="/" className='ad-btn'>General</a>
                 
             </div>
             <div className='record'>

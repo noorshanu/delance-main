@@ -82,6 +82,11 @@ font-size: 13px !important;
 font-weight: 400 !important;
   }
   
+  .explore-btn:hover{
+    background-color: #00A652;
+    border: 0.5px solid #006A34;
+    
+  }
   
   
   
