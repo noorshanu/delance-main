@@ -87,7 +87,7 @@ function FootDark() {
                   Sign up
                 </a>
                 <a href="/" className="hero-btn-2">
-                  Explore
+                  Find Job
                 </a>
               </div>
             </div>
