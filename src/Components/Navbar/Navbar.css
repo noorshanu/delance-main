@@ -176,6 +176,7 @@ font-weight: 400 !important;
       display: flex;
       justify-content: space-around;
       flex-direction: column;
+      gap: 20px;
       align-items: flex-start;
     }
   
@@ -209,7 +210,16 @@ font-weight: 400 !important;
     
   }
   
-   
+  .dropdown-display{
+    display: block;
+    position: unset;
+    top: 10%;
+    margin-left: -2%;
+    background: rgba(255, 255, 255, 0);
+    padding-left: 2%;
+    padding-bottom: 1%;
+    padding-right: 2%;
+  }
   
    .hamburger-menu {
       display: block;

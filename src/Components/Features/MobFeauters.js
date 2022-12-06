@@ -46,7 +46,7 @@ function MobFeauters() {
                 />
               </div>
 
-              <h3>Tranceparency</h3>
+              <h3>Transparency</h3>
               <p>
                 By implementing an{" "}
                 <span className="black">automated dispute system</span> and

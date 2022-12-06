@@ -47,7 +47,7 @@ function Feauters() {
                 />
               </div>
 
-              <h3>Tranceparency</h3>
+              <h3>Transparency</h3>
               <p>
                 By implementing an{" "}
                 <span className="black">automated dispute system</span> and
@@ -73,8 +73,7 @@ function Feauters() {
                 <span className="black">guarantee of payment</span> for their
                 services, while the Employer’s funds are safe until the
                 Freelancer produces the expected work. As it’s based on{" "}
-                <span className="black">smart contracts</span> , escrow can’t be
-                manipulated in any way, and makes trust.
+                <span className="black">smart contracts</span>.
               </p>
               <p> </p>
             </div>

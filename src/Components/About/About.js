@@ -45,15 +45,13 @@ function About() {
                   />
                 </div>
                 <div>
-                  <p className="ab-p1">Fastest Growing Network </p>
-                  <p className="ab-p2">8k+ Users</p>
-                  <p className="ab-p3">Freelance Network</p>
+                  <p className="ab-p1">Unlimited ownership </p>
+                  <p className="ab-p2">Instant Withdrawal</p>
+                  <p className="ab-p3">Recruitment platform</p>
                 </div>
               </div>
             </div>
-            <div  className="main-sub-btn">
-            <a href="#team" className="explore-btn">BUY</a>
-            </div>
+           
           </div>
 
           <div className="col-md-7">
@@ -95,6 +93,9 @@ function About() {
         alt=""
         className="side-about"
       />
+       <div  className="main-sub-btn">
+            <a href="#team" className="explore-btn">BUY</a>
+            </div>
     </section>
   );
 }
