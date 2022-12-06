@@ -30,6 +30,14 @@ text-align: center;
 
 color: #FFFFFF;
 }
+.job-box{
+  border-radius: 10px;
+  background: linear-gradient(black, black) padding-box, linear-gradient(to top, #00a652, #000000,transparent);
+  border-bottom: 2px solid #00a652;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  padding: 20px;
+}
 .job-box-2 img{
     width: auto;
     height: 151px;
@@ -44,6 +52,14 @@ color: #FFFFFF;
     text-align: center;
     
     color: #FFFFFF;
+}
+.job-box-2{
+  border-radius: 10px;
+  background: linear-gradient(black, black) padding-box, linear-gradient(to top, #00a652, #000000,transparent);
+  border-bottom: 2px solid #00a652;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  padding: 20px;
 }
 .job-box-3 img{
     width: auto;
@@ -60,6 +76,14 @@ color: #FFFFFF;
     
     color: #FFFFFF;
 }
+.job-box-3{
+  border-radius: 10px;
+  background: linear-gradient(black, black) padding-box, linear-gradient(to top, #00a652, #000000,transparent);
+  border-bottom: 2px solid #00a652;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  padding: 20px;
+}
 .job-box-4 img{
     width: auto;
     height: 145px;
@@ -74,6 +98,14 @@ color: #FFFFFF;
     text-align: center;
     
     color: #FFFFFF;
+}
+.job-box-4{
+  border-radius: 10px;
+  background: linear-gradient(black, black) padding-box, linear-gradient(to top, #00a652, #000000,transparent);
+  border-bottom: 2px solid #00a652;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  padding: 20px;
 }
 .job-soon{
     text-align: center;
