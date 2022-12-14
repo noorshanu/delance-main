@@ -56,7 +56,7 @@ function Hero() {
           </div>
           <div className='hero-btn'>
             <a href="/" className='hero-btn-1'>Buy Now</a>
-            <a href="/" className='hero-btn-2'>Find Freelancer</a>
+            <a href="/" className='hero-btn-2'>Sign Up</a>
           </div>
         </div>
         <div className='col-md-6 text-end align-items-center'>
