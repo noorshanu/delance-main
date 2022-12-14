@@ -25,7 +25,7 @@ function Hero() {
       <div className='container'>
         <div className='row justify-content-center'>
         <div className='col-md-6'>
-          <h1>Creating space for better world to work <span className='green'>together</span></h1>
+          <h1>Creating Web3 space for better world to work <span className='green'>together</span></h1>
           <p className='hero-sp-p'>Connect With The Community</p>
           <div className='social-hero d-flex'>
           <a href="https://twitter.com/deelance_com" target="_blank" rel="noreferrer">
