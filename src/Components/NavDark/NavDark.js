@@ -3,10 +3,20 @@ import { NavLink } from "react-router-dom";
 import "./NavDark.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import {FaAngleDown} from 'react-icons/fa'
+import OutsideClickDetector from "hooks/OutsideClickDetector";
+import useMediaQuery from "hooks/useMediaQuery";
 
 function NavDark() {
   const [showMediaIcons, setShowMediaIcons] = useState(false);
-  const [isOpen, setIsOpen] =useState(false)
+  const [isHover, setIsHover] = useState(false);
+  const isBellow1024px = useMediaQuery("(max-width : 64em)");
+
+  const dropdownRef = OutsideClickDetector(() => {
+    setIsHover(false);
+  });
+  const dropdownToggler = () => {
+    setIsHover((val) => !val);
+  };
 
   return (
     <>
@@ -33,10 +43,24 @@ function NavDark() {
           <li>
               <NavLink to="/" >Home</NavLink>
             </li>
-            <li>
-              <a href="#drop" className="" onClick={()=>setIsOpen(!isOpen)}>About Us <FaAngleDown/></a>
-            </li>
-            <div className={isOpen ?"dropdown-display" :"dropdown"}>
+          
+            <li className="drop-btn"  ref={dropdownRef}>
+              <a href="#drop" className="dp" 
+              onMouseEnter={() =>
+                isBellow1024px ? null : setIsHover(true)
+              }
+              onMouseLeave={() =>
+                isBellow1024px ? null : setIsHover(false)
+              }
+              onClick={() => dropdownToggler()}
+              >About us <FaAngleDown/></a>
+              <div className={isHover?'dropdown-active':"dropdown"}
+               onMouseEnter={() =>
+                isBellow1024px ? null : setIsHover(true)
+              }
+              onMouseLeave={() =>
+                isBellow1024px ? null : setIsHover(false)
+              }>
             <li>
               <a href="/">About </a>
             </li>
@@ -48,6 +72,7 @@ function NavDark() {
             <a href="https://docs.dework.live/" target='_blank' rel="noreferrer">Whitepaper</a>
            </li>
             </div>
+            </li>
        
             
             <li>
