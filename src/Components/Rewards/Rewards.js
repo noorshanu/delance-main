@@ -76,8 +76,8 @@ function Rewards() {
                 equivalent of $100 of $RIA at the time of the prize draw. You
                 can buy $RIA by clicking the button below:
               </p>
-              <div>
-                <a href="/">BUY NOW</a>
+              <div className="re-btn text-center justify-content-center">
+                <a href="/" className="buy-reward">BUY NOW</a>
               </div>
             </div>
           </div>
