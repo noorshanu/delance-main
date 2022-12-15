@@ -74,7 +74,12 @@ function Model({ setIsModal }) {
             placeholder="Email :"
             name="email"
           />
-        
+         <label for="cars">Choose a option:</label>
+  <select id="cars" name="cars">
+    <option value="volvo">Freelancer</option>
+    <option value="saab">Employer</option>
+   
+  </select>
        
 <div className='btn-modal'>
           <button type="submit" className="fs-26px white weight-5 pointer" >
