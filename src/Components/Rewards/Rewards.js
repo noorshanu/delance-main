@@ -59,22 +59,22 @@ function Rewards() {
           <div className="col-md-6">
             <div className="re-box1">
               <h1>
-                Try your luck and enter a drawing for $100,000 worth of $RIA
+                Try your luck and enter a drawing for $100,000 worth of $Dlance
               </h1>
               <p>
                 To celebrate our pre-sale and our rapidly growing community,
                 we’re giving 3 lucky people a chance to split $100,000 worth of
-                $RIA.
+                $Dlance.
               </p>
               <p>
                 All you have to do is follow the steps described in the widget
                 on this page to receive multiple entries, and hold at least $100
-                of $RIA at the time of the draw.
+                of $Dlance at the time of the draw.
               </p>
               <p>
                 Good luck, and remember eligible entries must hold the
-                equivalent of $100 of $RIA at the time of the prize draw. You
-                can buy $RIA by clicking the button below:
+                equivalent of $100 of $Dlance at the time of the prize draw. You
+                can buy $Dlance by clicking the button below:
               </p>
               <div className="re-btn text-center justify-content-center">
                 <a href="/" className="buy-reward">BUY NOW</a>
