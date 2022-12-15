@@ -76,7 +76,9 @@ function Navbar() {
             </li>
          
        
-            
+            <li>
+              <NavLink to="/rewards" >Rewards</NavLink>
+            </li>
             <li>
               <NavLink to="/nft-market" >NFT marketplace</NavLink>
             </li>
