@@ -116,17 +116,16 @@
 }
 .formWrapper form input {
   padding: 0.875rem 1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.875);
+  border-radius: 5px;
 }
-.formWrapper form textarea {
-  background-color: transparent;
-  outline: none;
+.formWrapper form select {
   padding: 0.875rem 1rem;
-  border: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  resize: none;
-  height: 5rem;
+  border: 1px solid rgba(0, 0, 0, 0.875);
+  border-radius: 5px;
 }
+
+
 .formWrapper form button {
   background: #ff1616;
   border: 0.1875rem solid #ffffff;
@@ -157,10 +156,10 @@
 .formWrapper form input {
     padding: 0.625rem 0.75rem;
   }
- .formWrapper form textarea {
+  .formWrapper form select {
     padding: 0.625rem 0.75rem;
-    height: 6.25rem;
   }
+
   .formWrapper form button {
     border: 0.1875rem solid #ffffff;
     border-radius: 0.625rem;
@@ -194,6 +193,10 @@
     margin-bottom: 1.125rem;
   }
    .formWrapper form input {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .formWrapper form select {
     padding: 0.5rem 0.75rem;
   }
    .formWrapper form textarea {
