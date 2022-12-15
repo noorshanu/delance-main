@@ -32,7 +32,12 @@
     display: flex;
     justify-content: flex-end;
   }
-  
+  .pop-head h2{
+    color: #0da658;
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 600;
+  }
   .titleCloseBtn button {
     background-color: transparent;
     color: #fff;
