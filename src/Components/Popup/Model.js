@@ -54,7 +54,7 @@ function Model({ setIsModal }) {
                 </h2>
                 <h1 className="fs-55px weight-7 text-center  lh-1">
                   We are still in beta.Get 
-                  <span className="red"> Early Access</span> by joining on oyr
+                  <span className="red"> Early Access</span> by joining on our
                   waitlist.
                 </h1>
               </header>
