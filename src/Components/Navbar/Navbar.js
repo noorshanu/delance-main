@@ -5,10 +5,12 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import {FaAngleDown} from 'react-icons/fa'
 import OutsideClickDetector from "hooks/OutsideClickDetector";
 import useMediaQuery from "hooks/useMediaQuery";
+import Model from 'Components/Popup/Model';
 
 function Navbar() {
   const [showMediaIcons, setShowMediaIcons] = useState(false);
   // const [isOpen, setIsOpen] =useState(false)
+  const [isModal,setIsModal]=useState(false)
   const [isHover, setIsHover] = useState(false);
   const isBellow1024px = useMediaQuery("(max-width : 64em)");
 
@@ -90,7 +92,7 @@ function Navbar() {
             </li>
             
             <li>
-              <a href="#team" className="explore-btn">Sign Up</a>
+              <a href="#team" className="explore-btn" onClick={()=>setIsModal(true)}>Sign Up</a>
             </li>
           </ul>
         </div>
@@ -101,6 +103,9 @@ function Navbar() {
           </a>
         </div>
       </nav>
+      <div className='pop-up-sign' >
+      {isModal && <Model setIsModal={setIsModal} />}
+      </div>
     </>
   );
 }

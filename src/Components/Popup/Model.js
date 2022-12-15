@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 // import Toast from "./Toast";
 import "./Modelll.css";
 // import OutsideClickDetector from "hooks/OutsideClickDetector";
@@ -52,9 +52,9 @@ function Model({ setIsModal }) {
                 <h2 className="text-center   mb-10px lh-1">
                   Join us!
                 </h2>
-                <h1 className="fs-55px weight-7 text-center white lh-1">
-                  We are still in beta.Get
-                  <span className="red">Early Access</span>by joining on oyr
+                <h1 className="fs-55px weight-7 text-center  lh-1">
+                  We are still in beta.Get 
+                  <span className="red"> Early Access</span> by joining on oyr
                   waitlist.
                 </h1>
               </header>
