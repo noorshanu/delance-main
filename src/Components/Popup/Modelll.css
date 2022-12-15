@@ -15,7 +15,7 @@
   }
   
   .modalContainer {
-    width: auto;
+    width: 50%;
     height: auto;
     border: 2px solid rgba(34, 255, 22, 0.658);
     border-radius: 12px;
