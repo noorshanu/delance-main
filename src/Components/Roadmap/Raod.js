@@ -57,10 +57,7 @@ export default function Raod() {
               <p><FaCheck/> Website Live </p>
               <p><FaCheck/> Initial Smart-contracts Deployment  </p>
               
-              <p><GoPrimitiveDot/> Private Sale  </p>
-              <p><GoPrimitiveDot/> Project Launch  </p>
-              <p><GoPrimitiveDot/> Metaverse Demo   </p>
-              <p><GoPrimitiveDot/> CMC and CG Listing   </p>
+             
             </div>
 
           </div>
@@ -73,11 +70,12 @@ export default function Raod() {
               <p> ( Jan - March )</p>
             </div>
             <div className="road-list">
-              <p><GoPrimitiveDot /> NFT Launch  </p>
-              <p><GoPrimitiveDot/> NFT MarketPlace </p>
-              <p><GoPrimitiveDot/> Freelance Platform Launch </p>
-              <p><GoPrimitiveDot className=""/> Exchanges Listing  </p>
-              <p><GoPrimitiveDot/> Metaverse Development    </p>
+            <p><GoPrimitiveDot/> Private Sale  </p>
+              <p><GoPrimitiveDot/> Project Launch  </p>
+              <p><GoPrimitiveDot/> Metaverse Demo   </p>
+              <p><GoPrimitiveDot/> CMC and CG Listing   </p>
+
+             
               
             </div>
           </div>
@@ -89,6 +87,27 @@ export default function Raod() {
               <p>( April -June )   </p>
             </div>
             <div className="road-list">
+            <p><GoPrimitiveDot /> NFT Launch  </p>
+              <p><GoPrimitiveDot/> NFT MarketPlace </p>
+              <p><GoPrimitiveDot/> Freelance Platform Launch </p>
+              <p><GoPrimitiveDot className=""/> Exchanges Listing  </p>
+              <p><GoPrimitiveDot/> Metaverse Development    </p>
+
+     
+            
+            </div>
+      
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+        <div className="road-box">
+        <div className="road-top">
+              <h2>Q3 2023</h2>
+              <p>( July -Sept )   </p>
+            </div>
+            <div className="road-list">
+            
+
               <p><GoPrimitiveDot /> App development   </p>
               <p><GoPrimitiveDot/> Metaverse Integration to Main Platform </p>
               <p><GoPrimitiveDot/> Further Development   </p>
