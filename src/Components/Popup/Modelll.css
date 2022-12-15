@@ -15,7 +15,7 @@
   }
   
   .modalContainer {
-    width: 50%;
+    width: auto;
     height: auto;
     border: 2px solid rgba(34, 255, 22, 0.658);
     border-radius: 12px;
@@ -37,6 +37,9 @@
     text-transform: uppercase;
     font-size: 28px;
     font-weight: 600;
+  }
+  .pop-head h1{
+    font-size: 16px;
   }
   .titleCloseBtn button {
     background-color: transparent;
