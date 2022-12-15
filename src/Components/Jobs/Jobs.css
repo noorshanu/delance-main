@@ -32,7 +32,7 @@ color: #FFFFFF;
 }
 .job-box{
   border-radius: 10px;
-  background: linear-gradient(black, black) padding-box, linear-gradient(to top, #00a652, #000000,transparent);
+  background: linear-gradient(#1b1c1e, #1b1c1e) padding-box, linear-gradient(to top, #00a652, #1b1c1e,transparent);
   border-bottom: 2px solid #00a652;
   border-left: 2px solid transparent;
   border-right: 2px solid transparent;
@@ -55,7 +55,7 @@ color: #FFFFFF;
 }
 .job-box-2{
   border-radius: 10px;
-  background: linear-gradient(black, black) padding-box, linear-gradient(to top, #00a652, #000000,transparent);
+  background: linear-gradient(#1b1c1e, #1b1c1e) padding-box, linear-gradient(to top, #00a652, #1b1c1e,transparent);
   border-bottom: 2px solid #00a652;
   border-left: 2px solid transparent;
   border-right: 2px solid transparent;
@@ -78,7 +78,7 @@ color: #FFFFFF;
 }
 .job-box-3{
   border-radius: 10px;
-  background: linear-gradient(black, black) padding-box, linear-gradient(to top, #00a652, #000000,transparent);
+  background: linear-gradient(#1b1c1e, #1b1c1e) padding-box, linear-gradient(to top, #00a652, #1b1c1e,transparent);
   border-bottom: 2px solid #00a652;
   border-left: 2px solid transparent;
   border-right: 2px solid transparent;
@@ -101,7 +101,7 @@ color: #FFFFFF;
 }
 .job-box-4{
   border-radius: 10px;
-  background: linear-gradient(black, black) padding-box, linear-gradient(to top, #00a652, #000000,transparent);
+  background: linear-gradient(#1b1c1e, #1b1c1e) padding-box, linear-gradient(to top, #00a652, #1b1c1e,transparent);
   border-bottom: 2px solid #00a652;
   border-left: 2px solid transparent;
   border-right: 2px solid transparent;

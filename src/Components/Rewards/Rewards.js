@@ -57,7 +57,7 @@ function Rewards() {
         </div>
         <div className="row justify-content-center align-items-center">
           <div className="col-md-6">
-            <div>
+            <div className="re-box1">
               <h1>
                 Try your luck and enter a drawing for $100,000 worth of $RIA
               </h1>

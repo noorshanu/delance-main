@@ -52,7 +52,7 @@ function Jobs() {
         <section style={{marginTop:'1%'}}>
             <img src="https://ik.imagekit.io/cforcrypto/Dework/find_jobs/findJob_-_updated_1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669980843877" alt=""/>
         </section>
-        <section style={{paddingBottom:'3%',background:'#000'}}>
+        <section style={{paddingBottom:'3%',background:'#1b1c1e'}}>
             </section>
       </>
   )
