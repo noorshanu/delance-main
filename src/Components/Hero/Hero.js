@@ -10,7 +10,7 @@ import {
   FaInstagram
 
 } from "react-icons/fa";
-// import Model from 'Components/Popup/Model';
+import Model from 'Components/Popup/Model';
 
 function Hero() {
   const [isModal,setIsModal]=useState(false)
@@ -53,7 +53,7 @@ function Hero() {
           </div>
           <div className='hero-btn'>
             <a href="/" className='hero-btn-1'>Buy Now</a>
-            <a href="#pop" className='hero-btn-2' onClick={()=>setIsModal(true)}>Sign Up</a>
+            <button className='hero-btn-2' onClick={()=>setIsModal(true)}>Sign Up</button>
           </div>
         </div>
         <div className='col-md-6 text-end align-items-center'>
@@ -67,7 +67,7 @@ function Hero() {
       <div className='side-2'>
       &nbsp; </div>
       <div >
-      {/* <Model/> */}
+      {isModal && <Model setIsModal={setIsModal} />}
       </div>
      
     </section>

@@ -1,49 +1,49 @@
 import React,{useState } from 'react'
-import Toast from "./Toast";
-import './Model.css'
-import OutsideClickDetector from "hooks/OutsideClickDetector";
-import  { useRef } from 'react';
-import emailjs from '@emailjs/browser';
+// import Toast from "./Toast";
+// import './Model.css'
+// import OutsideClickDetector from "hooks/OutsideClickDetector";
+// import  { useRef } from 'react';
+// import emailjs from '@emailjs/browser';
 // import { FaTelegram } from "react-icons/fa";
 
-function Model({ setOpenModal }) {
-    const form = useRef();
+function Model({ setIsModal }) {
+    // const form = useRef();
 
-    const sendEmail = (e) => {
-      e.preventDefault();
+    // const sendEmail = (e) => {
+    //   e.preventDefault();
   
-      emailjs.sendForm('service_kz0dtx4', 'template_tly8pl6', form.current, 'mnctSEDuRTEVNoe0i')
-        .then((result) => {
-          e.preventDefault();
-          setShowToast(true);
-            console.log(result.text);
-            form.current.reset();
+    //   emailjs.sendForm('service_kz0dtx4', 'template_tly8pl6', form.current, 'mnctSEDuRTEVNoe0i')
+    //     .then((result) => {
+    //       e.preventDefault();
+    //       setShowToast(true);
+    //         console.log(result.text);
+    //         form.current.reset();
             
             
            
-        }, (error) => {
-            console.log(error.text);
-        });
-    };
+    //     }, (error) => {
+    //         console.log(error.text);
+    //     });
+    // };
 
 
-    const [showToast, setShowToast] = useState(false);
-    const toastRef = OutsideClickDetector(() => setShowToast(false));
+    // const [showToast, setShowToast] = useState(false);
+    // const toastRef = OutsideClickDetector(() => setShowToast(false));
     
     
   return (
     <div className="modalBackground">
     <div className="modalContainer" >
-    <Toast
+    {/* <Toast
         title="Your Response has been submitted"
         state={showToast}
         stateSetter={setShowToast}
         toastRef={toastRef}
-      />
+      /> */}
       <div className="titleCloseBtn">
         <button
           onClick={() => {
-            setOpenModal(false);
+            setIsModal(false);
           }}
         >
           X
@@ -60,7 +60,8 @@ function Model({ setOpenModal }) {
           Request  <span className="red">Audit / KYC / Escrow</span>
           </h1>
         </header>
-        <form onSubmit={sendEmail} ref={form} >
+        <form  > 
+          {/* onSubmit={sendEmail} ref={form} */}
           <input
             type="text"
             className="fs-26px white weight-3"
