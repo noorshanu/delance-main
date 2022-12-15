@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './Hero.css'
 import {
   FaTwitter,
@@ -10,13 +10,10 @@ import {
   FaInstagram
 
 } from "react-icons/fa";
-// import { Canvas } from "react-three-fiber";
-// import { OrbitControls, useGLTF } from "@react-three/drei";
-// function Model(props) {
-//   const { scene } = useGLTF("./main2.glb");
-//   return <primitive object={scene} />;
-// }
+// import Model from 'Components/Popup/Model';
+
 function Hero() {
+  const [isModal,setIsModal]=useState(false)
   return (
     <>
     <section className='hero'>
@@ -56,18 +53,12 @@ function Hero() {
           </div>
           <div className='hero-btn'>
             <a href="/" className='hero-btn-1'>Buy Now</a>
-            <a href="/" className='hero-btn-2'>Sign Up</a>
+            <a href="#pop" className='hero-btn-2' onClick={()=>setIsModal(true)}>Sign Up</a>
           </div>
         </div>
         <div className='col-md-6 text-end align-items-center'>
           <img className='hero-img' src='https://ik.imagekit.io/cforcrypto/Dework/find_jobs/Group_29.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1669981304630' alt=""/>
-          {/* <Canvas pixelRatio={[1, 2]} camera={{ position: [-15, 10, 40], fov: 60 }} style={{width:'100%',height:'450px'}} >
-      <ambientLight intensity={5} />
-      <Suspense fallback={null}>
-        <Model />
-      </Suspense>
-      <OrbitControls />
-    </Canvas> */}
+     
         </div>
         </div>
    
@@ -75,6 +66,10 @@ function Hero() {
       </div>
       <div className='side-2'>
       &nbsp; </div>
+      <div >
+      {/* <Model/> */}
+      </div>
+     
     </section>
     </>
   )

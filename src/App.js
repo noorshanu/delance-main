@@ -4,6 +4,7 @@ import Academy from 'Pages/Academy';
 import JobPortal from 'Pages/JobPortal';
 import NftMarket from 'Pages/NftMarket';
 import Privacy from 'Pages/Privacy';
+import Reward from 'Pages/Reward';
 import Risk from 'Pages/Risk';
 import TeamPage from 'Pages/TeamPage';
 import Terms from 'Pages/Terms';
@@ -22,6 +23,7 @@ function App() {
           <Route exact path="/privacy-policy" element={<Privacy/>}/>
           <Route exact path="/terms" element={<Terms/>}/>
           <Route exact path="/risk" element={<Risk/>}/>
+          <Route exact path="/rewards" element={<Reward/>}/>
         
         </Routes>
     </Router>

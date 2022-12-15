@@ -41,7 +41,7 @@
 
   .pop-cat-nft-box{  
     border-radius: 10px;
-    background: linear-gradient(black, black) padding-box,
+    background: linear-gradient(#1b1c1e, #1b1c1e) padding-box,
     linear-gradient(to top,  #00a652,  #000000,transparent);
    
     border-bottom: 2px solid #00a652 ;
