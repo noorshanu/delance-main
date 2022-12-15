@@ -1,20 +1,26 @@
+.pop-up-sign{
+  position: absolute;
+  top: calc(100% - 47.2rem);
+}
+
+
 .modalBackground {
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.036);
     position: fixed;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
   }
   
   .modalContainer {
     width: auto;
     height: auto;
-    border: 2px solid rgba(255, 22, 22, 0.1568627451);
+    border: 2px solid rgba(34, 255, 22, 0.658);
     border-radius: 12px;
     backdrop-filter: blur(2.1875rem);
-    background-color: #ff161628;
+    background-color: #16ff6b28;
     display: flex;
     flex-direction: column;
     padding: 25px;

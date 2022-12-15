@@ -1,6 +1,6 @@
 import React,{useState } from 'react'
 // import Toast from "./Toast";
-// import './Model.css'
+import './Modelll.css'
 // import OutsideClickDetector from "hooks/OutsideClickDetector";
 // import  { useRef } from 'react';
 // import emailjs from '@emailjs/browser';
@@ -50,14 +50,14 @@ function Model({ setIsModal }) {
         </button>
       </div>
     <div className="">
-    <section>
+    <section className='section-box'>
       <div className="formWrapper">
         <header>
           <h2 className="text-center fs-34px white weight-3 mb-10px lh-1">
-          You can also send directly on Telegram;
+          Join us!
           </h2>
           <h1 className="fs-55px weight-7 text-center white lh-1">
-          Request  <span className="red">Audit / KYC / Escrow</span>
+          We are still in beta.Get<span className="red">Early Access</span>by joining on oyr waitlist.
           </h1>
         </header>
         <form  > 
@@ -65,8 +65,8 @@ function Model({ setIsModal }) {
           <input
             type="text"
             className="fs-26px white weight-3"
-            placeholder="Project Name :"
-            name="projectname"
+            placeholder="Full Name :"
+            name="fullname"
           />
           <input
             type="email"
@@ -74,30 +74,13 @@ function Model({ setIsModal }) {
             placeholder="Email :"
             name="email"
           />
-          <input
-            type="text"
-            className="fs-26px white weight-3"
-            placeholder="Project Telegram :"
-            name="telegram"
-          />
-             <input
-            type="text"
-            className="fs-26px white weight-3"
-            placeholder="Source Code Link (Github) :"
-            name="github"
-          />
-          <textarea
-            className="fs-26px white weight-3"
-            placeholder="Message :"
-            name="message"
-          ></textarea>
+        
+       
 <div className='btn-modal'>
           <button type="submit" className="fs-26px white weight-5 pointer" >
-            Send
+            Request early access
           </button>
-          <a href='https://t.me/BlockAuditReport' target='_blank' rel='noreferrer' className="fs-26px white weight-5 pointer" >
-            Telegram 
-          </a>
+         
           </div>
         </form>
       </div></section></div>

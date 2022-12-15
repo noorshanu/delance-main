@@ -66,7 +66,7 @@ function Hero() {
       </div>
       <div className='side-2'>
       &nbsp; </div>
-      <div >
+      <div className='pop-up-sign' >
       {isModal && <Model setIsModal={setIsModal} />}
       </div>
      
