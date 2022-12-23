@@ -30,7 +30,7 @@ function Navbar() {
           <div className="d-flex foot-logo">
             <NavLink to='/'>
             <img
-              src="https://ik.imagekit.io/cforcrypto/Dework/logo_new.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669805675437"
+              src="https://ik.imagekit.io/cforcrypto/Dework/find_jobs/logo-white.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669995470971"
               alt=""
               className=""
             />

@@ -9,17 +9,20 @@
 
 }
 .hero h1 {
-  font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 52px;
-  line-height: 138.4%;
-  /* or 104px */
-
-  color: #000000;
+  line-height: 74px;
+  /* or 123% */
+  
+  
+  color: #FFFFFF;
+  
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .hero-sp-p{
-  font-size: 21px;
-    font-weight: 600;
+  font-size: 16px;
+    font-weight: 400;
+    color: #fff;
 }
 .social-hero{
   gap: 1rem;
@@ -29,10 +32,10 @@
   font-size: 26px;
 }
 .social-hero a:hover{
-  color: #00a652;
+  color: #00E86D;
 }
 .green {
-  color: #00a652;
+  color: #00E86D;
   font-weight: 700;
 }
 .hero-btn {
@@ -40,20 +43,15 @@
 }
 
 .hero-btn-1 {
-  background: linear-gradient(
-    93.52deg,
-    #00a652 0.78%,
-    #006a34 102.15%,
-    #58ffaa 102.16%
-  );
+  background: #00E86D;
   border: 0.5px solid #ffffff;
   box-shadow: 0px 7px 16px rgb(0 0 0 / 40%);
-  border-radius: 33.5px 0px;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
+  border-radius: 4px;
+
   padding: 1% 7%;
   font-size: 18px;
   font-weight: 600;
-  color: #fff;
+  color: rgb(0, 0, 0);
   margin-right: 5%;
 }
 .hero-btn-1:hover{
@@ -75,26 +73,8 @@
   border: 0.5px solid #ffffff;
   color: #fff;
 }
-.side-1 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 409px;
-  height: 246px;
-  background: #00a652;
-  filter: blur(180px);
-  z-index: -20;
-}
 
-.side-2 {
-  position: absolute;
-  left: 0;
-  width: 409px;
-  height: 246px;
-  background: #00a652;
-  filter: blur(180px);
-  z-index: -20;
-}
+
 @media (max-width:768px) {
   .hero h1{
     font-size: 26px;
@@ -103,16 +83,7 @@
     height: 230px;
     margin-top: 37px;
   }
-  .side-1 {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 253px;
-    height: 194px;
-  }
-  .side-2 {
-    display: none;
-  }
+
   .hero-sp-p{
     font-size: 14px;
       font-weight: 600;
