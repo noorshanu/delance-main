@@ -7,12 +7,8 @@ function Feauters() {
     <section className="features">
       <div className="container text-center">
         <div className="feat-header">
-          <img
-            src="https://ik.imagekit.io/cforcrypto/Dework/Group_2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669366346851"
-            alt=""
-            className="feat-side"
-          />
-          <h1>Features</h1>
+       
+          <h1>Key <span className="green">Features</span></h1>
         </div>
       </div>
       <MobFeauters className='mob-feat'/>
@@ -30,9 +26,9 @@ function Feauters() {
               <h3>Business simplified</h3>
               <p>
                 Post a job or apply for one in{" "}
-                <span className="black">a minute.</span> No browser plugins, 3rd
+                a minute.No browser plugins, 3rd
                 party apps, credit card details, or wallet-linking necessary.
-                <span className="black">Fast, efficient & easy</span> the way
+                Fast, efficient & easy the way
                 blockchain is meant to be
               </p>
               <p> </p>

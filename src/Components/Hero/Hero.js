@@ -9,6 +9,7 @@ import "./Hero.css";
 //   FaDiscord,
 //   FaInstagram,
 // } from "react-icons/fa";
+import {AiOutlineArrowRight} from 'react-icons/ai'
 import Model from "Components/Popup/Model";
 
 function Hero() {
@@ -84,10 +85,10 @@ function Hero() {
               {/* </div> */}
               <div className="hero-btn">
                 <a href="/" className="hero-btn-1">
-                  Buy Now
+                Find Freelancer  <AiOutlineArrowRight/>
                 </a>
                 <button className="hero-btn-2" onClick={() => setIsModal(true)}>
-                  Sign Up
+                Buy Now
                 </button>
               </div>
             </div>

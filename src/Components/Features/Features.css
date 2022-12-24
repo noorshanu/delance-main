@@ -11,7 +11,7 @@
 
   text-align: center;
 
-  color: #0000008f;
+  color: #ffffff;
 }
 
 .feat-img {
@@ -22,9 +22,8 @@
   width: auto;
 }
 .feat-box {
-  background: linear-gradient(180deg, #ffffff 0%, #dadada 100%);
-  border: 3px solid #00a652;
-  border-radius: 25px;
+  background: #242A38;
+  border-radius: 8px;
   width: 288px;
   padding-top: 3%;
   padding-bottom: 2%;
@@ -41,7 +40,7 @@
 
   text-transform: capitalize;
 
-  color: #000000;
+  color: #ffffff;
 }
 
 .feat-box p {
@@ -52,7 +51,7 @@
      line-height: 112.4%;
      /* padding-top: 1%; */
      /* text-align: justify; */
-     color: #000000;
+     color: #ffffff;
      padding-left: 6%;
      padding-right: 6%;
 }

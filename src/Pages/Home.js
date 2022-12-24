@@ -16,8 +16,9 @@ function Home() {
     <>
     <Navbar/>
     <Hero/>
-    <About/>
     <Features/>
+    <About/>
+   
     <Find/>
     <WhyUs/>
     <Tokenomic/>
