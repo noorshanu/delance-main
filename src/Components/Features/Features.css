@@ -2,15 +2,19 @@
   padding-top: 1%;
   padding-bottom: 5%;
 }
+.feat-header{
+  padding-bottom: 5%;
+}
+.feat-header img{
+  width: auto;
+  height: auto;
+}
 .feat-header h1 {
   font-style: normal;
   font-weight: 800;
-  font-size: 80px;
+  font-size: 40px;
   line-height: 138.4%;
-  /* identical to box height, or 277px */
-
   text-align: center;
-
   color: #ffffff;
 }
 
@@ -39,8 +43,6 @@
   padding-bottom: 1%;
 
   text-transform: capitalize;
-
-  color: #ffffff;
 }
 
 .feat-box p {

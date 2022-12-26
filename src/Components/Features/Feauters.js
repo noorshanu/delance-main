@@ -9,6 +9,7 @@ function Feauters() {
         <div className="feat-header">
        
           <h1>Key <span className="green">Features</span></h1>
+          <img src="https://ik.imagekit.io/cforcrypto/Dework/icons/Group_427325103.png?ik-sdk-version=javascript-1.4.3&updatedAt=1671913800599" alt=""/>
         </div>
       </div>
       <MobFeauters className='mob-feat'/>
@@ -18,12 +19,12 @@ function Feauters() {
             <div className="feat-box">
               <div className="feat-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/icons/icon__2_.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1669384940367"
+                  src="https://ik.imagekit.io/cforcrypto/Dework/icons/Group_1261152731.png?ik-sdk-version=javascript-1.4.3&updatedAt=1671913800596"
                   alt=""
                 />
               </div>
 
-              <h3>Business simplified</h3>
+              <h3 className="green">Business simplified</h3>
               <p>
                 Post a job or apply for one in{" "}
                 a minute.No browser plugins, 3rd
@@ -38,17 +39,17 @@ function Feauters() {
             <div className="feat-box">
               <div className="feat-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/icons/icon__1_.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1669384940347"
+                  src="https://ik.imagekit.io/cforcrypto/Dework/icons/Group.png?ik-sdk-version=javascript-1.4.3&updatedAt=1671913800579"
                   alt=""
                 />
               </div>
 
-              <h3>Transparency</h3>
+              <h3 className="green">Transparency</h3>
               <p>
                 By implementing an{" "}
-                <span className="black">automated dispute system</span> and
+              automated dispute system and
                 reputation stored on the blockchain. we’re building a{" "}
-                <span className="black">trustworthy platform</span> all
+                trustworthy platform all
                 stakeholders can rely on.
               </p>
               <p></p>
@@ -58,18 +59,18 @@ function Feauters() {
             <div className="feat-box">
               <div className="feat-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/icons/icon__6_.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1669384940388"
+                  src="https://ik.imagekit.io/cforcrypto/Dework/icons/Group_1261152740.png?ik-sdk-version=javascript-1.4.3&updatedAt=1671913800622"
                   alt=""
                 />
               </div>
 
-              <h3>Escrow</h3>
+              <h3 className="green">Escrow</h3>
               <p>
                 With escrow, Freelancers have the{" "}
-                <span className="black">guarantee of payment</span> for their
+                guarantee of payment for their
                 services, while the Employer’s funds are safe until the
                 Freelancer produces the expected work. As it’s based on{" "}
-                <span className="black">smart contracts</span>.
+                smart contracts.
               </p>
               <p> </p>
             </div>
@@ -80,17 +81,17 @@ function Feauters() {
             <div className="feat-box">
               <div className="feat-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/icons/icon__5_.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1669384940219"
+                  src="https://ik.imagekit.io/cforcrypto/Dework/icons/Group_1261152741.png?ik-sdk-version=javascript-1.4.3&updatedAt=1671913800563"
                   alt=""
                 />
               </div>
 
-              <h3>Ownership</h3>
+              <h3 className="green">Ownership</h3>
               <p>
                 With NFT (NFT) get ownership of the underlying{" "}
-                <span className="black">asset</span> or piece of work.{" "}
-                <span className="black"> NFTs can represent:</span> art, music,
-                photographs, designs, web pages, animations, videos, royality or
+                asset or piece of work.{" "}
+                 NFTs can represent: art, music,
+                photographs, designs, web pages, animations, videos, royalty or
                 copyright of work etc.
               </p>
               <p></p>
@@ -100,16 +101,16 @@ function Feauters() {
             <div className="feat-box">
               <div className="feat-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/icons/icon__4_.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1669384940348"
+                  src="https://ik.imagekit.io/cforcrypto/Dework/icons/Group__1_.png?ik-sdk-version=javascript-1.4.3&updatedAt=1671913800609"
                   alt=""
                 />
               </div>
 
-              <h3>Low Fees</h3>
+              <h3 className="green">Low Fees</h3>
               <p>
-                Our <span className="black">decentralized</span> and reputation
+                Our decentralized and reputation
                 stored on the blockchain. freelance market
-                <span className="black">ecosystem</span> alowers fees by
+               ecosystem alower fees by
                 directly connecting Employers and Freelancers.
               </p>
               <p></p>
@@ -119,16 +120,16 @@ function Feauters() {
             <div className="feat-box">
               <div className="feat-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/icons/icon__3_.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1669384940367"
+                  src="https://ik.imagekit.io/cforcrypto/Dework/icons/Group_1261152743.png?ik-sdk-version=javascript-1.4.3&updatedAt=1671913800566"
                   alt=""
                 />
               </div>
 
-              <h3>Fast Payments</h3>
+              <h3 className="green">Fast Payments</h3>
               <p>
-                You can use <span className="black">Crypto</span> get paid for
+                You can use Crypto get paid for
                 your services quickly and avoid currency{" "}
-                <span className="black">exchange</span> and possible commission
+                exchange and possible commission
                 rates{" "}
               </p>
             </div>
