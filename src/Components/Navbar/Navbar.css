@@ -113,7 +113,7 @@ font-weight: 400 !important;
   .menu-link ul li a {
   transition: 0.5s;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 300;
   font-size: 12px;
   line-height: 109%;
   text-transform: uppercase;
