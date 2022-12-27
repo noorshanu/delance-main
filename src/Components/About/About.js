@@ -31,6 +31,10 @@ function About() {
                   and buyers.
                 </p>
               </div>
+              <div className="list-box">
+                
+
+              </div>
             </div>
           </div>
         </div>

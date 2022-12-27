@@ -1,11 +1,11 @@
 .hero {
-  padding-top: 11%;
+  padding-top: 8%;
   height: 100vh;
 }
 .hero-img {
-  height: 513px;
+  height: auto;
   width: auto;
-  margin-top: -22px;
+  margin-top: -55px;
 }
 .hero h1 {
   font-weight: 600;

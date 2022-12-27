@@ -7,24 +7,28 @@ function Find() {
     
       <div className="bg-dework">
         <div className="container">
-          <div className="d-work-box">
-            <p>
-              {" "}
-              Deelance ” is a project that creates unique contents on Metaverse
-              technology that is a huge trend around the world. Its aim is to
-              move people to another dimension within the digital universe.
-             
-            </p>
+        <div className="row justify-content-center ">
+          <div className="col-md-6">
+            <div className="meta-1">
+              <h1>Find Freelancer In <span className="green">Metaverse</span> </h1>
+              <p>Deelance ” is a project that creates unique contents on Metaverse technology that is a huge trend around the world. Its aim is to move people to another dimension within the digital universe. </p>
+              <p> Metaverse - where buyers can interact with freelancers in the office space and have a discussion</p>
+            </div>
+            <a href="/" className="demo-btn">
+              DEMO
 
-            <p>
-            Metaverse - where buyers can interact with freelancers in the
-              office space and have a discussion through voice or video
-              conference call in the meeting room.
-            </p>
+            </a>
+
           </div>
-          <div className="de-work-btn-box">
-            <h1><a href="http://demo.deelance.com/" target='_blank' rel="noreferrer">DEMO</a></h1>
+          <div className="col-md-6">
+            <div className="text-center meta-img">
+              <img src="https://ik.imagekit.io/cforcrypto/Dework/Asset_3.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672057407781" alt=""/>
+
+            </div>
+
           </div>
+
+        </div>
         </div>
       </div>
     </section>
