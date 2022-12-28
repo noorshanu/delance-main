@@ -1,4 +1,4 @@
-import FootDark from 'Components/FootDark/FootDark'
+import Footer from 'Components/Footer/Footer'
 import Navbar from 'Components/Navbar/Navbar'
 
 import React from 'react'
@@ -199,7 +199,7 @@ function Terms() {
   </section>
 
 
-    <FootDark/>
+   <Footer/>
     </>
   )
 }

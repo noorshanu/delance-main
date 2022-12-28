@@ -1,4 +1,4 @@
-import FootDark from 'Components/FootDark/FootDark'
+import Footer from 'Components/Footer/Footer'
 import Navbar from 'Components/Navbar/Navbar'
 import Rewards from 'Components/Rewards/Rewards'
 import React from 'react'
@@ -11,7 +11,7 @@ function Reward() {
         <Rewards/>
 
 
-    <FootDark/>
+    <Footer/>
     </>
   )
 }

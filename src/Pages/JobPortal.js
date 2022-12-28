@@ -1,4 +1,4 @@
-import FootDark from 'Components/FootDark/FootDark'
+import Footer from 'Components/Footer/Footer'
 import Jobs from 'Components/Jobs/Jobs'
 import Navbar from 'Components/Navbar/Navbar'
 
@@ -12,7 +12,7 @@ function JobPortal() {
         <Jobs/>
        
  
-    <FootDark/>
+    <Footer/>
     </>
   )
 }
