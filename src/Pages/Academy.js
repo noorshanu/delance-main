@@ -1,21 +1,17 @@
-import AcademyPage from 'Components/AcademyPage'
-import FootDark from 'Components/FootDark/FootDark'
-
-import NavDark from 'Components/NavDark/NavDark'
-import React from 'react'
+import AcademyPage from "Components/AcademyPage";
+import FootDark from "Components/FootDark/FootDark";
+import Navbar from "Components/Navbar/Navbar";
+import React from "react";
 
 function Academy() {
   return (
     <>
-    
-    <div className='dark'>
-     <NavDark/>
-        <AcademyPage/>
-       
-    </div>
-    <FootDark/>
+      <Navbar />
+      <AcademyPage />
+
+      <FootDark />
     </>
-  )
+  );
 }
 
-export default Academy
+export default Academy;

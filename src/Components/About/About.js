@@ -1,5 +1,6 @@
 import React from "react";
 import "./About.css";
+import {AiOutlineCheckCircle} from 'react-icons/ai'
 
 function About() {
   return (
@@ -32,7 +33,10 @@ function About() {
                 </p>
               </div>
               <div className="list-box">
-                
+                <h3 className="green"><AiOutlineCheckCircle/> Fully Decentralized</h3>
+                <p>World’s first fully decentralized freelance network</p>
+
+                <h3 className="green"><AiOutlineCheckCircle/> 2% Commission </h3>
 
               </div>
             </div>

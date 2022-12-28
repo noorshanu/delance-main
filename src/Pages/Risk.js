@@ -1,13 +1,14 @@
 import FootDark from 'Components/FootDark/FootDark'
-import NavDark from 'Components/NavDark/NavDark'
+import Navbar from 'Components/Navbar/Navbar'
+
 import React from 'react'
 
 function Risk() {
   return (
     <>
 
-    <div className='dark'>
-    <NavDark/>
+ 
+  <Navbar/>
         <section className="mb-70px mt-200px">
     <div className="container">
       <div className="pol">
@@ -34,7 +35,7 @@ function Risk() {
         </div>
 </section>
 
-    </div>
+
     <FootDark/>
    </>
   )

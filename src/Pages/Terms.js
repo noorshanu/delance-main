@@ -1,12 +1,13 @@
 import FootDark from 'Components/FootDark/FootDark'
-import NavDark from 'Components/NavDark/NavDark'
+import Navbar from 'Components/Navbar/Navbar'
+
 import React from 'react'
 
 function Terms() {
   return (
     <>
-    <div className='dark'>
-        <NavDark/>
+   
+      <Navbar/>
     <section class="mb-70px mt-200px">
     <div class="container">
       <div class="pol">
@@ -197,7 +198,7 @@ function Terms() {
     </div>
   </section>
 
-  </div>
+
     <FootDark/>
     </>
   )

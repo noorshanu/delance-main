@@ -1,16 +1,17 @@
 import FootDark from 'Components/FootDark/FootDark'
-import NavDark from 'Components/NavDark/NavDark'
+import Navbar from 'Components/Navbar/Navbar'
+
 import Team from 'Components/Team/Team'
 import React from 'react'
 
 function TeamPage() {
   return (
     <>
-    <div className='dark'>
-        <NavDark/>
+ 
+      <Navbar/>
         <Team/>
        
-    </div>
+
     <FootDark/>
     </>
     

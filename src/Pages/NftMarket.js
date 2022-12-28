@@ -2,20 +2,20 @@ import NFT from "Components/NFT/NFT";
 import NFTTrending from "Components/NFT Trending/NFTTrending";
 import NFTPopCat from "Components/NFT Popular cat/NFTPopCat";
 import React from "react";
-import NavDark from "Components/NavDark/NavDark";
 import FootDark from "Components/FootDark/FootDark";
+import Navbar from "Components/Navbar/Navbar";
 
 function NftMarket() {
   return (
     <>
       
         
-        <div className="dark">
-        <NavDark />
+       
+       <Navbar/>
         <NFT />
         <NFTPopCat />
         <NFTTrending />
-        </div>
+      
         <FootDark />
       
     </>
