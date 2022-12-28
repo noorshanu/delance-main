@@ -1,9 +1,8 @@
-.border-foot-top{
-    border-top: 4px solid #00A652;
-  
+.footer{
+   background-color:  #242A38;
     padding-top: 3%;
     padding-bottom: 2%;
-    border-bottom: 2px solid #6C6C6C;
+   
 }
 .footer-logo img{
     width: 178px;
@@ -19,13 +18,13 @@
 }
 .sc-1{
     font-size: 14px;
-    color: #6C6C6C;
+    color: #ffffff;
 }
 .foot-link a p{
     font-size: 14px;
     font-weight: 500;
     line-height: 19px;
-    color: #6C6C6C;
+    color: #ffffff;
 }
 .foot-link a p:hover{
     color: #00A652;
@@ -33,7 +32,7 @@
 .foot-bottom-text{
     font-size: 14px;
     font-weight: 500;
-    color: #6C6C6C;
+    color: #ffffff;
     text-align: center;
     padding-top: 1%;
     padding-bottom: 1%;

@@ -19,13 +19,12 @@ function Footer() {
           <div className="row justify-content-center align-items-center">
             <div className="col-md-3 col-6">
               <div className="footer-logo">
-                <NavLink to='/'>
-                <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/logo_new.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669805675437"
-                  alt="foot-logo"
-                />
+                <NavLink to="/">
+                  <img
+                    src="https://ik.imagekit.io/cforcrypto/Dework/logo_new.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669805675437"
+                    alt="foot-logo"
+                  />
                 </NavLink>
-            
               </div>
               <p className="sc-1">Conect With The Community</p>
               <div className="foot-social">
@@ -79,12 +78,19 @@ function Footer() {
                   <FaInstagram />
                 </a>
               </div>
+              <div>
+                <p>
+                  Deelance is a freelancing and Recruitment platform based on
+                  Web3 platform that is redefining how freelancers connect with
+                  potential employers and buyers.
+                </p>
+              </div>
             </div>
 
             <div className="col-md-3 col-6">
               <div className="foot-btn-grup">
                 <a href="/" className="hero-btn-1">
-                 Buy Now
+                  Buy Now
                 </a>
                 <a href="/" className="hero-btn-2">
                   Find job
