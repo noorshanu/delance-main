@@ -74,7 +74,7 @@ function WhyUs() {
                 <td className="text-center">20%</td>
                 <td className="text-center">20%</td>
               </tr>
-              <tr>
+              <tr className="bg-blue">
                 <th scope="row">
                   <p>Withdrawal Fee</p>
                 </th>
@@ -99,7 +99,7 @@ function WhyUs() {
                 <td className="text-center"><MdOutlineCancel/></td>
                 <td className="text-center"><MdOutlineCancel/></td>
               </tr>
-              <tr>
+              <tr className="bg-blue">
                 <th scope="row">Content Ownership</th>
                 <td className="green text-center"><AiOutlineCheckCircle/></td>
                 <td className="text-center"><MdOutlineCancel/></td>
@@ -114,7 +114,7 @@ function WhyUs() {
                 <td className="text-center">No/Partial</td>
               </tr>
 
-              <tr>
+              <tr className="bg-blue">
                 <th scope="row">No Limit On Task Size</th>
                 <td className="green text-center"><AiOutlineCheckCircle/></td>
                 <td className="text-center"><MdOutlineCancel/></td>
@@ -130,7 +130,7 @@ function WhyUs() {
                 <td className="text-center"><MdOutlineCancel/></td>
               </tr>
 
-              <tr>
+              <tr className="bg-blue">
                 <th scope="row">NFT / Metaverse</th>
                 <td className="green text-center"><AiOutlineCheckCircle/></td>
                 <td className="text-center"><MdOutlineCancel/></td>
