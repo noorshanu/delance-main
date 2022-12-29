@@ -39,8 +39,7 @@ th,td{
 
   border: 1px solid #535675;
   border-radius: 9px;
-  padding-top: 2%;
-  padding-bottom: 1%;
+
 
   color: #fff;
 }
@@ -48,6 +47,9 @@ th,td{
 
   padding-top: 1%;
   padding-bottom: 1%;
+}
+.b-right{
+  border-right: 1px solid #00E86D
 }
 .content-2 img {
   height: auto;
