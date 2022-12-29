@@ -1,5 +1,7 @@
 import React from "react";
 import MobWhyus from "./MobWhyus";
+import {AiOutlineCheckCircle} from 'react-icons/ai'
+import {MdOutlineCancel} from 'react-icons/md'
 
 import "./Why.css";
 
@@ -58,89 +60,89 @@ function WhyUs() {
                 <th scope="row">
                   <p>Client Fee</p>
                 </th>
-                <td>2%</td>
-                <td>3%</td>
-                <td>3.5%</td>
-                <td>20%</td>
+                <td className="text-center">2%</td>
+                <td className="text-center">3%</td>
+                <td className="text-center">3.5%</td>
+                <td className="text-center">20%</td>
               </tr>
               <tr>
                 <th scope="row">
                   <p>Freelancer Fee</p>{" "}
                 </th>
-                <td>10%</td>
-                <td>10%</td>
-                <td>20%</td>
-                <td>20%</td>
+                <td className="text-center">10%</td>
+                <td className="text-center">10%</td>
+                <td className="text-center">20%</td>
+                <td className="text-center">20%</td>
               </tr>
               <tr>
                 <th scope="row">
                   <p>Withdrawal Fee</p>
                 </th>
-                <td>Crypto/Instant</td>
-                <td>
+                <td className="text-center">Crypto/Instant</td>
+                <td className="text-center">
                   Min Payout $100 (2.75% Fee For Withdrawal For Currency
                   Conversion)
                 </td>
-                <td>
+                <td className="text-center">
                   Min Payout $100 (5% Fee For Withdrawal For Currency
                   Conversion)
                 </td>
-                <td>
+                <td className="text-center">
                   Min Payout $100 (5% Fee For Withdrawal For Currency
                   Conversion)
                 </td>
               </tr>
               <tr>
                 <th scope="row">Decentralized</th>
-                <td>Larry the Bird</td>
-                <td>@twitter</td>
-                <td>@twitter</td>
-                <td>@twitter</td>
+                <td className="green text-center"><AiOutlineCheckCircle/></td>
+                <td className="text-center"><MdOutlineCancel/></td>
+                <td className="text-center"><MdOutlineCancel/></td>
+                <td className="text-center"><MdOutlineCancel/></td>
               </tr>
               <tr>
                 <th scope="row">Content Ownership</th>
-                <td>Larry the Bird</td>
-                <td>@twitter</td>
-                <td>@twitter</td>
-                <td>@twitter</td>
+                <td className="green text-center"><AiOutlineCheckCircle/></td>
+                <td className="text-center"><MdOutlineCancel/></td>
+                <td className="text-center"><MdOutlineCancel/></td>
+                <td className="text-center"><MdOutlineCancel/></td>
               </tr>
               <tr>
                 <th scope="row">Efficient Escrow</th>
-                <td>Larry the Bird</td>
-                <td>@twitter</td>
-                <td>@twitter</td>
-                <td>@twitter</td>
+                <td>Yes</td>
+                <td>No/Partial</td>
+                <td>No/Partial</td>
+                <td>No/Partial</td>
               </tr>
 
               <tr>
                 <th scope="row">No Limit On Task Size</th>
-                <td>Larry the Bird</td>
-                <td>@twitter</td>
-                <td>@twitter</td>
-                <td>@twitter</td>
+                <td className="green"><AiOutlineCheckCircle/></td>
+                <td><MdOutlineCancel/></td>
+                <td><MdOutlineCancel/></td>
+                <td><MdOutlineCancel/></td>
               </tr>
 
               <tr>
                 <th scope="row">Scalable Dispute System</th>
-                <td>Larry the Bird</td>
-                <td>@twitter</td>
-                <td>@twitter</td>
-                <td>@twitter</td>
+                <td className="green"><AiOutlineCheckCircle/></td>
+                <td><MdOutlineCancel/></td>
+                <td><MdOutlineCancel/></td>
+                <td><MdOutlineCancel/></td>
               </tr>
 
               <tr>
                 <th scope="row">NFT / Metaverse</th>
-                <td>Larry the Bird</td>
-                <td>@twitter</td>
-                <td>@twitter</td>
-                <td>@twitter</td>
+                <td className="green"><AiOutlineCheckCircle/></td>
+                <td><MdOutlineCancel/></td>
+                <td><MdOutlineCancel/></td>
+                <td><MdOutlineCancel/></td>
               </tr>
               <tr>
                 <th scope="row">Staff Recruitment</th>
-                <td>Larry the Bird</td>
-                <td>@twitter</td>
-                <td>@twitter</td>
-                <td>@twitter</td>
+                <td className="green"><AiOutlineCheckCircle/></td>
+                <td><MdOutlineCancel/></td>
+                <td><MdOutlineCancel/></td>
+                <td><MdOutlineCancel/></td>
               </tr>
             </tbody>
           </table>
