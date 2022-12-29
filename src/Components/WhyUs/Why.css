@@ -11,7 +11,7 @@
 
   text-align: center;
 
-  color: #0000008f;
+  color: #ffffff;
 }
 
 .border-down p {
@@ -23,108 +23,35 @@
 
   text-transform: capitalize;
 
-  color: #000000;
+  color: #ffffff;
 }
-.border-down hr {
-  color: #00a652;
-  height: 6px;
-  width: 75px;
-  border-top: 2.5px solid;
-  opacity: 1.25;
-}
+
 .why-us-box {
-  background: linear-gradient(180deg, #ffffff 0%, #dadada 100%);
-  border: 3px solid #00a652;
-  border-radius: 25px;
+  background: #242A38;
+
+  border-radius: 9px;
   padding-top: 2%;
   padding-bottom: 2%;
   padding-left: 1%;
   padding-right: 1%;
+  color: #fff;
 }
 .content-2 {
-  text-align: center;
-  background: linear-gradient(180deg, #00bd5d 0%, #006632 100%);
-  border-radius: 37px;
-  height: 100%;
-  color: #fff;
+
   padding-top: 1%;
   padding-bottom: 1%;
 }
 .content-2 img {
   height: auto;
   width: 120px;
-  margin-top: 8%;
-  margin-bottom: 12%;
-}
-.content-2 hr {
-  color: white;
-  height: 6px;
-  width: 89px;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  border-top: 2.5px solid;
-  opacity: 1;
-}
-.content-2 p {
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 100.4%;
-
-  text-transform: capitalize;
-
-  color: #ffffff;
-}
-.content {
-  height: 100%;
-  margin-top: 29%;
+ 
 }
 
-.content-3{
-    height: 100%;
-    text-align: center;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    border-radius: 37px;
-}
-.content-3 img {
-    height: 37px;
-    width: 124px;
-    margin-top: 8%;
-    margin-bottom: 12%;
-}
 
-.content-3 hr {
-    color: rgb(0, 0, 0);
-    height: 6px;
-    width: 89px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    border-top: 2.5px solid;
-    opacity: 1;
-  }
-  .content-3 p {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 100.4%;
-  
-    text-transform: capitalize;
-  
-    color: #000000;
-  }
-  .short-dis p{
-    font-size: 9px;
-    line-height: 7px;
-    margin: 2px;
-}
-.each{
-    font-size: 8px !important;
-    line-height: 11px !important;
-    margin: 2px;
-}
+
+
+
+
 .mob-why-swiper{
   display: none;
 }
@@ -136,18 +63,6 @@
   .mob-why-swiper{
     display: block;
   }
-  .why-us-head h1 {
-
-    font-size: 36px;
-  }
-  .content {
   
-    text-align: center;
-  }
-  .border-down hr {
-  
-    margin-right: auto;
-    margin-left: auto;
-}
   
 }
