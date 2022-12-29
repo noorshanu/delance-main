@@ -58,64 +58,79 @@ function WhyUs() {
             <tbody>
               <tr className="bg-blue">
                 <th scope="row " className="b-right">
-                  <p>Client Fee</p>
+                  <p className="t-head">Client Fee</p>
                 </th>
-                <td className="text-center b-right">2%</td>
-                <td className="text-center">3%</td>
-                <td className="text-center">3.5%</td>
-                <td className="text-center">20%</td>
+                <td className="text-center b-right t-head">2%</td>
+                <td className="text-center t-head">3%</td>
+                <td className="text-center t-head">3.5%</td>
+                <td className="text-center t-head">20%</td>
               </tr>
               <tr>
                 <th scope="row" className="b-right">
-                  <p>Freelancer Fee</p>{" "}
+                  <p className="t-head">Freelancer Fee</p>{" "}
                 </th>
-                <td className="text-center b-right">10%</td>
-                <td className="text-center">10%</td>
-                <td className="text-center">20%</td>
-                <td className="text-center">20%</td>
+                <td className="text-center b-right t-head">10%</td>
+                <td className="text-center t-head">10%</td>
+                <td className="text-center t-head">20%</td>
+                <td className="text-center t-head">20%</td>
               </tr>
               <tr className="bg-blue">
                 <th scope="row" className="b-right">
-                  <p>Withdrawal Fee</p>
+                  <p className="t-head">Withdrawal Fee</p>
                 </th>
                 <td className="text-center b-right">Crypto/Instant</td>
-                <td className="text-center">
-                  Min Payout $100 (2.75% Fee For Withdrawal For Currency
-                  Conversion)
+                <td className="text-center t-head">
+                  Min Payout $100 
+                  <p className="t-head">(2.75% Fee For Withdrawal For </p>
+                  <p className="t-head">Currency
+                  Conversion)</p>
                 </td>
-                <td className="text-center">
-                  Min Payout $100 (5% Fee For Withdrawal For Currency
-                  Conversion)
+                <td className="text-center t-head">
+                  Min Payout $100 
+                 <p className="t-head"> (5% Fee For Withdrawal For </p>
+                  <p className="t-head">Currency
+                  Conversion)</p>
                 </td>
-                <td className="text-center">
-                  Min Payout $100 (5% Fee For Withdrawal For Currency
-                  Conversion)
+                <td className="text-center t-head">
+                  Min Payout $100 
+                  <p className="t-head">  (5% Fee For Withdrawal For </p>
+                  <p className="t-head">Currency
+                  Conversion)</p>
+                
                 </td>
               </tr>
               <tr>
-                <th scope="row" className="b-right">Decentralized</th>
+                <th scope="row" className="b-right">
+                  <p className="t-head">Decentralized</p>
+                  </th>
                 <td className="green text-center b-right"><AiOutlineCheckCircle/></td>
                 <td className="text-center cross"><MdOutlineCancel/></td>
                 <td className="text-center cross"><MdOutlineCancel/></td>
                 <td className="text-center cross"><MdOutlineCancel/></td>
               </tr>
               <tr className="bg-blue">
-                <th scope="row" className="b-right">Content Ownership</th>
+                <th scope="row" className="b-right">
+                 <p className="t-head">Content Ownership</p>
+                 </th>
                 <td className="green text-center b-right"><AiOutlineCheckCircle/></td>
                 <td className="text-center cross"><MdOutlineCancel/></td>
                 <td className="text-center cross"><MdOutlineCancel/></td>
                 <td className="text-center cross"><MdOutlineCancel/></td>
               </tr>
               <tr>
-                <th scope="row" className="b-right">Efficient Escrow</th>
-                <td className="text-center b-right" >Yes</td>
-                <td className="text-center">No/Partial</td>
-                <td className="text-center">No/Partial</td>
-                <td className="text-center">No/Partial</td>
+                <th scope="row" className="b-right">
+                <p className="t-head"> Efficient Escrow</p>
+                 </th>
+                <td className="text-center b-right t-head" >Yes</td>
+                <td className="text-center t-head">No/Partial</td>
+                <td className="text-center t-head">No/Partial</td>
+                <td className="text-center t-head">No/Partial</td>
               </tr>
 
               <tr className="bg-blue">
-                <th scope="row" className="b-right">No Limit On Task Size</th>
+                <th scope="row" className="b-right">
+                <p className="t-head">No Limit On Task Size</p>
+                  </th>
                 <td className="green text-center b-right"><AiOutlineCheckCircle/></td>
                 <td className="text-center cross"><MdOutlineCancel/></td>
                 <td className="text-center cross"><MdOutlineCancel/></td>
@@ -123,7 +138,9 @@ function WhyUs() {
               </tr>
 
               <tr>
-                <th scope="row" className="b-right">Scalable Dispute System</th>
+                <th scope="row" className="b-right">
+                <p className="t-head">Scalable Dispute System</p>
+                  </th>
                 <td className="green text-center b-right"><AiOutlineCheckCircle/></td>
                 <td className="text-center cross"><MdOutlineCancel/></td>
                 <td className="text-center cross"><MdOutlineCancel/></td>
@@ -131,14 +148,18 @@ function WhyUs() {
               </tr>
 
               <tr className="bg-blue">
-                <th scope="row" className="b-right">NFT / Metaverse</th>
+                <th scope="row" className="b-right">
+                <p className="t-head">NFT / Metaverse</p>
+                 </th>
                 <td className="green text-center b-right"><AiOutlineCheckCircle/></td>
                 <td className="text-center cross"><MdOutlineCancel/></td>
                 <td className="text-center cross"><MdOutlineCancel/></td>
                 <td className="text-center cross"><MdOutlineCancel/></td>
               </tr>
               <tr>
-                <th scope="row" className="b-right">Staff Recruitment</th>
+                <th scope="row" className="b-right">
+                <p className="t-head">Staff Recruitment</p>
+                 </th>
                 <td className="green text-center b-right"><AiOutlineCheckCircle/></td>
                 <td className="text-center cross"><MdOutlineCancel/></td>
                 <td className="text-center cross"><MdOutlineCancel/></td>

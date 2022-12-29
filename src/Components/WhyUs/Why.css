@@ -3,9 +3,16 @@
 }
 .table{
   color: #fff;
+  margin-bottom: 0;
 }
 th,td{
   border-bottom: 0px;
+}
+th{
+  width: 250px;
+}
+td{
+  width: 100px !important;
 }
 .why-us-head h1 {
   font-style: normal;
@@ -64,7 +71,12 @@ th,td{
   background: #111827;
 }
 
-
+.t-head{
+  font-weight: 400;
+font-size: 14px;
+line-height: 26px;
+margin-bottom: 5px;
+}
 
 
 
