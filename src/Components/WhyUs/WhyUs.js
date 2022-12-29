@@ -66,16 +66,64 @@ function WhyUs() {
                 <td>Jacob</td>
                 <td>Thornton</td>
                 <td>@fat</td>
+                <td>@twitter</td>
               </tr>
               <tr>
                 <th scope="row"><p>Withdrawal Fee</p></th>
-                <td colspan="2">Larry the Bird</td>
+                <td  >Larry the Bird</td>
+                <td>@twitter</td>
                 <td>@twitter</td>
                 <td>@twitter</td>
               </tr>
               <tr>
                 <th scope="row">Decentralized</th>
-                <td colspan="2">Larry the Bird</td>
+                <td  >Larry the Bird</td>
+                <td>@twitter</td>
+                <td>@twitter</td>
+                <td>@twitter</td>
+              </tr>
+              <tr>
+                <th scope="row">Decentralized</th>
+                <td  >Larry the Bird</td>
+                <td>@twitter</td>
+                <td>@twitter</td>
+                <td>@twitter</td>
+              </tr>
+              <tr>
+                <th scope="row">Decentralized</th>
+                <td  >Larry the Bird</td>
+                <td>@twitter</td>
+                <td>@twitter</td>
+                <td>@twitter</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Decentralized</th>
+                <td  >Larry the Bird</td>
+                <td>@twitter</td>
+                <td>@twitter</td>
+                <td>@twitter</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Decentralized</th>
+                <td  >Larry the Bird</td>
+                <td>@twitter</td>
+                <td>@twitter</td>
+                <td>@twitter</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Decentralized</th>
+                <td  >Larry the Bird</td>
+                <td>@twitter</td>
+                <td>@twitter</td>
+                <td>@twitter</td>
+              </tr>
+              <tr>
+                <th scope="row">Decentralized</th>
+                <td  >Larry the Bird</td>
+                <td>@twitter</td>
                 <td>@twitter</td>
                 <td>@twitter</td>
               </tr>
