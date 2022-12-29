@@ -20,7 +20,7 @@ function WhyUs() {
                 <th scope="col">
                   <div className="content-2">
                     <img
-                      src="https://ik.imagekit.io/cforcrypto/Dework/logo_new.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669805675437"
+                      src="https://ik.imagekit.io/cforcrypto/Dework/find_jobs/logo-white.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669995470971"
                       alt=""
                     />
                   </div>
@@ -53,26 +53,28 @@ function WhyUs() {
             </thead>
             <tbody>
               <tr>
-                <th scope="row">1</th>
+                <th scope="row">
+                  <p>Client Fee</p>
+                   </th>
                 <td>Mark</td>
                 <td>Otto</td>
                 <td>@mdo</td>
                 <td>@twitter</td>
               </tr>
               <tr>
-                <th scope="row">2</th>
+                <th scope="row"><p>Freelancer Fee</p> </th>
                 <td>Jacob</td>
                 <td>Thornton</td>
                 <td>@fat</td>
               </tr>
               <tr>
-                <th scope="row">3</th>
+                <th scope="row"><p>Withdrawal Fee</p></th>
                 <td colspan="2">Larry the Bird</td>
                 <td>@twitter</td>
                 <td>@twitter</td>
               </tr>
               <tr>
-                <th scope="row">4</th>
+                <th scope="row">Decentralized</th>
                 <td colspan="2">Larry the Bird</td>
                 <td>@twitter</td>
                 <td>@twitter</td>
