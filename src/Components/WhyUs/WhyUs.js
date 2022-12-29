@@ -95,16 +95,16 @@ function WhyUs() {
               <tr>
                 <th scope="row">Decentralized</th>
                 <td className="green text-center"><AiOutlineCheckCircle/></td>
-                <td className="text-center"><MdOutlineCancel/></td>
-                <td className="text-center"><MdOutlineCancel/></td>
-                <td className="text-center"><MdOutlineCancel/></td>
+                <td className="text-center cross"><MdOutlineCancel/></td>
+                <td className="text-center cross"><MdOutlineCancel/></td>
+                <td className="text-center cross"><MdOutlineCancel/></td>
               </tr>
               <tr className="bg-blue">
                 <th scope="row">Content Ownership</th>
                 <td className="green text-center"><AiOutlineCheckCircle/></td>
-                <td className="text-center"><MdOutlineCancel/></td>
-                <td className="text-center"><MdOutlineCancel/></td>
-                <td className="text-center"><MdOutlineCancel/></td>
+                <td className="text-center cross"><MdOutlineCancel/></td>
+                <td className="text-center cross"><MdOutlineCancel/></td>
+                <td className="text-center cross"><MdOutlineCancel/></td>
               </tr>
               <tr>
                 <th scope="row">Efficient Escrow</th>
@@ -117,32 +117,32 @@ function WhyUs() {
               <tr className="bg-blue">
                 <th scope="row">No Limit On Task Size</th>
                 <td className="green text-center"><AiOutlineCheckCircle/></td>
-                <td className="text-center"><MdOutlineCancel/></td>
-                <td className="text-center"><MdOutlineCancel/></td>
-                <td className="text-center"><MdOutlineCancel/></td>
+                <td className="text-center cross"><MdOutlineCancel/></td>
+                <td className="text-center cross"><MdOutlineCancel/></td>
+                <td className="text-center cross"><MdOutlineCancel/></td>
               </tr>
 
               <tr>
                 <th scope="row">Scalable Dispute System</th>
                 <td className="green text-center"><AiOutlineCheckCircle/></td>
-                <td className="text-center"><MdOutlineCancel/></td>
-                <td className="text-center"><MdOutlineCancel/></td>
-                <td className="text-center"><MdOutlineCancel/></td>
+                <td className="text-center cross"><MdOutlineCancel/></td>
+                <td className="text-center cross"><MdOutlineCancel/></td>
+                <td className="text-center cross"><MdOutlineCancel/></td>
               </tr>
 
               <tr className="bg-blue">
                 <th scope="row">NFT / Metaverse</th>
                 <td className="green text-center"><AiOutlineCheckCircle/></td>
-                <td className="text-center"><MdOutlineCancel/></td>
-                <td className="text-center"><MdOutlineCancel/></td>
-                <td className="text-center"><MdOutlineCancel/></td>
+                <td className="text-center cross"><MdOutlineCancel/></td>
+                <td className="text-center cross"><MdOutlineCancel/></td>
+                <td className="text-center cross"><MdOutlineCancel/></td>
               </tr>
               <tr>
                 <th scope="row">Staff Recruitment</th>
                 <td className="green text-center"><AiOutlineCheckCircle/></td>
-                <td className="text-center"><MdOutlineCancel/></td>
-                <td className="text-center"><MdOutlineCancel/></td>
-                <td className="text-center"><MdOutlineCancel/></td>
+                <td className="text-center cross"><MdOutlineCancel/></td>
+                <td className="text-center cross"><MdOutlineCancel/></td>
+                <td className="text-center cross"><MdOutlineCancel/></td>
               </tr>
             </tbody>
           </table>
