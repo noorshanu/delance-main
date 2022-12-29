@@ -4,6 +4,9 @@
 .table{
   color: #fff;
 }
+th,td{
+  border-bottom: 0px;
+}
 .why-us-head h1 {
   font-style: normal;
   font-weight: 800;
