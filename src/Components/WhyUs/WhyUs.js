@@ -20,7 +20,7 @@ function WhyUs() {
           <table className="table">
             <thead>
               <tr>
-                <th scope="col">#</th>
+                <th scope="col"> </th>
                 <th scope="col">
                   <div className="content-2">
                     <img
@@ -32,7 +32,7 @@ function WhyUs() {
                 <th scope="col">
                   <div className="content-2">
                     <img
-                      src="https://ik.imagekit.io/cforcrypto/Dework/image_8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669366389254"
+                      src="https://ik.imagekit.io/cforcrypto/Dework/Group.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672314856661"
                       alt=""
                     />
                   </div>
@@ -48,7 +48,7 @@ function WhyUs() {
                 <th scope="col">
                   <div className="content-2">
                     <img
-                      src="https://ik.imagekit.io/cforcrypto/Dework/image_10.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669366388768"
+                      src="https://ik.imagekit.io/cforcrypto/Dework/Fiverr_New_1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672314856553"
                       alt=""
                     />
                   </div>
@@ -56,8 +56,8 @@ function WhyUs() {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">
+              <tr className="bg-blue">
+                <th scope="row ">
                   <p>Client Fee</p>
                 </th>
                 <td className="text-center">2%</td>
@@ -108,41 +108,41 @@ function WhyUs() {
               </tr>
               <tr>
                 <th scope="row">Efficient Escrow</th>
-                <td>Yes</td>
-                <td>No/Partial</td>
-                <td>No/Partial</td>
-                <td>No/Partial</td>
+                <td className="text-center">Yes</td>
+                <td className="text-center">No/Partial</td>
+                <td className="text-center">No/Partial</td>
+                <td className="text-center">No/Partial</td>
               </tr>
 
               <tr>
                 <th scope="row">No Limit On Task Size</th>
-                <td className="green"><AiOutlineCheckCircle/></td>
-                <td><MdOutlineCancel/></td>
-                <td><MdOutlineCancel/></td>
-                <td><MdOutlineCancel/></td>
+                <td className="green text-center"><AiOutlineCheckCircle/></td>
+                <td className="text-center"><MdOutlineCancel/></td>
+                <td className="text-center"><MdOutlineCancel/></td>
+                <td className="text-center"><MdOutlineCancel/></td>
               </tr>
 
               <tr>
                 <th scope="row">Scalable Dispute System</th>
-                <td className="green"><AiOutlineCheckCircle/></td>
-                <td><MdOutlineCancel/></td>
-                <td><MdOutlineCancel/></td>
-                <td><MdOutlineCancel/></td>
+                <td className="green text-center"><AiOutlineCheckCircle/></td>
+                <td className="text-center"><MdOutlineCancel/></td>
+                <td className="text-center"><MdOutlineCancel/></td>
+                <td className="text-center"><MdOutlineCancel/></td>
               </tr>
 
               <tr>
                 <th scope="row">NFT / Metaverse</th>
-                <td className="green"><AiOutlineCheckCircle/></td>
-                <td><MdOutlineCancel/></td>
-                <td><MdOutlineCancel/></td>
-                <td><MdOutlineCancel/></td>
+                <td className="green text-center"><AiOutlineCheckCircle/></td>
+                <td className="text-center"><MdOutlineCancel/></td>
+                <td className="text-center"><MdOutlineCancel/></td>
+                <td className="text-center"><MdOutlineCancel/></td>
               </tr>
               <tr>
                 <th scope="row">Staff Recruitment</th>
-                <td className="green"><AiOutlineCheckCircle/></td>
-                <td><MdOutlineCancel/></td>
-                <td><MdOutlineCancel/></td>
-                <td><MdOutlineCancel/></td>
+                <td className="green text-center"><AiOutlineCheckCircle/></td>
+                <td className="text-center"><MdOutlineCancel/></td>
+                <td className="text-center"><MdOutlineCancel/></td>
+                <td className="text-center"><MdOutlineCancel/></td>
               </tr>
             </tbody>
           </table>

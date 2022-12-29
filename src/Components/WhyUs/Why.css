@@ -31,11 +31,11 @@
 .why-us-box {
   background: #242A38;
 
+  border: 1px solid #535675;
   border-radius: 9px;
   padding-top: 2%;
-  padding-bottom: 2%;
-  padding-left: 1%;
-  padding-right: 1%;
+  padding-bottom: 1%;
+
   color: #fff;
 }
 .content-2 {
@@ -46,7 +46,14 @@
 .content-2 img {
   height: auto;
   width: 120px;
+
  
+}
+.content-2{
+  text-align: center;
+}
+.bg-blue{
+  background: #111827;
 }
 
 
