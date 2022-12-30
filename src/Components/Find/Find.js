@@ -14,10 +14,14 @@ function Find() {
               <p>Deelance ” is a project that creates unique contents on Metaverse technology that is a huge trend around the world. Its aim is to move people to another dimension within the digital universe. </p>
               <p> Metaverse - where buyers can interact with freelancers in the office space and have a discussion</p>
             </div>
+            <div className="gp-2">
             <a href="/" className="demo-btn">
               DEMO
 
             </a>
+
+            </div>
+          
 
           </div>
           <div className="col-md-6">
