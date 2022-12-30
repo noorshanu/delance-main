@@ -5,7 +5,7 @@
 .hero-img {
   height: auto;
   width: 609px;
-  margin-top: -55px;
+  margin-top: -5%;
 }
 .hero h1 {
   font-weight: 600;
@@ -47,7 +47,7 @@
   font-size: 18px;
   font-weight: 600;
   color: rgb(0, 0, 0);
-  margin-right: 5%;
+  margin-right: 2%;
 }
 .hero-btn-1:hover {
   background: #ffffff;

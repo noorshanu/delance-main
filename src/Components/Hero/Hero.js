@@ -23,58 +23,7 @@ function Hero() {
                 redefining how freelancers connect with potential employers and
                 buyers
               </p>
-              {/* <p className="hero-sp-p">Connect With The Community</p> */}
-              {/* <div className="social-hero d-flex">
-                <a
-                  href="https://twitter.com/deelance_com"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaTwitter />
-                </a>
-                <a
-                  href="https://www.facebook.com/profile.php?id=100087266006183"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaFacebookSquare />
-                </a>
-                <a
-                  href="https://medium.com/@deeLance"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaMedium />
-                </a>
-                <a
-                  href="https://t.me/deelancer"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaTelegramPlane />
-                </a>
-                <a
-                  href="https://www.linkedin.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaLinkedin />
-                </a>
-                <a
-                  href="https://discord.gg/vhH3Sbt9NQ"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaDiscord />
-                </a>
-                <a
-                  href="https://www.instagram.com/deelanceofficial/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaInstagram />
-                </a> */}
-              {/* </div> */}
+           
               <div className="hero-btn">
                 <a href="/" className="hero-btn-1">
                 Find Freelancer  <AiOutlineArrowRight/>
@@ -87,7 +36,7 @@ function Hero() {
             <div className="col-md-6 text-end align-items-center">
               <img
                 className="hero-img"
-                src="https://ik.imagekit.io/cforcrypto/Dework/Asset_1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1671911926540"
+                src="https://ik.imagekit.io/cforcrypto/Dework/Asset_7-8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672426894959"
                 alt=""
               />
             </div>

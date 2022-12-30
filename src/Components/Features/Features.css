@@ -32,26 +32,24 @@
   margin: 5%;
   padding-top: 5%;
   padding-bottom: 2%;
-  height: 220px;
+  height: 250px;
 }
 .feat-box h3 {
-  font-style: normal;
-  font-weight: 600;
-  font-size: 22px;
+  font-weight: 400;
+  font-size: 24px;
   text-align: center;
-  line-height: 104.4%;
+  line-height: 30px;
   padding-top: 3%;
   padding-bottom: 1%;
-
   text-transform: capitalize;
 }
 
 .feat-box p {
   /* font-family: auto; */
   font-style: normal;
-  font-weight: 500;
+  font-weight: 300;
   font-size: 13px;
-  line-height: 112.4%;
+  line-height: 24px;
  
   color: #ffffff;
   padding-left: 10%;

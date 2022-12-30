@@ -14,10 +14,16 @@
 }
 .about h1{
     color: #fff;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 50px;
 }
 .about-img-1{
     height: auto;
-    width: 500px;
+    width: 535px;
+}
+.gp-1{
+    margin-top: 65px;
 }
 
 
@@ -33,15 +39,24 @@ color: #FFFFFF;
 }
 .about-details p{
     font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 138.4%;
-/* or 35px */
-
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
 
 color: #FFFFFF;
-padding-top: 6%;
+padding-top: 4%;
     padding-bottom: 4%;
+}
+.list-box h3{
+    font-weight: 500;
+font-size: 20px;
+line-height: 26px;
+}
+.list-box p{
+    font-weight: 400;
+font-size: 16px;
+line-height: 26px;
+margin-left: 26px;
 }
 
 

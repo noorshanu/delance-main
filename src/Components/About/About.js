@@ -43,7 +43,10 @@ function About() {
                 <p>Unlimited ownership Instant Withdrawal recruitment platform</p>
 
               </div>
+              <div className="gp-1">
               <a href="/" className="demo-btn">Buy Now <AiOutlineArrowRight/></a>
+              </div>
+            
             </div>
           </div>
         </div>
