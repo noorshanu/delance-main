@@ -6,11 +6,12 @@
     color: #fff;
     font-weight: 700;
     font-size: 47px;
-    line-height: 56px;
+    line-height: 50px;
 }
 .meta-1 p{
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 400;
     padding: 2% 0%;
     line-height: 28px;
 }
