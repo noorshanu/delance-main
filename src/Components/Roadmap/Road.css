@@ -1,13 +1,18 @@
 .road-head h1{
     font-style: normal;
-font-weight: 600;
-font-size: 48px;
+font-weight: 700;
+font-size: 40px;
 line-height: 138.4%;
 /* identical to box height, or 208px */
 
 text-align: center;
-padding-bottom: 3%;
 
+
+}
+.road-head img{
+    width: auto;
+    height: auto;
+    margin-bottom: 2%;
 }
 .roadmap{
     padding-top: 2%;
