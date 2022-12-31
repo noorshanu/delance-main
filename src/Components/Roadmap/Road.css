@@ -13,6 +13,59 @@ padding-bottom: 3%;
     padding-top: 2%;
     padding-bottom: 4%
 }
+.box-road-1{
+    width: 250px;
+    height: 100%;
+    color: #fff;
+    position: relative;
+    top: -86px;
+}
+.box-road-1 h1{
+    font-weight: 700;
+font-size: 24px;
+line-height: 36px;
+/* identical to box height, or 150% */
+
+
+color: #00E86D;
+}
+.box-road-1 p{
+    font-weight: 400;
+font-size: 16px;
+line-height: 22px;
+/* identical to box height, or 138% */
+
+
+/* Additional 2 */
+
+color: #B2B2B2;
+
+}
+.rd-b{
+    background: #242A38;
+border-radius: 8px;
+color: #fff;
+padding: 4%;
+}
+.rd-b p{
+    font-family: 'Mulish';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 28px;
+/* or 156% */
+
+
+color: #FFFFFF;
+}
+.rb-img{
+    margin-bottom: 30px;
+}
+.grid-road{
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    gap: 5rem;
+}
 
 
 @media (max-width:768px) {
