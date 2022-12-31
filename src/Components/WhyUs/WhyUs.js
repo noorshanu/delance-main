@@ -14,6 +14,7 @@ function WhyUs() {
           <h1>
             Why <span className="green">Deelance</span>{" "}
           </h1>
+          <img src="https://ik.imagekit.io/cforcrypto/Dework/icons/Group_427325103.png?ik-sdk-version=javascript-1.4.3&updatedAt=1671913800599" alt=""/>
         </div>
 
         <div className="why-us-box ">

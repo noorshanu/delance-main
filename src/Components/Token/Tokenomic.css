@@ -2,12 +2,14 @@
     text-align: center;
 }
 .token-head h1{
-    font-style: normal;
-    font-weight: 800;
-    font-size: 55px;
-    line-height: 138.4%;
-    text-align: center;
-    color: #fff;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    color: #00E86D;
+}
+.token-head img{
+    width: auto;
+  height: auto;
 }
 .token-img{
     padding: 3%;
@@ -19,6 +21,22 @@
     background: #242A38;
     padding-top: 2%;
     padding-bottom: 4%;
+}
+.to-2 p{
+    font-family: 'Mulish';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 26px;
+color: #fff;
+}
+.to-1 p{
+    font-family: 'Mulish';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 26px;
+color: #fff;
 }
 
 @media (max-width:768px) {

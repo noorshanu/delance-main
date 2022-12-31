@@ -16,14 +16,19 @@ td{
 }
 .why-us-head h1 {
   font-style: normal;
-  font-weight: 800;
-  font-size: 55px;
-  line-height: 138.4%;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
   /* identical to box height, or 208px */
 
   text-align: center;
 
   color: #ffffff;
+}
+.why-us-head img{
+  width: auto;
+  height: auto;
+  margin-bottom: 2%;
 }
 .cross{
   color: #FF3535;
