@@ -37,13 +37,13 @@ export default function Raod() {
                 <GoPrimitiveDot /> Initial Project Plan{" "}
               </p>
               <p>
-                <GoPrimitiveDot /> Initial Project Plan{" "}
+                <GoPrimitiveDot /> Website Design{" "}
               </p>
               <p>
-                <GoPrimitiveDot /> Initial Project Plan{" "}
+                <GoPrimitiveDot /> Website Live{" "}
               </p>
               <p>
-                <GoPrimitiveDot /> Initial Project Plan{" "}
+                <GoPrimitiveDot /> Initial Smart-contracts Deployment{" "}
               </p>
             </div>
           </div>
@@ -58,22 +58,22 @@ export default function Raod() {
               />
             </div>
             <div className="text-center">
-            <h1>Q4 2022</h1>
-            <p>(Nov - Dec)</p>
+            <h1>Q1 2023</h1>
+            <p>(Jan - Mar)</p>
             </div>
             
             <div className="rd-b">
               <p>
-                <GoPrimitiveDot /> Initial Project Plan{" "}
+                <GoPrimitiveDot /> Private Sale{" "}
               </p>
               <p>
-                <GoPrimitiveDot /> Initial Project Plan{" "}
+                <GoPrimitiveDot /> Project Launch{" "}
               </p>
               <p>
-                <GoPrimitiveDot /> Initial Project Plan{" "}
+                <GoPrimitiveDot /> Metaverse Demo{" "}
               </p>
               <p>
-                <GoPrimitiveDot /> Initial Project Plan{" "}
+                <GoPrimitiveDot /> CMC and CG Listing{" "}
               </p>
             </div>
           </div>
@@ -88,22 +88,30 @@ export default function Raod() {
               />
             </div>
             <div className="text-center">
-            <h1>Q4 2022</h1>
-            <p>(Nov - Dec)</p>
+            <h1>Q2 2023</h1>
+            <p>(March - April)</p>
             </div>
             
             <div className="rd-b">
               <p>
-                <GoPrimitiveDot /> Initial Project Plan{" "}
+                <GoPrimitiveDot /> Flutter Development{" "}
               </p>
               <p>
-                <GoPrimitiveDot /> Initial Project Plan{" "}
+                <GoPrimitiveDot /> NFT Launch{" "}
               </p>
               <p>
-                <GoPrimitiveDot /> Initial Project Plan{" "}
+                <GoPrimitiveDot /> NFT Marketplace{" "}
               </p>
               <p>
-                <GoPrimitiveDot /> Initial Project Plan{" "}
+                <GoPrimitiveDot /> Freelance Platform
+      Launch{" "}
+              </p>
+              <p>
+                <GoPrimitiveDot /> Exchanges Listing{" "}
+              </p>
+              <p>
+                <GoPrimitiveDot /> Metaverse
+      Development{" "}
               </p>
             </div>
           </div>
@@ -118,23 +126,22 @@ export default function Raod() {
               />
             </div>
             <div className="text-center">
-            <h1>Q4 2022</h1>
-            <p>(Nov - Dec)</p>
+            <h1>Q3 2023</h1>
+            <p>(May - June)</p>
             </div>
             
             <div className="rd-b">
               <p>
-                <GoPrimitiveDot /> Initial Project Plan{" "}
+                <GoPrimitiveDot /> App Development{" "}
               </p>
               <p>
-                <GoPrimitiveDot /> Initial Project Plan{" "}
+                <GoPrimitiveDot /> Metaverse Integration
+      to Main Platform{" "}
               </p>
               <p>
-                <GoPrimitiveDot /> Initial Project Plan{" "}
+                <GoPrimitiveDot /> Platform Improvements{" "}
               </p>
-              <p>
-                <GoPrimitiveDot /> Initial Project Plan{" "}
-              </p>
+             
             </div>
           </div>
           </div>
