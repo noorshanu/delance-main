@@ -64,7 +64,7 @@ color: #FFFFFF;
 .grid-road{
     display: grid;
     grid-template-columns: repeat(4,auto);
-    gap: 5rem;
+    gap: 3rem;
 }
 
 
