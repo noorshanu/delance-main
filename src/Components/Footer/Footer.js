@@ -21,11 +21,60 @@ function Footer() {
               <div className="footer-logo">
                 <NavLink to="/">
                   <img
-                    src="https://ik.imagekit.io/cforcrypto/Dework/logo_new.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669805675437"
+                    src="https://ik.imagekit.io/cforcrypto/Dework/icons/logo-white_1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672518832954"
                     alt="foot-logo"
                   />
                 </NavLink>
               </div>
+             
+              <div className="foot-p">
+                <p>
+                  Deelance is a freelancing and Recruitment platform based on
+                  Web3 platform that is redefining how freelancers connect with
+                  potential employers and buyers.
+                </p>
+              </div>
+            </div>
+
+            <div className="col-md-3 col-6">
+            <div className="foot-link">
+                <NavLink to="/privacy-policy" target="_blank">
+                  <p>Privacy</p>
+                </NavLink>
+                <NavLink to="/risk" target="_blank">
+                  <p>Risk Warning</p>
+                </NavLink>
+                <a href="/">
+                  <p>Announcements</p>
+                </a>
+
+                <NavLink href="/privacy-policy" target="_blank">
+                  <p>Cookie Preferences</p>
+                </NavLink>
+              </div>
+            </div>
+
+            <div className="col-md-3 col-6">
+              <div className="foot-link">
+                <a href="/">
+                  <p>About</p>
+                </a>
+                <a href="/">
+                  <p>Careers</p>
+                </a>
+
+                <a href="/">
+                  <p>Community</p>
+                </a>
+
+                <NavLink to="/terms" target="_blank">
+                  <p>Terms</p>
+                </NavLink>
+              </div>
+            </div>
+
+            <div className="col-md-3 col-6">
+        
               <p className="sc-1">Conect With The Community</p>
               <div className="foot-social">
                 <a
@@ -78,67 +127,13 @@ function Footer() {
                   <FaInstagram />
                 </a>
               </div>
-              <div>
-                <p>
-                  Deelance is a freelancing and Recruitment platform based on
-                  Web3 platform that is redefining how freelancers connect with
-                  potential employers and buyers.
-                </p>
-              </div>
-            </div>
-
-            <div className="col-md-3 col-6">
-              <div className="foot-btn-grup">
-                <a href="/" className="hero-btn-1">
-                  Buy Now
-                </a>
-                <a href="/" className="hero-btn-2">
-                  Find job
-                </a>
-              </div>
-            </div>
-
-            <div className="col-md-3 col-6">
-              <div className="foot-link">
-                <a href="/">
-                  <p>About</p>
-                </a>
-                <a href="/">
-                  <p>Careers</p>
-                </a>
-
-                <a href="/">
-                  <p>Community</p>
-                </a>
-
-                <NavLink to="/terms" target="_blank">
-                  <p>Terms</p>
-                </NavLink>
-              </div>
-            </div>
-
-            <div className="col-md-3 col-6">
-              <div className="foot-link">
-                <NavLink to="/privacy-policy" target="_blank">
-                  <p>Privacy</p>
-                </NavLink>
-                <NavLink to="/risk" target="_blank">
-                  <p>Risk Warning</p>
-                </NavLink>
-                <a href="/">
-                  <p>Announcements</p>
-                </a>
-
-                <NavLink href="/privacy-policy" target="_blank">
-                  <p>Cookie Preferences</p>
-                </NavLink>
-              </div>
             </div>
           </div>
-        </div>
-        <p className="foot-bottom-text">
+          <p className="foot-bottom-text">
           2022© Deelance Inc. | All Rights Reserved{" "}
         </p>
+        </div>
+      
       </footer>
     </>
   );

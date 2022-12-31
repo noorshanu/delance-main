@@ -1,7 +1,7 @@
 .footer{
    background-color:  #242A38;
     padding-top: 3%;
-    padding-bottom: 2%;
+    padding-bottom: 1px;
    
 }
 .footer-logo img{
@@ -17,7 +17,7 @@
     color: #6C6C6C;
 }
 .sc-1{
-    font-size: 14px;
+    font-size: 16px;
     color: #ffffff;
 }
 .foot-link a p{
@@ -36,9 +36,21 @@
     text-align: center;
     padding-top: 1%;
     padding-bottom: 1%;
+    border-top: 2px solid #222222;
 }
 .foot-social a:hover{
     color: #00A652;
+}
+.foot-p{
+    font-family: 'Mulish';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 28px;
+/* or 175% */
+
+
+color: #FFFFFF;
 }
 
 @media (max-width:768px) {
