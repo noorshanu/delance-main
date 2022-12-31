@@ -49,7 +49,7 @@ export default function Raod() {
           </div>
 
 
-          <div className="box-road-1">
+          <div className="box-road-2">
             <div className="text-center rb-img">
               <img
                 src="https://ik.imagekit.io/cforcrypto/Dework/Group_1261152793.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1672394848621"
@@ -79,7 +79,7 @@ export default function Raod() {
           </div>
 
 
-          <div className="box-road-1">
+          <div className="box-road-3">
             <div className="text-center rb-img">
               <img
                 src="https://ik.imagekit.io/cforcrypto/Dework/Group_1261152793.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1672394848621"

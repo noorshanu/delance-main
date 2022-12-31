@@ -1,90 +1,119 @@
-.road-head h1{
-    font-style: normal;
-font-weight: 700;
-font-size: 40px;
-line-height: 138.4%;
-/* identical to box height, or 208px */
+.road-head h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 138.4%;
+  /* identical to box height, or 208px */
 
-text-align: center;
+  text-align: center;
+}
+.road-head img {
+  width: auto;
+  height: auto;
+  margin-bottom: 2%;
+}
+.roadmap {
+  padding-top: 2%;
+  padding-bottom: 4%;
+}
+.box-road-1 {
+  width: 250px;
+  height: 100%;
+  color: #fff;
+  position: relative;
+  top: -76px;
+}
 
+.box-road-1 {
+  width: 250px;
+  height: 100%;
+  color: #fff;
+  position: relative;
+  top: -76px;
+}
+.box-road-2 {
+  width: 250px;
+  height: 100%;
+  color: #fff;
+  position: relative;
+  top: -106px;
+}
+.box-road-3 {
+  width: 250px;
+  height: 100%;
+  color: #fff;
+  position: relative;
+  top: -150px;
+}
 
-}
-.road-head img{
-    width: auto;
-    height: auto;
-    margin-bottom: 2%;
-}
-.roadmap{
-    padding-top: 2%;
-    padding-bottom: 4%
-}
-.box-road-1{
-    width: 250px;
-    height: 100%;
-    color: #fff;
-    position: relative;
-    top: -86px;
-}
-.box-road-1 h1{
+.box-road-3 h1 {
     font-weight: 700;
-font-size: 24px;
-line-height: 36px;
-/* identical to box height, or 150% */
-
-
-color: #00E86D;
-}
-.box-road-1 p{
+    font-size: 24px;
+    line-height: 36px;
+    color: #00e86d;
+  }
+  .box-road-3 p {
     font-weight: 400;
-font-size: 16px;
-line-height: 22px;
-/* identical to box height, or 138% */
+    font-size: 16px;
+    line-height: 22px;
+  
+    color: #b2b2b2;
+  }
 
+  .box-road-2 h1 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #00e86d;
+  }
+  .box-road-2 p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+  
+    color: #b2b2b2;
+  }
 
-/* Additional 2 */
-
-color: #B2B2B2;
-
+.box-road-1 h1 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  color: #00e86d;
 }
-.rd-b{
-    background: #242A38;
-border-radius: 8px;
-color: #fff;
-padding: 4%;
+.box-road-1 p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #b2b2b2;
 }
-.rd-b p{
-    font-family: 'Mulish';
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
-line-height: 28px;
-/* or 156% */
-
-
-color: #FFFFFF;
+.rd-b {
+  background: #242a38;
+  border-radius: 8px;
+  color: #fff;
+  padding: 4%;
 }
-.rb-img{
-    margin-bottom: 30px;
+.rd-b p {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  /* or 156% */
+
+  color: #ffffff;
 }
-.grid-road{
-    display: grid;
-    grid-template-columns: repeat(4,auto);
-    gap: 3rem;
+.rb-img {
+  margin-bottom: 30px;
+}
+.grid-road {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 3rem;
 }
 
+@media (max-width: 768px) {
 
-@media (max-width:768px) {
-    .road-top h2 {
-        font-size: 18px;
-        line-height: 10px;
-    }
-    .roadmap .container{
-        width: 100% !important;
-    }
-    .swiper-slide-active .road-box{
+  
 
-    }
-
- 
-    
 }
