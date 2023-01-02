@@ -14,10 +14,10 @@ function Tokenomic() {
 
             <div className='col-md-4'>
               <div className='to-1 text-end'>
-                <p>Team - 10% <span><BiCircle/></span> </p>
-                <p>Team - 10% <span><BiCircle/></span></p>
-                <p>Team - 10% <span><BiCircle/></span></p>
-                <p>Team - 10% <span><BiCircle/></span></p>
+                <p>Team - 10% <span className='orange'><BiCircle/></span> </p>
+                <p>Team - 10% <span className='light-blue'><BiCircle/></span></p>
+                <p>Team - 10% <span className='deep-blue'><BiCircle/></span></p>
+                <p>Team - 10% <span className='green'><BiCircle/></span></p>
 
               </div>
               
