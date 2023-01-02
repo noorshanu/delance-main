@@ -1,6 +1,6 @@
 import React from 'react'
 import './Tokenomic.css'
-import {BiCircle} from 'react-icons/bi'
+import {AiOutlineArrowRight} from 'react-icons/ai'
 
 function Tokenomic() {
   return (
@@ -26,7 +26,7 @@ function Tokenomic() {
             <div className='col-md-4 text-center'>
             <img src="https://ik.imagekit.io/cforcrypto/Dework/Group_1261152779.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672393264251" alt="" className='token-img'/>
             <div style={{margin:'auto'}} className='main-sub-btn'>
-            <a href="#team" className="demo-btn">BUY NOW</a>
+            <a href="#team" className="demo-btn">BUY NOW  <AiOutlineArrowRight/></a>
             </div>
               </div>
 

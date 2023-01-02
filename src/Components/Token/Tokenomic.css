@@ -14,8 +14,8 @@
 .token-img{
     padding: 3%;
     width: auto;
-    height: 510px;
-    margin-left: -50px;
+    height: 425px;
+    margin-left: -6px;
 }
 .token{
     background: #242A38;
@@ -27,7 +27,7 @@
 font-style: normal;
 font-weight: 400;
 font-size: 16px;
-line-height: 26px;
+line-height: 50px;
 color: #fff;
 }
 .to-1 p{
@@ -35,7 +35,7 @@ color: #fff;
 font-style: normal;
 font-weight: 400;
 font-size: 16px;
-line-height: 26px;
+line-height: 50px;
 color: #fff;
 }
 
