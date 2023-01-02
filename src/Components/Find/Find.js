@@ -26,7 +26,7 @@ function Find() {
           </div>
           <div className="col-md-6">
             <div className="text-center meta-img">
-              <img src="https://ik.imagekit.io/cforcrypto/Dework/Asset_3.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672057407781" alt=""/>
+              <img src="https://ik.imagekit.io/cforcrypto/Dework/merged.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672669567704" alt=""/>
 
             </div>
 
