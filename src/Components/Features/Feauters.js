@@ -16,6 +16,8 @@ function Feauters() {
       <div className="container desktop-feat">
         <div className="row justify-content-center align-items-center">
           <div className="col-md-4">
+         
+            
             <div className="feat-box">
               <div className="feat-img">
                 <img
@@ -25,7 +27,7 @@ function Feauters() {
               </div>
 
               <h3 className="green">Business simplified</h3>
-              <p>
+              <p> 
                 Post a job or apply for one in{" "}
                 a minute.No browser plugins, 3rd
                 party apps, credit card details, or wallet-linking necessary.
