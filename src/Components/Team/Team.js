@@ -29,7 +29,7 @@ function Team() {
                 </div>
                 <div className="text-center box-img">
                   <img
-                    src="https://ik.imagekit.io/cforcrypto/Dework/Team/IMAGE_2022-12-04_01_25_54_1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1670100298373"
+                    src="https://ik.imagekit.io/cforcrypto/Dework/Team/8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672666682469"
                     alt=""
                   />
                   <h2>SURESH JOSHI</h2>
@@ -59,7 +59,7 @@ function Team() {
               </div>
               <div className="text-center box-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/Team/aiimg_1.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1670013257933"
+                  src="https://ik.imagekit.io/cforcrypto/Dework/Team/9.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672666682414"
                   alt=""
                 />
                 <h2>JAGJEET JENA</h2>
@@ -116,7 +116,7 @@ function Team() {
               </div>
               <div className="text-center box-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/Team/aiimg__3__1.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1670013257776"
+                  src="https://ik.imagekit.io/cforcrypto/Dework/Team/1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672666682366"
                   alt=""
                 />
                 <h2>SHOAIB</h2>
@@ -192,7 +192,7 @@ function Team() {
           <div className="mb-12">
             <div className="team-box">
               <div className="linked">
-                <a className="linked-in" href="https://www.linkedin.com/in/dommeti-d-329235257/" target='_blank' rel="noreferrer">
+                <a className="linked-in" href="https://www.linkedin.com/in/dommeti-k-329235257/" target='_blank' rel="noreferrer">
                   <FaLinkedin />{" "}
                 </a>{" "}
               </div>
@@ -282,7 +282,7 @@ function Team() {
               </div>
               <div className="text-center box-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/Team/1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672666682366"
+                  src="https://ik.imagekit.io/cforcrypto/Dework/Team/5.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672666682440"
                   alt=""
                 />
                 <h2>VISAKH</h2>
