@@ -1,5 +1,5 @@
 .team{
-    padding-top: 3%;
+    padding-top: 1%;
     padding-bottom: 5%;
 }
 
@@ -8,13 +8,12 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
     column-gap:50px;
 }
-.team-box{
-    border: 3px solid #00A652;
-    box-shadow: 4px 4px 15px 5px #00a652;
-    border-radius: 34px 0px;
+.team-box {
+    border: 1px solid #ffffff;
+    box-shadow: 1px 4px 9px 2px #5a5a5a;
+    border-radius: 8px;
     padding: 5%;
     height: 100%;
-   
 }
 .box-img img{
     width: 150px;
@@ -50,11 +49,9 @@ color: #FFFFFF;
 
 }
 .linked{
-    
-    position: absolute;
-    /* left: 0; */
-    margin-left: 18.8%;
-    margin-top: -1.6%;
+    position: relative;
+    left: 97%;
+    top: -5%;
     font-size: 25px;
 }
 .team_details{
@@ -79,7 +76,7 @@ color: #00A652;
 }
 .team-sub p{
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 30px;
     line-height: 40px;
     text-align: start;

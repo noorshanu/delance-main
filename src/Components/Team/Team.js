@@ -87,7 +87,7 @@ function Team() {
               </div>
               <div className="text-center box-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/Team/aiimg__2__3.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1670013257959"
+                  src="https://ik.imagekit.io/cforcrypto/Dework/Team/4.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672666682450"
                   alt=""
                 />
                 <h2>ROBERTO</h2>
@@ -145,7 +145,7 @@ function Team() {
               </div>
               <div className="text-center box-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/Team/team1.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1670013257727"
+                  src="https://ik.imagekit.io/cforcrypto/Dework/Team/2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672666682417"
                   alt=""
                 />
                 <h2>DEBBA</h2>
@@ -172,7 +172,7 @@ function Team() {
               </div>
               <div className="text-center box-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/Team/aiimg__4__2.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1670013257947"
+                  src="https://ik.imagekit.io/cforcrypto/Dework/Team/6.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672666682478"
                   alt=""
                 />
                 <h2>ADNAN A RAHI</h2>
@@ -198,7 +198,7 @@ function Team() {
               </div>
               <div className="text-center box-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/Team/aiimg__5__1.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1670013257858"
+                  src="https://ik.imagekit.io/cforcrypto/Dework/Team/7.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672666682400"
                   alt=""
                 />
                 <h2>DOMMETI</h2>
@@ -229,7 +229,7 @@ function Team() {
               </div>
               <div className="text-center box-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/Team/aiimg__6__1.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1670013257821"
+                  src="https://ik.imagekit.io/cforcrypto/Dework/Team/10.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672666682424"
                   alt=""
                 />
                 <h2>GURPREET SINGH</h2>
@@ -255,7 +255,7 @@ function Team() {
               </div>
               <div className="text-center box-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/Team/photo_2022-12-03_00-58-02.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1670013252326"
+                  src="https://ik.imagekit.io/cforcrypto/Dework/Team/3.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672666682420"
                   alt=""
                 />
                 <h2>NOOR ALAM</h2>
@@ -282,7 +282,7 @@ function Team() {
               </div>
               <div className="text-center box-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/Team/aiimg__7__1.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1670013257826"
+                  src="https://ik.imagekit.io/cforcrypto/Dework/Team/1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672666682366"
                   alt=""
                 />
                 <h2>VISAKH</h2>
