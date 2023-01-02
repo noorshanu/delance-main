@@ -39,20 +39,9 @@ line-height: 26px;
 color: #fff;
 }
 
-.orange{
-    color: #E16E3A;
-}
-.light-blue{
-    color: #9076DD;
-}
-.deep-blue{
-    color: #7220D8;
-}
-.green{
-    color: #2ACB71;
-}
-.sky-blue{
-  color:  #00A1FF;
+.to-1 img{
+    height: auto;
+    width: auto;
 }
 @media (max-width:768px) {
     .token-head h1 {

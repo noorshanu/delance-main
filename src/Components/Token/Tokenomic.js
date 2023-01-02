@@ -14,10 +14,10 @@ function Tokenomic() {
 
             <div className='col-md-4'>
               <div className='to-1 text-end'>
-                <p>Team - 10% <span className='orange'><BiCircle/></span> </p>
-                <p>Team - 10% <span className='light-blue'><BiCircle/></span></p>
-                <p>Team - 10% <span className='deep-blue'><BiCircle/></span></p>
-                <p>Team - 10% <span className='green'><BiCircle/></span></p>
+                <p>Team - 10% <img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-6.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602964" alt=""/> </p>
+                <p>Reserved/Ecosystem - 15% <img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-4.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652603018" alt=""/></p>
+                <p>Cex - 16% <span className='deep-blue'><BiCircle/></span></p>
+                <p>Advisor/Partnership - 6% <span className='green'><BiCircle/></span></p>
 
               </div>
               
@@ -32,10 +32,10 @@ function Tokenomic() {
 
               <div className='col-md-4'>
               <div className='to-2 text-start'>
-                <p><span><BiCircle/></span>Team - 10% </p>
-                <p> <span><BiCircle/></span> Team - 10%</p>
-                <p><span><BiCircle/></span> Team - 10%</p>
-                <p><span><BiCircle/></span> Team - 10%</p>
+                <p><span><BiCircle/></span> Rewards / Airdrop - 2%  </p>
+                <p> <span><BiCircle/></span> Liquidity - 15%</p>
+                <p><span><BiCircle/></span> Presale - 33%</p>
+                <p><span><BiCircle/></span> Private - 3%</p>
 
               </div>
               
