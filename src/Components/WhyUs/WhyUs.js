@@ -22,7 +22,7 @@ function WhyUs() {
             <thead>
               <tr>
                 <th scope="col" className="b-right ht-101"> </th>
-                <th scope="col" className="b-right">
+                <th scope="col" className="b-right" style={{background:'#111827'}}>
                   <div className="content-2">
                     <img
                       src="https://ik.imagekit.io/cforcrypto/Dework/logo-white_1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672338028484"
