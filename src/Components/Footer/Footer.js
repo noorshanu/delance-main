@@ -17,7 +17,7 @@ function Footer() {
       <footer className="footer">
         <div className="container border-foot-top">
           <div className="row justify-content-center align-items-center">
-            <div className="col-md-3 col-6">
+            <div className="col-md-4 col-6">
               <div className="footer-logo">
                 <NavLink to="/">
                   <img
@@ -36,7 +36,7 @@ function Footer() {
               </div>
             </div>
 
-            <div className="col-md-3 col-6">
+            <div className="col-md-2 col-6">
             <div className="foot-link">
                 <NavLink to="/privacy-policy" target="_blank">
                   <p>Privacy</p>
@@ -54,7 +54,7 @@ function Footer() {
               </div>
             </div>
 
-            <div className="col-md-3 col-6">
+            <div className="col-md-2 col-6">
               <div className="foot-link">
                 <a href="/">
                   <p>About</p>
@@ -73,7 +73,7 @@ function Footer() {
               </div>
             </div>
 
-            <div className="col-md-3 col-6">
+            <div className="col-md-4 col-6">
         
               <p className="sc-1">Conect With The Community</p>
               <div className="foot-social">
