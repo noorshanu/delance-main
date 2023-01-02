@@ -43,6 +43,10 @@ color: #fff;
     height: auto;
     width: auto;
 }
+.to-2 img{
+    height: auto;
+    width: auto;
+}
 @media (max-width:768px) {
     .token-head h1 {
         font-size: 39px;
