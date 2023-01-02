@@ -79,23 +79,23 @@ function WhyUs() {
                 <th scope="row" className="b-right">
                   <p className="t-head">Withdrawal Fee</p>
                 </th>
-                <td className="text-center b-right">Crypto/Instant</td>
-                <td className="text-center t-head">
+                <td className="text-center b-right t-head-2">Crypto/Instant</td>
+                <td className="text-center t-head-2">
                   Min Payout $100 
-                  <p className="t-head">(2.75% Fee For Withdrawal For </p>
-                  <p className="t-head">Currency
+                  <p className="t-head-2">(2.75% Fee For Withdrawal For </p>
+                  <p className="t-head-2">Currency
                   Conversion)</p>
                 </td>
-                <td className="text-center t-head">
+                <td className="text-center t-head-2">
                   Min Payout $100 
-                 <p className="t-head"> (5% Fee For Withdrawal For </p>
-                  <p className="t-head">Currency
+                 <p className="t-head-2"> (5% Fee For Withdrawal For </p>
+                  <p className="t-head-2">Currency
                   Conversion)</p>
                 </td>
-                <td className="text-center t-head">
+                <td className="text-center t-head-2">
                   Min Payout $100 
-                  <p className="t-head">  (5% Fee For Withdrawal For </p>
-                  <p className="t-head">Currency
+                  <p className="t-head-2">  (5% Fee For Withdrawal For </p>
+                  <p className="t-head-2">Currency
                   Conversion)</p>
                 
                 </td>
