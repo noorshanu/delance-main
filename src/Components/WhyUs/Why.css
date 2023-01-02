@@ -66,8 +66,12 @@ td{
 .content-2 img {
   height: auto;
   width: 120px;
+  margin-bottom: 1.3rem;
 
  
+}
+.ht-101{
+  height: 101px;
 }
 .content-2{
   text-align: center;

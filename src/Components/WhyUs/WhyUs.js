@@ -21,7 +21,7 @@ function WhyUs() {
           <table className="table">
             <thead>
               <tr>
-                <th scope="col" className="b-right"> </th>
+                <th scope="col" className="b-right ht-101"> </th>
                 <th scope="col" className="b-right">
                   <div className="content-2">
                     <img
