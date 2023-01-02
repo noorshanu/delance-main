@@ -30,10 +30,10 @@
   background: #242a38;
   border-radius: 8px;
   width: auto;
-  margin: 5%;
+  margin: 8%;
   padding-top: 5%;
   padding-bottom: 2%;
-  height: 250px;
+  height: 275px;
   cursor: pointer;
 }
 .feat-box:hover{
