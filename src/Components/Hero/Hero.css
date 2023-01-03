@@ -73,6 +73,7 @@
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 26px;
+    line-height: 36px;
   }
   .hero-img {
     height: 230px;
@@ -88,29 +89,17 @@
   }
   .hero {
     padding-top: 11%;
-    height: 62vh;
+    height: 70vh;
   }
 
   .hero-btn-1 {
-    background: linear-gradient(
-      93.52deg,
-      #00a652 0.78%,
-      #006a34 102.15%,
-      #58ffaa 102.16%
-    );
-    border: 0.5px solid #ffffff;
-    box-shadow: 0px 7px 16px rgb(0 0 0 / 40%);
-    border-radius: 1.5px 22px;
+ 
     padding: 1% 8%;
     font-size: 14px;
   }
 
   .hero-btn-2 {
-    border: 0.5px solid #006a34;
-    filter: drop-shadow(0px 7px 16px rgba(0, 0, 0, 0.4));
-    border-radius: 2.5px 24px;
-    transform: matrix(1, 0, 0, -1, 0, 0);
-    color: #00a652;
+  
     padding: 1% 8%;
     font-size: 14px;
   }

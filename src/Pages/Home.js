@@ -8,7 +8,7 @@ import Footer from '../Components/Footer/Footer'
 import WhyUs from '../Components/WhyUs/WhyUs'
 import Tokenomic from 'Components/Token/Tokenomic'
 import Raod from 'Components/Roadmap/Raod'
-import PartnersMob from 'Components/Partners/PartnersMob'
+
 
 function Home() {
   return (
@@ -22,7 +22,7 @@ function Home() {
     <WhyUs/>
     <Tokenomic/>
     <Raod/>
-    <PartnersMob/>
+  
     
     <Footer/>
     </>

@@ -45,7 +45,16 @@
 
 @media (max-width:768px) {
    
+    .meta-1 h1 {
+        font-size: 30px;
+        line-height: 37px;
+    }
 
+    .meta-1 p {
+        font-family: 'Mulish', sans-serif;
+        color: #fff;
+        font-size: 16px;
+    }
  
 
     
