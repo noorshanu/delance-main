@@ -22,7 +22,7 @@ function Home() {
     <WhyUs/>
     <Tokenomic/>
     <Raod/>
-  
+   
     
     <Footer/>
     </>

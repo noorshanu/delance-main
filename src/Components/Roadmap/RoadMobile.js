@@ -1,26 +1,20 @@
-import "./Road.css";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { GoPrimitiveDot } from "react-icons/go";
-import RoadMobile from "./RoadMobile";
+import "swiper/css";
+import "swiper/css/pagination";
+import {Pagination,Autoplay } from "swiper";
 
-export default function Raod() {
+function RoadMobile() {
   return (
-    <>
-      <section className="roadmap">
-        <div className="container">
-          <div className="road-head text-center">
-            <h1 className="green">ROADMAP</h1>
-            <img src="https://ik.imagekit.io/cforcrypto/Dework/icons/Group_427325103.png?ik-sdk-version=javascript-1.4.3&updatedAt=1671913800599" alt=""/>
-          </div>
-          <div className="road-slide">
-            <img
-              src="https://ik.imagekit.io/cforcrypto/Dework/Mask_group.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1672394255186"
-              alt=""
-            />
-          </div>
-          <div className="grid-road">
+    <div className="mob-road">
 
-         
-          <div className="box-road-1">
+<Swiper pagination={true}  autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+         modules={[Pagination,Autoplay]} className="mySwiper">
+        <SwiperSlide>
+        <div className="box-road-1">
             <div className="text-center rb-img">
               <img
                 src="https://ik.imagekit.io/cforcrypto/Dework/Group_1261152793.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1672394848621"
@@ -48,9 +42,10 @@ export default function Raod() {
               </p>
             </div>
           </div>
+            </SwiperSlide>
 
-
-          <div className="box-road-2">
+            <SwiperSlide>
+            <div className="box-road-2">
             <div className="text-center rb-img">
               <img
                 src="https://ik.imagekit.io/cforcrypto/Dework/Group_1261152793.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1672394848621"
@@ -78,9 +73,11 @@ export default function Raod() {
               </p>
             </div>
           </div>
+            </SwiperSlide>
 
 
-          <div className="box-road-3">
+            <SwiperSlide>
+        <div className="box-road-3">
             <div className="text-center rb-img">
               <img
                 src="https://ik.imagekit.io/cforcrypto/Dework/Group_1261152793.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1672394848621"
@@ -116,39 +113,11 @@ export default function Raod() {
               </p>
             </div>
           </div>
+            </SwiperSlide>
+            </Swiper>
 
-
-          <div className="box-road-4">
-            <div className="text-center rb-img">
-              <img
-                src="https://ik.imagekit.io/cforcrypto/Dework/Group_1261152793.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1672394848621"
-                alt=""
-                style={{width:'auto'}}
-              />
-            </div>
-            <div className="text-center">
-            <h1>Q3 2023</h1>
-            <p>(May - June)</p>
-            </div>
-            
-            <div className="rd-b">
-              <p>
-                <GoPrimitiveDot /> App Development{" "}
-              </p>
-              <p>
-                <GoPrimitiveDot /> Metaverse Integration
-      to Main Platform{" "}
-              </p>
-              <p>
-                <GoPrimitiveDot /> Platform Improvements{" "}
-              </p>
-             
-            </div>
-          </div>
-          </div>
-          <RoadMobile/>
-        </div>
-      </section>
-    </>
-  );
+    </div>
+  )
 }
+
+export default RoadMobile
