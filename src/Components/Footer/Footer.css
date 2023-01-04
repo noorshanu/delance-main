@@ -11,6 +11,7 @@
 .foot-social{
     display: flex;
     gap: 1rem;
+    overflow: hidden;
 }
 .foot-social a{
     font-size: 19px;
@@ -72,4 +73,13 @@ color: #FFFFFF;
         font-size: 12px;
         line-height: 16px;
     }
+    .foot-social{
+        display: flex;
+        gap: 5px;
+        overflow: hidden;
+    }
+    .sc-1 {
+        font-size: 12px;
+        color: #ffffff;
+      }
 }
