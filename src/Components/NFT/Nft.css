@@ -63,16 +63,10 @@ padding-bottom: 6%;
   }
   
   .nft-hero-btn-1 {
-    background: linear-gradient(
-      93.52deg,
-      #00a652 0.78%,
-      #006a34 102.15%,
-      #58ffaa 102.16%
-    );
+    background: transparent;
     border: 0.5px solid #ffffff;
     box-shadow: 0px 7px 16px rgb(0 0 0 / 40%);
-    border-radius: 33.5px 0px;
-    transform: matrix(-1, 0, 0, 1, 0, 0);
+    border-radius:  8px;
     padding: 1% 7%;
     font-size: 18px;
     font-weight: 600;

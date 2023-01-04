@@ -56,9 +56,9 @@
   .trending-nft-outerbox{  
     border-radius: 10px;  
     
-    background:linear-gradient(#1b1c1e, #1b1c1e) padding-box,
-    linear-gradient(to top,  #00a652,  #000000,transparent);
-    border-image-source: linear-gradient(89.18deg, #2BFF47 0.71%, rgba(241, 255, 5, 0) 35.23%, rgba(241, 255, 5, 0) 64.47%, #10FF50 99.29%);
+    background:linear-gradient(#111827, #111827) padding-box,
+    linear-gradient(to top,  #ffffff,  #000000,transparent);
+    
     border: 3px solid transparent;
     padding: 20px 50px;
   }
