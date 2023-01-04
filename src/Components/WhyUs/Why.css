@@ -109,6 +109,14 @@ margin-top: 5px;
   .mob-why-swiper{
     display: block;
   }
+  .why-us-box {
+    background: #242A38;
   
+    border: 1px solid #535675;
+    border-radius: 9px;
+  display: flex;
+  padding: 2%;
+    color: #fff;
+  }
   
 }

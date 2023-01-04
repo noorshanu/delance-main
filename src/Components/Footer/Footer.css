@@ -68,5 +68,8 @@ color: #FFFFFF;
     .footer-logo img{
         height: 36px;
     }
-    
+    .foot-p p{
+        font-size: 12px;
+        line-height: 16px;
+    }
 }

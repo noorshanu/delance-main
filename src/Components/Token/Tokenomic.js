@@ -13,7 +13,7 @@ function Tokenomic() {
           <div className='row align-items-center'>
 
             <div className='col-md-4'>
-              <div className='to-1 text-end'>
+              <div className='to-1'>
                 <p>Team - 10% <img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-6.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602964" alt=""/> </p>
                 <p>Reserved/Ecosystem - 15% <img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-4.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652603018" alt=""/></p>
                 <p>Cex - 16% <img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-7.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602977" alt=""/></p>
@@ -31,7 +31,7 @@ function Tokenomic() {
               </div>
 
               <div className='col-md-4'>
-              <div className='to-2 text-start'>
+              <div className='to-2 '>
                 <p><img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602987" alt=""/> Rewards / Airdrop - 2%  </p>
                 <p><img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602973" alt=""/> Liquidity - 15%</p>
                 <p><img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602976" alt=""/> Presale - 33%</p>

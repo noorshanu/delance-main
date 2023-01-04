@@ -33,7 +33,7 @@ function Hero() {
                 </button>
               </div>
             </div>
-            <div className="col-md-6 text-end align-items-center">
+            <div className="col-md-6 text-center align-items-center">
               <img
                 className="hero-img"
                 src="https://ik.imagekit.io/cforcrypto/Dework/Asset_7-8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672426894959"
