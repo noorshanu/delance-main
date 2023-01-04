@@ -12,13 +12,16 @@ function MobWhyus() {
   return (
     <>
     <div className="container-fluid mob-why-swiper ">
-        <div className="why-us-head text-center">
-          <h1>Why Deelance</h1>
+    <div className="why-us-head text-center">
+          <h1>
+            Why <span className="green">Deelance</span>{" "}
+          </h1>
+          <img src="https://ik.imagekit.io/cforcrypto/Dework/icons/Group_427325103.png?ik-sdk-version=javascript-1.4.3&updatedAt=1671913800599" alt=""/>
         </div>
     <div className='why-us-box'>
     
-            <div className='row justify-content-center align-items-center'>
-            <div className="col-md-3 col-12">
+            <div className='row justify-content-center '>
+            <div className="col-12">
               <div className="content">
                 <div className="border-down">
                   <p>Client Fee</p>
@@ -67,12 +70,12 @@ function MobWhyus() {
 
            <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
         <SwiperSlide>
-            <div className='row justify-content-center align-items-center'>
+            <div className='row justify-content-center '>
             <div className="col-md-2 col-6">
               <div className="content-2 text-center">
                 <div className="why-content-img-head">
                   <img
-                    src="https://ik.imagekit.io/cforcrypto/Dework/logo-white_1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672338028484"
+                    src="https://ik.imagekit.io/cforcrypto/logo-white_1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672858114579"
                     alt=""
                   />
                 </div>
@@ -89,31 +92,31 @@ function MobWhyus() {
                   <hr />
                 </div>
                 <div className="">
-                  <p>Yes</p>
+                  <p className='green'><AiOutlineCheckCircle/></p>
                   <hr />
                 </div>
                 <div className="">
-                  <p>Yes</p>
+                <p className='green'><AiOutlineCheckCircle/></p>
                   <hr />
                 </div>
                 <div className="">
-                  <p>Yes</p>
+                <p className='green'><AiOutlineCheckCircle/></p>
                   <hr />
                 </div>
                 <div className="">
-                  <p>Yes</p>
+                <p className='green'><AiOutlineCheckCircle/></p>
                   <hr />
                 </div>
                 <div className="">
-                  <p>Yes</p>
+                <p className='green'><AiOutlineCheckCircle/></p>
                   <hr />
                 </div>
                 <div className="">
-                  <p>Yes</p>
+                <p className='green'><AiOutlineCheckCircle/></p>
                   <hr />
                 </div>
                 <div className="">
-                  <p>Yes</p>
+                <p className='green'><AiOutlineCheckCircle/></p>
                   <hr />
                 </div>
               </div>
@@ -122,12 +125,12 @@ function MobWhyus() {
             </div>
         </SwiperSlide>
         <SwiperSlide>
-        <div className='row justify-content-center align-items-center'>
+        <div className='row justify-content-center '>
         <div className="col-md-2 col-6">
               <div className="content-3 text-center">
                 <div className="why-content-img-head">
                   <img
-                    src="https://ik.imagekit.io/cforcrypto/Dework/Group.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672314856661"
+                    src="https://ik.imagekit.io/cforcrypto/Asset_10-8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672858114646"
                     alt=""
                   />
                 </div>
@@ -141,7 +144,7 @@ function MobWhyus() {
                 </div>
                 <div className="short-dis">
                   <p>Min payout $100</p>
-                  <p>(2.75% fee for withdrawal for currency conversion)</p>
+               
                   <hr />
                 </div>
                 <div className="">
@@ -149,7 +152,7 @@ function MobWhyus() {
                   <hr />
                 </div>
                 <div className="">
-                  <p>No</p>
+                <p className='cross'><MdOutlineCancel/></p>
                   <hr />
                 </div>
                 <div className="">
@@ -157,19 +160,19 @@ function MobWhyus() {
                   <hr />
                 </div>
                 <div className="">
-                  <p>No</p>
+                <p className='cross'><MdOutlineCancel/></p>
                   <hr />
                 </div>
                 <div className="">
-                  <p>No</p>
+                <p className='cross'><MdOutlineCancel/></p>
                   <hr />
                 </div>
                 <div className="">
-                  <p>No</p>
+                <p className='cross'><MdOutlineCancel/></p>
                   <hr />
                 </div>
                 <div className="">
-                  <p>No</p>
+                <p className='cross'><MdOutlineCancel/></p>
                   <hr />
                 </div>
               </div>
@@ -178,12 +181,12 @@ function MobWhyus() {
             </div>
         </SwiperSlide>
         <SwiperSlide>
-        <div className='row  justify-content-center align-items-center'>
+        <div className='row  justify-content-center '>
         <div className="col-md-2 col-6">
-              <div className="content-3 text-center">
+              <div className="content-4 text-center">
                 <div className="why-content-img-head">
                   <img
-                    src="https://ik.imagekit.io/cforcrypto/Dework/Upwork_logo.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672338028457"
+                    src="https://ik.imagekit.io/cforcrypto/Upwork_logo.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672858114615"
                     alt=""
                   />
                 </div>
@@ -198,15 +201,15 @@ function MobWhyus() {
                 </div>
                 <div className="short-dis">
                   <p>Min payout $100</p>
-                  <p>(5% fee for withdrawal for currency conversion)</p>
+              
                   <hr />
                 </div>
                 <div className="">
-                  <p>No</p>
+                <p className='cross'><MdOutlineCancel/></p>
                   <hr />
                 </div>
                 <div className="">
-                  <p>No</p>
+                <p className='cross'><MdOutlineCancel/></p>
                   <hr />
                 </div>
                 <div className="">
@@ -214,19 +217,19 @@ function MobWhyus() {
                   <hr />
                 </div>
                 <div className="">
-                  <p>No</p>
+                <p className='cross'><MdOutlineCancel/></p>
                   <hr />
                 </div>
                 <div className="">
-                  <p>No</p>
+                <p className='cross'><MdOutlineCancel/></p>
                   <hr />
                 </div>
                 <div className="">
-                  <p>No</p>
+                <p className='cross'><MdOutlineCancel/></p>
                   <hr />
                 </div>
                 <div className="">
-                  <p>No</p>
+                <p className='cross'><MdOutlineCancel/></p>
                   <hr />
                 </div>
               </div>
@@ -235,12 +238,12 @@ function MobWhyus() {
         </SwiperSlide>
 
         <SwiperSlide>
-        <div className='row  justify-content-center align-items-center'>
+        <div className='row  justify-content-center '>
         <div className="col-md-2 col-6">
-              <div className="content-3 text-center">
+              <div className="content-5 text-center">
                 <div className="why-content-img-head">
                   <img
-                    src="https://ik.imagekit.io/cforcrypto/Dework/Fiverr_New_1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672314856553"
+                    src="https://ik.imagekit.io/cforcrypto/Asset_9-8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672858114686"
                     alt=""
                   />
                 </div>
@@ -255,15 +258,15 @@ function MobWhyus() {
                 </div>
                 <div className="short-dis">
                   <p>Min payout $100</p>
-                  <p>(5% fee for withdrawal for currency conversion)</p>
+                  
                   <hr />
                 </div>
                 <div className="">
-                  <p>No</p>
+                <p className='cross'><MdOutlineCancel/></p>
                   <hr />
                 </div>
                 <div className="">
-                  <p>No</p>
+                <p className='cross'><MdOutlineCancel/></p>
                   <hr />
                 </div>
                 <div className="">
@@ -271,19 +274,19 @@ function MobWhyus() {
                   <hr />
                 </div>
                 <div className="">
-                  <p>No</p>
+                <p className='cross'><MdOutlineCancel/></p>
                   <hr />
                 </div>
                 <div className="">
-                  <p>No</p>
+                <p className='cross'><MdOutlineCancel/></p>
                   <hr />
                 </div>
                 <div className="">
-                  <p>No</p>
+                <p className='cross'><MdOutlineCancel/></p>
                   <hr />
                 </div>
                 <div className="">
-                  <p>No</p>
+                <p className='cross'><MdOutlineCancel/></p>
                   <hr />
                 </div>
               </div>
