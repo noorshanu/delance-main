@@ -55,7 +55,7 @@ function Footer() {
             </div>
 
             <div className="col-md-2 col-6">
-              <div className="foot-link">
+              <div className="foot-link2">
                 <a href="/">
                   <p>About</p>
                 </a>

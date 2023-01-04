@@ -82,4 +82,8 @@ color: #FFFFFF;
         font-size: 12px;
         color: #ffffff;
       }
+      .foot-link{
+        position: relative;
+        top: 30px;
+      }
 }
