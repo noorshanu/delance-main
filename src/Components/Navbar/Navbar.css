@@ -66,8 +66,8 @@ a {
  .dropdown-active{
   visibility:visible  ;
   opacity: 1 ;
-    position: relative;
-    top: 0%;
+    position: absolute;
+    top: 7%;
     margin-left: 0%;
     background: rgba(255, 255, 255, 0);
     padding-left: 0%;
@@ -214,7 +214,19 @@ font-weight: 400 !important;
       justify-content: space-between;
       width: 100% !important;
     }
-  
+    .dropdown-active{
+      visibility:visible  ;
+      opacity: 1 ;
+        position: relative;
+        top: 0%;
+        margin-left: 0%;
+        background: rgba(255, 255, 255, 0);
+        padding-left: 0%;
+        padding-bottom: 1%;
+        padding-right: 6%;
+        z-index: 1;
+     }
+      
     .foot-logo img{
       width: auto;
       height: 36px;
