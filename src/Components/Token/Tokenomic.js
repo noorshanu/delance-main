@@ -38,6 +38,13 @@ function Tokenomic() {
                 <p><img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-3.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602935" alt=""/> Private - 3%</p>
 
               </div>
+              <div className='to-3 '>
+                <p>Rewards / Airdrop - 2%  <img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602987" alt=""/>  </p>
+                <p>Liquidity - 15% <img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602973" alt=""/> </p>
+                <p>Presale - 33% <img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602976" alt=""/> </p>
+                <p>Private - 3% <img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-3.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602935" alt=""/> </p>
+
+              </div>
               
             </div>
             
