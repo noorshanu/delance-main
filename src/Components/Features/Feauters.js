@@ -1,5 +1,6 @@
 import React from "react";
 import "./Features.css";
+import MobFeauters from "./MobFeauters";
 
 
 function Feauters() {
@@ -12,7 +13,7 @@ function Feauters() {
           <img src="https://ik.imagekit.io/cforcrypto/Dework/icons/Group_427325103.png?ik-sdk-version=javascript-1.4.3&updatedAt=1671913800599" alt=""/>
         </div>
       </div>
-      
+      <MobFeauters/>
       <div className="container desktop-feat">
         <div className="row justify-content-center align-items-center">
           <div className="col-md-4">
@@ -21,7 +22,7 @@ function Feauters() {
             <div className="feat-box">
               <div className="feat-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/icons/Group_1261152731.png?ik-sdk-version=javascript-1.4.3&updatedAt=1671913800596"
+                  src="https://ik.imagekit.io/cforcrypto/Dework/icons/Asset_11-8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672928695067"
                   alt=""
                 />
               </div>
@@ -41,7 +42,7 @@ function Feauters() {
             <div className="feat-box">
               <div className="feat-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/icons/Group.png?ik-sdk-version=javascript-1.4.3&updatedAt=1671913800579"
+                  src="https://ik.imagekit.io/cforcrypto/Dework/icons/Asset_12-8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672928695065"
                   alt=""
                 />
               </div>
@@ -61,7 +62,7 @@ function Feauters() {
             <div className="feat-box">
               <div className="feat-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/icons/Group_1261152740.png?ik-sdk-version=javascript-1.4.3&updatedAt=1671913800622"
+                  src="https://ik.imagekit.io/cforcrypto/Dework/icons/Asset_13-8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672928695075"
                   alt=""
                 />
               </div>
@@ -83,7 +84,7 @@ function Feauters() {
             <div className="feat-box">
               <div className="feat-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/icons/Group_1261152741.png?ik-sdk-version=javascript-1.4.3&updatedAt=1671913800563"
+                  src="https://ik.imagekit.io/cforcrypto/Dework/icons/Asset_16-8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672928695045"
                   alt=""
                 />
               </div>
@@ -103,7 +104,7 @@ function Feauters() {
             <div className="feat-box">
               <div className="feat-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/icons/Group__1_.png?ik-sdk-version=javascript-1.4.3&updatedAt=1671913800609"
+                  src="https://ik.imagekit.io/cforcrypto/Dework/icons/Asset_15-8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672928695083"
                   alt=""
                 />
               </div>
@@ -122,7 +123,7 @@ function Feauters() {
             <div className="feat-box">
               <div className="feat-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/icons/Group_1261152743.png?ik-sdk-version=javascript-1.4.3&updatedAt=1671913800566"
+                  src="https://ik.imagekit.io/cforcrypto/Dework/icons/Asset_14-8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672928695073"
                   alt=""
                 />
               </div>

@@ -3,60 +3,61 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/navigation";
-
-
-
-// import required modules
-import { Navigation } from "swiper";
+import "swiper/css/pagination";
+import {Pagination,Autoplay } from "swiper";
 function MobFeauters() {
   return (
     <>
-    <Swiper navigation={true} modules={[Navigation]} className="mySwiper mob-feat">
+    <Swiper  pagination={true}  autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+         modules={[Pagination,Autoplay]} className="mySwiper mob-feat">
       <SwiperSlide>
         <div className='container'>
         <div className="row justify-content-center align-items-center">
-          <div className="col-md-4">
-            <div className="feat-box">
-              <div className="feat-img">
-                <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/icons/icon__2_.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1669384940367"
-                  alt=""
-                />
-              </div>
+        <div className="col-md-4">
+         
+            
+         <div className="feat-box">
+           <div className="feat-img">
+             <img
+               src="https://ik.imagekit.io/cforcrypto/Dework/icons/Asset_11-8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672928695067"
+               alt=""
+             />
+           </div>
 
-              <h3>Business simplified</h3>
-              <p>
-                Post a job or apply for one in{" "}
-                <span className="black">a minute.</span> No browser plugins, 3rd
-                party apps, credit card details, or wallet-linking necessary.
-                <span className="black">Fast, efficient & easy</span> the way
-                blockchain is meant to be
-              </p>
-              <p> </p>
-            </div>
-          </div>
+           <h3 className="green">Business simplified</h3>
+           <p> 
+             Post a job or apply for one in{" "}
+             a minute.No browser plugins, 3rd
+             party apps, credit card details, or wallet-linking necessary.
+             Fast, efficient & easy the way
+             blockchain is meant to be
+           </p>
+           <p> </p>
+         </div>
+       </div>
+       <div className="col-md-4">
+         <div className="feat-box">
+           <div className="feat-img">
+             <img
+               src="https://ik.imagekit.io/cforcrypto/Dework/icons/Asset_12-8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672928695065"
+               alt=""
+             />
+           </div>
 
-          <div className="col-md-4">
-            <div className="feat-box">
-              <div className="feat-img">
-                <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/icons/icon__1_.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1669384940347"
-                  alt=""
-                />
-              </div>
-
-              <h3>Transparency</h3>
-              <p>
-                By implementing an{" "}
-                <span className="black">automated dispute system</span> and
-                reputation stored on the blockchain. we’re building a{" "}
-                <span className="black">trustworthy platform</span> all
-                stakeholders can rely on.
-              </p>
-              <p></p>
-            </div>
-          </div>
+           <h3 className="green">Transparency</h3>
+           <p>
+             By implementing an{" "}
+           automated dispute system and
+             reputation stored on the blockchain. we’re building a{" "}
+             trustworthy platform all
+             stakeholders can rely on.
+           </p>
+           <p></p>
+         </div>
+       </div>
       </div>
             
         </div>
@@ -65,43 +66,41 @@ function MobFeauters() {
         <div className='container'>
             <div className='row justify-content-center align-items-center'>
       
-          <div className="col-md-4">
+            <div className="col-md-4">
             <div className="feat-box">
               <div className="feat-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/icons/icon__6_.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1669384940388"
+                  src="https://ik.imagekit.io/cforcrypto/Dework/icons/Asset_16-8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672928695045"
                   alt=""
                 />
               </div>
 
-              <h3>Escrow</h3>
+              <h3 className="green">Ownership</h3>
               <p>
-                With escrow, Freelancers have the{" "}
-                <span className="black">guarantee of payment</span> for their
-                services, while the Employer’s funds are safe until the
-                Freelancer produces the expected work. As it’s based on{" "}
-                <span className="black">smart contracts</span> , escrow can’t be
-                manipulated in any way, and makes trust.
+                With NFT (NFT) get ownership of the underlying{" "}
+                asset or piece of work.{" "}
+                 NFTs can represent: art, music,
+                photographs, designs, web pages, animations, videos, royalty or
+                copyright of work etc.
               </p>
-              <p> </p>
+              <p></p>
             </div>
           </div>
           <div className="col-md-4">
             <div className="feat-box">
               <div className="feat-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/icons/icon__5_.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1669384940219"
+                  src="https://ik.imagekit.io/cforcrypto/Dework/icons/Asset_15-8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672928695083"
                   alt=""
                 />
               </div>
 
-              <h3>Ownership</h3>
+              <h3 className="green">Low Fees</h3>
               <p>
-                With NFT (NFT) get ownership of the underlying{" "}
-                <span className="black">asset</span> or piece of work.{" "}
-                <span className="black"> NFTs can represent:</span> art, music,
-                photographs, designs, web pages, animations, videos, royality or
-                copyright of work etc.
+                Our decentralized and reputation
+                stored on the blockchain. freelance market
+               ecosystem alower fees by
+                directly connecting Employers and Freelancers.
               </p>
               <p></p>
             </div>
@@ -114,39 +113,40 @@ function MobFeauters() {
         <div className='container'>
         <div className="row justify-content-center align-items-center mtf-60">
      
-          <div className="col-md-4">
+        <div className="col-md-4">
             <div className="feat-box">
               <div className="feat-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/icons/icon__4_.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1669384940348"
+                  src="https://ik.imagekit.io/cforcrypto/Dework/icons/Asset_13-8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672928695075"
                   alt=""
                 />
               </div>
 
-              <h3>Low Fees</h3>
+              <h3 className="green">Escrow</h3>
               <p>
-                Our <span className="black">decentralized</span> and reputation
-                stored on the blockchain. freelance market
-                <span className="black">ecosystem</span> alowers fees by
-                directly connecting Employers and Freelancers.
+                With escrow, Freelancers have the{" "}
+                guarantee of payment for their
+                services, while the Employer’s funds are safe until the
+                Freelancer produces the expected work. As it’s based on{" "}
+                smart contracts.
               </p>
-              <p></p>
+              <p> </p>
             </div>
           </div>
           <div className="col-md-4">
             <div className="feat-box">
               <div className="feat-img">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/icons/icon__3_.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1669384940367"
+                  src="https://ik.imagekit.io/cforcrypto/Dework/icons/Asset_14-8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672928695073"
                   alt=""
                 />
               </div>
 
-              <h3>Fast Payments</h3>
+              <h3 className="green">Fast Payments</h3>
               <p>
-                You can use <span className="black">Crypto</span> get paid for
+                You can use Crypto get paid for
                 your services quickly and avoid currency{" "}
-                <span className="black">exchange</span> and possible commission
+                exchange and possible commission
                 rates{" "}
               </p>
             </div>

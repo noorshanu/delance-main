@@ -70,9 +70,7 @@ export default function Raod() {
               <p>
                 <GoPrimitiveDot /> Project Launch{" "}
               </p>
-              <p>
-                <GoPrimitiveDot /> Metaverse Demo{" "}
-              </p>
+             
               <p>
                 <GoPrimitiveDot /> CMC and CG Listing{" "}
               </p>
@@ -94,9 +92,7 @@ export default function Raod() {
             </div>
             
             <div className="rd-b">
-              <p>
-                <GoPrimitiveDot /> Flutter Development{" "}
-              </p>
+         
               <p>
                 <GoPrimitiveDot /> NFT Launch{" "}
               </p>
@@ -105,7 +101,7 @@ export default function Raod() {
               </p>
               <p>
                 <GoPrimitiveDot /> Freelance Platform
-      Launch{" "}
+      Development{" "}
               </p>
               <p>
                 <GoPrimitiveDot /> Exchanges Listing{" "}
@@ -136,8 +132,7 @@ export default function Raod() {
                 <GoPrimitiveDot /> App Development{" "}
               </p>
               <p>
-                <GoPrimitiveDot /> Metaverse Integration
-      to Main Platform{" "}
+                <GoPrimitiveDot /> Metaverse Platform Development{" "}
               </p>
               <p>
                 <GoPrimitiveDot /> Platform Improvements{" "}
