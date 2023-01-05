@@ -65,14 +65,20 @@ export default function Raod() {
             
             <div className="rd-b">
               <p>
-                <GoPrimitiveDot /> Private Sale{" "}
+                <GoPrimitiveDot /> PreSale Sale{" "}
               </p>
               <p>
                 <GoPrimitiveDot /> Project Launch{" "}
               </p>
+              <p>
+                <GoPrimitiveDot /> Marketing{" "}
+              </p>
              
               <p>
                 <GoPrimitiveDot /> CMC and CG Listing{" "}
+              </p>
+              <p>
+                <GoPrimitiveDot /> Exchange Listing{" "}
               </p>
             </div>
           </div>
