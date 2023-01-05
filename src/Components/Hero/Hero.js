@@ -25,10 +25,10 @@ function Hero() {
               </p>
            
               <div className="hero-btn">
-                <a href="/" className="hero-btn-1">
-                Find Freelancer  <AiOutlineArrowRight/>
-                </a>
-                <button className="hero-btn-2" onClick={() => setIsModal(true)}>
+                <button href="/" className="hero-btn-1" onClick={() => setIsModal(true)}>
+               Sign Up  <AiOutlineArrowRight/>
+                </button>
+                <button className="hero-btn-2" >
                 Buy Now
                 </button>
               </div>

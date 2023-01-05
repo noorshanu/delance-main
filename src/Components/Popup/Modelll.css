@@ -16,7 +16,7 @@
   }
   
   .modalContainer {
-    width: auto;
+    width: 700px;
     height: auto;
     border: 2px solid rgba(34, 255, 22, 0.658);
     border-radius: 12px;
@@ -52,7 +52,13 @@
   #cancelBtn {
     background-color: crimson;
   }    
-
+.fs-55px{
+  font-weight: 600;
+  font-size: 26px !important;
+  line-height: 74px;
+  color: #ffffff;
+  text-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+}
 
 
 .black {
