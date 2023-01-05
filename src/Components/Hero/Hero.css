@@ -6,6 +6,9 @@
   height: auto;
   width: auto;
   margin-top: -33%;
+  position: relative;
+  z-index: -2;
+
 }
 .hero h1 {
   font-weight: 600;
