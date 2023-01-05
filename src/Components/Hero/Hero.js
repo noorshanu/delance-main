@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Hero.css";
-
+ import Heroe from './herobg.png'
 import {AiOutlineArrowRight} from 'react-icons/ai'
 import Model from "Components/Popup/Model";
 
@@ -36,7 +36,7 @@ function Hero() {
             <div className="col-md-6 text-center align-items-center">
               <img
                 className="hero-img"
-                src="https://ik.imagekit.io/cforcrypto/Dework/Asset_19-82.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672937026900"
+                src={Heroe}
                 alt=""
               />
             </div>
