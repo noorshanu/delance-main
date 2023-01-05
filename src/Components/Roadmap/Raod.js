@@ -109,9 +109,7 @@ export default function Raod() {
                 <GoPrimitiveDot /> Freelance Platform
       Development{" "}
               </p>
-              <p>
-                <GoPrimitiveDot /> Exchanges Listing{" "}
-              </p>
+             
               <p>
                 <GoPrimitiveDot /> Metaverse
       Development{" "}
