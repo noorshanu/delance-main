@@ -65,7 +65,7 @@ export default function Raod() {
             
             <div className="rd-b">
               <p>
-                <GoPrimitiveDot /> PreSale Sale{" "}
+                <GoPrimitiveDot /> PreSale {" "}
               </p>
               <p>
                 <GoPrimitiveDot /> Project Launch{" "}
@@ -138,7 +138,7 @@ export default function Raod() {
                 <GoPrimitiveDot /> App Development{" "}
               </p>
               <p>
-                <GoPrimitiveDot /> Metaverse Platform Development{" "}
+                <GoPrimitiveDot /> Metaverse Platform Launch{" "}
               </p>
               <p>
                 <GoPrimitiveDot /> Platform Improvements{" "}

@@ -60,16 +60,20 @@ function RoadMobile() {
             
             <div className="rd-b">
               <p>
-                <GoPrimitiveDot /> Private Sale{" "}
+                <GoPrimitiveDot /> PreSale {" "}
               </p>
               <p>
                 <GoPrimitiveDot /> Project Launch{" "}
               </p>
               <p>
-                <GoPrimitiveDot /> Metaverse Demo{" "}
+                <GoPrimitiveDot /> Marketing{" "}
               </p>
+             
               <p>
                 <GoPrimitiveDot /> CMC and CG Listing{" "}
+              </p>
+              <p>
+                <GoPrimitiveDot /> Exchange Listing{" "}
               </p>
             </div>
           </div>
@@ -91,9 +95,7 @@ function RoadMobile() {
             </div>
             
             <div className="rd-b">
-              <p>
-                <GoPrimitiveDot /> Flutter Development{" "}
-              </p>
+         
               <p>
                 <GoPrimitiveDot /> NFT Launch{" "}
               </p>
@@ -102,7 +104,7 @@ function RoadMobile() {
               </p>
               <p>
                 <GoPrimitiveDot /> Freelance Platform
-      Launch{" "}
+      Development{" "}
               </p>
               <p>
                 <GoPrimitiveDot /> Exchanges Listing{" "}
@@ -111,6 +113,34 @@ function RoadMobile() {
                 <GoPrimitiveDot /> Metaverse
       Development{" "}
               </p>
+            </div>
+          </div>
+            </SwiperSlide>
+            <SwiperSlide>
+            <div className="box-road-4">
+            <div className="text-center rb-img">
+              <img
+                src="https://ik.imagekit.io/cforcrypto/Dework/Group_1261152793.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1672394848621"
+                alt=""
+                style={{width:'auto'}}
+              />
+            </div>
+            <div className="text-center">
+            <h1>Q3 2023</h1>
+            <p>(May - June)</p>
+            </div>
+            
+            <div className="rd-b">
+              <p>
+                <GoPrimitiveDot /> App Development{" "}
+              </p>
+              <p>
+                <GoPrimitiveDot /> Metaverse Platform Launch{" "}
+              </p>
+              <p>
+                <GoPrimitiveDot /> Platform Improvements{" "}
+              </p>
+             
             </div>
           </div>
             </SwiperSlide>
