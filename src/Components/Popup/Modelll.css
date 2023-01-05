@@ -264,3 +264,10 @@
   color: red !important;
   background-color: transparent !important;
 }
+@media (max-width:768px) {
+  
+.modalContainer {
+  margin: 5%;
+  
+}
+}
