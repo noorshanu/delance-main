@@ -14,7 +14,7 @@ function About() {
     const scrollProgress = () => {
     const scrollpx = document.documentElement.scrollTop;
 const winHeightPx = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-const scrollLen = Math.ceil(scrollpx / winHeightPx * 30)
+const scrollLen = Math.ceil(scrollpx / winHeightPx * 23)
 setScrolled(scrollLen)
     }
     
