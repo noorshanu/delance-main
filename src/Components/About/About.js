@@ -1,8 +1,24 @@
-import React from "react";
+import { useEffect, useState } from 'react';
 import "./About.css";
+
 import {AiOutlineCheckCircle,AiOutlineArrowRight} from 'react-icons/ai'
 
 function About() {
+  const [scrolled, setScrolled] = useState(0);
+
+  useEffect (() => {
+    window.addEventListener("scroll", scrollProgress);
+    
+    return () => window.removeEventListener("scroll", scrollProgress);
+    },[])
+    const scrollProgress = () => {
+    const scrollpx = document.documentElement.scrollTop;
+const winHeightPx = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+const scrollLen = Math.ceil(scrollpx / winHeightPx * 30)
+setScrolled(scrollLen)
+    }
+    
+   
   return (
     <section className="about">
       <div className="container">
@@ -11,7 +27,7 @@ function About() {
             <div className="col-md-6">
               <div className="text-center">
                 <img
-                  src="https://ik.imagekit.io/cforcrypto/Dework/Asset_2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672057407049"
+                  src={`https://ik.imagekit.io/cforcrypto/image_${scrolled.toString().padStart (4, '0')}.png`}
                   alt=""
                   className="about-img-1"
                 />
