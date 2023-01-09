@@ -73,10 +73,10 @@ function Model({ setIsModal }) {
                   name="email"
                 />
                 <label for="cars">Choose a option:</label>
-                <select id="cars" name="cars">
-                  <option value="volvo">Freelancer</option>
-                  <option value="saab">Employer</option>
-                  <option value="saab">Jobseeker</option>
+                <select id="option" name="option">
+                  <option value="Freelancer" name="Freelancer">Freelancer</option>
+                  <option value="Employer" name="employer">Employer</option>
+                  <option value="Jobseeker" name="Jobseeker">Jobseeker</option>
                 </select>
 
                 <div className="btn-modal">
