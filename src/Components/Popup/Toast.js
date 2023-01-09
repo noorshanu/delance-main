@@ -21,19 +21,19 @@ function Toast({ title, state, stateSetter, toastRef }) {
   }, [state]);
 
   return (
-    // <div
-    //   className={`${styles.toast} ${state ? styles.active : ""}`}
-    //   ref={toastRef}
-    // >
-    //   <p className={`${isBellow760px ? "fs-14px" : "fs-22px"}  white weight-4`}>
-    //     {title}
-    //   </p>
+    <div
+      className={`${styles.toast} ${state ? styles.active : ""}`}
+      ref={toastRef}
+    >
+      <p className={`${isBellow760px ? "fs-14px" : "fs-22px"}  white weight-4`}>
+        {title}
+      </p>
 
-    //   {/* <button onClick={() => stateSetter(false)}>
-    //     <IoClose color="white" />
-    //   </button> */}
-    // </div>
-    <></>
+      {/* <button onClick={() => stateSetter(false)}>
+        <IoClose color="white" />
+      </button> */}
+    </div>
+   
   );
 }
 

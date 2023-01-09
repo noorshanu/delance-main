@@ -2,27 +2,27 @@ import React from "react";
 // import Toast from "./Toast";
 import "./Modelll.css";
 // import OutsideClickDetector from "hooks/OutsideClickDetector";
-// import  { useRef } from 'react';
-// import emailjs from '@emailjs/browser';
+import  { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 // import { FaTelegram } from "react-icons/fa";
 
 function Model({ setIsModal }) {
-  // const form = useRef();
+  const form = useRef();
 
-  // const sendEmail = (e) => {
-  //   e.preventDefault();
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-  //   emailjs.sendForm('service_kz0dtx4', 'template_tly8pl6', form.current, 'mnctSEDuRTEVNoe0i')
-  //     .then((result) => {
-  //       e.preventDefault();
-  //       setShowToast(true);
-  //         console.log(result.text);
-  //         form.current.reset();
+    emailjs.sendForm('service_2gb6skl', 'template_62uujcv', form.current, 'B9w0v-pm5DquLkrPw')
+      .then((result) => {
+        e.preventDefault();
+        // setShowToast(true);
+          console.log(result.text);
+          form.current.reset();
 
-  //     }, (error) => {
-  //         console.log(error.text);
-  //     });
-  // };
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
 
   // const [showToast, setShowToast] = useState(false);
   // const toastRef = OutsideClickDetector(() => setShowToast(false));
@@ -58,13 +58,13 @@ function Model({ setIsModal }) {
                   waitlist.
                 </h1>
               </header>
-              <form>
-                {/* onSubmit={sendEmail} ref={form} */}
+              <form onSubmit={sendEmail} ref={form}>
+                {/*  */}
                 <input
                   type="text"
                   className="fs-26px white weight-3"
                   placeholder="Full Name :"
-                  name="fullname"
+                  name="full_name"
                 />
                 <input
                   type="email"
