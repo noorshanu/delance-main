@@ -74,7 +74,7 @@ function Model({ setIsModal }) {
                 />
                 <label for="cars">Choose a option:</label>
                 <select id="option" name="option">
-                  <option value="Freelancer" name="Freelancer">Freelancer</option>
+                  <option value="Freelancer" name="freelancer">Freelancer</option>
                   <option value="Employer" name="employer">Employer</option>
                   <option value="Jobseeker" name="Jobseeker">Jobseeker</option>
                 </select>
