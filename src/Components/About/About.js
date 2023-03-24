@@ -1,24 +1,21 @@
-import { useEffect, useState } from 'react';
 import "./About.css";
-
-import {AiOutlineCheckCircle,AiOutlineArrowRight} from 'react-icons/ai'
+import { AiOutlineCheckCircle, AiOutlineArrowRight } from "react-icons/ai";
+import Lottie from "react-lottie";
+import Meta from "./about.json";
+import { useTranslation } from "react-i18next";
 
 function About() {
-  const [scrolled, setScrolled] = useState(0);
+  const { t } = useTranslation("common");
 
-  useEffect (() => {
-    window.addEventListener("scroll", scrollProgress);
-    
-    return () => window.removeEventListener("scroll", scrollProgress);
-    },[])
-    const scrollProgress = () => {
-    const scrollpx = document.documentElement.scrollTop;
-const winHeightPx = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-const scrollLen = Math.ceil(scrollpx / winHeightPx * 23)
-setScrolled(scrollLen)
-    }
-    
-   
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: Meta,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
   return (
     <section className="about">
       <div className="container">
@@ -26,10 +23,15 @@ setScrolled(scrollLen)
           <div className="row">
             <div className="col-md-6">
               <div className="text-center">
-                <img
+                {/* <img
                   src={`https://ik.imagekit.io/cforcrypto/image_${scrolled.toString().padStart (4, '0')}.png`}
                   alt=""
                   className="about-img-1"
+                /> */}
+                <Lottie
+                  options={defaultOptions}
+                  className="loti-1"
+                  width="auto"
                 />
               </div>
             </div>
@@ -37,32 +39,39 @@ setScrolled(scrollLen)
             <div className="col-md-6">
               <div className="head-about-txt">
                 <h1>
-                  About <span className="green">Us</span>
+                  {t("About")} <span className="green">{t("Us")}</span>
                 </h1>
               </div>
               <div className="about-details">
-                <p>
-                  Deelance is a freelancing and Recruitment platform based on
-                  Web3. Deelance is one such decentralized platform that is
-                  redefining how freelancers connect with potential employers
-                  and buyers.
-                </p>
+                <p>{t("about_us.description")}</p>
               </div>
               <div className="list-box">
-                <h3 className="green"><AiOutlineCheckCircle/> Fully Decentralized</h3>
-                <p>World’s first fully decentralized freelance network</p>
+                {new Array(3).fill("").map((_, i) => (
+                  <div key={i}>
+                    <h3 className="green">
+                      <AiOutlineCheckCircle /> {t(`about_us.points.${i}.title`)}
+                    </h3>
+                    <p>{t(`about_us.points.${i}.description`)}</p>
+                  </div>
+                ))}
 
-                <h3 className="green"><AiOutlineCheckCircle/> 2% Commission </h3>
+                {/* <h3 className="green">
+                  <AiOutlineCheckCircle /> 2% Commission{" "}
+                </h3>
                 <p>Only 2% Commission lowest In the Industry</p>
 
-                <h3 className="green"><AiOutlineCheckCircle/> Instant Withdrawal</h3>
-                <p>Unlimited ownership Instant Withdrawal recruitment platform</p>
-
+                <h3 className="green">
+                  <AiOutlineCheckCircle /> Instant Withdrawal
+                </h3>
+                <p>
+                  Unlimited ownership Instant Withdrawal recruitment platform
+                </p> */}
               </div>
               <div className="gp-1">
-              <a href="/" className="demo-btn">Buy Now <AiOutlineArrowRight/></a>
+                <a href="/" className="demo-btn">
+                  {t("buttons.buy_now")} <AiOutlineArrowRight />
+                </a>
               </div>
-            
             </div>
           </div>
         </div>

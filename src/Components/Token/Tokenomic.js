@@ -1,59 +1,33 @@
-import React from 'react'
-import './Tokenomic.css'
-import {AiOutlineArrowRight} from 'react-icons/ai'
+import React from "react";
+import "./Tokenomic.css";
+import Dash from "../../assets/dash.svg";
+import DeelanceContract from "layouts/Home/DeelanceContract";
+import { useTranslation } from "react-i18next";
+// import LottieToken from "./LottieToken";
+// import animationData from './Token.json'
+import Test from "./testd";
 
 function Tokenomic() {
+  const { t } = useTranslation("common");
+
   return (
-    <section className='token'>
-        <div className='container justify-content-center text-center'>
-          <div className='token-head text-center'>
-            <h1>Tokenomics</h1>
-            <img src="https://ik.imagekit.io/cforcrypto/Dework/icons/Group_427325103.png?ik-sdk-version=javascript-1.4.3&updatedAt=1671913800599" alt=""/>
-          </div>
-          <div className='row align-items-center'>
-
-            <div className='col-md-4'>
-              <div className='to-1'>
-                <p>Team - 10% <img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-6.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602964" alt=""/> </p>
-                <p>Reserved/Ecosystem - 15% <img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-4.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652603018" alt=""/></p>
-                <p>Cex - 16% <img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-7.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602977" alt=""/></p>
-                <p>Advisor/Partnership - 6% <img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-5.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602962" alt=""/></p>
-
-              </div>
-              
-            </div>
-
-            <div className='col-md-4 text-center'>
-            <img src="https://ik.imagekit.io/cforcrypto/Dework/Group_1261152779.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672393264251" alt="" className='token-img'/>
-            <div style={{margin:'auto'}} className='main-sub-btn'>
-            <a href="#team" className="demo-btn">BUY NOW  <AiOutlineArrowRight/></a>
-            </div>
-              </div>
-
-              <div className='col-md-4'>
-              <div className='to-2 '>
-                <p><img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602987" alt=""/> Rewards / Airdrop - 2%  </p>
-                <p><img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602973" alt=""/> Liquidity - 15%</p>
-                <p><img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602976" alt=""/> Presale - 33%</p>
-                <p><img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-3.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602935" alt=""/> Private - 3%</p>
-
-              </div>
-              <div className='to-3 '>
-                <p>Rewards / Airdrop - 2%  <img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602987" alt=""/>  </p>
-                <p>Liquidity - 15% <img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602973" alt=""/> </p>
-                <p>Presale - 33% <img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602976" alt=""/> </p>
-                <p>Private - 3% <img src="https://ik.imagekit.io/cforcrypto/Dework/token/Ellipse_22-3.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672652602935" alt=""/> </p>
-
-              </div>
-              
-            </div>
-            
-          </div>
-      
+    <section className="token">
+      <div className="container justify-content-center text-center">
+        <div className="token-head text-center">
+          <h1>{t("Tokenomics")}</h1>
+          <img src={Dash} alt="" />
         </div>
-        
-        </section>
-  )
+        <div className="row align-items-center">
+          <div className="">
+            {/* <LottieToken   /> */}
+            <Test />
+          </div>
+        </div>
+      </div>
+
+      <DeelanceContract />
+    </section>
+  );
 }
 
-export default Tokenomic
+export default Tokenomic;

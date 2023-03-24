@@ -1,19 +1,143 @@
-.hero {
-  padding-top: 8%;
-  height: 100vh;
+.hero-upper-section {
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.sign-up-close-btn {
+  position: fixed;
+  top: 1.6rem;
+  right: 2rem;
+  color: white;
+  z-index: 100000;
+  cursor: pointer;
+  background-color: transparent;
+  display: flex;
+  font-size: 2rem;
+  border: none;
+  outline: none;
+}
+
+.hero-upper-section-left {
+  width: 50%;
+}
+
+.hero-upper-gif {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 50%;
+  transform: translateY(-50%);
+}
+
+.lower-section-wrapper {
+  display: flex;
+  align-items: flex-end;
+}
+
+.lower-section-presale {
+  flex: 1;
+}
+.lower-section-social-links {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+}
+
+.lower-section-social-links a {
+  font-size: 2rem;
+}
+
+.lower-section-social-links > *:not(:last-child) {
+  margin-right: 1rem;
+}
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+
+.hero-home {
+  min-height: 100vh;
+  padding-top: 2rem;
 }
 .hero-img {
-  height: auto;
   width: auto;
-  margin-top: -33%;
-  position: relative;
-  z-index: -2;
-
 }
-.hero h1 {
+
+.hero-gif-and-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-links-and-verified-wrapper {
+  width: 100%;
+}
+
+.contract-verification-banner {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.disclaimer {
+  margin-top: 3rem;
+  margin-bottom: 1.4rem;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.audit-images {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+.audit-images img {
+  height: 1.8rem;
+}
+.audit-images > *:not(:last-child) {
+  margin-right: 1.4rem;
+}
+
+.audit-kyc {
+  width: fit-content;
+  border: 1px solid #9d9a9a;
+  padding: 1rem 1.2rem;
+  border-radius: 1rem;
+}
+
+.verification-banner-title {
+  font-size: 1rem;
+  font-weight: bold;
+  width: 100%;
+  display: block;
+  flex: unset;
+  width: unset;
+}
+
+.hero-ss {
+  /* position: absolute; */
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  width: 100%;
+}
+.hero-ss > *:not(:last-child) {
+  margin-right: 1rem;
+}
+.hero-ss a {
+  font-size: 1.6rem;
+}
+
+.hero-home h1 {
   font-weight: 600;
-  font-size: 52px;
-  line-height: 74px;
+  font-size: 41px;
+  line-height: 60px;
   color: #ffffff;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -21,6 +145,7 @@
   font-size: 16px;
   font-weight: 400;
   color: #fff;
+  margin-bottom: 5px;
 }
 .social-hero {
   gap: 1rem;
@@ -37,7 +162,7 @@
   font-weight: 700;
 }
 .hero-btn {
-  padding-top: 5%;
+  padding-top: 3%;
 }
 
 .hero-btn-1 {
@@ -46,7 +171,7 @@
   box-shadow: 0px 7px 16px rgb(0 0 0 / 40%);
   border-radius: 4px;
 
-  padding: 1.8% 7%;
+  padding: 1% 7%;
   font-size: 18px;
   font-weight: 600;
   color: rgb(0, 0, 0);
@@ -73,8 +198,20 @@
   color: rgb(0, 0, 0);
 }
 
+.second-img {
+  margin-top: -8%;
+}
+.loti-1 {
+  /* height: 500px;
+  width: 700px; */
+}
+
 @media (max-width: 768px) {
-  .hero h1 {
+  .second-img {
+    margin-top: 0%;
+  }
+
+  .hero-home h1 {
     font-size: 26px;
     line-height: 36px;
   }
@@ -90,20 +227,68 @@
   .social-hero a {
     font-size: 14px;
   }
-  .hero {
-    padding-top: 11%;
-    height: 100%;
+  .hero-home {
+    height: auto;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
   }
 
   .hero-btn-1 {
- 
     padding: 1% 8%;
     font-size: 14px;
   }
 
   .hero-btn-2 {
-  
     padding: 1% 8%;
     font-size: 14px;
+  }
+  .hero-ss {
+    position: static;
+    text-align: center;
+  }
+  .hero-ss a {
+    font-size: 1.4rem;
+  }
+
+  .second-img {
+    position: static;
+    transform: translateY(0%);
+    width: 100%;
+  }
+
+  .verification-banner-title {
+    font-size: 0.8rem;
+    font-weight: bold;
+    width: 100%;
+    display: block;
+    flex: unset;
+    width: unset;
+  }
+
+  /*  */
+
+  .contract-verification-banner {
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
+
+  .audit-kyc {
+    padding: 0.6rem 0.8rem;
+    border-radius: 0.4rem;
+  }
+  .audit-images img {
+    height: 1.7rem;
+  }
+
+  .disclaimer {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sign-up-close-btn {
+    top: 0.4rem;
+    right: 2rem;
+    font-size: 2rem;
   }
 }
