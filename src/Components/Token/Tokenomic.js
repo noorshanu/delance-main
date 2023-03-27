@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 // import LottieToken from "./LottieToken";
 // import animationData from './Token.json'
 import Test from "./testd";
+import TitleDash from "Components/TitleDash";
 
 function Tokenomic() {
   const { t } = useTranslation("common");
@@ -13,10 +14,8 @@ function Tokenomic() {
   return (
     <section className="token">
       <div className="container justify-content-center text-center">
-        <div className="token-head text-center">
-          <h1>{t("Tokenomics")}</h1>
-          <img src={Dash} alt="" />
-        </div>
+        <TitleDash title={t("Tokenomics")} />
+
         <div className="row align-items-center">
           <div className="">
             {/* <LottieToken   /> */}

@@ -1,0 +1,14 @@
+.wrapper {
+  padding: 5rem 0;
+  background-color: var(--main-2);
+}
+
+.box {
+  max-width: 32rem;
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    padding: 4rem 0;
+  }
+}

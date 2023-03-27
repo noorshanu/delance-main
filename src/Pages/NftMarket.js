@@ -7,6 +7,7 @@ import Footer from "Components/Footer/Footer";
 import Warning from "Components/Common/Warning";
 import { Helmet } from "react-helmet";
 import PageLayout from "layouts/PageLayout";
+
 function NftMarket() {
   return (
     <>

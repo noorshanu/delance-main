@@ -7,6 +7,7 @@ import {
   FaLinkedin,
   FaDiscord,
   FaInstagram,
+  FaYoutube,
 } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import "./Footer.css";
@@ -76,7 +77,7 @@ function Footer() {
             </div>
 
             <div className="col-md-4 col-6">
-              <p className="sc-1">{t("Conect With The Community")}</p>
+              <p className="sc-1">{t("Connect With The Community")}</p>
               <div className="foot-social">
                 <a
                   href="https://twitter.com/deelance_com"
@@ -126,6 +127,13 @@ function Footer() {
                   rel="noreferrer"
                 >
                   <FaInstagram />
+                </a>
+                <a
+                  href="https://www.youtube.com/channel/UCM7Nv8JQECFr5lF_hd8KgTA"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaYoutube />
                 </a>
               </div>
             </div>

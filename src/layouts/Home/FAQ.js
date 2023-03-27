@@ -2,6 +2,8 @@ import React from "react";
 import Accordion from "Components/Accordion";
 import DashImg from "../../assets/dash.svg";
 import { useTranslation } from "react-i18next";
+import TitleDash from "Components/TitleDash";
+import SignUpButtonWithModal from "Components/SignUpButtonWithModal";
 
 function FAQ() {
   const { t } = useTranslation("common");
@@ -11,26 +13,23 @@ function FAQ() {
       <div className="container">
         <div className="faq-grid">
           <div className="faq-head">
-            <h1 className="green">{t("Faqs")}</h1>
-            <div className=" line-g">
-              <img src={DashImg} alt="" />
-            </div>
+            <TitleDash title={t("FAQs")} />
             <div>
               <h4 className="faq-p mt-3 mb-4 white">
                 {t(
-                  "faq.description",
-                  "See some of the most frequently asked questions about Deelance here. Got a question that’s not on the list? Let us know !"
+                  "Answers to some of the most frequently asked questions about Deelance. Do you have a question that’s not on the list? Let us know!"
                 )}
               </h4>
+
+              <SignUpButtonWithModal />
             </div>
           </div>
 
           <div className="accordion-list">
             <Accordion title={t("faq.question1", "What is Deelance?")}>
-              <p>
+              <p className="mb-0">
                 {t(
-                  "faq.answer1",
-                  "Deelance is building freelancing and Recruitment platform based on Web3. In Deelance the can tokenized the selling assets into NFT to get ownership of the underlying asset or piece of work. With Low fee, Fast payment, transparency and data ownership Deelance is redefining how freelancers connect with potential employers and buyers in metaverse"
+                  "Deelance is a freelancing and recruitment platform based on Web3 technology that is redefining how freelancers connect with potential employers and buyers."
                 )}
               </p>
             </Accordion>
@@ -42,7 +41,7 @@ function FAQ() {
               <p>{t("✔️On-chain KYC to avoid bad Actors")}</p>
               <p>{t("✔️Extra benefit with Data ownership ")}</p>
               <p>{t("✔️Smart contract escrow")}</p>
-              <p>{t("✔️Smart contract job Placements")}</p>
+              <p className="mb-0">{t("✔️Smart contract job Placements")}</p>
             </Accordion>
 
             <Accordion title={t("faq.question3", "How can I buy DLANCE?")}>
@@ -54,16 +53,16 @@ function FAQ() {
                 {t("using ETH, USDT, or via credit card through our partner.")}
               </p>
 
-              <p>
+              <p className="mb-0">
                 {t(
                   "You can purchase ETH using your card, then swap for $DLANCE. Ensure you have enough ETH to buy $DLANCE cover the gas fees"
                 )}
               </p>
             </Accordion>
             <Accordion title={t("faq.question4", "What is next for Deelance?")}>
-              <p>
+              <p className="mb-0">
                 {t(
-                  "We have big plans for Deelance following our presale! Accelerate the development and adoption of Deelance freelancing platform, Metaverse, App along with NFT Marketplace, and continued onboarding local ambassadors to enhance our Global presence."
+                  "After the pre-sale, our focus will be on developing and launching the platform, NFT marketplace, Metaverse app, and expanding our reach globally by connecting with more ambassadors."
                 )}
               </p>
             </Accordion>

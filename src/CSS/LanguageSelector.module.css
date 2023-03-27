@@ -30,13 +30,15 @@
   position: absolute;
   top: 100%;
   right: 0;
-  width: 6rem;
+  width: 8rem;
 }
 
 .languageDetectorWrapper:hover .dropdown {
   opacity: 1;
   pointer-events: visible;
   transform: translateY(0);
+  max-height: 20rem;
+  overflow-y: auto;
 }
 
 .dropdownMain {

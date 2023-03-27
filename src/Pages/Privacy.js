@@ -1,6 +1,9 @@
 import PageLayout from "layouts/PageLayout";
+import { useTranslation } from "react-i18next";
 
 function Privacy() {
+  const { t } = useTranslation("common");
+
   return (
     <PageLayout>
       <section className="mb-70px mt-5">

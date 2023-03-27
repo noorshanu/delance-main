@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useParams } from "react-router-dom";
 import "./Navbar.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaAngleDown } from "react-icons/fa";
@@ -11,8 +11,8 @@ import LanguageSelector from "Components/LanguageSelector";
 import { IoMdClose } from "react-icons/io";
 import LinkScroller from "Components/LinkScroller";
 import ConnectWalletBtn from "Components/ConnectWalletBtn";
-import useSticky from "hooks/useSticky";
-import DisclaimerHeader from "Components/DisclaimerHeader";
+import i18next from "i18next";
+import { to } from "utils/RouterUtils";
 
 function Navbar() {
   const isBelow1080px = useMediaQuery("(max-width : 1080px)");
@@ -24,6 +24,7 @@ function Navbar() {
 
   const { t } = useTranslation("common");
   const location = useLocation();
+  const params = useParams();
 
   React.useEffect(() => {
     const handler = () => {
@@ -65,7 +66,7 @@ function Navbar() {
           <div className="container">
             <nav className="main-nav">
               <div className="main-nav-left">
-                <NavLink to="/">
+                <NavLink to={to("")}>
                   <img src={NavLogo} alt="" className="logo" />
                 </NavLink>
               </div>
@@ -93,7 +94,7 @@ function Navbar() {
                 )}
 
                 <div className="-nav-links">
-                  <NavLink className="-nav-anchor" to="/">
+                  <NavLink className="-nav-anchor" to={to("")}>
                     {t("Home")}
                   </NavLink>
 
@@ -107,18 +108,18 @@ function Navbar() {
                       <div className="nav-about-dropdown-content">
                         <LinkScroller
                           id="about-us"
-                          to="/"
+                          to={to("")}
                           className="-nav-anchor"
-                          wait={location.pathname === "/" ? 0 : 100}
+                          wait={location.pathname === to("") ? 0 : 100}
                           onClick={() => setShowMediaIcons(false)}
                           scrollerOptions={{
                             offset: -20,
                           }}
                         >
-                          About
+                          {t("About")}
                         </LinkScroller>
 
-                        <NavLink className="-nav-anchor" to="/team">
+                        <NavLink className="-nav-anchor" to={to("/team")}>
                           {t("Team")}
                         </NavLink>
 
@@ -134,16 +135,16 @@ function Navbar() {
                     </div>
                   </div>
 
-                  <NavLink className="-nav-anchor" to="/rewards">
+                  <NavLink className="-nav-anchor" to={to("/rewards")}>
                     {t("header.links.win")}
                   </NavLink>
-                  <NavLink className="-nav-anchor" to="/nft-market">
+                  <NavLink className="-nav-anchor" to={to("/nft-market")}>
                     {t("Nft Marketplace")}
                   </NavLink>
-                  <NavLink className="-nav-anchor" to="/job-portal">
+                  <NavLink className="-nav-anchor" to={to("/job-portal")}>
                     {t("find job")}
                   </NavLink>
-                  <NavLink className="-nav-anchor" to="/academy">
+                  <NavLink className="-nav-anchor" to={to("/academy")}>
                     {t("Academy")}
                   </NavLink>
                   {/* {account ? (

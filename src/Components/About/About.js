@@ -4,6 +4,18 @@ import Lottie from "react-lottie";
 import Meta from "./about.json";
 import { useTranslation } from "react-i18next";
 
+const aboutPoints = [
+  {
+    title: "Fully Decentralized",
+    desc: "World’s first fully decentralized freelance network",
+  },
+  { title: "Only 2% Commission", desc: "lowest In the Industry" },
+  {
+    title: "Unlimited ownership",
+    desc: "Instant withdrawal recruitment platform",
+  },
+];
+
 function About() {
   const { t } = useTranslation("common");
 
@@ -39,19 +51,23 @@ function About() {
             <div className="col-md-6">
               <div className="head-about-txt">
                 <h1>
-                  {t("About")} <span className="green">{t("Us")}</span>
+                  {t("About")} <span className="green-light">{t("Us")}</span>
                 </h1>
               </div>
               <div className="about-details">
-                <p>{t("about_us.description")}</p>
+                <p>
+                  {t(
+                    "Deelance is a freelancing and recruitment platform based on a decentralized Web3 architecture. The Deelance platform redefines how freelancers connect with potential employers and buyers by delivering superior efficiency and confidence."
+                  )}
+                </p>
               </div>
               <div className="list-box">
-                {new Array(3).fill("").map((_, i) => (
+                {aboutPoints.map((item, i) => (
                   <div key={i}>
-                    <h3 className="green">
-                      <AiOutlineCheckCircle /> {t(`about_us.points.${i}.title`)}
+                    <h3 className="green-light">
+                      <AiOutlineCheckCircle /> {t(item.title)}
                     </h3>
-                    <p>{t(`about_us.points.${i}.description`)}</p>
+                    <p>{t(item.desc)}</p>
                   </div>
                 ))}
 

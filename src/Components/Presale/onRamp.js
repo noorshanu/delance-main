@@ -1,6 +1,6 @@
 import React from "react";
 
-function onRamp({ setIsModal2 }) {
+const onRamp = ({ setIsModal2 }) => {
   return (
     <div className="modalBackground">
       <div className="modalContainer-2" style={{ width: "auto" }}>
@@ -35,6 +35,6 @@ function onRamp({ setIsModal2 }) {
       </div>
     </div>
   );
-}
+};
 
 export default onRamp;

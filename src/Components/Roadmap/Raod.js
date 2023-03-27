@@ -5,6 +5,7 @@ import RoadMobile from "./RoadMobile";
 import RoadLine from "../../assets/backline.svg";
 import DotLine from "../../assets/dot1.svg";
 import { useTranslation } from "react-i18next";
+import TitleDash from "Components/TitleDash";
 
 const data = [
   {
@@ -15,7 +16,7 @@ const data = [
       "Initial Project Plan",
       "Website Design",
       "Website Live",
-      "Initial Smart-contracts Deployment",
+      "Initial smart contracts deployment",
     ],
   },
   {
@@ -26,7 +27,7 @@ const data = [
       "PreSale",
       "Contract Testing",
       "Project Prototype",
-      "Metaverse Demo(Alpha)",
+      "Metaverse Demo (Alpha)",
       "CMC and CG Listing",
     ],
   },
@@ -37,8 +38,8 @@ const data = [
     points: [
       "Token Launch",
       "NFT Launch",
-      "NFT MarketPlace",
-      "Freelance Platform Launch(Beta Version)",
+      "NFT Marketplace",
+      "Freelance Platform Launch (Beta Version)",
       "Exchanges Listing",
       "Metaverse Development",
     ],
@@ -46,10 +47,10 @@ const data = [
   {
     className: "box-road-4",
     question: "Q3 2023",
-    duration: "May - June",
+    duration: "July - Sep",
     points: [
       "App Development",
-      "Metaverse Integration(Beta version)",
+      "Metaverse Integration (Beta version)",
       "Further Development",
     ],
   },
@@ -62,10 +63,7 @@ export default function Raod() {
     <>
       <section className="roadmap">
         <div className="container">
-          <div className="road-head text-center">
-            <h1 className="green">{t("Roadmap")}</h1>
-            <img src={DashImg} alt="" />
-          </div>
+          <TitleDash title={t("Roadmap")} className="text-center" />
 
           <div className="road-slide">
             <img src={RoadLine} alt="" />

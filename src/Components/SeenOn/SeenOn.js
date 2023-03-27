@@ -9,40 +9,34 @@ import Tet from "../../assets/seen/tet.png";
 import "./seen.css";
 import Marquee from "react-fast-marquee";
 
+const images = [
+  {
+    img: "images/beInCrypto.png",
+    styles: { height: "2.6rem" },
+  },
+  { img: "images/yahoo-finance.png", styles: { height: "2.6rem" } },
+  { img: "images/insider.png", styles: { height: "2.2rem" } },
+  { img: "images/cryptonews.svg", styles: { height: "2.6rem" } },
+  { img: "images/finanzen-net.svg", styles: { height: "1.9rem" } },
+  { img: "images/cointelegraph.svg", styles: { height: "2.6rem" } },
+];
+
 function SeenOn() {
   return (
     <section className="seenOn">
       <div className="container">
-        <Marquee
-          className="seen-grid"
-          gradientColor={[17, 24, 39]}
-          loop={0}
-          speed={50}
-        >
-          <img
-            src={Mint}
-            alt=""
-            style={{ height: "2rem" }}
-            // className="mint"
-          />
-          <img src={Fina} alt="" style={{ height: "2.6rem" }} />
-          <img
-            src={Krypto}
-            alt=""
-            style={{ height: "2.2rem" }}
-
-            //  className="krypto"
-          />
-          <img src={Coin} alt="" style={{ height: "3rem" }} />
-          <img src={Bct} alt="" style={{ height: "3rem" }} />
-          <img
-            src={Crypto}
-            alt=""
-            style={{ height: "2rem" }}
-
-            // className="crypto"
-          />
-          <img src={Tet} alt="" style={{ height: "3rem" }} />
+        <Marquee className="seen-grid" gradientColor={[17, 24, 39]} speed={50}>
+          {images.map((item, i) => (
+            <img
+              key={i}
+              src={item.img}
+              alt="img"
+              style={{
+                filter: "brightness(0) invert(1)",
+                ...item?.styles,
+              }}
+            />
+          ))}
         </Marquee>
       </div>
     </section>

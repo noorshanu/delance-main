@@ -11,6 +11,11 @@ import LastUsed from "locize-lastused";
 const condition =
   process.env.NODE_ENV === "development" || process.env.NODE_ENV === "test";
 
+// const options = {
+//   order: ["querystring", "navigator"],
+//   lookupQuerystring: "lng",
+// };
+
 i18next
   .use(locizePlugin)
   .use(LastUsed)
@@ -23,6 +28,8 @@ i18next
     lng: "en",
     defaultNS: "en",
     saveMissing: condition ? true : false,
+
+    // detection: options,
 
     backend: {
       projectId: "a6ad41b6-ac0f-4312-9b7a-7dbcd306fa2e",
@@ -76,3 +83,5 @@ i18next
 //       escapeValue: false, // react already safes from xss => https://www.i18next.com/translation-function/interpolation#unescape
 //     },
 //   });
+
+export default i18next;

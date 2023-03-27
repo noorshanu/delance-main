@@ -1,16 +1,12 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import Academy from "Pages/Academy";
-import HowBuy from "Pages/HowBuy";
-import JobPortal from "Pages/JobPortal";
-import NftMarket from "Pages/NftMarket";
-import Privacy from "Pages/Privacy";
-import Reward from "Pages/Reward";
-import Risk from "Pages/Risk";
-import TeamPage from "Pages/TeamPage";
-import Terms from "Pages/Terms";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./Pages/Home";
-import NotFound from "./Pages/404Page";
+
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+
 import { ethers } from "ethers";
 import { useEffect, useState } from "react";
 import { BEP20ABI, BigNFTABI } from "./Constants/ABI";
@@ -22,6 +18,10 @@ import { useProvider, useAccount, useSigner } from "wagmi";
 import { useWeb3Modal } from "@web3modal/react";
 import { getProvider } from "@wagmi/core";
 import CookieConcent from "Components/CookieConcent";
+import { I18nextProvider } from "react-i18next";
+import i18next from "./i18n";
+import NestedApp from "layouts/NestedApp";
+import ScrollToTop from "Components/ScrollToTop ";
 
 function App() {
   const { open } = useWeb3Modal();
@@ -65,7 +65,7 @@ function App() {
     return (
       <div className="-app-loader">
         <Circles height="80" width="80" color="#00a652" />
-        <h2 className="green">Deelance</h2>
+        <h2 className="green-light weight-700">Deelance</h2>
       </div>
     );
   }
@@ -82,23 +82,17 @@ function App() {
         }}
       >
         {/* <Router basename="/Deelance-WalletConnect-v2"> */}
-        <Router>
-          <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route exact path="/nft-market" element={<NftMarket />} />
-            <Route exact path="/job-portal" element={<JobPortal />} />
-            <Route exact path="/academy" element={<Academy />} />
-            <Route exact path="/team" element={<TeamPage />} />
-            <Route exact path="/privacy-policy" element={<Privacy />} />
-            <Route exact path="/terms" element={<Terms />} />
-            <Route exact path="/risk" element={<Risk />} />
-            <Route exact path="/rewards" element={<Reward />} />
-            <Route exact path="/how-to-buy" element={<HowBuy />} />
-            <Route exact path="*" element={<NotFound />} />
-          </Routes>
+        <I18nextProvider i18n={i18next}>
+          <Router>
+            <ScrollToTop />
+            <Routes>
+              <Route path="/" element={<Navigate to="/en" />} />
+              <Route path="/:locale/*" element={<NestedApp />} />
+            </Routes>
 
-          <CookieConcent />
-        </Router>
+            <CookieConcent />
+          </Router>
+        </I18nextProvider>
       </UserContext.Provider>
     </>
   );

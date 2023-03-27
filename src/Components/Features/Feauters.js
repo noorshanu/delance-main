@@ -9,130 +9,65 @@ import Pay from "../../assets/feature/pay.svg";
 import Trans from "../../assets/feature/trans.svg";
 import MobFeauters from "./MobFeauters";
 import { useTranslation } from "react-i18next";
+import TitleDash from "Components/TitleDash";
+import FeatureCard from "Components/FeatureCard";
+import useMediaQuery from "hooks/useMediaQuery";
 
 const data = [
   {
     img: Buss,
+    title: "Business Simplified",
+    desc: "It only takes a minute to post a job or apply for one. No browser plugins, third-party apps, credit card details, or wallet-linking necessary. Fast, efficient and easy – the way blockchain is meant to be.",
   },
   {
     img: Trans,
+    title: "Transparency",
+    desc: "Deelance has built an automated dispute system where all buyer and seller reputations are stored on the public blockchain. Deelance is a trustworthy platform all stakeholders can rely on",
   },
-  { img: Owner },
-  { img: Escrow },
-  { img: Dollar },
-  { img: Pay },
+  {
+    img: Pay,
+    title: "Fast Payments",
+    desc: "Accept crypto as the compensation method for your services to benefit from fast payments. There’s no currency exchange risk or hefty commission rates to pay.",
+  },
+
+  {
+    img: Escrow,
+    title: "Ownership",
+    desc: "DeeLance turns freelance work into digital tokens in the form of  NFTs. This helps make sure that recruiters get ownership of the work they're paying for, and protects against problems like payment fraud and copyright violations. Using NFTs also makes the freelance world more secure and reliable.",
+  },
+  {
+    img: Owner,
+    title: "Escrow",
+    desc: "Deelance uses secure escrow accounts to guarantee freelancers receive payment for services supplied. Our escrow system guarantees that employer funds are stored safely until the freelancer completes of the contracted work to the agreed specification and standard, at which time the funds are released. All agreements between transacting parties are based on smart contracts.",
+  },
+  {
+    img: Dollar,
+    title: "Low Fees",
+    desc: "Our decentralized reputation and smart platform directly connects freelancers and employers in a peer to peer system. This means our freelance marketplace can charge much lower fees than legacy competitors because it directly connects employers and freelancers.",
+  },
 ];
 
 function Feauters() {
   const { t } = useTranslation("common");
+  const isBellow768px = useMediaQuery("(max-width : 768px)");
 
   return (
     <section className="features">
       <div className="container text-center">
-        <div className="feat-header">
-          <h1>
-            {t("Key")} <span className="green">{t("Features")}</span>
-          </h1>
-          <img src={Dash} alt="" />
-        </div>
+        <TitleDash title={`${t("Key")} ${t("Features")}`} className="mb-4" />
       </div>
 
-      <MobFeauters data={data} />
-
-      <div className="container desktop-feat">
-        <div className="row justify-content-center align-items-center">
-          {data.map((item, i) => (
-            <div key={i} className="col-md-4">
-              <div className="feat-box">
-                <div className="feat-img">
-                  <img src={item.img} alt="" />
-                </div>
-
-                <h3 className="green">{t(`key_features.cards.${i}.title`)}</h3>
-                <p>{t(`key_features.cards.${i}.description`)}</p>
-                <p> </p>
-              </div>
-            </div>
-          ))}
-
-          {/* <div className="col-md-4">
-            <div className="feat-box">
-              <div className="feat-img">
-                <img src={Trans} alt="" />
-              </div>
-
-              <h3 className="green">Transparency</h3>
-              <p>
-                By implementing an automated dispute system and reputation
-                stored on the blockchain. we’re building a trustworthy platform
-                all stakeholders can rely on.
-              </p>
-              <p></p>
-            </div>
+      {isBellow768px ? (
+        <MobFeauters data={data} />
+      ) : (
+        <div className="container desktop-feat">
+          <div className="feat-container">
+            {data.map((item, i) => (
+              <FeatureCard key={i} item={item} />
+            ))}
           </div>
-          <div className="col-md-4">
-            <div className="feat-box">
-              <div className="feat-img">
-                <img src={Escrow} alt="" />
-              </div>
-
-              <h3 className="green">Escrow</h3>
-              <p>
-                With escrow, Freelancers have the guarantee of payment for their
-                services, while the Employer’s funds are safe until the
-                Freelancer produces the expected work. As it’s based on smart
-                contracts.
-              </p>
-              <p> </p>
-            </div>
-          </div> */}
         </div>
-        {/* <div className="row justify-content-center align-items-center mtf-60">
-          <div className="col-md-4">
-            <div className="feat-box">
-              <div className="feat-img">
-                <img src={Owner} alt="" />
-              </div>
-
-              <h3 className="green">Ownership</h3>
-              <p>
-                With NFT (NFT) get ownership of the underlying asset or piece of
-                work. NFTs can represent: art, music, photographs, designs, web
-                pages, animations, videos, royalty or copyright of work etc.
-              </p>
-              <p></p>
-            </div>
-          </div>
-          <div className="col-md-4">
-            <div className="feat-box">
-              <div className="feat-img">
-                <img src={Dollar} alt="" />
-              </div>
-
-              <h3 className="green">Low Fees</h3>
-              <p>
-                Our decentralized and reputation stored on the blockchain.
-                freelance market ecosystem alower fees by directly connecting
-                Employers and Freelancers.
-              </p>
-              <p></p>
-            </div>
-          </div>
-          <div className="col-md-4">
-            <div className="feat-box">
-              <div className="feat-img">
-                <img src={Pay} alt="" />
-              </div>
-
-              <h3 className="green">Fast Payments</h3>
-              <p>
-                You can use Crypto get paid for your services quickly and avoid
-                currency exchange and possible commission rates{" "}
-              </p>
-            </div>
-          </div>
-        </div> */}
-      </div>
+      )}
     </section>
   );
 }

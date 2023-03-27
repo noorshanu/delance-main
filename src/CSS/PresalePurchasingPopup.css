@@ -1,0 +1,104 @@
+.presale-purshasing-popup {
+  --px: 2rem;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 500px;
+  width: 90%;
+
+  border-radius: 0.6rem;
+  overflow: hidden;
+  color: white;
+}
+
+.presale-purshasing-popup.mount {
+  animation: inAnimation 300ms ease;
+}
+
+.presale-purshasing-popup.unmount {
+  animation: outAnimation 300ms ease;
+}
+
+@keyframes inAnimation {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -80%) scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes outAnimation {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -40%) scale(0.9);
+  }
+}
+
+.presale-purshasing-popup header {
+  background-color: var(--main-2);
+  padding: 1rem var(--px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.presale-purshasing-popup header button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  font-size: 1.6rem;
+}
+
+.presale-purshasing-popup main {
+  padding: 2rem var(--px);
+  background-color: var(--main-1);
+}
+
+.eth-balance {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid white;
+}
+
+.eth-balance > :not(:last-child) {
+  margin-right: 1em;
+}
+
+.eth-balance img {
+  height: 1.8em;
+  width: auto;
+}
+
+.purshasing-input {
+  display: flex;
+}
+
+.purshasing-input button {
+  margin-left: 1rem;
+}
+
+.purshasing-input input {
+  border: 1px solid white;
+  height: 2.2em;
+  width: 100%;
+  display: block;
+  padding: 0 1em;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  background-color: transparent;
+  border-radius: 0.4rem;
+}

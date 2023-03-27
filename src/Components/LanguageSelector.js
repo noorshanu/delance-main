@@ -3,6 +3,9 @@ import { useTranslation } from "react-i18next";
 import styles from "CSS/LanguageSelector.module.css";
 import { FaGlobe } from "react-icons/fa";
 import { AiFillCaretDown } from "react-icons/ai";
+import generateLanguage from "utils/generateLanguage";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const allLanguages = [
   { text: "English", value: "en" },
@@ -13,11 +16,28 @@ const allLanguages = [
   { text: "Russian", value: "ru" },
   { text: "French", value: "fr" },
   { text: "Japanese", value: "ja" },
+  { text: "Bulgarian", value: "bg" },
+  { text: "Czech", value: "cs" },
+  { text: "Dutch", value: "nl" },
+  { text: "Hungarian", value: "hu" },
+  { text: "Indonesian Malay", value: "ms" },
+  { text: "Italian", value: "it" },
+  { text: "Korean", value: "ko" },
+  { text: "Portuguese", value: "pt" },
+  { text: "Romanian", value: "ro" },
+  { text: "Slovak", value: "sk" },
+  { text: "Thai", value: "th" },
+  { text: "Turkish", value: "tr" },
+  { text: "Vietnamese", value: "vi" },
+  { text: "Polish", value: "pl" },
 ];
 
 function LanguageSelector() {
   const { i18n } = useTranslation("common");
   const [langCode, setLangCode] = useState("en");
+  const location = useLocation();
+  const navigate = useNavigate();
+  const params = useParams();
 
   function changeLanguage(value) {
     i18n.changeLanguage(value);
@@ -27,7 +47,7 @@ function LanguageSelector() {
     // console.log(value);
 
     // let loc = "/";
-    // window.location.replace(value == "en" ? loc : loc + "?lng=" + value);
+    // window.location.replace(loc + "?lng=" + value);
   }
 
   useEffect(() => {
@@ -48,7 +68,10 @@ function LanguageSelector() {
             <button
               type="button"
               key={i}
-              onClick={() => changeLanguage(item.value)}
+              onClick={() => {
+                navigate(generateLanguage(item.value, location));
+                changeLanguage(item.value);
+              }}
               className={`${styles.dropdownItem} ${
                 langCode == item.value && styles.active
               }`}

@@ -15,24 +15,9 @@
   font-family: "Inter", sans-serif;
 }
 
-:root {
-  --green-dark: #00a652;
-  --green-light: #00e86d;
-  --green-text: #00e069;
-
-  --main-1: #111827;
-  --main-2: #242a38;
-  --main-2: rgba(5, 8, 40);
-
-  --navbar-height: 90px;
-  --disclaimer-height: 50px;
-}
-
 .stop-scrolling {
-  height: 100vh !important;
-  max-height: 100vh !important;
-  min-height: 100vh !important;
-  overflow: hidden !important;
+  overflow-y: hidden !important; /* Hide vertical scrollbar */
+  overflow-x: hidden !important; /* Hide horizontal scrollbar */
 }
 
 html,
@@ -181,11 +166,6 @@ img {
 .line-g img {
   width: auto;
 }
-.faq-head h1 {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 40px;
-}
 
 @media (max-width: 1080px) {
   :root {
@@ -296,21 +276,4 @@ img {
   max-width: var(--width);
   overflow: hidden !important;
   text-overflow: ellipsis;
-}
-
-.black-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  transition: all 0.4s ease;
-  opacity: 0;
-  pointer-events: none;
-  z-index: 100;
-}
-.black-screen.show {
-  opacity: 1;
-  pointer-events: visible;
 }

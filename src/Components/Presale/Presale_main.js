@@ -67,7 +67,6 @@ function Presale_main() {
       };
       getPr();
     } else {
-      
       const handlePopupClose = () => {
         getAllBalances();
         getSaleProgress();
@@ -92,10 +91,10 @@ function Presale_main() {
       };
 
       const getDeelance = async () => {
-        console.log("Account wallet", account)
+        console.log("Account wallet", account);
         const sa = await contracts.Main.userDeposits(account);
         const pric = sa / 1000000000000000000;
-        console.log("Account balance deelance", pric)
+        console.log("Account balance deelance", pric);
         setDeelance(pric);
       };
 
@@ -158,7 +157,7 @@ function Presale_main() {
       getClaimStatus();
     }
   }, [account, somestate]);
-  
+
   const claimNFT = async (e) => {
     e.preventDefault();
 
@@ -194,7 +193,7 @@ function Presale_main() {
   };
 
   const handlePopupClose = () => {
-  setSomeState(!somestate);
+    setSomeState(!somestate);
   };
   const handleModal = async (e) => {
     e.preventDefault();
@@ -267,16 +266,15 @@ function Presale_main() {
 
                     <p className="green">
                       {" "}
-                      <Link to="/how-to-buy" target="_blank">
+                      <Link to="/how-to-buy" >
                         {t("How To Buy")}
                       </Link>{" "}
                     </p>
                   </div>
 
                   <div className="price-box text-center">
-                    <h1>
-                      ${prices.toLocaleString("en-US")}{" "}
-                      <span className="sp-white">/ $DLANCE</span>
+                    <h1 className="green-light fs-24px text-center weight-700">
+                      ${prices.toLocaleString("en-US")} <span>/ $DLANCE</span>
                     </h1>
                   </div>
 
@@ -365,16 +363,18 @@ function Presale_main() {
                 Remaining
               </p> */}
 
-              <PresaleRemainingTimer
+              {/* <PresaleRemainingTimer
                 somestate={somestate}
                 setSomeState={setSomeState}
-              />
+              /> */}
             </div>
           </div>
         </div>
         <div className="pop-up-sign2">
-        {isModal && <PrePop setIsModal={setIsModal} onClose={handlePopupClose} />}
-      </div>
+          {isModal && (
+            <PrePop setIsModal={setIsModal} onClose={handlePopupClose} />
+          )}
+        </div>
         <div className="pop-up-sign2">
           {isModal2 && <OnRamp setIsModal2={setIsModal2} />}
         </div>

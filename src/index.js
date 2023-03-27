@@ -1,26 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import './i18n'
-import {
-  configureChains,
-  createClient,
-  WagmiConfig,
-} from "wagmi";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import "./boilerplate.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { configureChains, createClient, WagmiConfig } from "wagmi";
 
-import { mainnet} from "wagmi/chains";
+import { mainnet } from "wagmi/chains";
 import { Web3Modal } from "@web3modal/react";
 import {
   EthereumClient,
   modalConnectors,
   walletConnectProvider,
 } from "@web3modal/ethereum";
-import { infuraProvider } from 'wagmi/providers/infura'
+import { infuraProvider } from "wagmi/providers/infura";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
 const chains = [mainnet];
 //console.log(chains[0])
@@ -30,10 +25,9 @@ const { provider } = configureChains(
   [mainnet],
   [
     walletConnectProvider({ projectId: PROJECT_ID }),
-    infuraProvider({ apiKey: '7b50cd907db34540b993f3209ba55488' }),
-  ],
-)
-
+    infuraProvider({ apiKey: "7b50cd907db34540b993f3209ba55488" }),
+  ]
+);
 
 //console.log("provider", provider)
 const wagmiClient = createClient({

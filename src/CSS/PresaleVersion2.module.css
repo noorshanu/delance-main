@@ -1,0 +1,15 @@
+.wrapper {
+  padding: 2rem 3rem;
+  border-radius: 0.5rem;
+  border: 2px solid var(--green-dark);
+  background-color: var(--main-3);
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 1.4rem 2rem;
+    border-radius: 0.5rem;
+    border: 2px solid var(--green-dark);
+    background-color: var(--main-3);
+  }
+}

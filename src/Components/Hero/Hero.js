@@ -8,6 +8,7 @@ import {
   FaLinkedin,
   FaDiscord,
   FaInstagram,
+  FaYoutube,
 } from "react-icons/fa";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import Model from "Components/Popup/Model";
@@ -18,9 +19,12 @@ import { useTranslation } from "react-i18next";
 import UpperSection from "./UpperSection";
 import LowerSection from "./LowerSection";
 import { IoClose } from "react-icons/io5";
+import BaseButton from "Components/BaseButton";
+import SignUpButtonWithModal from "Components/SignUpButtonWithModal";
+import PresaleVersion2 from "Components/PresaleVersion2";
 
 function Hero() {
-  const [isModal, setIsModal] = useState(false);
+  const { t } = useTranslation("common");
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -29,18 +33,6 @@ function Hero() {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
-
-  const { t } = useTranslation("common");
-
-  useEffect(() => {
-    if (isModal) {
-      document.body.classList.add("stop-scrolling");
-      console.log("running if");
-    } else {
-      document.body.classList.remove("stop-scrolling");
-      console.log("running else");
-    }
-  }, [isModal]);
 
   return (
     <>
@@ -54,26 +46,42 @@ function Hero() {
             style={{ position: "relative" }}
           >
             <div className="col-md-6">
-              <h1>
-                {t("Creating")}{" "}
-                <span className="green"> {t("Web3 Space")} </span>
-                {t("For Better World to")}{" "}
-                <span className="green">{t("Work Together")}</span>
+              {/* <h1 className="hero-title white weight-600">
+                A <span className="green-light"> {t("Web3 Space")} </span>
+                Where the World{" "}
+                <span className="green-light">{t("Work Together")}</span>{" "}
+                Smartly
+              </h1> */}
+
+              <h1 className="hero-title white weight-700 lh-1_3 mb-4">
+                <span className="green-light">Deelance</span> - A{" "}
+                <span className="green-light">{t("Web3 Space")}</span>{" "}
+                {t("Where the World Works Together Smartly.")}
               </h1>
-              <p className="hero-sp-p">{t("hero.hero_details")}</p>
-              <div className="hero-btn">
-                <button
-                  href="/"
-                  className="hero-btn-1"
-                  onClick={() => setIsModal(true)}
-                >
+
+              <p className="hero-sp-p">
+                {t(
+                  "DeeLance is a freelancing and Recruitment platform based on Web3. Its a decentralized platform revolutionizing how freelancers connect with potential employers"
+                )}
+              </p>
+              <div className="hero-btn mt-4">
+                {/* <BaseButton onClick={() => setIsModal(true)}>
                   {t("Sign Up")} <AiOutlineArrowRight />
-                </button>
+                </BaseButton> */}
+
+                <BaseButton
+                  as="a"
+                  href="https://docs.deelance.com/"
+                  target="_blank"
+                >
+                  {t("Whitepaper")}
+                </BaseButton>
 
                 {/* <button className="hero-btn-2">{t("buttons.buy_now")}</button> */}
               </div>
-              <div className="presale-hero-box">
-                <PresaleMain />
+              <div className="mt-5">
+                {/* <PresaleMain /> */}
+                <PresaleVersion2 />
               </div>
             </div>
 
@@ -105,15 +113,14 @@ function Hero() {
                 </div>
 
                 <div className="disclaimer">
-                  <p className="text-center white">
-                    ⚠️Beware of any other website or social media account
-                    claiming to represent us is fraudulent and unauthorized. We
-                    take no responsibility for any misinformation or harm caused
-                    by such impersonation.
+                  <p className="white text-center">
+                    {t(
+                      "⚠️Beware of fraudulent and unauthorized websites, social media or email accounts claiming to represent Deelance. Deelance takes no responsibility for the misrepresentation and harm resulting from the wilful deception perpetrated by fraudulent third parties. Please exercise due caution at all times."
+                    )}
                   </p>
 
-                  <p className="text-center white">
-                    Follow our verified accounts to stay updated.
+                  <p className="white text-center">
+                    {t("Only interact with verified Deelance accounts.")}
                   </p>
                 </div>
 
@@ -167,41 +174,23 @@ function Hero() {
                   >
                     <FaInstagram />
                   </a>
+                  <a
+                    href="https://www.youtube.com/channel/UCM7Nv8JQECFr5lF_hd8KgTA"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <FaYoutube />
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="pop-up-sign">
-          {/* {isModal && <Model setIsModal={setIsModal} />} */}
-          {isModal && (
-            <div>
-              <iframe
-                width="540"
-                height="305"
-                src="https://a83cf220.sibforms.com/serve/MUIEAHsYtyXnp-P1ZZgWLkU-hoJ-yYDWNUUCZjbpduGIBe8_MFUlSt3NBcsQbI6b-IQoxpMwd-YYx4-ca11lD_qaZpUJbFY-qt1OiMM5-kFfEozmU7I2XjMkdIGao-Agt45gbigkvImql6-Bzlj6I1pxfdmXeE-M-EdmMQwOY2j-kRk6gacfT_zIufgD4MLVR-gu009GI8G2rcyw"
-                style={{
-                  position: "fixed",
-                  top: "50%",
-                  left: "50%",
-                  transform: "translate(-50%,-50%)",
-                  zIndex: 1000,
-                  height: "100vh",
-                  width: "100%",
-                  backgroundColor: "rgba(0,0,0,.8)",
-                }}
-              ></iframe>
+        {/* <div className="pop-up-sign"> */}
+        {/* {isModal && <Model setIsModal={setIsModal} />} */}
 
-              <button
-                className="sign-up-close-btn"
-                onClick={() => setIsModal(false)}
-              >
-                <IoClose />
-              </button>
-            </div>
-          )}
-        </div>
+        {/* </div> */}
       </section>
     </>
   );

@@ -17,6 +17,7 @@ import { Navigation } from "swiper";
 import { HiArrowNarrowLeft, HiArrowNarrowRight } from "react-icons/hi";
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
+import TitleDash from "Components/TitleDash";
 
 const FullCol = ({ img, items, textAlign = "center" }) => {
   return (
@@ -55,12 +56,10 @@ function MobWhyus({ keys }) {
   return (
     <>
       <div className="container-fluid mob-why-swiper">
-        <div className="why-us-head text-center">
-          <h1>
-            {t("Why")} <span className="green">{t("Deelance")}</span>{" "}
-          </h1>
-          <img src={Dash} alt="" />
-        </div>
+        <TitleDash
+          className="text-center mt-4 mb-4"
+          title={t("faq.question2", "Why Deelance?")}
+        />
         <div className="why-us-box" style={{ position: "relative" }}>
           <div className="navigatoion-buttons">
             <button ref={navigationPrevRef}>

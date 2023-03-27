@@ -9,6 +9,7 @@ import Freelance from "../../assets/freela.png";
 import Upwork from "../../assets/Upwork.png";
 import "./Why.css";
 import { useTranslation } from "react-i18next";
+import TitleDash from "Components/TitleDash";
 
 function WhyUs() {
   const { t } = useTranslation("common");
@@ -31,12 +32,10 @@ function WhyUs() {
       <MobWhyus keys={keys} />
 
       <div className="container desktop-box-why">
-        <div className="why-us-head text-center">
-          <h1>
-            {t("Why")} <span className="green">{t("Deelance")}</span>{" "}
-          </h1>
-          <img src={Dash} alt="" />
-        </div>
+        <TitleDash
+          className="text-center mt-4 mb-5"
+          title={t("faq.question2", "Why Deelance?")}
+        />
 
         <div className="why-us-box">
           <table className="table">

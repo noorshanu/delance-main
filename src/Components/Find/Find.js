@@ -3,6 +3,7 @@ import "./Find.css";
 import Lottie from "react-lottie";
 import Meta from "./metav.json";
 import { useTranslation } from "react-i18next";
+import BaseButton from "Components/BaseButton";
 
 function Find() {
   const { t } = useTranslation("common");
@@ -22,32 +23,31 @@ function Find() {
             <div className="col-md-6">
               <div className="meta-1">
                 <h1>
-                  {t("Find Freelancer In")}{" "}
-                  <span className="green">{t("Metaverse")}</span>{" "}
+                  {t("Find Freelancers in the")}{" "}
+                  <span className="green-light">{t("Metaverse")}</span>{" "}
                 </h1>
                 <p>
                   {t(
-                    "find.description_1",
-                    "Deelance ” is a project that creates unique contents on Metaverse technology that is a huge trend around the world. Its aim is to move people to another dimension within the digital universe."
+                    "Deelance brings employers and freelancers together for work and discussion in the virtual world of the Metaverse. "
                   )}
                 </p>
                 <p>
                   {" "}
                   {t(
-                    "find.description_2",
-                    "Metaverse - where buyers can interact with freelancers in the office space and  a discussion"
+                    "Through the creation of innovative and unique digital worlds, commercial activities such as freelancer marketplaces will become even more efficient and useful."
                   )}
                 </p>
               </div>
               <div className="gp-2">
-                <a
+                <BaseButton
+                  variant={1}
+                  as="a"
                   href="https://demo.corporate-metaverse.com/join"
                   target="_blank"
                   rel="noreferrer"
-                  className="demo-btn"
                 >
                   {t("buttons.demo", "DEMO")}
-                </a>
+                </BaseButton>
               </div>
             </div>
             <div className="col-md-6">
