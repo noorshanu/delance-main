@@ -16,6 +16,7 @@ import UserContext from "../UserContext";
 import { ethers } from "ethers";
 import { TokenList } from "../Constants/Constants";
 import { getProvider } from "@wagmi/core";
+import axios from "axios"; 
 
 const Button = ({ children, icon, ...props }) => {
   const isBellow768px = useMediaQuery("(max-width : 768px)");
@@ -143,6 +144,7 @@ function PresaleVersion2() {
   const [aa, setNetwork] = useState();
   const [claimDisabled, setClaimDisabled] = useState(true);
   const [condition, setCondition] = useState({ condition: true });
+  const [referralLink, setReferralLink] = useState("");
 
   // console.log("presale version 2, re-rendering");
 
@@ -205,6 +207,9 @@ function PresaleVersion2() {
       };
       getPr();
     } else {
+
+      handleClickReferralLink();
+
       const countdownDate = new Date("2023-04-16T00:00:00").getTime();
 
       const interval = setInterval(() => {
@@ -316,6 +321,49 @@ function PresaleVersion2() {
     }
   }, [account, somestate]);
 
+  const generateReferralLink = async (walletAddress, iid) => {
+    const apiDomain = "https://api.dashfx.net";
+    const apiUrl = "/api/publisher/presale";
+    const apiToken = "8c204353f83140b34023c4c6474491fe";
+
+    const config = {
+      headers: {
+        Authorization: `Bearer ${apiToken}`,
+      },
+    };
+
+    const payload = {
+      walletAddress,
+      iid,
+    };
+
+    try {
+      const response = await axios.post(apiDomain + apiUrl, payload, config);
+      const link = response.data.link;
+      setReferralLink(link);
+    } catch (error) {
+      console.error("Error generating referral link:", error);
+    }
+  };
+
+  const handleClickReferralLink = () => {
+    const walletAddress = {account}; // Replace with the desired walletAddress
+    const iid = "826"; // Replace with the desired iid
+    console.log("ACCOUNT IN HANDLE", account)
+    generateReferralLink(walletAddress, iid);
+  };
+
+  const copyToClipboard = (text) => {
+    const el = document.createElement("textarea");
+    el.value = text;
+    el.setAttribute("readonly", "");
+    el.style.position = "absolute";
+    el.style.left = "-9999px";
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand("copy");
+    document.body.removeChild(el);
+  };
   return (
     <div className={styles.wrapper}>
       <p className="white text-center weight-700 fs-16px mb-2 logo-plus-title">
@@ -408,6 +456,10 @@ function PresaleVersion2() {
               {t("Buy")} {tokenDetails.symbol} {t("With")} USDT
             </Button>
             <Button
+                onClick={() => {
+                  copyToClipboard(referralLink);
+                  alert("Referral link copied to clipboard");
+                }}
               icon={
                 <img
                   src="images/referal-link.png"
@@ -434,7 +486,7 @@ function PresaleVersion2() {
       )}
       <div className="d-flex justify-content-center mt-3">
         <Link
-          to="/how-to-buy"
+          to="/en/how-to-buy"
           target="_blank"
           style={{ textDecoration: "underline" }}
         >

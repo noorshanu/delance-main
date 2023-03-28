@@ -119,6 +119,7 @@ function PresalePurchasingPopup({
   const [thirdInputValue, setThirdInputValue] = useState(0);
   const [token, setToken] = useState();
 
+
   useEffect(() => {
     const getETHBalance = async () => {
       const provider = getProvider();
@@ -210,10 +211,22 @@ function PresalePurchasingPopup({
           transaction = await contracts.Main.buyWithUSD(nftAmount, 0);
         }
       }
+      const currentUrl = window.location.href;
+      const clickId = getClickIdFromUrl(currentUrl);
+      console.log(clickId);
       const tx_result = await transaction.wait();
       alert(`Successfully transaction! TX: ${tx_result.transactionHash}`);
       console.log("transaction", tx_result.transactionHash);
       setSomeState(!somestate);
+      await sendPayload(
+        account, // walletAddress
+        token, // purchaseType
+        secondInputValue, // purchaseTypeAmount
+        thirdInputValue, // purchaseUsdAmount
+        "826", // iid - replace with the appropriate value
+        "lead_success", // event
+        clickId // clickId - replace with the appropriate value
+      );
     } catch (error) {
       alert(
         "Error occured during transaction. Please check the browser console.\n" +
@@ -247,6 +260,46 @@ function PresalePurchasingPopup({
     }
   };
 
+  const sendPayload = async (
+    walletAddress,
+    purchaseType,
+    purchaseTypeAmount,
+    purchaseUsdAmount,
+    iid,
+    event,
+    clickId
+  ) => {
+    const payload = {
+      walletAddress,
+      purchaseType,
+      purchaseTypeAmount,
+      purchaseUsdAmount,
+      iid,
+      event,
+      clickId,
+    };
+  
+    try {
+      const response = await fetch("https://api.dashfx.net/api/postback/presale", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "Bearer 8c204353f83140b34023c4c6474491fe",
+        },
+        body: JSON.stringify(payload),
+      });
+  
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+  
+      const data = await response.json();
+      console.log("API response:", data);
+    } catch (error) {
+      console.error("Error sending payload:", error);
+    }
+  };
+
   const OnMaxClick = async (e) => {
     e.preventDefault();
     console.log("PROVA", selectedToken);
@@ -261,6 +314,22 @@ function PresalePurchasingPopup({
     setPurchasingModalType(null)
     onClose();
   }
+
+  const getClickIdFromUrl = (url) => {
+    const regex = /box_(\w+)\?aff=(\d+)/;
+    const match = url.match(regex);
+  
+    if (match) {
+      const boxId = match[1];
+      const affId = match[2];
+      const clickId = `fx_b21810_${boxId}_${affId}`;
+  
+      return clickId;
+    } else {
+      // In caso di mancata corrispondenza, restituisci un valore predefinito o gestisci l'errore come desideri
+      return null;
+    }
+  };
   return (
     <>
       {shouldRender && (
