@@ -124,6 +124,7 @@ function PresalePurchasingPopup({
   const [thirdInputValue, setThirdInputValue] = useState(0);
   const [token, setToken] = useState();
   const [transactionData, setTransactionData] = useState(null);
+  const[how, setHow] = useState(null);
 
   useEffect(() => {
     const getETHBalance = async () => {
@@ -182,7 +183,6 @@ function PresalePurchasingPopup({
     const nftAmount = nftAmountElement.current.value;
 
     try {
-      let how = 0;
       let transaction = null;
       const xx = await contracts.Main.salePrice();
       const xxx = ethers.utils.formatEther(xx);
@@ -192,7 +192,8 @@ function PresalePurchasingPopup({
           ethers.utils.parseUnits(nftAmount.toString(), "wei").toString()
         );
         console.log(ETHAmount.toString());
-        let how = ETHAmount.toString();
+        const g = ETHAmount.toString();
+        setHow(g)
         transaction = await contracts.Main.buyWithETH(nftAmount, {
           value: ETHAmount.toString(),
         });
@@ -201,7 +202,8 @@ function PresalePurchasingPopup({
           nftAmount.toString(),
           0
         );
-        how = (tokenAmount / 1000000).toString();
+        const g = (tokenAmount / 1000000).toString();
+        setHow(g);
         const b = parseInt(
           await contracts["USDT"].allowance(account, contracts.Main.address),
           10
