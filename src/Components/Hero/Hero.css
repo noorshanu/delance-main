@@ -157,9 +157,12 @@
 .hero-btn-1,
 .hero-btn-2 {
   border-radius: 4px;
-  padding: 0.4em 2em;
+  padding: 0 2em;
+  height: 2.4em;
   font-weight: 600;
   transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
 }
 
 .hero-btn-1 {
@@ -189,6 +192,28 @@
 .loti-1 {
   /* height: 500px;
   width: 700px; */
+}
+
+.loadingbutton-loader {
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  border-top: 0.3em solid var(--main-1);
+  border-left: 0.3em solid var(--main-1);
+  border-right: 0.3em solid var(--green-dark);
+  border-bottom: 0.3em solid var(--green-dark);
+  margin: 0 auto;
+
+  animation: loading-loader 0.4s linear infinite;
+}
+
+@keyframes loading-loader {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @media (max-width: 768px) {

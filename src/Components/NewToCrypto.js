@@ -26,7 +26,7 @@ function NewToCrypto() {
               style={{ "--decrement-lg": "6px" }}
             >
               {t(
-                "Want to purchase $DLANCE and join the future of Freelancing but not sure where to start? Fill in our form and one of our team members will guide you through the process."
+                "Do you want to purchase $DLANCE and join the future of freelancing but are not sure where to start? Fill out our form, and one of our team members will guide you through the process."
               )}
             </p>
 

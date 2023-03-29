@@ -3,6 +3,9 @@ import { AiOutlineCheckCircle, AiOutlineArrowRight } from "react-icons/ai";
 import Lottie from "react-lottie";
 import Meta from "./about.json";
 import { useTranslation } from "react-i18next";
+import BaseButton from "Components/BaseButton";
+import LinkScroller from "Components/LinkScroller";
+import { Link as ScrollLink } from "react-scroll";
 
 const aboutPoints = [
   {
@@ -84,9 +87,19 @@ function About() {
                 </p> */}
               </div>
               <div className="gp-1">
-                <a href="/" className="demo-btn">
-                  {t("buttons.buy_now")} <AiOutlineArrowRight />
-                </a>
+                {/* <a href="/" className="demo-btn">
+                </a> */}
+
+                <BaseButton
+                  variant={1}
+                  as={ScrollLink}
+                  to="presale-atm"
+                  offset={-100}
+                  style={{ cursor: "pointer" }}
+                >
+                  {t("buttons.buy_now")}{" "}
+                  <AiOutlineArrowRight style={{ marginLeft: ".5em" }} />
+                </BaseButton>
               </div>
             </div>
           </div>

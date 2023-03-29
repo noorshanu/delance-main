@@ -1,20 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./Hero.css";
-import {
-  FaTwitter,
-  FaFacebookSquare,
-  FaMedium,
-  FaTelegramPlane,
-  FaLinkedin,
-  FaDiscord,
-  FaInstagram,
-  FaYoutube,
-} from "react-icons/fa";
+
 import { AiOutlineArrowRight } from "react-icons/ai";
-import Model from "Components/Popup/Model";
 import Lottie from "react-lottie";
 import Hero_lot from "./bg";
-import PresaleMain from "Components/Presale/Presale_main";
 import { useTranslation } from "react-i18next";
 import UpperSection from "./UpperSection";
 import LowerSection from "./LowerSection";
@@ -23,7 +12,6 @@ import BaseButton from "Components/BaseButton";
 import SignUpButtonWithModal from "Components/SignUpButtonWithModal";
 import PresaleVersion2 from "Components/PresaleVersion2";
 import SocialLinks from "Components/SocialLinks";
-import VerifiedCard from "Components/VerifiedCard";
 
 function Hero() {
   const { t } = useTranslation("common");
@@ -35,6 +23,8 @@ function Hero() {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
+
+  console.log("re-rednering parent");
 
   return (
     <>
@@ -63,7 +53,7 @@ function Hero() {
 
               <p className="hero-sp-p mb-0">
                 {t(
-                  "DeeLance is a freelancing and Recruitment platform based on Web3. Its a decentralized platform revolutionizing how freelancers connect with potential employers"
+                  "DeeLance is a freelancing and recruitment platform based on Web3. It's a decentralized platform revolutionizing how freelancers connect with potential employers."
                 )}
               </p>
               <div className="mt-4 mt-md-5" id="presale-atm">
@@ -84,7 +74,7 @@ function Hero() {
                 <div className="disclaimer">
                   <p className="white text-center">
                     {t(
-                      "⚠️Beware of fraudulent and unauthorized websites, social media or email accounts claiming to represent DeeLance. DeeLance takes no responsibility for the misrepresentation and harm resulting from the wilful deception perpetrated by fraudulent third parties. Please exercise due caution at all times."
+                      "⚠️Beware of fraudulent and unauthorized websites, social media, or email accounts claiming to represent DeeLance. DeeLance takes no responsibility for the misrepresentation and harm resulting from the willful deception perpetrated by fraudulent third parties. Please exercise due caution at all times."
                     )}
                   </p>
 

@@ -17,7 +17,6 @@ function BaseButton({
     <Component
       className={`${variants[variant]} ${fontSize} ${className}`}
       style={{
-        display: "inline-block",
         ...style,
       }}
       {...props}

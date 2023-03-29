@@ -1,4 +1,5 @@
 import React from "react";
+import "Components/Popup/Modelll.css";
 
 const onRamp = ({ setIsModal2 }) => {
   return (

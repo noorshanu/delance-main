@@ -34,8 +34,7 @@ function Footer() {
 
                 <p style={{ maxWidth: "28rem" }} className="mb-0 white fs-16px">
                   {t(
-                    "footer.subtitle",
-                    "DeeLance is a freelancing and Recruitment platform based on Web3 platform that is redefining how freelancers connect with potential employers and buyers."
+                    "DeeLance is a freelancing and recruitment platform based on Web3. It's a decentralized platform revolutionizing how freelancers connect with potential employers."
                   )}
                 </p>
               </div>

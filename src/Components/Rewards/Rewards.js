@@ -46,7 +46,7 @@ function Rewards() {
               </p>
               <p>
                 {t(
-                  "To make multiple entries, follow the steps described in the scrollable box on this page. You must hold at least $100 of $DLANCE at the time of the draw."
+                  "To make multiple entries, follow the steps described in the scrollable box on this page. You must hold at least $100 worth of $DLANCE at the time of the draw."
                 )}
               </p>
               <p>{t("Good luck!")}</p>

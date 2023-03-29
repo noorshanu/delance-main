@@ -10,7 +10,7 @@ import { useParams } from "react-router-dom";
 const allLanguages = [
   { text: "English", value: "en" },
   { text: "German", value: "de" },
-  { text: "Spanish", value: "es-419" },
+  { text: "Spanish", value: "es" },
   { text: "Chinese", value: "zh" },
   { text: "Arabic", value: "ar" },
   { text: "Russian", value: "ru" },

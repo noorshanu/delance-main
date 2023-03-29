@@ -27,7 +27,7 @@ function Find() {
               </h1>
               <p>
                 {t(
-                  "DeeLance brings employers and freelancers together for work and discussion in the virtual world of the Metaverse. "
+                  "DeeLance brings together employers and freelancers for work and discussion in the virtual world of the Metaverse."
                 )}
               </p>
               <p>

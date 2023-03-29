@@ -59,7 +59,7 @@ function DeelanceContract() {
           <p className="text-center white mb-0">
             {t(
               "deelance_contract.subtitle",
-              "Use the contract information below to add the $DLANCE token to your wallet."
+              "Use the contract information provided below to add the $DLANCE token to your wallet."
             )}
           </p>
         </header>
@@ -86,8 +86,7 @@ function DeelanceContract() {
 
             <p className={`${styles.warning} mb-0`}>
               {t(
-                "deelance_contract.address_title",
-                "Please do not send any tokens to this address as they will be lost."
+                "Please note that you should not send any tokens to this address, as doing so may result in the permanent loss of the tokens."
               )}
             </p>
           </Box>

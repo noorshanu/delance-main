@@ -5,7 +5,6 @@ import BaseButton from "./BaseButton";
 import tokenDetails from "Constants/tokenDetails";
 import useDelayUnmount from "hooks/useDelayUnmount";
 import OutsideClickDetector from "hooks/OutsideClickDetector";
-import Portal from "./Portal";
 import modalType, { tokenSymbols } from "Constants/modalType";
 import { ethers } from "ethers";
 import { TokenList } from "../Constants/Constants";
@@ -15,8 +14,9 @@ import { useTranslation } from "react-i18next";
 import axios from "axios";
 import TransitionWrapper from "./TransitionWrapper";
 import TransactionSuccesfullPopup from "./TransactionSuccesfullPopup";
+import LoadingButton from "./LoadingButton";
 
-const Input = ({ OnMaxClick, handleFirstInputChange, maxa }) => {
+const Input = ({ OnMaxClick, handleFirstInputChange, maxa, disabled }) => {
   const { t } = useTranslation("common");
 
   return (
@@ -27,10 +27,12 @@ const Input = ({ OnMaxClick, handleFirstInputChange, maxa }) => {
         onChange={handleFirstInputChange}
         ref={maxa}
         required
+        disabled={disabled}
       />
       {OnMaxClick && (
         <BaseButton
           onClick={OnMaxClick}
+          disabled={disabled}
           variant={1}
           style={{
             paddingTop: 0,
@@ -101,11 +103,17 @@ function PresalePurchasingPopup({
   setTransactionSuccessfull,
 }) {
   const { t } = useTranslation("common");
-  const shouldRender = useDelayUnmount(Boolean(purchasingModalType), 300);
-  const ModalRef = OutsideClickDetector(() => {
-    setPurchasingModalType(null);
-    onClose();
-  });
+  // const ModalRef = OutsideClickDetector(() => {
+  //   setSecondInputValue(0);
+  //   setPurchasingModalType(null);
+  //   onClose();
+
+  //   console.log("😁😁😁😁😁😁");
+  //   console.log("😁😁😁😁😁😁");
+  //   console.log("😁😁😁😁😁😁");
+  //   console.log("issue");
+  // });
+
   const handleClose = () => {
     onClose(); // Chiama la funzione onClose passata come prop
   };
@@ -124,9 +132,26 @@ function PresalePurchasingPopup({
   const [thirdInputValue, setThirdInputValue] = useState(0);
   const [token, setToken] = useState();
   const [transactionData, setTransactionData] = useState(null);
-  const[how, setHow] = useState(null);
+  const [how, setHow] = useState(null);
+  const [showApprove, setShowApprove] = useState(false);
+  const [transactionLoading, setTransactionLoading] = useState(false);
+  const [deelance, setDeelance] = useState(0);
+  const[all, setAll] = useState(0);
 
   useEffect(() => {
+    const getDeelance = async () => {
+      const allowance = parseInt(
+        await contracts["USDT"].allowance(account, contracts.Main.address),
+        10
+      );
+      setAll(allowance);
+      console.log("Account wallet", account);
+      const sa = await contracts.Main.userDeposits(account);
+      const pric = sa / 1000000000000000000;
+      console.log("Account balance deelance", pric);
+      setDeelance(pric);
+    };
+
     const getETHBalance = async () => {
       const provider = getProvider();
       const balance = await provider.getBalance(account);
@@ -147,6 +172,11 @@ function PresalePurchasingPopup({
       );
       console.log("CIAO", aaaa);
       console.log("success");
+
+      if (token === "USDT") {
+        setShowApprove(aaaa < 5 * 10 ** decimals);
+      }
+
       return balance.div("1" + "0".repeat(decimals)).toNumber();
     };
 
@@ -158,6 +188,7 @@ function PresalePurchasingPopup({
       setBalances(balances);
     };
 
+    getDeelance();
     getAllBalances();
     getSomeState();
 
@@ -174,8 +205,22 @@ function PresalePurchasingPopup({
     }
   }, [lastSymbol, purchasingModalType, account]);
 
+  const getDeelance = async () => {
+    const allowance = parseInt(
+      await contracts["USDT"].allowance(account, contracts.Main.address),
+      10
+    );
+    setAll(allowance);
+    console.log("Account wallet", account);
+    const sa = await contracts.Main.userDeposits(account);
+    const pric = sa / 1000000000000000000;
+    console.log("Account balance deelance", pric);
+    setDeelance(pric);
+  };
+
   const buyNFT = async (e) => {
     e.preventDefault();
+    setTransactionLoading(true);
 
     if (!account) {
       return;
@@ -192,8 +237,9 @@ function PresalePurchasingPopup({
           ethers.utils.parseUnits(nftAmount.toString(), "wei").toString()
         );
         console.log(ETHAmount.toString());
-        const g = ETHAmount.toString();
-        setHow(g)
+        const g = ETHAmount.toString() / 1000000000000000000;
+        setHow(g);
+        console.log("ETH AMOUNT IN G", g);
         transaction = await contracts.Main.buyWithETH(nftAmount, {
           value: ETHAmount.toString(),
         });
@@ -204,42 +250,66 @@ function PresalePurchasingPopup({
         );
         const g = (tokenAmount / 1000000).toString();
         setHow(g);
-        const b = parseInt(
+        console.log("USDT AMOUNT IN G", g);
+        const allowance = parseInt(
           await contracts["USDT"].allowance(account, contracts.Main.address),
           10
         );
         const requiredTokenAmount = tokenAmount.toString();
-        if (b < requiredTokenAmount) {
-          console.log("sono qui");
-          transaction = await contracts["USDT"].approve(
+
+        if (allowance < 1) {
+
+          const transaction = await contracts["USDT"].approve(
             contracts.Main.address,
             "10000000000000000000000000000000000000000000000000000000000"
           );
+       
+          if (await transaction.wait()) {
+            alert("Allowance it's ok now! You can continue purchase!")
+            const allowance = parseInt(
+              await contracts["USDT"].allowance(account, contracts.Main.address),
+              10
+            );
+            setTransactionLoading(false);
+            setAll(allowance)
+            setSomeState(!somestate)
+            return;
+          } else {
+            alert("Something wrong with allowance... try to revoke allowance and try again!")
+            setTransactionLoading(false);
+          return;
+          }
+
         } else {
           console.log("SIIII", nftAmount.toString());
           transaction = await contracts.Main.buyWithUSD(nftAmount, 0);
+
+          const errorCode = 0; // Define the errorCode variable here (change its value if needed)
+          const xxff = {
+            a: account,
+          };
+
+          window.dataLayer.push({
+            event:"workflowStep",
+            workflowName: "swap",
+            workflowStepNumber: 2,
+            workflowStepName: "confirmTransaction",
+            workflowCompleteFlag: 0,
+            workflowErrorCode: errorCode,
+            walletAddress: xxff.a,
+                        });
         }
       }
       const currentUrl = window.location.href;
       const clickId = getClickIdFromUrl(currentUrl);
       console.log(clickId);
       const tx_result = await transaction.wait();
-      // alert(`Successfully transaction! TX: ${tx_result.transactionHash}`);
-      setTransactionSuccessfull({
-        transactionHash: tx_result.transactionHash,
-        amount: nftAmount.toString(),
-        txResult: "transaction result",
-      });
-      setPurchasingModalType(null);
-      console.log("transaction", tx_result.transactionHash);
 
-      setPurchasingModalType(null);
-
-      setSomeState(!somestate);
       const xxxx = {
         a: account,
       };
-
+      getDeelance();
+      const ev = deelance === 0 ? "conversion" : "revenue";
       await sendPayload(
         xxxx.a, // walletAddress
         token, // purchaseType
@@ -247,9 +317,43 @@ function PresalePurchasingPopup({
         how, // purchaseTypeAmount
         thirdInputValue, // purchaseUsdAmount
         "826", // iid - replace with the appropriate value
-        "lead_success", // event
+        ev, // event
         clickId // clickId - replace with the appropriate value
       );
+
+      // alert(`Successfully transaction! TX: ${tx_result.transactionHash}`);
+      setTransactionSuccessfull({
+        transactionHash: tx_result.transactionHash,
+        amount: nftAmount.toString(),
+        txResult: "transaction result",
+      });
+
+      const errorCode = 0; // Define the errorCode variable here (change its value if needed)
+      const xxffa = {
+        a: account,
+      };
+
+      window.dataLayer.push({
+        event:"workflowStep",
+        workflowName: "swap",
+        workflowStepNumber: 3,
+        workflowStepName: "swapSuccessful",
+        workflowCompleteFlag: 1,
+        workflowErrorCode: errorCode,
+        walletAddress: xxffa.a,
+        transactionId: tx_result.transactionHash,
+        swapFromCurrency: token,
+        swapFromValue: how,
+        swapToCurrency: "$DLANCE",
+        swapToValue: nftAmount.toString(),
+                    });
+                    
+      setPurchasingModalType(null);
+      console.log("transaction", tx_result.transactionHash);
+
+      setPurchasingModalType(null);
+
+      setSomeState(!somestate);
     } catch (error) {
       alert(
         "Error occured during transaction. Please check the browser console.\n" +
@@ -258,6 +362,8 @@ function PresalePurchasingPopup({
       console.error("Transaction Error:", error.reason);
       setSomeState(!somestate);
     }
+
+    setTransactionLoading(false);
   };
 
   const handleFirstInputChange = async (event) => {
@@ -339,6 +445,7 @@ function PresalePurchasingPopup({
     }
     handleFirstInputChange({ target: { value: maxa.current.value } });
   };
+
   const chiudi = (e) => {
     setSecondInputValue(0);
     setPurchasingModalType(null);
@@ -359,13 +466,15 @@ function PresalePurchasingPopup({
       return null;
     }
   };
+
   return (
     <>
       <TransitionWrapper
         className="presale-purshasing-popup"
         open={Boolean(purchasingModalType)}
+        setOpen={setPurchasingModalType}
       >
-        <div ref={ModalRef}>
+        <div>
           <header>
             <p className="fs-20px white weight-700 mb-0">EXCHANGE</p>
             <button className="white" onClick={() => chiudi()}>
@@ -399,6 +508,7 @@ function PresalePurchasingPopup({
                   OnMaxClick={OnMaxClick}
                   maxa={maxa}
                   handleFirstInputChange={handleFirstInputChange}
+                  disabled={transactionLoading}
                 />
               </div>
 
@@ -415,22 +525,31 @@ function PresalePurchasingPopup({
                     value={secondInputValue}
                     ref={nftAmountElement}
                     required
+                    disabled={transactionLoading}
                   />
                 </div>
               </div>
             </div>
 
-            <BaseButton onClick={buyNFT} style={{ width: "100%" }}>
-              {t("Convert")}
-            </BaseButton>
+            <LoadingButton
+              onClick={buyNFT}
+              loading={transactionLoading}
+              style={{ width: "100%" }}
+              className="text-center justify-content-center"
+            >
+              {token === "USDT" && all < 1
+                ? t("Approve")
+                : t("Convert")}
+            </LoadingButton>
           </main>
         </div>
       </TransitionWrapper>
-      <TransactionSuccesfullPopup
+
+      {/* <TransactionSuccesfullPopup
         open={isTransactionSuccesfull}
         setOpen={setTransactionSuccessfull}
         data={transactionData}
-      />
+      /> */}
     </>
   );
 }

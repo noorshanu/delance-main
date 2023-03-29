@@ -134,7 +134,70 @@ const PorgressBar = ({ percantage, total, inSale, t }) => {
   );
 };
 
-const Timer = ({ days, hours, minutes, seconds }) => {
+const Timer = ({ account, somestate }) => {
+  const [days, setDays] = useState(0);
+  const [hours, setHours] = useState(0);
+  const [minutes, setMinutes] = useState(0);
+  const [seconds, setSeconds] = useState(0);
+
+  useEffect(() => {
+    if (!account) {
+      const countdownDate = new Date("2023-04-16T00:00:00").getTime();
+
+      const interval = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = countdownDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        setDays(days);
+        setHours(hours);
+        setMinutes(minutes);
+        setSeconds(seconds);
+
+        if (distance < 0) {
+          clearInterval(interval);
+          setDays(0);
+          setHours(0);
+          setMinutes(0);
+          setSeconds(0);
+        }
+      }, 1000);
+    } else {
+      const countdownDate = new Date("2023-04-16T00:00:00").getTime();
+
+      const interval = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = countdownDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        setDays(days);
+        setHours(hours);
+        setMinutes(minutes);
+        setSeconds(seconds);
+
+        if (distance < 0) {
+          clearInterval(interval);
+          setDays(0);
+          setHours(0);
+          setMinutes(0);
+          setSeconds(0);
+        }
+      }, 1000);
+    }
+  }, [account, somestate]);
+
   return (
     <div className="white presale-timer">
       <div>
@@ -164,10 +227,7 @@ function PresaleVersion2() {
   const [percantage, setPercantage] = useState(0);
   const { t } = useTranslation("common");
   const { address } = useAccount();
-  const [days, setDays] = useState(0);
-  const [hours, setHours] = useState(0);
-  const [minutes, setMinutes] = useState(0);
-  const [seconds, setSeconds] = useState(0);
+
   const [total, setTotal] = useState(0);
   const [inSale, setInSale] = useState(0);
   const [purchasingModalType, setPurchasingModalType] = useState(null);
@@ -191,7 +251,38 @@ function PresaleVersion2() {
 
   // console.log("presale version 2, re-rendering");
 
+  const handleConnectWalletClick = async () => {
+    try {
+      await connectWallet();
+      const errorCode = 0; // Define the errorCode variable here (change its value if needed)
+      window.dataLayer.push({
+        event: "workflowStep",
+        workflowName: "connectWallet",
+        workflowStepNumber: 1,
+        workflowStepName: "start",
+        workflowCompleteFlag: 0,
+        workflowErrorCode: errorCode, // Use the variable here
+      });
+    } catch (error) {
+      console.error("Error connecting wallet:", error);
+    }
+  };
+
   const buyCard = async (e) => {
+    const errorCode = 0; // Define the errorCode variable here (change its value if needed)
+    const xxff = {
+      a: account,
+    };
+    window.dataLayer.push({
+      event:"workflowStep",
+      workflowName: "swap",
+      workflowStepNumber: 1,
+      workflowStepName: "swapAmount",
+      workflowCompleteFlag: 0,
+      workflowErrorCode: errorCode,
+      walletAddress: xxff.a
+                  });
+
     setIsModal2(true);
   };
 
@@ -199,37 +290,49 @@ function PresaleVersion2() {
     setSomeState(!somestate);
   };
 
+  const sendingConnection = async (walletAddress, iid) => {
+    const event = "lead_success";
+    const currentUrl = window.location.href;
+    const clickId = getClickIdFromUrl(currentUrl);
+    const payload = {
+      walletAddress,
+      iid,
+      event,
+      clickId,
+    };
+
+    console.log("SENDING CONNECTION");
+    console.log("PAYLOAD PER SENDING", payload);
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "Bearer 8c204353f83140b34023c4c6474491fe",
+      },
+    };
+
+    try {
+      const response = await axios.post(
+        "https://api.dashfx.net/api/postback/presale",
+        payload,
+        config
+      );
+
+      if (response.status !== 200) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = response.data;
+      console.log("FUNZIONA");
+      console.log("API response SENDING:", data);
+    } catch (error) {
+      console.error("Error sending payload:", error);
+    }
+  };
+
   useEffect(() => {
     if (!account) {
       setTotal("1500000");
       setPercantage("0");
-
-      const countdownDate = new Date("2023-04-16T00:00:00").getTime();
-
-      const interval = setInterval(() => {
-        const now = new Date().getTime();
-        const distance = countdownDate - now;
-
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(
-          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        setDays(days);
-        setHours(hours);
-        setMinutes(minutes);
-        setSeconds(seconds);
-
-        if (distance < 0) {
-          clearInterval(interval);
-          setDays(0);
-          setHours(0);
-          setMinutes(0);
-          setSeconds(0);
-        }
-      }, 1000);
 
       const getPr = async () => {
         const pri = await contracts.Main.salePrice();
@@ -250,34 +353,22 @@ function PresaleVersion2() {
       };
       getPr();
     } else {
+      const errorCode = 0; // No error
+      const xxf = {
+        a: account,
+      };
+
+      window.dataLayer.push({
+        event: "workflowStep",
+        workflowName: "connectWallet",
+        workflowStepNumber: 2,
+        workflowStepName: "successful",
+        workflowCompleteFlag: 1,
+        walletAddress: xxf.a,
+        workflowErrorCode: errorCode,
+      });
+
       handleClickReferralLink();
-
-      const countdownDate = new Date("2023-04-16T00:00:00").getTime();
-
-      const interval = setInterval(() => {
-        const now = new Date().getTime();
-        const distance = countdownDate - now;
-
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(
-          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        setDays(days);
-        setHours(hours);
-        setMinutes(minutes);
-        setSeconds(seconds);
-
-        if (distance < 0) {
-          clearInterval(interval);
-          setDays(0);
-          setHours(0);
-          setMinutes(0);
-          setSeconds(0);
-        }
-      }, 1000);
 
       /*       const getETHBalance = async () => {
         const balance = await provider.getBalance(account);
@@ -364,6 +455,11 @@ function PresaleVersion2() {
   }, [account, somestate]);
 
   const generateReferralLink = async (walletAddress, iid) => {
+    await sendingConnection(
+      walletAddress, // walletAddress
+      iid
+    );
+
     const apiDomain = "https://api.dashfx.net";
     const apiUrl = "/api/publisher/presale";
     const apiToken = "8c204353f83140b34023c4c6474491fe";
@@ -400,25 +496,34 @@ function PresaleVersion2() {
     const iid = "826"; // Replace with the desired iid
     console.log("ACCOUNT IN HANDLE", account);
     generateReferralLink(walletAddress, iid);
+    sendingConnection(walletAddress, iid);
   };
 
-  const copyToClipboard = (text) => {
-    const el = document.createElement("textarea");
-    el.value = text;
-    el.setAttribute("readonly", "");
-    el.style.position = "absolute";
-    el.style.left = "-9999px";
-    document.body.appendChild(el);
-    el.select();
-    document.execCommand("copy");
-    document.body.removeChild(el);
+  const getClickIdFromUrl = (url) => {
+    // Aggiornamento dell'espressione regolare per cercare "clickId=" seguito dal pattern desiderato
+    const regex = /clickId=(fx_b\d+_\w+_\d+)/;
+    const match = url.match(regex);
+
+    if (match) {
+      const clickId = match[1]; // Ora la variabile 'clickId' contiene il valore corrispondente al pattern
+
+      return clickId;
+    } else {
+      // In caso di mancata corrispondenza, restituisci un valore predefinito o gestisci l'errore come desideri
+      return null;
+    }
   };
+
+  console.log("re-rendering");
+
   return (
     <div className={styles.wrapper}>
       <p className="white text-center weight-700 fs-16px mb-2 logo-plus-title">
-        <img src="images/deelance-logo.png" className="dee-logo" />
-        <span>1 {tokenDetails.symbol} = ${prices.toLocaleString("en-US")} USDT</span>
-        <img src="images/etheruem-logo.png" className="presale-eth" />
+        <img src="images/deelance-logo.png" alt="img" className="dee-logo" />
+        <span>
+          1 {tokenDetails.symbol} = ${prices.toLocaleString("en-US")} USDT
+        </span>
+        <img src="images/etheruem-logo.png" alt="img" className="presale-eth" />
       </p>
       <p
         className="white text-center weight-700 opacity-0_8 fs-16px"
@@ -426,23 +531,21 @@ function PresaleVersion2() {
       >
         {t("USDT Raised")}{" "}
         <span className="green-light">
-          {(total - inSale).toLocaleString("en-US")}
+        {((parseFloat(total - inSale).toFixed(2)) * 1).toLocaleString("en-US")}
         </span>{" "}
-        / <span className="green-light">${parseInt(total).toLocaleString("en-US")}</span> 
-       
+        /{" "}
+        <span className="green-light">
+          ${parseInt(total).toLocaleString("en-US")}
+        </span>
       </p>
       <div className="mb-4">
         <div className="mb-4">
-          <Timer
-            days={days}
-            hours={hours}
-            minutes={minutes}
-            seconds={seconds}
-          />
+          <Timer account={account} somestate={somestate} />
         </div>
 
         <p className="text-center white weight-700 fs-16px">
-          {t("Until Price Increase To")} ${nextprices.toLocaleString("en-US")} USDT
+          {t("Until Price Increase To")} ${nextprices.toLocaleString("en-US")}{" "}
+          USDT
         </p>
       </div>
       <PorgressBar
@@ -454,7 +557,10 @@ function PresaleVersion2() {
       {!address ? (
         <div className="mt-4 d-flex justify-content-center">
           <div style={{ maxWidth: "20rem", width: "100%" }}>
-            <ConnectWalletBtn normal={true} />
+            <ConnectWalletBtn
+              onClick={handleConnectWalletClick}
+              normal={true}
+            />
           </div>
         </div>
       ) : (
@@ -472,6 +578,19 @@ function PresaleVersion2() {
             <Button
               className="mb-3"
               onClick={() => {
+                const errorCode = 0; // Define the errorCode variable here (change its value if needed)
+                const xxff = {
+                  a: account,
+                };
+                window.dataLayer.push({
+                  event:"workflowStep",
+                  workflowName: "swap",
+                  workflowStepNumber: 1,
+                  workflowStepName: "swapAmount",
+                  workflowCompleteFlag: 0,
+                  workflowErrorCode: errorCode,
+                  walletAddress: xxff.a
+                              });
                 setPurchasingModalType(modalType.eth);
                 handlePopupClose();
               }}
@@ -489,6 +608,19 @@ function PresaleVersion2() {
             </Button>
             <Button
               onClick={() => {
+                const errorCode = 0; // Define the errorCode variable here (change its value if needed)
+                const xxff = {
+                  a: account,
+                };
+                window.dataLayer.push({
+                  event:"workflowStep",
+                  workflowName: "swap",
+                  workflowStepNumber: 1,
+                  workflowStepName: "swapAmount",
+                  workflowCompleteFlag: 0,
+                  workflowErrorCode: errorCode,
+                  walletAddress: xxff.a
+                              });
                 setPurchasingModalType(modalType.usdt);
                 handlePopupClose();
               }}
@@ -584,7 +716,7 @@ function PresaleVersion2() {
         <div className="mt-3">
           <p className="text-center white fs-16px mb-1">{t("Launch Price")}</p>
           <p className="text-center white fs-16px mb-0">
-            1 {tokenDetails.symbol} = $0.030 USDT
+            1 {tokenDetails.symbol} = $0.033 USDT
           </p>
         </div>
       )}

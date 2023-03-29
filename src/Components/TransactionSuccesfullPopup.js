@@ -16,7 +16,7 @@ function TransactionSuccesfullPopup({ open, setOpen, data }) {
       return; // non eseguire l'effetto se data è null o undefined
     }
 
-    setTrx(data.trx);
+    setTrx(data.transactionHash);
     setAmount(data.amount);
     setTrans(data.transaction);
     console.log("DATA", data);

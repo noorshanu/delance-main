@@ -35,7 +35,7 @@ function ReferralLinkPopup({ open, referralLink, setOpen }) {
   }, [isCopied]);
 
   return (
-    <TransitionWrapper open={open} className={styles.wrapper}>
+    <TransitionWrapper open={open} className={styles.wrapper} setOpen={setOpen}>
       <div>
         <header>
           <h1 className="text-center white fs-20px weight-700 mb-0 uppercase">

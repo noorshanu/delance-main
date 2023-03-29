@@ -25,7 +25,7 @@ jobs hiring near me,work from home jobs,jobs available near me,nft marketplace,n
         />
         <meta
           name="description"
-          content="All you have to do is follow the steps described in the widget on this page to receive multiple entries, and hold at least $100 of $DLANCE at the time of the draw."
+          content="All you have to do is follow the steps described in the widget on this page to receive multiple entries, and hold at least $100 worth of $DLANCE at the time of the draw."
         />
         <title>Win 100k</title>
       </Helmet>

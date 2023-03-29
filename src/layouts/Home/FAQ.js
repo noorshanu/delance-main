@@ -26,7 +26,7 @@ function FAQ() {
           </div>
 
           <div className="accordion-list">
-            <Accordion title={t("faq.question1", "What is DeeLance?")}>
+            <Accordion title={t("What is DeeLance?")}>
               <p className="mb-0">
                 {t(
                   "DeeLance is a freelancing and recruitment platform based on Web3 technology that is redefining how freelancers connect with potential employers and buyers."
@@ -37,9 +37,9 @@ function FAQ() {
               <div className="pt-2"></div>
               <p>{t("✔️Advance Gig Framework with NFT subscription model")}</p>
               <p>{t("✔️Multiple Crypto payment option")}</p>
-              <p>{t("✔️NDA ( Buyer & Seller )")}</p>
+              <p>{t("✔️NDA (Buyer & Seller)")}</p>
               <p>{t("✔️On-chain KYC to avoid bad Actors")}</p>
-              <p>{t("✔️Extra benefit with Data ownership ")}</p>
+              <p>{t("✔️Extra benefit with Data Ownership")}</p>
               <p>{t("✔️Smart contract escrow")}</p>
               <p className="mb-0">{t("✔️Smart contract job Placements")}</p>
             </Accordion>
@@ -59,7 +59,7 @@ function FAQ() {
                 )}
               </p>
             </Accordion>
-            <Accordion title={t("faq.question4", "What is next for DeeLance?")}>
+            <Accordion title={t("What is next for DeeLance?")}>
               <p className="mb-0">
                 {t(
                   "After the pre-sale, our focus will be on developing and launching the platform, NFT marketplace, Metaverse app, and expanding our reach globally by connecting with more ambassadors."

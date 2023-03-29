@@ -4,7 +4,7 @@ import { useAccount } from "wagmi";
 import styles from "CSS/ConnectWalletBtn.module.css";
 import { useTranslation } from "react-i18next";
 
-function ConnectWalletBtn({ setShowMediaIcons, normal = false }) {
+function ConnectWalletBtn({ onClick, setShowMediaIcons, normal = false }) {
   const { open } = useWeb3Modal();
   const { address } = useAccount();
   const { t } = useTranslation("common");

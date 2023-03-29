@@ -17,12 +17,12 @@ const data = [
   {
     img: Buss,
     title: "Business Simplified",
-    desc: "It only takes a minute to post a job or apply for one. No browser plugins, third-party apps, credit card details, or wallet-linking necessary. Fast, efficient and easy – the way blockchain is meant to be.",
+    desc: "It only takes a minute to post a job or apply for one. No browser plugins, third-party apps, credit card details, or wallet-linking are necessary. The process is fast, efficient, and easy – the way blockchain is meant to be.",
   },
   {
     img: Trans,
     title: "Transparency",
-    desc: "DeeLance has built an automated dispute system where all buyer and seller reputations are stored on the public blockchain. DeeLance is a trustworthy platform all stakeholders can rely.",
+    desc: "DeeLance has built an automated dispute system where all buyer and seller reputations are stored on the public blockchain. DeeLance is a trustworthy platform all stakeholders can rely on.",
   },
   {
     img: Pay,
@@ -33,17 +33,17 @@ const data = [
   {
     img: Escrow,
     title: "Ownership",
-    desc: "DeeLance turns freelance work into digital tokens in the form of  NFTs. This helps make sure that recruiters get ownership of the work they're paying for, and protects against problems like payment fraud and copyright violations. Using NFTs also makes the freelance world more secure and reliable.",
+    desc: "DeeLance turns freelance work into digital tokens in the form of NFTs. This helps make sure that recruiters get ownership of the work they're paying for and protects against problems like payment fraud and copyright violations. Using NFTs also makes the freelance world more secure and reliable.",
   },
   {
     img: Owner,
     title: "Escrow",
-    desc: "DeeLance uses secure escrow accounts to guarantee freelancers receive payment for services supplied. Our escrow system guarantees that employer funds are stored safely until the freelancer completes of the contracted work to the agreed specification and standard, at which time the funds are released. All agreements between transacting parties are based on smart contracts.",
+    desc: "DeeLance uses secure escrow accounts to guarantee freelancers receive payment for services supplied. Our escrow system guarantees that employer funds are stored safely until the freelancer completes the contracted work to the agreed specification and standard, at which time the funds are released. All agreements between transacting parties are based on smart contracts.",
   },
   {
     img: Dollar,
     title: "Low Fees",
-    desc: "Our decentralized reputation and smart platform directly connects freelancers and employers in a peer to peer system. This means our freelance marketplace can charge much lower fees than legacy competitors because it directly connects employers and freelancers.",
+    desc: "Our decentralized reputation and smart platform directly connect freelancers and employers in a peer-to-peer system. This means our freelance marketplace can charge much lower fees than legacy competitors because it directly connects employers and freelancers.",
   },
 ];
 
