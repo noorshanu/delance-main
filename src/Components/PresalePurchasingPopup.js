@@ -338,6 +338,7 @@ function PresalePurchasingPopup({
     handleFirstInputChange({ target: { value: maxa.current.value } });
   };
   const chiudi = (e) => {
+    setSecondInputValue(0);
     setPurchasingModalType(null);
     onClose();
   };
