@@ -13,6 +13,7 @@ import { NavLink } from "react-router-dom";
 import "./Footer.css";
 import NavLogo from "../../assets/main-logo.svg";
 import { useTranslation } from "react-i18next";
+import SocialLinks from "Components/SocialLinks";
 
 function Footer() {
   const { t } = useTranslation("common");
@@ -20,127 +21,87 @@ function Footer() {
   return (
     <>
       <footer className="footer">
-        <div className="container border-foot-top">
-          <div className="row justify-content-center align-items-center">
-            <div className="col-md-4 col-6">
-              <div className="footer-logo">
-                <NavLink to="/">
-                  <img src={NavLogo} alt="foot-logo" />
-                </NavLink>
-              </div>
+        <div className="footer-top">
+          <div className="container">
+            <div className="footer-stack">
+              <div>
+                <div className="footer-logo">
+                  <NavLink to="/">
+                    <img src={NavLogo} alt="foot-logo" />
+                  </NavLink>
+                </div>
 
-              <div className="foot-p">
-                <p>
+                <p style={{ maxWidth: "28rem" }} className="mb-0 white fs-16px">
                   {t(
                     "footer.subtitle",
                     "Deelance is a freelancing and Recruitment platform based on Web3 platform that is redefining how freelancers connect with potential employers and buyers."
                   )}
                 </p>
               </div>
-            </div>
 
-            <div className="col-md-2 col-6">
-              <div className="foot-link">
-                <NavLink to="/privacy-policy" target="_blank">
-                  <p>{t("Privacy")}</p>
+              <div className="foot-links-wrapper">
+                <NavLink
+                  className="foot-link fs-16px"
+                  to="/privacy-policy"
+                  target="_blank"
+                >
+                  {t("Privacy")}
                 </NavLink>
-                <NavLink to="/risk" target="_blank">
-                  <p>{t("Risk Warning")}</p>
+                <NavLink
+                  className="foot-link fs-16px"
+                  to="/risk"
+                  target="_blank"
+                >
+                  {t("Risk Warning")}
                 </NavLink>
-                <a href="/">
-                  <p>{t("Announcements")}</p>
+                <a href="/" className="foot-link white-16px">
+                  {t("Announcements")}
                 </a>
-
-                <NavLink href="/privacy-policy" target="_blank">
-                  <p>{t("Cookie Preferences")}</p>
-                </NavLink>
-              </div>
-            </div>
-
-            <div className="col-md-2 col-6">
-              <div className="foot-link2">
-                <a href="/">
-                  <p>{t("About")}</p>
-                </a>
-                <a href="/">
-                  <p>{t("Careers")}</p>
-                </a>
-
-                <a href="/">
-                  <p>{t("Community")}</p>
-                </a>
-
-                <NavLink to="/terms" target="_blank">
-                  <p>{t("Terms")}</p>
+                <NavLink
+                  className="foot-link fs-16px"
+                  href="/privacy-policy"
+                  target="_blank"
+                >
+                  {t("Cookie Preferences")}
                 </NavLink>
               </div>
-            </div>
 
-            <div className="col-md-4 col-6">
-              <p className="sc-1">{t("Connect With The Community")}</p>
-              <div className="foot-social">
-                <a
-                  href="https://twitter.com/deelance_com"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaTwitter />
+              <div className="foot-links-wrapper">
+                <a className="foot-link fs-16px" href="/">
+                  {t("About")}
                 </a>
-                <a
-                  href="https://www.facebook.com/profile.php?id=100087266006183"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaFacebookSquare />
+                <a className="foot-link fs-16px" href="/">
+                  {t("Careers")}
                 </a>
-                <a
-                  href="https://medium.com/@deeLance"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaMedium />
+                <a className="foot-link fs-16px" href="/">
+                  {t("Community")}
                 </a>
-                <a
-                  href="https://t.me/deelance_com"
+                <NavLink
+                  to="/terms"
+                  className="foot-link fs-16px"
                   target="_blank"
-                  rel="noreferrer"
                 >
-                  <FaTelegramPlane />
-                </a>
-                <a
-                  href="https://www.linkedin.com/company/deelance"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaLinkedin />
-                </a>
-                <a
-                  href="https://discord.gg/vhH3Sbt9NQ"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaDiscord />
-                </a>
-                <a
-                  href="https://www.instagram.com/deelanceofficial/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaInstagram />
-                </a>
-                <a
-                  href="https://www.youtube.com/channel/UCM7Nv8JQECFr5lF_hd8KgTA"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaYoutube />
-                </a>
+                  {t("Terms")}
+                </NavLink>
+              </div>
+
+              <div className="">
+                <p className="fs-16px white">
+                  {t("Connect With The Community")}
+                </p>
+
+                <SocialLinks fontSize="78%" />
               </div>
             </div>
           </div>
-          <p className="foot-bottom-text">
-            {t("2023© Deelance Inc. | All Rights Reserved")}
-          </p>
+        </div>
+
+        <div className="footer-bottom">
+          <div className="container">
+            <p className="fs-16px white mb-0 text-center">
+              {t("2023© Deelance Inc. | All Rights Reserved")}
+            </p>
+          </div>
         </div>
       </footer>
     </>

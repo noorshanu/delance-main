@@ -1,0 +1,19 @@
+.stepsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5rem;
+  row-gap: 3rem;
+}
+
+.HowToBuyStack > *:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 786px) {
+  .stepsGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 5rem;
+    row-gap: 3rem;
+  }
+}

@@ -120,20 +120,6 @@
   width: unset;
 }
 
-.hero-ss {
-  /* position: absolute; */
-  display: flex;
-  justify-content: center;
-  z-index: 2;
-  width: 100%;
-}
-.hero-ss > *:not(:last-child) {
-  margin-right: 1rem;
-}
-.hero-ss a {
-  font-size: 1.6rem;
-}
-
 .hero-title {
   font-weight: 600;
   font-size: 41px;

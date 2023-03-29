@@ -163,10 +163,6 @@ img {
   gap: 10rem;
 }
 
-.line-g img {
-  width: auto;
-}
-
 @media (max-width: 1080px) {
   :root {
     --navbar-height: 80px;
@@ -276,4 +272,6 @@ img {
   max-width: var(--width);
   overflow: hidden !important;
   text-overflow: ellipsis;
+  word-break: keep-all;
+  white-space: nowrap;
 }

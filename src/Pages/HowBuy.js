@@ -5,6 +5,11 @@ function HowBuy() {
   return (
     <PageLayout>
       <HowToBuy />
+
+      <br />
+      <br />
+      <br />
+      <br />
     </PageLayout>
   );
 }

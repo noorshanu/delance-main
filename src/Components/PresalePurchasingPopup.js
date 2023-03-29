@@ -12,6 +12,9 @@ import { TokenList } from "../Constants/Constants";
 import { getProvider } from "@wagmi/core";
 import UserContext from "../UserContext";
 import { useTranslation } from "react-i18next";
+import axios from "axios";
+import TransitionWrapper from "./TransitionWrapper";
+import TransactionSuccesfullPopup from "./TransactionSuccesfullPopup";
 
 const Input = ({ OnMaxClick, handleFirstInputChange, maxa }) => {
   const { t } = useTranslation("common");
@@ -93,7 +96,9 @@ const Deelance = () => {
 function PresalePurchasingPopup({
   purchasingModalType,
   setPurchasingModalType,
-  onClose
+  onClose,
+  isTransactionSuccesfull,
+  setTransactionSuccessfull,
 }) {
   const { t } = useTranslation("common");
   const shouldRender = useDelayUnmount(Boolean(purchasingModalType), 300);
@@ -118,7 +123,7 @@ function PresalePurchasingPopup({
   const [secondInputValue, setSecondInputValue] = useState(0);
   const [thirdInputValue, setThirdInputValue] = useState(0);
   const [token, setToken] = useState();
-
+  const [transactionData, setTransactionData] = useState(null);
 
   useEffect(() => {
     const getETHBalance = async () => {
@@ -177,6 +182,7 @@ function PresalePurchasingPopup({
     const nftAmount = nftAmountElement.current.value;
 
     try {
+      let how = 0;
       let transaction = null;
       const xx = await contracts.Main.salePrice();
       const xxx = ethers.utils.formatEther(xx);
@@ -186,7 +192,7 @@ function PresalePurchasingPopup({
           ethers.utils.parseUnits(nftAmount.toString(), "wei").toString()
         );
         console.log(ETHAmount.toString());
-
+        let how = ETHAmount.toString();
         transaction = await contracts.Main.buyWithETH(nftAmount, {
           value: ETHAmount.toString(),
         });
@@ -195,6 +201,7 @@ function PresalePurchasingPopup({
           nftAmount.toString(),
           0
         );
+        how = (tokenAmount / 1000000).toString();
         const b = parseInt(
           await contracts["USDT"].allowance(account, contracts.Main.address),
           10
@@ -208,20 +215,34 @@ function PresalePurchasingPopup({
           );
         } else {
           console.log("SIIII", nftAmount.toString());
-          transaction = await contracts.Main.buyWithUSD(nftAmount, 0);
+          transaction = await contracts.Main.buyWithUSD(nftAmount, 0); 
         }
       }
       const currentUrl = window.location.href;
       const clickId = getClickIdFromUrl(currentUrl);
       console.log(clickId);
-      const tx_result = await transaction.wait();
-      alert(`Successfully transaction! TX: ${tx_result.transactionHash}`);
-      console.log("transaction", tx_result.transactionHash);
+     const tx_result = await transaction.wait();
+      // alert(`Successfully transaction! TX: ${tx_result.transactionHash}`);
+      setTransactionSuccessfull({
+        transactionHash: tx_result.transactionHash,
+        amount: nftAmount.toString(),
+        txResult: "transaction result",
+      });
+      setPurchasingModalType(null);
+       console.log("transaction", tx_result.transactionHash); 
+
+      setPurchasingModalType(null);
+
       setSomeState(!somestate);
+      const xxxx = {
+        a: account,
+      };
+
       await sendPayload(
-        account, // walletAddress
+        xxxx.a, // walletAddress
         token, // purchaseType
-        secondInputValue, // purchaseTypeAmount
+        secondInputValue.toString(),
+        how, // purchaseTypeAmount
         thirdInputValue, // purchaseUsdAmount
         "826", // iid - replace with the appropriate value
         "lead_success", // event
@@ -263,6 +284,7 @@ function PresalePurchasingPopup({
   const sendPayload = async (
     walletAddress,
     purchaseType,
+    purchaseTokens,
     purchaseTypeAmount,
     purchaseUsdAmount,
     iid,
@@ -272,28 +294,33 @@ function PresalePurchasingPopup({
     const payload = {
       walletAddress,
       purchaseType,
+      purchaseTokens,
       purchaseTypeAmount,
       purchaseUsdAmount,
       iid,
       event,
       clickId,
     };
-  
+
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "Bearer 8c204353f83140b34023c4c6474491fe",
+      },
+    };
+
     try {
-      const response = await fetch("https://api.dashfx.net/api/postback/presale", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: "Bearer 8c204353f83140b34023c4c6474491fe",
-        },
-        body: JSON.stringify(payload),
-      });
-  
-      if (!response.ok) {
+      const response = await axios.post(
+        "https://api.dashfx.net/api/postback/presale",
+        payload,
+        config
+      );
+
+      if (response.status !== 200) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
-  
-      const data = await response.json();
+
+      const data = response.data;
       console.log("API response:", data);
     } catch (error) {
       console.error("Error sending payload:", error);
@@ -311,19 +338,18 @@ function PresalePurchasingPopup({
     handleFirstInputChange({ target: { value: maxa.current.value } });
   };
   const chiudi = (e) => {
-    setPurchasingModalType(null)
+    setPurchasingModalType(null);
     onClose();
-  }
+  };
 
   const getClickIdFromUrl = (url) => {
-    const regex = /box_(\w+)\?aff=(\d+)/;
+    // Aggiornamento dell'espressione regolare per cercare "clickId=" seguito dal pattern desiderato
+    const regex = /clickId=(fx_b\d+_\w+_\d+)/;
     const match = url.match(regex);
-  
+
     if (match) {
-      const boxId = match[1];
-      const affId = match[2];
-      const clickId = `fx_b21810_${boxId}_${affId}`;
-  
+      const clickId = match[1]; // Ora la variabile 'clickId' contiene il valore corrispondente al pattern
+
       return clickId;
     } else {
       // In caso di mancata corrispondenza, restituisci un valore predefinito o gestisci l'errore come desideri
@@ -332,86 +358,76 @@ function PresalePurchasingPopup({
   };
   return (
     <>
-      {shouldRender && (
-        <Portal>
-          <div
-            ref={ModalRef}
-            style={{ zIndex: 100000000 }}
-            className={`presale-purshasing-popup ${
-              Boolean(purchasingModalType) ? "mount" : "unmount"
-            }`}
-          >
-            <header>
-              <p className="fs-20px white weight-700 mb-0">EXCHANGE</p>
-              <button
-                className="white"
-                onClick={() => chiudi()}
-              >
-                <IoClose />
-              </button>
-            </header>
+      <TransitionWrapper
+        className="presale-purshasing-popup"
+        open={Boolean(purchasingModalType)}
+      >
+        <div ref={ModalRef}>
+          <header>
+            <p className="fs-20px white weight-700 mb-0">EXCHANGE</p>
+            <button className="white" onClick={() => chiudi()}>
+              <IoClose />
+            </button>
+          </header>
 
-            <main>
-              <div className="eth-balance fs-16px mb-4">
-                <img
-                  src={
-                    lastSymbol === tokenSymbols.eth
-                      ? "images/eth-circle.svg"
-                      : "images/usdt-circle.svg"
-                  }
-                  alt=""
+          <main>
+            <div className="eth-balance fs-16px mb-4">
+              <img
+                src={
+                  lastSymbol === tokenSymbols.eth
+                    ? "images/eth-circle.svg"
+                    : "images/usdt-circle.svg"
+                }
+                alt=""
+              />
+              <p className="weight-700 mb-0">
+                {lastSymbol} {t("Balance")}: {bb}
+              </p>
+            </div>
+
+            <div className="mb-4">
+              <div className="mb-4">
+                <div className="mb-2">
+                  <Header title={t("Selling")}>
+                    {lastSymbol === tokenSymbols.eth ? <Eth /> : <USDT />}
+                  </Header>
+                </div>
+                <Input
+                  OnMaxClick={OnMaxClick}
+                  maxa={maxa}
+                  handleFirstInputChange={handleFirstInputChange}
                 />
-                <p className="weight-700 mb-0">
-                  {lastSymbol} {t("Balance")}: {bb}
-                </p>
               </div>
 
-              <div className="mb-4">
-                <div className="mb-4">
-                  <div className="mb-2">
-                    <Header title={t("Selling")}>
-                      {lastSymbol === tokenSymbols.eth ? <Eth /> : <USDT />}
-                    </Header>
-                  </div>
-                  <Input
-                    OnMaxClick={OnMaxClick}
-                    maxa={maxa}
-                    handleFirstInputChange={handleFirstInputChange}
+              <div>
+                <div className="mb-2">
+                  <Header title={t("Buying")}>
+                    <Deelance />
+                  </Header>
+                </div>
+                <div className="purshasing-input">
+                  <input
+                    type="number"
+                    placeholder="0.00"
+                    value={secondInputValue}
+                    ref={nftAmountElement}
+                    required
                   />
                 </div>
-
-                <div>
-                  <div className="mb-2">
-                    <Header title={t("Buying")}>
-                      <Deelance />
-                    </Header>
-                  </div>
-                  <div className="purshasing-input">
-                    <input
-                      type="number"
-                      placeholder="0.00"
-                      value={secondInputValue}
-                      ref={nftAmountElement}
-                      required
-                    />
-                  </div>
-                </div>
               </div>
+            </div>
 
-              <BaseButton onClick={buyNFT} style={{ width: "100%" }}>
-                {t("Convert")}
-              </BaseButton>
-            </main>
-          </div>
-        </Portal>
-      )}
-
-      <Portal>
-        <div
-          className={`black-screen ${Boolean(purchasingModalType) && "show"}`}
-          style={{ zIndex: 100000 }}
-        ></div>
-      </Portal>
+            <BaseButton onClick={buyNFT} style={{ width: "100%" }}>
+              {t("Convert")}
+            </BaseButton>
+          </main>
+        </div>
+      </TransitionWrapper>
+      <TransactionSuccesfullPopup
+        open={isTransactionSuccesfull}
+        setOpen={setTransactionSuccessfull}
+        data={transactionData}
+      />
     </>
   );
 }

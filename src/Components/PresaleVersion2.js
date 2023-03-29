@@ -16,8 +16,19 @@ import UserContext from "../UserContext";
 import { ethers } from "ethers";
 import { TokenList } from "../Constants/Constants";
 import { getProvider } from "@wagmi/core";
-import axios from "axios"; 
+import axios from "axios";
+import TransactionSuccesfullPopup from "./TransactionSuccesfullPopup";
+import ReferralLinkPopup from "./ReferralLinkPopup";
 
+const Input = ({ referralLink, children, icon, ...props }) => {
+  const { t } = useTranslation("common");
+
+  return (
+    <div className="purshasing-input">
+      <input type="text" placeholder={referralLink} value={referralLink} />
+    </div>
+  );
+};
 const Button = ({ children, icon, ...props }) => {
   const isBellow768px = useMediaQuery("(max-width : 768px)");
 
@@ -46,6 +57,35 @@ const Button = ({ children, icon, ...props }) => {
         </div>
       )}
 
+      <span
+        style={{
+          flex: 1,
+          display: "block",
+          fontSize: isBellow768px ? "12px" : "inherit",
+        }}
+      >
+        {children}
+      </span>
+
+      {icon && !isBellow768px ? (
+        <span style={{ display: "block", width: "1.6em" }}></span>
+      ) : null}
+    </BaseButton>
+  );
+};
+
+const Button2 = ({ children, icon, ...props }) => {
+  const isBellow768px = useMediaQuery("(max-width : 768px)");
+
+  return (
+    <BaseButton
+      fontSize="fs-16px"
+      style={{
+        width: "50%",
+        maxWidth: "26rem",
+      }}
+      {...props}
+    >
       <span
         style={{
           flex: 1,
@@ -145,6 +185,8 @@ function PresaleVersion2() {
   const [claimDisabled, setClaimDisabled] = useState(true);
   const [condition, setCondition] = useState({ condition: true });
   const [referralLink, setReferralLink] = useState("");
+  const [isTransactionSuccesfull, setTransactionSuccessfull] = useState(false);
+  const [referralPopupOpen, setReferralPopupOpen] = useState(false);
 
   // console.log("presale version 2, re-rendering");
 
@@ -154,7 +196,7 @@ function PresaleVersion2() {
 
   const handlePopupClose = () => {
     setSomeState(!somestate);
-    };
+  };
 
   useEffect(() => {
     if (!account) {
@@ -207,7 +249,6 @@ function PresaleVersion2() {
       };
       getPr();
     } else {
-
       handleClickReferralLink();
 
       const countdownDate = new Date("2023-04-16T00:00:00").getTime();
@@ -237,7 +278,7 @@ function PresaleVersion2() {
         }
       }, 1000);
 
-/*       const getETHBalance = async () => {
+      /*       const getETHBalance = async () => {
         const balance = await provider.getBalance(account);
         return ethers.utils.formatEther(balance);
       }; */
@@ -256,7 +297,7 @@ function PresaleVersion2() {
         setDeelance(pric);
       };
 
-/*       const getClaimStatus = async () => {
+      /*       const getClaimStatus = async () => {
         const sa = await contracts.Main.claimStart();
         if (sa == 0) {
           setClaimDisabled(true);
@@ -283,7 +324,7 @@ function PresaleVersion2() {
         setPercantage((((xa - sa) / xa) * 100).toFixed(2));
       };
 
-/*       const getTokenBalances = async (token) => {
+      /*       const getTokenBalances = async (token) => {
         console.log(token, " getting balance");
         const balance = await contracts["USDT"].balanceOf(account);
         const decimals = (await contracts["USDT"].decimals()).toNumber();
@@ -337,19 +378,26 @@ function PresaleVersion2() {
       iid,
     };
 
+    console.log("Payload:", payload); // Log the payload to verify the values
+
     try {
       const response = await axios.post(apiDomain + apiUrl, payload, config);
-      const link = response.data.link;
-      setReferralLink(link);
+      const url = response.data.data.url;
+      console.log("LINK FOR REF", url);
+      console.log("RESPONSE FOR REF", response);
+      setReferralLink(url);
     } catch (error) {
       console.error("Error generating referral link:", error);
     }
   };
 
   const handleClickReferralLink = () => {
-    const walletAddress = {account}; // Replace with the desired walletAddress
+    const xx = {
+      a: account,
+    };
+    const walletAddress = xx.a; // Replace with the desired walletAddress
     const iid = "826"; // Replace with the desired iid
-    console.log("ACCOUNT IN HANDLE", account)
+    console.log("ACCOUNT IN HANDLE", account);
     generateReferralLink(walletAddress, iid);
   };
 
@@ -368,9 +416,7 @@ function PresaleVersion2() {
     <div className={styles.wrapper}>
       <p className="white text-center weight-700 fs-16px mb-2 logo-plus-title">
         <img src="images/deelance-logo.png" className="dee-logo" />
-        <span>
-          1 {tokenDetails.symbol} = ${prices.toLocaleString("en-US")} USDT
-        </span>
+        <span>1 {tokenDetails.symbol} = $0.025 USDT</span>
         <img src="images/etheruem-logo.png" className="presale-eth" />
       </p>
       <p
@@ -379,9 +425,10 @@ function PresaleVersion2() {
       >
         {t("USDT Raised")}{" "}
         <span className="green-light">
-          ${(total - inSale).toLocaleString("en-US")}
+          {/* ${(total - inSale).toLocaleString("en-US")} */}$0
         </span>{" "}
-        / <span className="green-light">${total.toLocaleString("en-US")}</span>
+        {/* / <span className="green-light">${total.toLocaleString("en-US")}</span> */}
+        / <span className="green-light">$1,500,000</span>
       </p>
       <div className="mb-4">
         <div className="mb-4">
@@ -394,7 +441,7 @@ function PresaleVersion2() {
         </div>
 
         <p className="text-center white weight-700">
-          {t("Until Price Increase To")} ${nextprices.toLocaleString("en-US")} USDT
+          {t("Until Price Increase To")} $0.027 USDT
         </p>
       </div>
       <PorgressBar
@@ -455,11 +502,16 @@ function PresaleVersion2() {
             >
               {t("Buy")} {tokenDetails.symbol} {t("With")} USDT
             </Button>
+
+            {/* <div className="d-flex justify-content-center"> */}
+            <Button variant={1} onClick={buyCard} className="mb-3">
+              {t("Buy With Card")}
+            </Button>
+            {/* </div> */}
+            {/* <Input referralLink={referralLink}></Input> */}
+
             <Button
-                onClick={() => {
-                  copyToClipboard(referralLink);
-                  alert("Referral link copied to clipboard");
-                }}
+              onClick={() => setReferralPopupOpen(true)}
               icon={
                 <img
                   src="images/referal-link.png"
@@ -468,20 +520,32 @@ function PresaleVersion2() {
                 />
               }
             >
-              {t("REFERRAL LINK")}
+              {/* {t("COPY")} */}
+              {t("Referal Link")}
             </Button>
+
+            {/* <Button2
+              className="hero-btn-2 fs-18px undefined"
+              onClick={() => {
+                copyToClipboard(referralLink);
+                alert("Referral link copied to clipboard");
+              }}
+              icon={
+                <img
+                  src="images/referal-link.png"
+                  style={{ width: "100%", filter: "brightness(0)" }}
+                  alt=""
+                />
+              }
+            >
+              {t("COPY")}
+            </Button2> */}
           </div>
 
           {/*   <p className="fs-16px white weight-700 text-center">
             Next Stage:{" "}
             <span className="green-light">{tokenDetails.symbol}</span> = ${prices.toLocaleString("en-US")} USDT
           </p> */}
-
-          <div className="d-flex justify-content-center">
-            <Button variant={1} onClick={buyCard}>
-              {t("Buy With Card")}
-            </Button>
-          </div>
         </div>
       )}
       <div className="d-flex justify-content-center mt-3">
@@ -498,13 +562,27 @@ function PresaleVersion2() {
         purchasingModalType={purchasingModalType}
         setPurchasingModalType={setPurchasingModalType}
         onClose={handlePopupClose}
+        isTransactionSuccesfull={isTransactionSuccesfull}
+        setTransactionSuccessfull={setTransactionSuccessfull}
+      />
+
+      <TransactionSuccesfullPopup
+        open={Boolean(isTransactionSuccesfull)}
+        data={isTransactionSuccesfull}
+        setOpen={setTransactionSuccessfull}
+      />
+
+      <ReferralLinkPopup
+        open={referralPopupOpen}
+        setOpen={setReferralPopupOpen}
+        referralLink={referralLink}
       />
 
       {!address && (
         <div className="mt-3">
           <p className="text-center white mb-1">{t("Launch Price")}</p>
           <p className="text-center white mb-0">
-            1 {tokenDetails.symbol} = 0.030 USDT
+            1 {tokenDetails.symbol} = $0.030 USDT
           </p>
         </div>
       )}

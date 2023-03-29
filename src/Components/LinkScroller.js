@@ -20,7 +20,9 @@ function LinkScroller({
       onClick={() => {
         setTimeout(() => {
           scroller.scrollTo(id, scrollerOptions);
-          onClick();
+          if (onClick) {
+            onClick();
+          }
         }, wait);
       }}
     >

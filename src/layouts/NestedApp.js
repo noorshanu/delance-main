@@ -16,7 +16,7 @@ import {
 } from "react-router-dom";
 import Home from "Pages/Home";
 import NotFound from "Pages/404Page";
-import CookieConcent from "Components/CookieConcent";
+// import CookieConcent from "Components/CookieConcent";
 import NewToCrypto from "Pages/NewToCrypto";
 import i18next from "i18next";
 
@@ -50,7 +50,7 @@ function NestedApp() {
         <Route path="*" element={<NotFound />} />
       </Routes>
 
-      <CookieConcent />
+      {/* <CookieConcent /> */}
     </div>
   );
 }

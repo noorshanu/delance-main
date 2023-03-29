@@ -136,7 +136,7 @@ function Navbar() {
                   </div>
 
                   <NavLink className="-nav-anchor" to={to("/rewards")}>
-                    {t("header.links.win")}
+                    {t("Win $100K")}
                   </NavLink>
                   <NavLink className="-nav-anchor" to={to("/nft-market")}>
                     {t("Nft Marketplace")}

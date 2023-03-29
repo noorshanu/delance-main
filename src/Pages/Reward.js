@@ -27,7 +27,7 @@ jobs hiring near me,work from home jobs,jobs available near me,nft marketplace,n
           name="description"
           content="All you have to do is follow the steps described in the widget on this page to receive multiple entries, and hold at least $100 of $Dlance at the time of the draw."
         />
-        <title>Win100k</title>
+        <title>Win 100k</title>
       </Helmet>
 
       <PageLayout>

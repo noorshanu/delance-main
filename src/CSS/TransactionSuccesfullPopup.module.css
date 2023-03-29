@@ -1,0 +1,27 @@
+.wrapper {
+  padding: 2rem 3rem;
+  border-radius: 0.4rem;
+  border: 2px solid var(--green-light);
+  background: var(--main-2);
+  max-width: 500px;
+  width: 90%;
+}
+
+.tickImg {
+  width: 90%;
+  max-width: 6rem;
+  margin: 0 auto;
+  display: block;
+}
+
+.closeBTN {
+  position: absolute;
+  top: 1rem;
+  right: 1.6rem;
+  font-size: 1.8rem;
+  background-color: transparent;
+  display: flex;
+  border: none;
+  outline: none;
+  color: white;
+}

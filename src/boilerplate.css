@@ -37,6 +37,19 @@
   --screen-size-sm: 500px;
 }
 
+hr {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: none !important;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+.underline {
+  text-decoration: underline;
+}
+
 /* COLORS */
 .green-light {
   color: var(--green-light);

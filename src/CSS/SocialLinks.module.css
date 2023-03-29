@@ -1,0 +1,19 @@
+.socialLinks {
+  /* position: absolute; */
+  display: flex;
+  z-index: 2;
+  width: 100%;
+}
+
+.socialLinks > *:not(:last-child) {
+  margin-right: 0.6em;
+}
+.socialLinks a {
+  font-size: 1.6em;
+}
+
+@media (max-width: 500px) {
+  .socialLinks a {
+    font-size: 1.2em;
+  }
+}

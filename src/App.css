@@ -93,10 +93,3 @@
     padding-right: 1.4rem;
   }
 }
-
-@media (max-width: 768px) {
-  .seenOn {
-    margin-top: 0rem;
-    margin-bottom: 2rem;
-  }
-}

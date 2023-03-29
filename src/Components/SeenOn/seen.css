@@ -1,4 +1,8 @@
 .seen-grid {
+  font-size: 100%;
+}
+
+.seen-grid {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -7,5 +11,20 @@
 
 .seen-grid img {
   width: auto;
-  margin: 0 2rem;
+  margin: 0 2em;
+}
+
+@media (max-width: 768px) {
+  .seenOn {
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+  }
+
+  .seen-grid {
+    font-size: 70%;
+  }
+
+  .seen-grid img {
+    margin: 0 0.8em;
+  }
 }

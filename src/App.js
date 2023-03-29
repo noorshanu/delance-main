@@ -17,7 +17,7 @@ import { Circles } from "react-loader-spinner";
 import { useProvider, useAccount, useSigner } from "wagmi";
 import { useWeb3Modal } from "@web3modal/react";
 import { getProvider } from "@wagmi/core";
-import CookieConcent from "Components/CookieConcent";
+
 import { I18nextProvider } from "react-i18next";
 import i18next from "./i18n";
 import NestedApp from "layouts/NestedApp";
@@ -89,8 +89,6 @@ function App() {
               <Route path="/" element={<Navigate to="/en" />} />
               <Route path="/:locale/*" element={<NestedApp />} />
             </Routes>
-
-            <CookieConcent />
           </Router>
         </I18nextProvider>
       </UserContext.Provider>

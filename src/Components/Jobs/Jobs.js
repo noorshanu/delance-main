@@ -54,7 +54,7 @@ function Jobs() {
           <div className="job-head">
             <h1>
               {t(
-                "Find Jobs on your finguretips , Access to best jobs and leading professionals in the industry"
+                "Job finder at your fingertips. Access the best jobs and top professionals in your industry"
               )}
             </h1>
           </div>

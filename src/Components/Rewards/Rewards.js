@@ -11,6 +11,10 @@ import {
 } from "react-icons/fa";
 import Logogo from "../../assets/main-logo.svg";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import { to } from "utils/RouterUtils";
+import BaseButton from "Components/BaseButton";
+import SocialLinks from "Components/SocialLinks";
 
 function Rewards() {
   const { t } = useTranslation("common");
@@ -19,57 +23,10 @@ function Rewards() {
     <section className="reward">
       <div className="container">
         <div className="reward-head text-center">
-          <div className="social-hero reward-hero d-flex">
-            <a
-              href="https://twitter.com/deelance_com"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaTwitter />
-            </a>
-            <a
-              href="https://www.facebook.com/profile.php?id=100087266006183"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaFacebookSquare />
-            </a>
-            <a
-              href="https://medium.com/@deeLance"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaMedium />
-            </a>
-            <a
-              href="https://t.me/deelance_com"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaTelegramPlane />
-            </a>
-            <a
-              href="https://www.linkedin.com/company/deelance/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaLinkedin />
-            </a>
-            <a
-              href="https://discord.gg/vhH3Sbt9NQ"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaDiscord />
-            </a>
-            <a
-              href="https://www.instagram.com/deelanceofficial/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaInstagram />
-            </a>
+          <div className="mt-4 mb-4">
+            <SocialLinks className="justify-content-center" fontSize="90%" />
           </div>
+
           <div className="header-btn">
             <h2>{t("Win $100,000")}</h2>
           </div>
@@ -79,28 +36,26 @@ function Rewards() {
             <div className="re-box1">
               <h1>
                 {t(
-                  "Try your luck and enter a drawing for $100,000 worth of $Dlance"
+                  "Enter a Drawing And You Could Be One of 4 Lucky Winners Sharing $100,000 Worth of $Dlance"
                 )}
               </h1>
               <p>
                 {t(
-                  "To celebrate our pre-sale and our rapidly growing community, we’re giving 4 lucky people a chance to split $100,000 worth of $Dlance."
+                  "To celebrate our presale launch and rapidly growing community, we’re giving four lucky people a chance to win a split of $100,000 worth of $Dlance."
                 )}
               </p>
               <p>
                 {t(
-                  "All you have to do is follow the steps described in the widget on this page to receive multiple entries, hold at least $100 of $Dlance at the time of the draw."
+                  "To make multiple entries, follow the steps described in the scrollable box on this page. You must hold at least $100 of $Dlance at the time of the draw."
                 )}
               </p>
-              <p>
-                {t(
-                  "Good luck, and remember eligible entries must hold the equivalent of $100 of $Dlance at the time of the draw. You can buy $Dlance by clicking the button below:"
-                )}
-              </p>
-              <div className="re-btn text-center justify-content-center">
-                <a href="/" className="buy-reward">
+              <p>{t("Good luck!")}</p>
+
+              <p>{t("You can buy $Dlance by clicking the button below:")}</p>
+              <div className="d-flex justify-content-center">
+                <BaseButton as={Link} to={to("/")} variant={1}>
                   {t("BUY NOW")}
-                </a>
+                </BaseButton>
               </div>
             </div>
           </div>

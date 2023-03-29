@@ -22,6 +22,7 @@ import { IoClose } from "react-icons/io5";
 import BaseButton from "Components/BaseButton";
 import SignUpButtonWithModal from "Components/SignUpButtonWithModal";
 import PresaleVersion2 from "Components/PresaleVersion2";
+import SocialLinks from "Components/SocialLinks";
 
 function Hero() {
   const { t } = useTranslation("common");
@@ -124,64 +125,8 @@ function Hero() {
                   </p>
                 </div>
 
-                <div className="hero-ss">
-                  <a
-                    href="https://twitter.com/deelance_com"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FaTwitter />
-                  </a>
-                  <a
-                    href="https://www.facebook.com/profile.php?id=100087266006183"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FaFacebookSquare />
-                  </a>
-                  <a
-                    href="https://medium.com/@deeLance"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FaMedium />
-                  </a>
-                  <a
-                    href="https://t.me/deelance_com"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FaTelegramPlane />
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/company/deelance"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FaLinkedin />
-                  </a>
-                  <a
-                    href="https://discord.gg/vhH3Sbt9NQ"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FaDiscord />
-                  </a>
-                  <a
-                    href="https://www.instagram.com/deelanceofficial/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FaInstagram />
-                  </a>
-                  <a
-                    href="https://www.youtube.com/channel/UCM7Nv8JQECFr5lF_hd8KgTA"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FaYoutube />
-                  </a>
-                </div>
+                {/*  */}
+                <SocialLinks className="justify-content-center" />
               </div>
             </div>
           </div>

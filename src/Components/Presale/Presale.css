@@ -62,10 +62,9 @@
   align-items: center;
   justify-content: flex-start;
   position: absolute;
-  right: 0%;
+  right: -1.2rem;
   top: 50%;
   transform: translateY(-50%);
-  /* opacity: 0.2; */
 }
 
 .fire-and-bullet .fire {
@@ -502,6 +501,10 @@ label {
 }
 
 @media (max-width: 768px) {
+  .fill-bar {
+    width: 74%;
+  }
+
   .presale-timer {
     --timer-size: 1.4rem;
     --timer-day-size: 0.8rem;

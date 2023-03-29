@@ -1,12 +1,19 @@
 import React from "react";
+import Dash from "assets/dash.svg";
 
-function TitleDash({ title, className }) {
+function TitleDash({
+  title,
+  className,
+  fontSize = "fs-40px",
+  color = "green-light",
+  textClassName,
+}) {
   return (
     <div className={`${className}`}>
-      <h1 className="green-light weight-700 fs-40px">{title}</h1>
-      <div className="line-g">
-        <img src="images/dash.svg" alt="" />
-      </div>
+      <h1 className={`${color} weight-700 ${fontSize} ${textClassName}`}>
+        {title}
+      </h1>
+      <img src={Dash} alt="" style={{ width: "auto" }} />
     </div>
   );
 }

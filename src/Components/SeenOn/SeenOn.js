@@ -12,13 +12,13 @@ import Marquee from "react-fast-marquee";
 const images = [
   {
     img: "images/beInCrypto.png",
-    styles: { height: "2.6rem" },
+    styles: { height: "2.6em" },
   },
-  { img: "images/yahoo-finance.png", styles: { height: "2.6rem" } },
-  { img: "images/insider.png", styles: { height: "2.2rem" } },
-  { img: "images/cryptonews.svg", styles: { height: "2.6rem" } },
-  { img: "images/finanzen-net.svg", styles: { height: "1.9rem" } },
-  { img: "images/cointelegraph.svg", styles: { height: "2.6rem" } },
+  { img: "images/yahoo-finance.png", styles: { height: "2.6em" } },
+  { img: "images/insider.png", styles: { height: "2.2em" } },
+  { img: "images/cryptonews.svg", styles: { height: "2.6em" } },
+  { img: "images/finanzen-net.svg", styles: { height: "1.9em" } },
+  { img: "images/cointelegraph.svg", styles: { height: "2.6em" } },
 ];
 
 function SeenOn() {

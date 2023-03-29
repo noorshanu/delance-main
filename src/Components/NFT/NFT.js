@@ -19,7 +19,7 @@ function NFT() {
                 </h1>
                 <h6>
                   {t(
-                    "Welcome to the future, you can buy and sell awesome artworks form here. The world largest digital marketplace for non-fungible tokens."
+                    "Welcome to the future. Buy and sell awesome artworks on the world’s best digital marketplace for non-fungible tokens."
                   )}
                 </h6>
                 <div className="nft-hero-btn">
