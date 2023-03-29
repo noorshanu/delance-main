@@ -1,0 +1,32 @@
+.wrapper {
+  background-color: var(--main-2);
+}
+
+.wrapper main {
+  padding: 4rem 0;
+}
+
+.sideBySide {
+  display: flex;
+  align-items: center;
+}
+
+.sideBySide > div {
+  flex: 1;
+}
+
+@media (max-width: 1000px) {
+  .sideBySide {
+    flex-direction: column;
+  }
+
+  .sideBySide > :first-child {
+    margin-bottom: 1.6rem;
+  }
+
+  .wrapper main {
+    padding: 0rem 0;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
+}

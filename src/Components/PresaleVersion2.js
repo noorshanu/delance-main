@@ -19,6 +19,7 @@ import { getProvider } from "@wagmi/core";
 import axios from "axios";
 import TransactionSuccesfullPopup from "./TransactionSuccesfullPopup";
 import ReferralLinkPopup from "./ReferralLinkPopup";
+import { to } from "utils/RouterUtils";
 
 const Input = ({ referralLink, children, icon, ...props }) => {
   const { t } = useTranslation("common");
@@ -200,7 +201,7 @@ function PresaleVersion2() {
 
   useEffect(() => {
     if (!account) {
-      setTotal("0");
+      setTotal("1500000");
       setPercantage("0");
 
       const countdownDate = new Date("2023-04-16T00:00:00").getTime();
@@ -416,7 +417,7 @@ function PresaleVersion2() {
     <div className={styles.wrapper}>
       <p className="white text-center weight-700 fs-16px mb-2 logo-plus-title">
         <img src="images/deelance-logo.png" className="dee-logo" />
-        <span>1 {tokenDetails.symbol} = $0.025 USDT</span>
+        <span>1 {tokenDetails.symbol} = ${prices.toLocaleString("en-US")} USDT</span>
         <img src="images/etheruem-logo.png" className="presale-eth" />
       </p>
       <p
@@ -425,10 +426,10 @@ function PresaleVersion2() {
       >
         {t("USDT Raised")}{" "}
         <span className="green-light">
-          {/* ${(total - inSale).toLocaleString("en-US")} */}$0
+          {(total - inSale).toLocaleString("en-US")}
         </span>{" "}
-        {/* / <span className="green-light">${total.toLocaleString("en-US")}</span> */}
-        / <span className="green-light">$1,500,000</span>
+        / <span className="green-light">${parseInt(total).toLocaleString("en-US")}</span> 
+       
       </p>
       <div className="mb-4">
         <div className="mb-4">
@@ -440,8 +441,8 @@ function PresaleVersion2() {
           />
         </div>
 
-        <p className="text-center white weight-700">
-          {t("Until Price Increase To")} $0.027 USDT
+        <p className="text-center white weight-700 fs-16px">
+          {t("Until Price Increase To")} ${nextprices.toLocaleString("en-US")} USDT
         </p>
       </div>
       <PorgressBar
@@ -550,8 +551,9 @@ function PresaleVersion2() {
       )}
       <div className="d-flex justify-content-center mt-3">
         <Link
-          to="/en/how-to-buy"
+          to={to("/how-to-buy")}
           target="_blank"
+          className="fs-16px"
           style={{ textDecoration: "underline" }}
         >
           {t("How To Buy")}
@@ -580,8 +582,8 @@ function PresaleVersion2() {
 
       {!address && (
         <div className="mt-3">
-          <p className="text-center white mb-1">{t("Launch Price")}</p>
-          <p className="text-center white mb-0">
+          <p className="text-center white fs-16px mb-1">{t("Launch Price")}</p>
+          <p className="text-center white fs-16px mb-0">
             1 {tokenDetails.symbol} = $0.030 USDT
           </p>
         </div>

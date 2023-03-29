@@ -73,7 +73,7 @@ a:hover {
 }
 
 .-nav-links > *:not(:last-child) {
-  margin-right: 1.9rem;
+  margin-right: 1.6rem;
 }
 
 .dropdown {
@@ -120,9 +120,8 @@ a:hover {
 /* ----------- Grid part ends ----------------- */
 
 .-nav-anchor {
-  transition: 0.5s;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1;
   text-transform: uppercase;

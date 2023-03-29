@@ -50,10 +50,10 @@ function DeelanceContract() {
       <div className="container">
         <header>
           <h1
-            className={`${styles.title} green-light text-center text-uppercase mb-3`}
+            className={`${styles.title} green-light text-center mb-3`}
             style={{ fontWeight: "bold" }}
           >
-            {t("Deelance Contract")}
+            {t("DeeLance Contract")}
           </h1>
 
           <p className="text-center white mb-0">

@@ -7,11 +7,11 @@ import { useTranslation } from "react-i18next";
 const aboutPoints = [
   {
     title: "Fully Decentralized",
-    desc: "World’s first fully decentralized freelance network",
+    desc: "First fully decentralized freelance network",
   },
-  { title: "Only 2% Commission", desc: "lowest In the Industry" },
+  { title: "Only 2% Commission", desc: "Lowest In the Industry" },
   {
-    title: "Unlimited ownership",
+    title: "Unlimited Ownership",
     desc: "Instant withdrawal recruitment platform",
   },
 ];
@@ -57,7 +57,7 @@ function About() {
               <div className="about-details">
                 <p>
                   {t(
-                    "Deelance is a freelancing and recruitment platform based on a decentralized Web3 architecture. The Deelance platform redefines how freelancers connect with potential employers and buyers by delivering superior efficiency and confidence."
+                    "DeeLance is a freelancing and recruitment platform based on a decentralized Web3 architecture. The DeeLance platform redefines how freelancers connect with potential employers and buyers by delivering superior efficiency and confidence."
                   )}
                 </p>
               </div>

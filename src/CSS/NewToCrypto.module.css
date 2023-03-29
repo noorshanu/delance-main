@@ -1,5 +1,5 @@
 .wrapper {
-  padding: 5rem 0;
+  padding: 1rem 0;
   background-color: var(--main-2);
 }
 
@@ -9,6 +9,6 @@
 
 @media (max-width: 1024px) {
   .wrapper {
-    padding: 4rem 0;
+    padding: 3rem 0;
   }
 }

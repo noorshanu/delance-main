@@ -18,7 +18,7 @@ function NftMarket() {
         />
         <meta
           name="keywords"
-          content="Freelance, fiver , upwork , jobs , NFT , content , marketing, freelancers, works , metaverse, web3, Binance,Deelance"
+          content="Freelance, fiver , upwork , jobs , NFT , content , marketing, freelancers, works , metaverse, web3, Binance,DeeLance"
         />
         <meta
           name="description"

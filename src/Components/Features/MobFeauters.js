@@ -23,13 +23,15 @@ function MobFeauters({ data }) {
         modules={[Pagination, Autoplay]}
         className="mySwiper mob-feat"
       >
-        <SwiperSlide>
-          <div className="container">
-            <FeatureCard item={data[0]} />
-            <FeatureCard item={data[1]} />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
+        {data.map((item, i) => (
+          <SwiperSlide key={i}>
+            <div className="container">
+              <FeatureCard item={item} />
+            </div>
+          </SwiperSlide>
+        ))}
+
+        {/* <SwiperSlide>
           <div className="container">
             <FeatureCard item={data[2]} />
             <FeatureCard item={data[3]} />
@@ -40,7 +42,7 @@ function MobFeauters({ data }) {
             <FeatureCard item={data[4]} />
             <FeatureCard item={data[5]} />
           </div>
-        </SwiperSlide>
+        </SwiperSlide> */}
       </Swiper>
     </>
   );

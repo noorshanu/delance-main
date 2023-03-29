@@ -36,22 +36,22 @@ function Rewards() {
             <div className="re-box1">
               <h1>
                 {t(
-                  "Enter a Drawing And You Could Be One of 4 Lucky Winners Sharing $100,000 Worth of $Dlance"
+                  "Enter a Drawing And You Could Be One of 4 Lucky Winners Sharing $100,000 Worth of $DLANCE"
                 )}
               </h1>
               <p>
                 {t(
-                  "To celebrate our presale launch and rapidly growing community, we’re giving four lucky people a chance to win a split of $100,000 worth of $Dlance."
+                  "To celebrate our presale launch and rapidly growing community, we’re giving four lucky people a chance to win a split of $100,000 worth of $DLANCE."
                 )}
               </p>
               <p>
                 {t(
-                  "To make multiple entries, follow the steps described in the scrollable box on this page. You must hold at least $100 of $Dlance at the time of the draw."
+                  "To make multiple entries, follow the steps described in the scrollable box on this page. You must hold at least $100 of $DLANCE at the time of the draw."
                 )}
               </p>
               <p>{t("Good luck!")}</p>
 
-              <p>{t("You can buy $Dlance by clicking the button below:")}</p>
+              <p>{t("You can buy $DLANCE by clicking the button below:")}</p>
               <div className="d-flex justify-content-center">
                 <BaseButton as={Link} to={to("/")} variant={1}>
                   {t("BUY NOW")}

@@ -171,7 +171,7 @@ function Presale_main() {
         <p>Claim Has Not Started Yet</p>,
         <p>
           once the presale has ended.you'll be able to claim your purchased
-          $Dlance Token.{" "}
+          $DLANCE Token.{" "}
         </p>
       );
       return;
@@ -261,14 +261,12 @@ function Presale_main() {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <p>{t("Deelance Official Contracts")}</p>
+                      <p>{t("DeeLance Official Contracts")}</p>
                     </a>
 
                     <p className="green">
                       {" "}
-                      <Link to="/how-to-buy" >
-                        {t("How To Buy")}
-                      </Link>{" "}
+                      <Link to="/how-to-buy">{t("How To Buy")}</Link>{" "}
                     </p>
                   </div>
 
@@ -281,7 +279,7 @@ function Presale_main() {
                   {showComp ? (
                     <div className="pre-head-2 ">
                       <h2>{t("presale.bought")}</h2>
-                      <span>{deelance} $Dlance</span>
+                      <span>{deelance} $DLANCE</span>
                     </div>
                   ) : (
                     <div></div>
@@ -289,7 +287,7 @@ function Presale_main() {
                   {account && (
                     <div className="pre-head-2">
                       <h2 className="mb-0">
-                        {t("Your Balance")} {deelance} $Dlance
+                        {t("Your Balance")} {deelance} $DLANCE
                       </h2>
                     </div>
                   )}

@@ -65,7 +65,7 @@ function App() {
     return (
       <div className="-app-loader">
         <Circles height="80" width="80" color="#00a652" />
-        <h2 className="green-light weight-700">Deelance</h2>
+        <h2 className="green-light weight-700">DeeLance</h2>
       </div>
     );
   }
@@ -81,7 +81,7 @@ function App() {
           disconnectWallet: open,
         }}
       >
-        {/* <Router basename="/Deelance-WalletConnect-v2"> */}
+        {/* <Router basename="/DeeLance-WalletConnect-v2"> */}
         <I18nextProvider i18n={i18next}>
           <Router>
             <ScrollToTop />

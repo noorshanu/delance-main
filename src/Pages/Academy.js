@@ -12,11 +12,11 @@ function Academy() {
       <Helmet>
         <meta
           name="Academy"
-          content="Interested in learning about blockchain, cryptocurrency, security, technology, or following along with tutorials? Deelance Academy has all that and more!"
+          content="Interested in learning about blockchain, cryptocurrency, security, technology, or following along with tutorials? DeeLance Academy has all that and more!"
         />
         <meta
           name="keywords"
-          content="Freelance, fiver , upwork , jobs , NFT , content , marketing, freelancers, works , metaverse, web3, Binance,Deelance"
+          content="Freelance, fiver , upwork , jobs , NFT , content , marketing, freelancers, works , metaverse, web3, Binance,DeeLance"
         />
         <meta
           name="description"

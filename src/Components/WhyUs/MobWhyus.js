@@ -58,7 +58,7 @@ function MobWhyus({ keys }) {
       <div className="container-fluid mob-why-swiper">
         <TitleDash
           className="text-center mt-4 mb-4"
-          title={t("faq.question2", "Why Deelance?")}
+          title={t("Why DeeLance?")}
         />
         <div className="why-us-box" style={{ position: "relative" }}>
           <div className="navigatoion-buttons">

@@ -12,11 +12,11 @@ function Reward() {
       <Helmet>
         <meta
           name="Win100k"
-          content="Participate in giveaway and win $100,000  worth of $Dlance"
+          content="Participate in giveaway and win $100,000  worth of $DLANCE"
         />
         <meta
           name="keywords"
-          content="Freelance, fiver , upwork , jobs , NFT , content , marketing, freelancers, works , metaverse, web3, Binance,Deelance,
+          content="Freelance, fiver , upwork , jobs , NFT , content , marketing, freelancers, works , metaverse, web3, Binance,DeeLance,
     freelancer,upwork freelancer,Fiver,freelancer website,freelancer affiliate program,freelancer accounting jobs,freelancer app developer,account freelancer,best freelancer sites,become a freelancer on fiverr,freelancer customer service,freelance content writer,canva freelancer,freelancer digital marketer ,freelancer earning, 
 jobs,indeed jobs, 
 jobs near me, 
@@ -25,7 +25,7 @@ jobs hiring near me,work from home jobs,jobs available near me,nft marketplace,n
         />
         <meta
           name="description"
-          content="All you have to do is follow the steps described in the widget on this page to receive multiple entries, and hold at least $100 of $Dlance at the time of the draw."
+          content="All you have to do is follow the steps described in the widget on this page to receive multiple entries, and hold at least $100 of $DLANCE at the time of the draw."
         />
         <title>Win 100k</title>
       </Helmet>

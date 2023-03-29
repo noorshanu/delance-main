@@ -1,4 +1,4 @@
-export const BigNFTABI = [
+export const BigNFTABI =[
   {
     "inputs": [],
     "stateMutability": "nonpayable",
@@ -112,6 +112,42 @@ export const BigNFTABI = [
     "type": "event"
   },
   {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_valuehard",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_valuetotal",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_valueinsale",
+        "type": "uint256"
+      }
+    ],
+    "name": "addHardcapsizeUSD",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_value",
+        "type": "uint256"
+      }
+    ],
+    "name": "addTokensInSale",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
     "inputs": [],
     "name": "baseDecimals",
     "outputs": [
@@ -164,6 +200,19 @@ export const BigNFTABI = [
       }
     ],
     "name": "changeClaimStart",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_value",
+        "type": "uint256"
+      }
+    ],
+    "name": "changeManuallyStep",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -458,6 +507,42 @@ export const BigNFTABI = [
     "type": "function"
   },
   {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_valuehard",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_valuetotal",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_valueinsale",
+        "type": "uint256"
+      }
+    ],
+    "name": "removeHardcapsizeUSD",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_value",
+        "type": "uint256"
+      }
+    ],
+    "name": "removeTokensInSale",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
     "inputs": [],
     "name": "renounceOwnership",
     "outputs": [],
@@ -509,6 +594,11 @@ export const BigNFTABI = [
         "internalType": "uint256",
         "name": "_value",
         "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_valuenext",
+        "type": "uint256"
       }
     ],
     "name": "setSalePrice",
@@ -525,19 +615,6 @@ export const BigNFTABI = [
       }
     ],
     "name": "settotalTokensForPresale",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "_value",
-        "type": "uint256"
-      }
-    ],
-    "name": "settotalUsdValueForPresale",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"

@@ -17,7 +17,7 @@ function FAQ() {
             <div>
               <h4 className="faq-p mt-3 mb-4 white">
                 {t(
-                  "Answers to some of the most frequently asked questions about Deelance. Do you have a question that’s not on the list? Let us know!"
+                  "Answers to some of the most frequently asked questions about DeeLance. Do you have a question that’s not on the list? Let us know!"
                 )}
               </h4>
 
@@ -26,14 +26,14 @@ function FAQ() {
           </div>
 
           <div className="accordion-list">
-            <Accordion title={t("faq.question1", "What is Deelance?")}>
+            <Accordion title={t("faq.question1", "What is DeeLance?")}>
               <p className="mb-0">
                 {t(
-                  "Deelance is a freelancing and recruitment platform based on Web3 technology that is redefining how freelancers connect with potential employers and buyers."
+                  "DeeLance is a freelancing and recruitment platform based on Web3 technology that is redefining how freelancers connect with potential employers and buyers."
                 )}
               </p>
             </Accordion>
-            <Accordion title={t("faq.question2", "Why Deelance?")}>
+            <Accordion title={t("Why DeeLance?")}>
               <div className="pt-2"></div>
               <p>{t("✔️Advance Gig Framework with NFT subscription model")}</p>
               <p>{t("✔️Multiple Crypto payment option")}</p>
@@ -44,7 +44,7 @@ function FAQ() {
               <p className="mb-0">{t("✔️Smart contract job Placements")}</p>
             </Accordion>
 
-            <Accordion title={t("faq.question3", "How can I buy DLANCE?")}>
+            <Accordion title={t("How can I buy $DLANCE?")}>
               <p>
                 {t("$DLANCE can be purchased on")}{" "}
                 <a href="deelance.com" target="_blank">
@@ -55,11 +55,11 @@ function FAQ() {
 
               <p className="mb-0">
                 {t(
-                  "You can purchase ETH using your card, then swap for $DLANCE. Ensure you have enough ETH to buy $DLANCE cover the gas fees"
+                  "You can purchase ETH using your card, then swap for $DLANCE. Ensure you have enough ETH to buy $DLANCE to cover the gas fees"
                 )}
               </p>
             </Accordion>
-            <Accordion title={t("faq.question4", "What is next for Deelance?")}>
+            <Accordion title={t("faq.question4", "What is next for DeeLance?")}>
               <p className="mb-0">
                 {t(
                   "After the pre-sale, our focus will be on developing and launching the platform, NFT marketplace, Metaverse app, and expanding our reach globally by connecting with more ambassadors."

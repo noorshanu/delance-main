@@ -74,6 +74,10 @@
 
 .hero-links-and-verified-wrapper {
   width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .contract-verification-banner {
@@ -85,7 +89,7 @@
 }
 
 .disclaimer {
-  margin-top: 3rem;
+  /* margin-top: 3rem; */
   margin-bottom: 1.4rem;
   max-width: 520px;
   margin-left: auto;
@@ -112,7 +116,6 @@
 }
 
 .verification-banner-title {
-  font-size: 1rem;
   font-weight: bold;
   width: 100%;
   display: block;
@@ -238,7 +241,6 @@
   }
 
   .verification-banner-title {
-    font-size: 0.8rem;
     font-weight: bold;
     width: 100%;
     display: block;

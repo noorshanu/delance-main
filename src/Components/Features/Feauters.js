@@ -22,7 +22,7 @@ const data = [
   {
     img: Trans,
     title: "Transparency",
-    desc: "Deelance has built an automated dispute system where all buyer and seller reputations are stored on the public blockchain. Deelance is a trustworthy platform all stakeholders can rely on",
+    desc: "DeeLance has built an automated dispute system where all buyer and seller reputations are stored on the public blockchain. DeeLance is a trustworthy platform all stakeholders can rely.",
   },
   {
     img: Pay,
@@ -38,7 +38,7 @@ const data = [
   {
     img: Owner,
     title: "Escrow",
-    desc: "Deelance uses secure escrow accounts to guarantee freelancers receive payment for services supplied. Our escrow system guarantees that employer funds are stored safely until the freelancer completes of the contracted work to the agreed specification and standard, at which time the funds are released. All agreements between transacting parties are based on smart contracts.",
+    desc: "DeeLance uses secure escrow accounts to guarantee freelancers receive payment for services supplied. Our escrow system guarantees that employer funds are stored safely until the freelancer completes of the contracted work to the agreed specification and standard, at which time the funds are released. All agreements between transacting parties are based on smart contracts.",
   },
   {
     img: Dollar,

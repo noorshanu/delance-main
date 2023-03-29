@@ -181,8 +181,7 @@ img {
   .faq-grid {
     display: grid;
     grid-template-columns: repeat(1, auto);
-    justify-content: space-between;
-    gap: 5px;
+    gap: 3rem;
   }
   iframe {
     min-height: 100%;

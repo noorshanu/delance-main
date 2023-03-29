@@ -15,16 +15,16 @@ function WhyUs() {
   const { t } = useTranslation("common");
 
   const keys = [
-    t("table.key1", "Client Fee"),
-    t("table.key2", "Freelancer Fee"),
-    t("table.key3", "Withdrawal Fee"),
-    t("table.key4", "Decentralized"),
-    t("table.key5", "Content Ownership"),
-    t("table.key6", "Efficient Escrow"),
-    t("table.key7", "No Limit on task size"),
-    t("table.key8", "scalable dispute system"),
-    t("table.key9", "NFT / Metaverse"),
-    t("table.key10", "Staff Recruitment"),
+    t("Client Fee"),
+    t("Freelancer Fee"),
+    t("Withdrawal Fee"),
+    t("Decentralized"),
+    t("Content Ownership"),
+    t("Efficient Escrow"),
+    t("No Limit on Task Size"),
+    t("Scalable Dispute System"),
+    t("NFT / Metaverse"),
+    t("Staff Recruitment"),
   ];
 
   return (
@@ -34,7 +34,7 @@ function WhyUs() {
       <div className="container desktop-box-why">
         <TitleDash
           className="text-center mt-4 mb-5"
-          title={t("faq.question2", "Why Deelance?")}
+          title={t("Why DeeLance?")}
         />
 
         <div className="why-us-box">

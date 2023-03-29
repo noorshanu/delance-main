@@ -41,8 +41,7 @@ function HowToBuy() {
           </div>
 
           <p className="text-center fs-20px white">
-            Welcome to DeeLance ‘Crypto For Dummies’ guide. If you’re
-            still a dummy, you’d better read on!
+          Welcome to DeeLance ‘Crypto For Beginners ’ guide. If you’re still new to crypto , you’d better read on!
           </p>
         </div>
 
@@ -54,8 +53,10 @@ function HowToBuy() {
 
           <div className={styles.stepsGrid}>
             <StepCard step="STEP 1" title="Install MetaMask on your browser">
-              You can’t be in crypto without a decentralised wallet that only
-              you control. Visit the{" "}
+              To begin your journey in the web3 world, you need to install a
+              decentralized wallet that only you have control over. One of the
+              most widely used wallets is MetaMask. To install MetaMask, visit
+              the official{" "}
               <a
                 href="https://metamask.io/"
                 className="green-text underline"
@@ -64,39 +65,42 @@ function HowToBuy() {
               >
                 ​MetaMask website
               </a>{" "}
-              and choose the browser for which you wish to install the wallet.
-              The most common options are Chrome and Firefox.
+              and select the browser you would like to use, such as Chrome or
+              Firefox.
             </StepCard>
 
             <StepCard step="STEP 2" title="Create your wallet">
-              Once installed, click on the ‘Create a Wallet’ button. Your wallet
-              is a public key comprising randomly generated numbers and letters.
-              This is your identifier on the blockchain.
+              Once installed, click on the "Create a Wallet" button to create
+              your MetaMask wallet. Your wallet's public key is a unique
+              identifier on the blockchain and is generated randomly.
             </StepCard>
 
             <StepCard step="STEP 3" title="Set a wallet password">
-              MetaMask will ask you to create a password. Make sure your
-              password is as secure as possible.
+              MetaMask will prompt you to set a password for your wallet. It is
+              essential to choose a strong password that cannot be easily
+              guessed.
             </StepCard>
 
             <StepCard step="STEP 4" title="Write down recovery phrase">
-              Write down your 12-word recovery phrase on a piece of paper and
-              keep it somewhere safe. Don’t store it on your PC! Without this,
-              you could lose access to your wallet.
+              It is crucial to write down your 12-word recovery phrase on a
+              piece of paper and keep it safe. Please do not store it on your PC
+              as it may be vulnerable to cyber-attacks. This recovery phrase is
+              necessary, without this you could lose access to your wallet.
             </StepCard>
 
             <StepCard step="STEP 5" title="Connect to the Ethereum network">
-              By default, MetaMask is set to transact with the Ethereum network.
-              Therefore there is no need to change the network within MetaMask
-              so that you can engage with the DeeLance token.
+              By default, MetaMask is set to transact with the Ethereum network,
+              which means there is no need to change the network settings within
+              the wallet to engage with the DeeLance token.
             </StepCard>
 
             <StepCard step="STEP 6" title="Import DeeLance to MetaMask">
-              To view your balance, import $Dlance to your MetaMask wallet. Click
-              on ‘Import Tokens’ and paste in the contract address:
-              <br/>
+              Import DeeLance to MetaMask To view your balance, import $DLANCE
+              to your MetaMask wallet. Click on ‘Import Tokens’ and paste in the
+              contract address:
+              <br />
               <span style={{ wordWrap: "break-word", wordBreak: "break-all" }}>
-              0x7D60dE2E7D92Cb5C863bC82f8d59b37C59fC0A7A
+                0x7D60dE2E7D92Cb5C863bC82f8d59b37C59fC0A7A
               </span>
             </StepCard>
           </div>
@@ -112,29 +116,28 @@ function HowToBuy() {
 
           <div className={styles.stepsGrid}>
             <StepCard step="STEP 1" title="Download Trust Wallet app">
-              Trust Wallet is a mobile wallet app backed by the popular Binance
-              exchange. You can get the app via Google Play or the App Store –
-              or access the download link via the Binance website.
+              To begin, download the Trust Wallet mobile application. Trust
+              Wallet is supported by the popular Binance exchange and can be
+              accessed via the Binance website or the App Store and Google Play.
             </StepCard>
 
             <StepCard step="STEP 2" title="Create your wallet">
-              You will now be asked if you already have a ​Trust Wallet or if
-              you wish to create a new one. Click the ‘Create a Wallet’ button
-              to create a new wallet.
+              Once downloaded, you will be prompted to either create a new Trust
+              Wallet or sign in to an existing one. Click on the ‘Create a
+              Wallet’ button to generate a new wallet.
             </StepCard>
 
             <StepCard step="STEP 3" title="Backup your passphrase">
-              Carefully write down the 12-word backup passphrase you are shown.
-              Next, you will need to manually type the 12 words in the correct
-              sequence so that Trust Wallet knows you have written the backup
-              passphrase down correctly.
+              It is crucial to backup your 12-word passphrase carefully. Trust
+              Wallet will require you to manually enter these 12 words in the
+              correct order to confirm that the backup passphrase is accurately
+              recorded.
             </StepCard>
 
             <StepCard step="STEP 4" title="Add DeeLance token">
-              Now that you have set up Trust Wallet on your mobile device, you
-              can add the DeeLance token ($Dlance). You can do this by
-              clicking on the button from the top-right of the screen, followed
-              by ‘Add Custom Token’.
+              With Trust Wallet set up on your mobile device, you can add the
+              DeeLance token ($DLANCE) by selecting the button at the top-right
+              of the screen and choosing ‘Add Custom Token’.
             </StepCard>
           </div>
         </div>

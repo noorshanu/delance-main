@@ -247,22 +247,6 @@
   padding-bottom: 8px;
 }
 
-.list-box {
-  padding-top: 14px;
-  padding-left: 10%;
-}
-
-.list-box h6 {
-  font-weight: 400;
-  font-size: 11px;
-  line-height: 110.9%;
-  /* identical to box height, or 18px */
-  padding-left: 5%;
-  text-transform: capitalize;
-
-  color: #ffffff;
-}
-
 .p-light {
   font-weight: 700;
   font-size: 30px;

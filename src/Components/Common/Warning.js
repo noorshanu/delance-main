@@ -8,7 +8,7 @@ function Warning() {
     <>
       {" "}
       <div className="warning-box">
-        <h2>
+        <h2 className="mb-0">
           {t(
             "warnings.warning",
             "Cryptocurrency may be unregulated in your jurisdiction. The value of cryptocurrencies may go down as well as up. Profits may be subject to capital gains or other taxes applicable in your jurisdiction."

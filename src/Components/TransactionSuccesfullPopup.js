@@ -3,9 +3,10 @@ import TransitionWrapper from "./TransitionWrapper";
 import styles from "CSS/TransactionSuccesfullPopup.module.css";
 import BaseButton from "./BaseButton";
 import { IoMdClose } from "react-icons/io";
+import { useTranslation } from "react-i18next";
 
 function TransactionSuccesfullPopup({ open, setOpen, data }) {
-
+  const { t } = useTranslation("common");
   const [amount, setAmount] = useState();
   const [transaction, setTrans] = useState();
   const [txr, setTrx] = useState();
@@ -18,12 +19,12 @@ function TransactionSuccesfullPopup({ open, setOpen, data }) {
     setTrx(data.trx);
     setAmount(data.amount);
     setTrans(data.transaction);
-    console.log('DATA', data);
-  }, [data]); 
+    console.log("DATA", data);
+  }, [data]);
 
   const handleViewTransaction = () => {
     if (txr) {
-      window.open(`https://etherscan.io/tx/${txr}`, '_blank');
+      window.open(`https://etherscan.io/tx/${txr}`, "_blank");
     }
     setOpen(false);
   };
@@ -42,16 +43,16 @@ function TransactionSuccesfullPopup({ open, setOpen, data }) {
         />
 
         <h1 className="text-center white weight-700 fs-22px mb-3">
-          Your Purchase Was Succesfull
+          {t("Your Purchase Was Succesfull")}
         </h1>
 
         <p className="text-center white mb-4">
-          {amount} tokens will be available for you to claim once the
-          presale ends
+          {amount}{" "}
+          {t("tokens will be available for you to claim once the presale ends")}
         </p>
 
-        <BaseButton style={{ width: '100%' }} onClick={handleViewTransaction}>
-          View Transaction
+        <BaseButton style={{ width: "100%" }} onClick={handleViewTransaction}>
+          {t("View Transaction")}
         </BaseButton>
       </div>
     </TransitionWrapper>

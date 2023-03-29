@@ -3,9 +3,11 @@ import TransitionWrapper from "./TransitionWrapper";
 import styles from "CSS/ReferralLinkPopup.module.css";
 import { FaCopy, FaRegCopy } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
+import { useTranslation } from "react-i18next";
 
 function ReferralLinkPopup({ open, referralLink, setOpen }) {
   const [isCopied, setCopied] = useState(true);
+  const { t } = useTranslation("common");
 
   async function handleCopy() {
     try {
@@ -37,7 +39,7 @@ function ReferralLinkPopup({ open, referralLink, setOpen }) {
       <div>
         <header>
           <h1 className="text-center white fs-20px weight-700 mb-0 uppercase">
-            Referral Link
+            {t("Referral Link")}
           </h1>
 
           <button className={styles.closeBTN} onClick={() => setOpen(false)}>
@@ -47,9 +49,9 @@ function ReferralLinkPopup({ open, referralLink, setOpen }) {
 
         <main>
           <p className="fs-16px text-center white mb-4">
-            Copy your referral link below and send it to your friends. For every
-            purchase made using this link, you’ll receive $DLANCE tokens airdrop
-            worth $200K .
+            {t(
+              "Copy your referral link below and send it to your friends. For every purchase made using this link, you’ll receive $DLANCE tokens airdrop worth $200K."
+            )}
           </p>
 
           <div className={styles.link}>

@@ -15,10 +15,10 @@
 }
 
 @media (max-width: 768px) {
-  .seenOn {
+  /* .seenOn {
     margin-top: 4rem;
     margin-bottom: 5rem;
-  }
+  } */
 
   .seen-grid {
     font-size: 70%;

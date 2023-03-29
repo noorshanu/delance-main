@@ -16,21 +16,30 @@ import { useTranslation } from "react-i18next";
 
 const teamData = [
   {
-    name: "Jagjeet",
-    title: "Advisor",
-    photo: Jagjeet,
-    desc: "CEO and co-founder of Battle Infinity (Metaverse Battle Games Platform). Jagjeet has vast technical experience and the leadership skills to execute on product delivery. Self-motivated ideas generator focused on solutions – there’s nothing Jagjeet likes more than overcoming difficult challenges to demonstrate his skills. A highly creative blue-sky thinker but a team worker too. Laser-focused on product development and delivery, Jagjeet consistently exceeds expectations.",
+    name: "DOMMETI",
+    title: "Founder / CEO",
+    photo: Don,
+    desc: "Dommeti has two decades of high-level experience in technology and engineering, as well as in the investment industry. In his career to date he has demonstrated an ability to identify emerging global trends and then create and execute on that vision. Dommeti has built and rationalized investment firms operating across various asset classes and geographies. Web3 is his passion. The buck stops with Dommeti – he is ultimately responsible for building and directing the specialist team that will make the DeeLance Web3 platform the 21st century home for freelancers.",
     links: {
-      linkedIn: "https://www.linkedin.com/in/jagjeet-jena-a48452163/",
+      linkedIn: "https://www.linkedin.com/in/dommeti-k-329235257/",
     },
   },
   {
-    name: "Jhosi",
+    name: "Suresh Jhosi",
     title: "Co-Founder",
     photo: Jhosi,
     desc: "Having worked in the digital space for over 20 years, Joshi has developed and delivered innovative communications solutions across all paid search media. His love for performance marketing and his association with Finixio (London), an affiliation specialist in the crypto space, as a partner and performance marketing head, has sharpened and clarified his vision of the possibilities offered by blockchain technology.",
     links: {
       linkedIn: "https://www.linkedin.com/in/suresh-joshi-61b3998/",
+    },
+  },
+  {
+    name: "Jagjeet",
+    title: "Advisor",
+    photo: Jagjeet,
+    desc: "CEO of Battle Infinity (Metaverse Battle Games Platform ). having vast Technical experience in leadership. Always self motivated to find ideas, solution and face challenging environment to prove skills. A creative mind working alongside a superior team, on course to deliver a project that exceeds all expectations.",
+    links: {
+      linkedIn: "https://www.linkedin.com/in/jagjeet-jena-a48452163/",
     },
   },
   {
@@ -69,15 +78,7 @@ const teamData = [
       linkedIn: "https://www.linkedin.com/in/adnan-a-rahi-9a2573216/",
     },
   },
-  {
-    name: "DOMMETI",
-    title: "Founder / CEO",
-    photo: Don,
-    desc: "Dommeti has two decades of high-level experience in technology and engineering, as well as in the investment industry. In his career to date he has demonstrated an ability to identify emerging global trends and then create and execute on that vision. Dommeti has built and rationalized investment firms operating across various asset classes and geographies. Web3 is his passion. The buck stops with Dommeti – he is ultimately responsible for building and directing the specialist team that will make the Deelance Web3 platform the 21st century home for freelancers.",
-    links: {
-      linkedIn: "https://www.linkedin.com/in/dommeti-k-329235257/",
-    },
-  },
+
   {
     name: "GURPREET SINGH",
     title: "SOCIAL MEDIA MANAGER",
@@ -109,7 +110,7 @@ const teamData = [
     name: "ABDULLAH MEHBOOB",
     title: "FRONTEND DEVELOPER",
     photo: Abdullah,
-    desc: "Abdullah is an experienced frontend developer with more than four years of expertise in his field. He possesses strong awareness and knowledge of technology trends and is skilled in using a variety of tools and frameworks, such as ReactJS, Next.js, Tailwind CSS, Chakra UI and many more. Abdullah's advanced proficiency in all of these technologies makes him a valuable asset to the Deelance team.",
+    desc: "Abdullah is an experienced frontend developer with more than four years of expertise in his field. He possesses strong awareness and knowledge of technology trends and is skilled in using a variety of tools and frameworks, such as ReactJS, Next.js, Tailwind CSS, Chakra UI and many more. Abdullah's advanced proficiency in all of these technologies makes him a valuable asset to the DeeLance team.",
     links: {
       linkedIn: "https://www.linkedin.com/in/abdullah-mehboob-0012a3203",
     },

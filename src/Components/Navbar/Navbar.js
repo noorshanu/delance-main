@@ -98,7 +98,7 @@ function Navbar() {
                     {t("Home")}
                   </NavLink>
 
-                  <div className="about-dropdown">
+                  {/* <div className="about-dropdown">
                     <a className="-nav-anchor">
                       {t("About")}
                       <FaAngleDown />
@@ -133,8 +133,20 @@ function Navbar() {
                         </a>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
 
+                  <a
+                    href="https://docs.deelance.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="-nav-anchor"
+                  >
+                    {t("Whitepaper")}
+                  </a>
+
+                  <NavLink className="-nav-anchor" to={to("/team")}>
+                    {t("Team")}
+                  </NavLink>
                   <NavLink className="-nav-anchor" to={to("/rewards")}>
                     {t("Win $100K")}
                   </NavLink>
@@ -147,6 +159,7 @@ function Navbar() {
                   <NavLink className="-nav-anchor" to={to("/academy")}>
                     {t("Academy")}
                   </NavLink>
+
                   {/* {account ? (
                 <li>
                   <a href="/" className="p1-btn" onClick={disconnectButt}>

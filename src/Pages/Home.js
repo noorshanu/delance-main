@@ -17,6 +17,7 @@ import DisclaimerHeader from "Components/DisclaimerHeader";
 import PageLayout from "layouts/PageLayout";
 import NewToCrypto from "Components/NewToCrypto";
 import TransactionSuccesfullPopup from "Components/TransactionSuccesfullPopup";
+import WhitepaperBanner from "sections/Home/WhitepaperBanner";
 
 function Home() {
   return (
@@ -28,7 +29,7 @@ function Home() {
         />
         <meta
           name="keywords"
-          content="Freelance, fiver , upwork , jobs , NFT , content , marketing, freelancers, works , metaverse, web3, Binance,Deelance,
+          content="Freelance, fiver , upwork , jobs , NFT , content , marketing, freelancers, works , metaverse, web3, Binance,DeeLance,
     freelancer,upwork freelancer,Fiver,freelancer website,freelancer affiliate program,freelancer accounting jobs,freelancer app developer,account freelancer,best freelancer sites,become a freelancer on fiverr,freelancer customer service,freelance content writer,canva freelancer,freelancer digital marketer ,freelancer earning, 
 jobs,indeed jobs, 
 jobs near me, 
@@ -43,25 +44,43 @@ jobs hiring near me,work from home jobs,jobs available near me,nft marketplace,n
       </Helmet>
       <div>
         <PageLayout>
-          <Hero />
+          <div className="mb-80px">
+            <Hero />
+          </div>
 
-          <SeenOn />
+          <div className="mb-80px">
+            <SeenOn />
+          </div>
 
-          <Features />
+          <div className="mb-100px">
+            <Features />
+          </div>
 
-          <div id="about-us">
+          <div className="mb-100px">
+            <WhitepaperBanner />
+          </div>
+
+          <div id="about-us" className="mb-100px">
             <About />
           </div>
 
-          <Find />
+          <div className="mb-80px">
+            <Find />
+          </div>
 
-          <WhyUs />
+          <div className="mb-100px">
+            <WhyUs />
+          </div>
 
-          <Tokenomic />
+          <div className="mb-80px">
+            <Tokenomic />
+          </div>
 
-          <Raod />
+          <div className="mb-100px">
+            <Raod />
+          </div>
 
-          <div className="pb-5 mb-5">
+          <div className="mb-100px">
             <FAQ />
           </div>
 

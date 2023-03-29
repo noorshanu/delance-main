@@ -45,9 +45,7 @@ function FullImageTutorials() {
           <img src={Step1} style={{ width: "100%" }} className="mb-5" alt="" />
 
           <p className="mb-0 fs-18px white text-center">
-            2. You’ll be given the option to connect with MetaMask or another
-            supported wallet through Wallet Connect. MetaMask works best on
-            desktop. We recommend Trust Wallet if connecting on mobile.
+            2. You will have the option to connect using MetaMask or another supported wallet via Wallet Connect. For desktop, MetaMask is recommended while Trust Wallet is suggested for mobile devices.
           </p>
         </div>
 
@@ -55,9 +53,7 @@ function FullImageTutorials() {
           <img src={Step2} style={{ width: "100%" }} className="mb-5" alt="" />
 
           <p className="mb-0 fs-18px white text-center">
-            3. There are three ways to purchase $Dlance tokens: ETH or USDT.
-            Select Ethereum network in your wallet. Then click the corresponding
-            BUY button to use your preferred currency.
+            3.You can purchase $DLANCE tokens in three ways; with ETH, USDT or card. Ensure that you select the Ethereum network on your wallet and then click on the BUY button that corresponds to your preferred currency.
           </p>
         </div>
       </div>
@@ -73,8 +69,7 @@ function FullImageTutorials() {
           <img src={Step3} style={{ width: "100%" }} className="mb-5" alt="" />
 
           <p className="mb-0 fs-18px white text-center">
-            Click 'Buy $Dlance With ETH'. Enter the amount of ETH you wish to
-            swap for $Dlance tokens. Then click ‘Convert’.
+          Buying with ETH: Click on 'Buy $Dlance with ETH' and enter the amount of ETH you wish to exchange for $Dlance tokens. Click on 'Convert'.
           </p>
         </div>
 
@@ -82,25 +77,14 @@ function FullImageTutorials() {
           <img src={Step4} style={{ width: "100%" }} className="mb-5" alt="" />
 
           <p className="mb-0 fs-18px white text-center">
-            You’ll now need to confirm your purchase. MetaMask will
-            automatically bring up the confirmation window where you can view
-            the details and gas fee for the transaction. A gas fee is paid in
-            ETH to network validators for verifying the transaction. Once you’re
-            happy with the transaction details, click ‘Confirm’.
+          You will then need to confirm your purchase. The confirmation window will automatically pop up on MetaMask where you can review the transaction details and gas fee (a fee paid in ETH to network validators for verifying the transaction). Once you have reviewed and agreed to the transaction details, click on 'Confirm'.
           </p>
         </div>
         <div>
-          <img
-            src={Thanku}
-            style={{ width: "100%" }}
-            className="mb-5"
-            alt=""
-          />
+          <img src={Thanku} style={{ width: "100%" }} className="mb-5" alt="" />
 
           <p className="mb-0 fs-18px white text-center">
-            Once the transaction is complete, you’ll see the SUCCESS screen.
-            You’ll be able to claim your $Dlance tokens from the Love Hate Inu
-            site at the end of the presale.
+          Once the transaction is complete, you will see the SUCCESS screen. You can claim your $DLANCE tokens from the DeeLance website at the end of the presale.
           </p>
         </div>
       </div>
@@ -120,9 +104,7 @@ function FullImageTutorials() {
           />
 
           <p className="mb-0 fs-18px white text-center">
-            Before you’re able to proceed, you’ll be prompted to authorise the
-            use of USDT in your wallet. Confirm the authorisation to continue
-            the transaction.
+          Before proceeding with your transaction, you will need to authorize the use of USDT in your wallet. To continue, please confirm the authorization prompt.
           </p>
         </div>
         <div>
@@ -134,25 +116,14 @@ function FullImageTutorials() {
           />
 
           <p className="mb-0 fs-18px white text-center">
-            You’ll now need to confirm your purchase. MetaMask will
-            automatically bring up the confirmation window where you can view
-            the details and gas fee for the transaction. A gas fee is paid in
-            ETH to network validators for verifying the transaction. Once you’re
-            happy with the transaction details, click ‘Confirm’.
+          Next, you will be required to confirm your purchase. The MetaMask interface will automatically display the confirmation window, where you can review the transaction details and gas fee, which is paid in ETH to network validators for verifying the transaction. Once you have reviewed and approved the transaction details, click the ‘Confirm’ button.
           </p>
         </div>
         <div>
-          <img
-            src={Thanku}
-            style={{ width: "100%" }}
-            className="mb-5"
-            alt=""
-          />
+          <img src={Thanku} style={{ width: "100%" }} className="mb-5" alt="" />
 
           <p className="mb-0 fs-18px white text-center">
-            Once the transaction is complete, you’ll see the SUCCESS screen.
-            You’ll be able to claim your $Dlance tokens from the Love Hate Inu
-            site at the end of the presale.
+          After completing the transaction, you will see a SUCCESS screen. You can claim your $DLANCE tokens from the DeeLance site at the end of the presale.
           </p>
         </div>
       </div>
@@ -165,7 +136,7 @@ function FullImageTutorials() {
           <Heading className="mb-5">3. Buy ETH With Card</Heading>
 
           <p className="fs-18px white text-center mb-5">
-          You will then be directed to our partner, Transak, where you can buy ETH using your card, via bank transfer or other methods, such as Apple Pay, directly in the widget.
+          To buy ETH using your card, bank transfer, or other methods, such as Apple Pay, you will be directed to our partner, Transak. Once there, you can complete your purchase directly in the widget.
           </p>
 
           <img
@@ -175,9 +146,9 @@ function FullImageTutorials() {
             alt=""
           />
 
-          <p className="mb-0 fs-18px white text-center">Select your chosen currency, enter the amount you wish to pay, and then choose your payment method. Outlined below are the estimated ETH you will receive, the rate and the total fees to carry out the transaction.
-
-Once you have chosen your payment method and purchase amount, click BUY NOW.</p>
+          <p className="mb-0 fs-18px white text-center">
+          Select your preferred currency, enter the amount you wish to pay, and choose your payment method. The widget will display the estimated ETH you will receive, the rate, and the total fees to carry out the transaction. After selecting your payment method and amount, click the 'Buy Now' button.
+          </p>
         </div>
         <div>
           <img
@@ -188,9 +159,7 @@ Once you have chosen your payment method and purchase amount, click BUY NOW.</p>
           />
 
           <p className="mb-0 fs-18px white text-center">
-          Before completing your purchase, you will have to go through Transak's KYC process to verify your account for purchasing. KYC (Know Your Customer) is the practice carried out by companies to verify the identity of their clients in compliance with legal requirements and current laws and regulations. But don't worry, it only takes a few minutes.
-
-To begin, enter your email address and verify it with the 4-digit verification code that is sent to that address. Then, agree to Transak's terms of use and ‘Continue’.
+          Before completing your purchase, you will need to go through Transak's KYC process to verify your account for purchasing. KYC (Know Your Customer) is a legal requirement for verifying the identity of clients. The process takes only a few minutes. To begin, enter your email address and verify it with the 4-digit code sent to your email. Then, agree to Transak's terms of use and click 'Continue.'
           </p>
         </div>
         <div>
@@ -202,7 +171,7 @@ To begin, enter your email address and verify it with the 4-digit verification c
           />
 
           <p className="fs-18px white text-center">
-          Enter your details, including your phone number and date of birth, then CONTINUE through to fill out your home address.
+          Next, enter your personal details, including your phone number and date of birth, and continue to fill out your home address.
           </p>
         </div>
 
@@ -222,9 +191,7 @@ To begin, enter your email address and verify it with the 4-digit verification c
           />
 
           <p className="fs-18px white text-center">
-          Once you have added your details, you will be required to prove your identity through a government-issued photo ID, either passport or driver's license.
-
-First, select the issuing country of your identification, then select which ID method you would like to use.
+          Once you have added your details, you will be required to prove your identity with a government-issued photo ID, such as a passport or driver's license. Select the issuing country of your identification, then choose your preferred ID method.
           </p>
           {/* <p className="fs-18px white text-center">
             Select your chosen currency, enter the amount you wish to pay, and
@@ -245,12 +212,8 @@ First, select the issuing country of your identification, then select which ID m
           />
 
           <p className="fs-18px white text-center">
-          You can upload your ID proof through your mobile device or a desktop webcam.
-
-If you are purchasing on a desktop but do not have access to a webcam ‘Continue on mobile’ and add your email address. A link will then be sent to you to access the Transak KYC portal and follow the steps on your mobile.
+          You can upload your ID proof through your mobile device or desktop webcam. If you are purchasing on a desktop without a webcam, click 'Continue on Mobile' and add your email address. A link will then be sent to you to access the Transak KYC portal and follow the steps on your mobile device.
           </p>
-
-         
 
           <img
             src={StepCard7}
@@ -260,7 +223,7 @@ If you are purchasing on a desktop but do not have access to a webcam ‘Continu
           />
 
           <p className="fs-18px white text-center mb-5">
-          Now take a photo of your chosen ID and a selfie, ensuring adequate lighting and the images are clear.
+          Take a photo of your ID and a selfie with adequate lighting and clear images.
           </p>
 
           <img
@@ -271,7 +234,7 @@ If you are purchasing on a desktop but do not have access to a webcam ‘Continu
           />
 
           <p className="fs-18px white text-center ">
-          Continue through to ‘Confirm’ your photos are adequate. If the images are insufficient, you can ‘Try again’ and redo the process.
+          Continue through to confirm your photos are adequate. If the images are insufficient, you can 'Try Again' and redo the process.
           </p>
           {/* <p className="fs-18px white text-center mb-5">
             First, select the issuing country of your identification, then
@@ -285,7 +248,7 @@ If you are purchasing on a desktop but do not have access to a webcam ‘Continu
             alt=""
           />
           <p className="fs-18px white text-center ">
-          Once you have confirmed your photos, your KYC details will be submitted to Transak for verification. The verification process usually takes between 5-10 minutes.
+          Once you have confirmed your photos, your KYC details will be submitted to Transak for verification. The process typically takes between 5-10 minutes. 
           </p>
           {/* <p className="fs-18px white text-center mb-5">
             If you are purchasing on a desktop but do not have access to a
@@ -302,7 +265,7 @@ If you are purchasing on a desktop but do not have access to a webcam ‘Continu
           />
 
           <p className="fs-18px white text-center mb-5">
-          Transak will notify you once you have been verified. You will now be able to proceed with your purchase. Click ‘Order Now’ to continue through to your billing address.
+          Transak will notify you once you have been verified, and you can then proceed with your purchase by clicking 'Order Now' to continue to your billing address
           </p>
 
           <img
@@ -313,7 +276,8 @@ If you are purchasing on a desktop but do not have access to a webcam ‘Continu
           />
 
           <p className="fs-18px white text-center mb-5">
-          Once you input your billing address information, you can ‘Continue’ to confirm your purchase.
+            Once you input your billing address information, you can ‘Continue’
+            to confirm your purchase.
           </p>
 
           <img
@@ -337,20 +301,20 @@ If you are purchasing on a desktop but do not have access to a webcam ‘Continu
           />
 
           <p className="fs-18px white text-center">
-          For first-time purchases, or if you want to use a new card, click ‘+ Add new card’.
-
-
-
-
+            For first-time purchases, or if you want to use a new card, click ‘+
+            Add new card’.
           </p>
           <p className="fs-18px white text-center mb-5">
-          Here you can input the card details you wish to purchase with. You will also see your card billing address towards the top of the widget. Once the information has been added, ‘Add Card’.
+            Here you can input the card details you wish to purchase with. You
+            will also see your card billing address towards the top of the
+            widget. Once the information has been added, ‘Add Card’.
           </p>
 
           <p className="fs-18px white text-center mb-5">
-          You will now need to accept Transaks Terms of Use and authorize Checkout.com to debit your account, along with confirming you wish to purchase the ETH to the wallet address provided.
-
-Click ‘Confirm’ for your purchase to be processed.
+            You will now need to accept Transaks Terms of Use and authorize
+            Checkout.com to debit your account, along with confirming you wish
+            to purchase the ETH to the wallet address provided. Click ‘Confirm’
+            for your purchase to be processed.
           </p>
           {/* <img
             src="https://www.lovehateinu.com/assets/images/buy-img/desktop-4.svg"

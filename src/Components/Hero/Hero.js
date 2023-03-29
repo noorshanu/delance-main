@@ -23,6 +23,7 @@ import BaseButton from "Components/BaseButton";
 import SignUpButtonWithModal from "Components/SignUpButtonWithModal";
 import PresaleVersion2 from "Components/PresaleVersion2";
 import SocialLinks from "Components/SocialLinks";
+import VerifiedCard from "Components/VerifiedCard";
 
 function Hero() {
   const { t } = useTranslation("common");
@@ -55,39 +56,24 @@ function Hero() {
               </h1> */}
 
               <h1 className="hero-title white weight-700 lh-1_3 mb-4">
-                <span className="green-light">Deelance</span> - A{" "}
+                <span className="green-light">DeeLance</span> - A{" "}
                 <span className="green-light">{t("Web3 Space")}</span>{" "}
                 {t("Where the World Works Together Smartly.")}
               </h1>
 
-              <p className="hero-sp-p">
+              <p className="hero-sp-p mb-0">
                 {t(
                   "DeeLance is a freelancing and Recruitment platform based on Web3. Its a decentralized platform revolutionizing how freelancers connect with potential employers"
                 )}
               </p>
-              <div className="hero-btn mt-4">
-                {/* <BaseButton onClick={() => setIsModal(true)}>
-                  {t("Sign Up")} <AiOutlineArrowRight />
-                </BaseButton> */}
-
-                <BaseButton
-                  as="a"
-                  href="https://docs.deelance.com/"
-                  target="_blank"
-                >
-                  {t("Whitepaper")}
-                </BaseButton>
-
-                {/* <button className="hero-btn-2">{t("buttons.buy_now")}</button> */}
-              </div>
-              <div className="mt-5">
+              <div className="mt-4 mt-md-5" id="presale-atm">
                 {/* <PresaleMain /> */}
                 <PresaleVersion2 />
               </div>
             </div>
 
             <div
-              className="col-md-6 text-center align-items-center hero-gif-and-links"
+              className="col-md-6 hero-gif-and-links"
               style={{ position: "relative" }}
             >
               <div className="second-img">
@@ -95,33 +81,15 @@ function Hero() {
               </div>
 
               <div className="hero-links-and-verified-wrapper">
-                <div className="contract-verification-banner">
-                  <div className="audit-kyc">
-                    <p className="verification-banner-title font-inter text-white mb-0">
-                      {t("Audit and KYC | 100% Secured and Verified")}
-                    </p>
-                  </div>
-                  <div className="audit-images">
-                    <img src="images/logo1.png" alt="" />
-                    <div
-                      style={{
-                        height: "20px",
-                        border: "1px solid rgba(255,255,255,.3)",
-                      }}
-                    ></div>
-                    <img src="images/coinsult-logo.svg" alt="" />
-                  </div>
-                </div>
-
                 <div className="disclaimer">
                   <p className="white text-center">
                     {t(
-                      "⚠️Beware of fraudulent and unauthorized websites, social media or email accounts claiming to represent Deelance. Deelance takes no responsibility for the misrepresentation and harm resulting from the wilful deception perpetrated by fraudulent third parties. Please exercise due caution at all times."
+                      "⚠️Beware of fraudulent and unauthorized websites, social media or email accounts claiming to represent DeeLance. DeeLance takes no responsibility for the misrepresentation and harm resulting from the wilful deception perpetrated by fraudulent third parties. Please exercise due caution at all times."
                     )}
                   </p>
 
                   <p className="white text-center">
-                    {t("Only interact with verified Deelance accounts.")}
+                    {t("Only interact with verified DeeLance accounts.")}
                   </p>
                 </div>
 

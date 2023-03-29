@@ -9,14 +9,17 @@ import {
   FaInstagram,
   FaYoutube,
 } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import "./Footer.css";
 import NavLogo from "../../assets/main-logo.svg";
 import { useTranslation } from "react-i18next";
 import SocialLinks from "Components/SocialLinks";
+import { to } from "utils/RouterUtils";
+import LinkScroller from "Components/LinkScroller";
 
 function Footer() {
   const { t } = useTranslation("common");
+  const location = useLocation();
 
   return (
     <>
@@ -25,16 +28,14 @@ function Footer() {
           <div className="container">
             <div className="footer-stack">
               <div>
-                <div className="footer-logo">
-                  <NavLink to="/">
-                    <img src={NavLogo} alt="foot-logo" />
-                  </NavLink>
-                </div>
+                <NavLink to={to("")}>
+                  <img src={NavLogo} className="footer-logo" alt="foot-logo" />
+                </NavLink>
 
                 <p style={{ maxWidth: "28rem" }} className="mb-0 white fs-16px">
                   {t(
                     "footer.subtitle",
-                    "Deelance is a freelancing and Recruitment platform based on Web3 platform that is redefining how freelancers connect with potential employers and buyers."
+                    "DeeLance is a freelancing and Recruitment platform based on Web3 platform that is redefining how freelancers connect with potential employers and buyers."
                   )}
                 </p>
               </div>
@@ -42,24 +43,22 @@ function Footer() {
               <div className="foot-links-wrapper">
                 <NavLink
                   className="foot-link fs-16px"
-                  to="/privacy-policy"
+                  to={to("/privacy-policy")}
                   target="_blank"
                 >
                   {t("Privacy")}
                 </NavLink>
                 <NavLink
                   className="foot-link fs-16px"
-                  to="/risk"
+                  to={to("/risk")}
                   target="_blank"
                 >
                   {t("Risk Warning")}
                 </NavLink>
-                <a href="/" className="foot-link white-16px">
-                  {t("Announcements")}
-                </a>
+
                 <NavLink
                   className="foot-link fs-16px"
-                  href="/privacy-policy"
+                  to={to("/privacy-policy")}
                   target="_blank"
                 >
                   {t("Cookie Preferences")}
@@ -67,17 +66,24 @@ function Footer() {
               </div>
 
               <div className="foot-links-wrapper">
-                <a className="foot-link fs-16px" href="/">
+                <LinkScroller
+                  id="about-us"
+                  to={to("")}
+                  className="foot-link"
+                  wait={location.pathname === to("") ? 0 : 100}
+                  scrollerOptions={{
+                    offset: -20,
+                  }}
+                >
                   {t("About")}
-                </a>
-                <a className="foot-link fs-16px" href="/">
+                </LinkScroller>
+
+                <NavLink to={to("")} className="foot-link fs-16px" href="/">
                   {t("Careers")}
-                </a>
-                <a className="foot-link fs-16px" href="/">
-                  {t("Community")}
-                </a>
+                </NavLink>
+
                 <NavLink
-                  to="/terms"
+                  to={to("/terms")}
                   className="foot-link fs-16px"
                   target="_blank"
                 >
@@ -99,7 +105,7 @@ function Footer() {
         <div className="footer-bottom">
           <div className="container">
             <p className="fs-16px white mb-0 text-center">
-              {t("2023© Deelance Inc. | All Rights Reserved")}
+              {t("2023© DeeLance Inc. | All Rights Reserved")}
             </p>
           </div>
         </div>

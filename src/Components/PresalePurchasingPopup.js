@@ -80,7 +80,7 @@ const USDT = () => {
   );
 };
 
-const Deelance = () => {
+const DeeLance = () => {
   return (
     <div style={{ display: "flex", alignItems: "center" }}>
       <img
@@ -215,13 +215,13 @@ function PresalePurchasingPopup({
           );
         } else {
           console.log("SIIII", nftAmount.toString());
-          transaction = await contracts.Main.buyWithUSD(nftAmount, 0); 
+          transaction = await contracts.Main.buyWithUSD(nftAmount, 0);
         }
       }
       const currentUrl = window.location.href;
       const clickId = getClickIdFromUrl(currentUrl);
       console.log(clickId);
-     const tx_result = await transaction.wait();
+      const tx_result = await transaction.wait();
       // alert(`Successfully transaction! TX: ${tx_result.transactionHash}`);
       setTransactionSuccessfull({
         transactionHash: tx_result.transactionHash,
@@ -229,7 +229,7 @@ function PresalePurchasingPopup({
         txResult: "transaction result",
       });
       setPurchasingModalType(null);
-       console.log("transaction", tx_result.transactionHash); 
+      console.log("transaction", tx_result.transactionHash);
 
       setPurchasingModalType(null);
 
@@ -402,7 +402,7 @@ function PresalePurchasingPopup({
               <div>
                 <div className="mb-2">
                   <Header title={t("Buying")}>
-                    <Deelance />
+                    <DeeLance />
                   </Header>
                 </div>
                 <div className="purshasing-input">
