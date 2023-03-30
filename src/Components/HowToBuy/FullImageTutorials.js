@@ -40,7 +40,7 @@ function FullImageTutorials() {
 
           <p className="mb-0 fs-18px white text-center">
             {t(
-              "1. Click the Connect button and you'll be prompted to connect your wallet."
+              "1. Click on the Connect button and follow the prompts to connect your wallet."
             )}
           </p>
         </div>
@@ -50,7 +50,7 @@ function FullImageTutorials() {
 
           <p className="mb-0 fs-18px white text-center">
             {t(
-              "2. You will have the option to connect using MetaMask or another supported wallet via Wallet Connect. For, MetaMask is recommended while Trust Wallet is suggested for mobile devices."
+              "2. You will have the option to connect using MetaMask or another supported wallet via Wallet Connect. For desktop, MetaMask is recommended while Trust Wallet is suggested for mobile devices."
             )}
           </p>
         </div>
@@ -307,7 +307,7 @@ function FullImageTutorials() {
 
           <p className="fs-18px white text-center mb-5">
             {t(
-              "Once you input your billing address information, you can ‘Continue’ to confirm your purchase."
+              "After you have entered your billing address information, you may proceed by clicking on ‘Continue’ to verify your purchase."
             )}
           </p>
 
@@ -327,24 +327,24 @@ function FullImageTutorials() {
 
           <p className="fs-18px white text-center">
             {t(
-              "For first-time purchases, or if you want to use a new card, click ‘+Add new card’."
+              "To use a new card, or for a first-time purchase, please click on the ‘+ Add new card’ option."
             )}
           </p>
           <p className="fs-18px white text-center mb-5">
             {t(
-              "Here you can input the card details you wish to purchase with. You will also see your card billing address towards the top of the widget. Once the information has been added, ‘Add Card’."
+              "This will enable you to input the details of the card you wish to use for payment. You will also find your card's billing address at the top of the widget. Once you have provided the required information, click on ‘Add Card’."
             )}
           </p>
 
           <p className="fs-18px white text-center mb-5">
             {t(
-              "You will now need to accept Transaks Terms of Use and authorize Checkout.com to debit your account, along with confirming you wish to purchase the ETH to the wallet address provided. Click ‘Confirm’ for your purchase to be processed."
+              "Next, you will be prompted to agree to Transak's Terms of Use and authorize Checkout.com to debit your account. Additionally, you will need to confirm your desire to purchase ETH at the provided wallet address. Once you have reviewed and confirmed your purchase details, click on ‘Confirm’ to initiate the payment processing."
             )}
           </p>
 
           <p className="fs-18px white text-center">
             {t(
-              "All done! Once payment has been authorized, it will take a few minutes for your order to be processed. Transak will send you a confirmation email once your ETH has been delivered to your wallet. Here you can also track your order or navigate back to the app."
+              "After your payment has been authorized, it may take a few minutes for your order to be processed. Transak will send you a confirmation email once your ETH has been successfully delivered to your wallet. From here, you can track your order or navigate back to the app as needed."
             )}
           </p>
         </div>

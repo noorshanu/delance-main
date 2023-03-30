@@ -23,7 +23,7 @@ function Team() {
       title: t("Founder / CEO"),
       photo: Don,
       desc: t(
-        "Dommeti has two decades of high-level experience in technology and engineering, as well as in the investment industry. In his career to date, he has demonstrated an ability to identify emerging global trends and then create and execute that vision. Dommeti has built and rationalized investment firms operating across various asset classes and geographies. Web3 is his passion. The buck stops with Dommeti – he is ultimately responsible for building and directing the specialist team that will make the DeeLance Web3 platform the 21st-century home for freelancers."
+        "Dommeti has two decades of high-level experience in technology and engineering, as well as in the investment industry. In his career to date, he has demonstrated an ability to identify emerging global trends and then create and execute that vision. Dommeti has built and rationalized investment firms operating across various asset classes and geographies. Web3 is his passion. The buck stops with Dommeti – he is ultimately responsible for building and directing the specialist team that will make the Deelance Web3 platform the 21st-century home for freelancers."
       ),
       links: {
         linkedIn: "https://www.linkedin.com/in/dommeti-k-329235257/",
@@ -45,7 +45,7 @@ function Team() {
       title: t("Advisor"),
       photo: Jagjeet,
       desc: t(
-        "CEO of Battle Infinity (Metaverse Battle Games Platform). having vast Technical experience in leadership. Always self-motivated to find ideas, solutions and face challenging environments to prove skills. A creative mind working alongside a superior team, on course to deliver a project that exceeds all expectations."
+        "CEO and co-founder of Battle Infinity (Metaverse Battle Games Platform). Jagjeet has vast technical experience and the leadership skills to execute product delivery. Self-motivated ideas generator focused on solutions – there’s nothing Jagjeet likes more than overcoming difficult challenges to demonstrate his skills. A highly creative blue-sky thinker but a team worker too. Laser-focused on product development and delivery, Jagjeet consistently exceeds expectations."
       ),
       links: {
         linkedIn: "https://www.linkedin.com/in/jagjeet-jena-a48452163/",
@@ -56,7 +56,7 @@ function Team() {
       title: t("PROJECT HEAD"),
       photo: ROBERTO,
       desc: t(
-        "As an experienced full-stack developer Roberto has worked in the web, and blockchain spaces for seven years. During this time he built dozens of modern and professional platforms that are today making profits for companies worldwide. Roberto’s major achievements include his work across a number of fields as the project lead, including building websites, cryptocurrencies, centralized exchanges, decentralized exchanges (DeFi), and NFT-related platforms."
+        "As an experienced full-stack developer Roberto has worked in the web, and blockchain spaces for seven years. During this time he built dozens of modern and professional platforms that are today making profits for companies worldwide. Roberto’s major achievements include his work across several fields as the project lead, including the building of websites, cryptocurrencies, centralized exchanges, decentralized exchanges (DeFi), and NFT-related platforms."
       ),
       links: {
         linkedIn: "https://www.linkedin.com/in/roberto-cinque/",
@@ -89,7 +89,7 @@ function Team() {
       title: t("QC/ SECURITY SPECIALIST"),
       photo: Addy,
       desc: t(
-        "Adnan began his career as a freelancer and has completed 1,000-plus assignments in the past three years. From concept to coding, Adnan has been involved in every stage of building and securing digital asset tokens. He has worked on launchpads, DeFi protocols, and cutting-edge Web3 applications."
+        "Adnan began his career as a freelancer and has completed 1,000-plus assignments in the past three years. From concept to coding, Adnan has been involved in every stage of building and securing digital asset tokens. He has worked on launchpads, DeFi protocols and apps, and cutting-edge Web3 applications."
       ),
       links: {
         linkedIn: "https://www.linkedin.com/in/adnan-a-rahi-9a2573216/",
@@ -101,7 +101,7 @@ function Team() {
       title: t("SOCIAL MEDIA MANAGER"),
       photo: Guru,
       desc: t(
-        "Gurpreet is a social media marketer who has more than five years experience collaborating with marketing agencies and different types of startups. Creativity and data analysis are his strengths. Gurpreet is a top-level social media strategist and innovator."
+        "Gurpreet is a social media marketer who has more than five years of experience collaborating with marketing agencies and different types of startups. Creativity and data analysis are his strengths. Gurpreet is a top-level social media strategist and innovator."
       ),
       links: {
         linkedIn: "https://www.linkedin.com/in/gurpreetsingh993/",
@@ -112,7 +112,7 @@ function Team() {
       title: t("FULL STACK DEVELOPER"),
       photo: Noor,
       desc: t(
-        "Noor is a full-stack web developer with five years experience working on a variety of platforms. He has a very strong background and expertise in React, Node.js and Python. Noor is also a great team player and self-starter."
+        "Noor is a full-stack web developer with five years of experience working on a variety of platforms. He has a very strong background and expertise in React, Node.js, and Python. Noor is also a great team player and self-starter."
       ),
       links: {
         linkedIn: "https://www.linkedin.com/in/noor-alam-aa722314b/",
@@ -123,7 +123,7 @@ function Team() {
       title: t("COMMUNITY MANAGER"),
       photo: Viki,
       desc: t(
-        "Visakh is a marketing and social media expert within the digital marketing space, with all-around knowledge and experience in the crypto space. His involvement with digital assets goes back three years. During that time Visakh acquired skills to, for example, expose Web3 project management platform Dework to hundreds of thousands of people worldwide using his unique marketing skills."
+        "Visakh is a marketing and social media expert within the digital marketing space, with all-around knowledge and experience in the crypto space. His involvement with digital assets goes back three years. During that time Visakh acquired skills to, for example, expose the Web3 project management platform Dework to hundreds of thousands of people worldwide using his unique marketing skills."
       ),
       links: {
         linkedIn:
@@ -135,7 +135,7 @@ function Team() {
       title: t("FRONTEND DEVELOPER"),
       photo: Abdullah,
       desc: t(
-        "Abdullah is an experienced frontend developer with more than four years of expertise in his field. He possesses strong awareness and knowledge of technology trends and is skilled in using a variety of tools and frameworks, such as ReactJS, Next.js, Tailwind CSS, Chakra UI and many more. Abdullah's advanced proficiency in all of these technologies makes him a valuable asset to the DeeLance team."
+        "Abdullah is an experienced front-end developer with more than four years of expertise in his field. He possesses strong awareness and knowledge of technology trends and is skilled in using a variety of tools and frameworks, such as ReactJS, Next.js, Tailwind CSS, Chakra UI, and many more. Abdullah's advanced proficiency in all of these technologies makes him a valuable asset to the Deelance team."
       ),
       links: {
         linkedIn: "https://www.linkedin.com/in/abdullah-mehboob-0012a3203",

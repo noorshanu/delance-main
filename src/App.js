@@ -48,7 +48,13 @@ function App() {
   }, [signer]);
 
   if (account) {
+    if (signer) {
     contracts.Main = new ethers.Contract(ContractAddr.Main, BigNFTABI, signer);
+    contracts["USDT"] = new ethers.Contract("0xdAC17F958D2ee523a2206206994597C13D831ec7", BEP20ABI, signer);
+    } else {
+      contracts.Main = new ethers.Contract(ContractAddr.Main, BigNFTABI, provider);
+      contracts["USDT"] = new ethers.Contract("0xdAC17F958D2ee523a2206206994597C13D831ec7", BEP20ABI, provider);
+    }
   } else {
     contracts.Main = new ethers.Contract(
       ContractAddr.Main,

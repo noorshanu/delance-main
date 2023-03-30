@@ -235,7 +235,7 @@ function PresaleVersion2() {
   const provider = getProvider();
 
   const { connectWallet, contracts, account } = useContext(UserContext);
-  const [balances, setBalances] = useState({ ETH: 0 });
+  const [balances, setBalances] = useState({ ETH: 0, USDT: 0 });
   const [prices, setPrices] = useState(0);
   const [nextprices, setPricesnext] = useState(0);
   const [deelance, setDeelance] = useState(0);
@@ -254,6 +254,12 @@ function PresaleVersion2() {
   const handleConnectWalletClick = async () => {
     try {
       await connectWallet();
+      setSomeState(!somestate);
+      getSaleProgress();
+      getDeelance();
+      getAllBalances();
+      getTokenBalances();
+      getETHBalance();
       const errorCode = 0; // Define the errorCode variable here (change its value if needed)
       window.dataLayer.push({
         event: "workflowStep",
@@ -274,14 +280,14 @@ function PresaleVersion2() {
       a: account,
     };
     window.dataLayer.push({
-      event:"workflowStep",
+      event: "workflowStep",
       workflowName: "swap",
       workflowStepNumber: 1,
       workflowStepName: "swapAmount",
       workflowCompleteFlag: 0,
       workflowErrorCode: errorCode,
-      walletAddress: xxff.a
-                  });
+      walletAddress: xxff.a,
+    });
 
     setIsModal2(true);
   };
@@ -328,12 +334,62 @@ function PresaleVersion2() {
       console.error("Error sending payload:", error);
     }
   };
+  const getETHBalance = async () => {
+    const provider = getProvider();
+    const balance = await provider.getBalance(account);
+    console.log("ETH BALANCE", ethers.utils.formatEther(balance))
+    return ethers.utils.formatEther(balance);
+  };
+
+  const getTokenBalances = async (token) => {
+    console.log(token, " getting balance");
+    const balance = await contracts["USDT"].balanceOf(account);
+    const decimals = (await contracts["USDT"].decimals()).toNumber();
+    const aaaa = parseInt(
+      await contracts["USDT"].allowance(account, contracts.Main.address),
+      10
+    );
+    console.log("CIAO", aaaa);
+    if (aaaa < 0) {
+      setCondition(true);
+    } else {
+      setCondition(false);
+    }
+    console.log("success");
+    return balance.div("1" + "0".repeat(decimals)).toNumber();
+  };
+  const getAllBalances = async () => {
+    const balances = { ETH: await getETHBalance() };
+      balances["USDT"] = await getTokenBalances("USDT");
+    setBalances(balances);
+  };
+
+  const getDeelance = async () => {
+    console.log("Account wallet", account);
+    const sa = await contracts.Main.userDeposits(account);
+    const pric = sa / 1000000000000000000;
+    console.log("Account balance deelance", pric);
+    setDeelance(pric);
+  };
+
+  const getSaleProgress = async () => {
+    const pri = await contracts.Main.salePrice();
+    const prinext = await contracts.Main.nextPrice();
+    const myString = ethers.utils.formatEther(pri);
+    const myStringnext = ethers.utils.formatEther(prinext);
+    const a = Number(myString).toFixed(3);
+    const b = Number(myStringnext).toFixed(3);
+    const sa = ethers.utils.formatEther(await contracts.Main.inSaleUSDvalue());
+    const xa = await contracts.Main.hardcapsizeUSD();
+    setPrices(a);
+    setPricesnext(b);
+    setInSale(sa);
+    setTotal(xa);
+    setPercantage((((xa - sa) / xa) * 100).toFixed(2));
+  };
 
   useEffect(() => {
     if (!account) {
-      setTotal("1500000");
-      setPercantage("0");
-
       const getPr = async () => {
         const pri = await contracts.Main.salePrice();
         const prinext = await contracts.Main.nextPrice();
@@ -416,8 +472,14 @@ function PresaleVersion2() {
         setPercantage((((xa - sa) / xa) * 100).toFixed(2));
       };
 
-      /*       const getTokenBalances = async (token) => {
-        console.log(token, " getting balance");
+      /*   const getETHBalance = async () => {
+        const provider = getProvider();
+        const balance = await provider.getBalance(account);
+        return ethers.utils.formatEther(balance);
+      };
+    
+           const getTokenBalances = async (token) => {
+        console.log("USDT", " getting balance");
         const balance = await contracts["USDT"].balanceOf(account);
         const decimals = (await contracts["USDT"].decimals()).toNumber();
         const aaaa = parseInt(
@@ -436,17 +498,19 @@ function PresaleVersion2() {
       const getAllBalances = async () => {
         const balances = { ETH: await getETHBalance() };
         for (const token of TokenList) {
-          balances[token] = await getTokenBalances(token);
+          balances["USDT"] = await getTokenBalances("USDT");
         }
         setBalances(balances);
-      }; */
-
+      }; 
+ */
       const handlePopupClose = () => {
         getSaleProgress();
         getDeelance();
         getSomeState();
       };
 
+      /*    getAllBalances();
+      getTokenBalances(); */
       getSaleProgress();
       getDeelance();
       getSomeState();
@@ -531,7 +595,7 @@ function PresaleVersion2() {
       >
         {t("USDT Raised")}{" "}
         <span className="green-light">
-        {((parseFloat(total - inSale).toFixed(2)) * 1).toLocaleString("en-US")}
+          {(parseFloat(total - inSale).toFixed(2) * 1).toLocaleString("en-US")}
         </span>{" "}
         /{" "}
         <span className="green-light">
@@ -583,14 +647,15 @@ function PresaleVersion2() {
                   a: account,
                 };
                 window.dataLayer.push({
-                  event:"workflowStep",
+                  event: "workflowStep",
                   workflowName: "swap",
                   workflowStepNumber: 1,
                   workflowStepName: "swapAmount",
                   workflowCompleteFlag: 0,
                   workflowErrorCode: errorCode,
-                  walletAddress: xxff.a
-                              });
+                  walletAddress: xxff.a,
+                });
+                getAllBalances();
                 setPurchasingModalType(modalType.eth);
                 handlePopupClose();
               }}
@@ -613,14 +678,15 @@ function PresaleVersion2() {
                   a: account,
                 };
                 window.dataLayer.push({
-                  event:"workflowStep",
+                  event: "workflowStep",
                   workflowName: "swap",
                   workflowStepNumber: 1,
                   workflowStepName: "swapAmount",
                   workflowCompleteFlag: 0,
                   workflowErrorCode: errorCode,
-                  walletAddress: xxff.a
-                              });
+                  walletAddress: xxff.a,
+                });
+                getAllBalances();
                 setPurchasingModalType(modalType.usdt);
                 handlePopupClose();
               }}

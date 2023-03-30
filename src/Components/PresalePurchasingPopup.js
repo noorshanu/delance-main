@@ -119,7 +119,7 @@ function PresalePurchasingPopup({
   };
   const [lastSymbol, setLastSymbol] = useState();
   const { connectWallet, contracts, account } = useContext(UserContext);
-  const [balances, setBalances] = useState({ ETH: 0 });
+  const [balances, setBalances] = useState({ ETH: 0, USDT: 0 });
   const [bb, setBB] = useState(0);
   const [showComp, setShowComp] = useState(false);
   const tokenElement = useRef({ value: "" });
@@ -136,20 +136,25 @@ function PresalePurchasingPopup({
   const [showApprove, setShowApprove] = useState(false);
   const [transactionLoading, setTransactionLoading] = useState(false);
   const [deelance, setDeelance] = useState(0);
-  const[all, setAll] = useState(0);
+  const [all, setAll] = useState(0);
 
   useEffect(() => {
     const getDeelance = async () => {
-      const allowance = parseInt(
-        await contracts["USDT"].allowance(account, contracts.Main.address),
-        10
-      );
-      setAll(allowance);
       console.log("Account wallet", account);
       const sa = await contracts.Main.userDeposits(account);
       const pric = sa / 1000000000000000000;
       console.log("Account balance deelance", pric);
       setDeelance(pric);
+    };
+
+    getDeelance();
+
+    const getAllowan = async () => {
+      const allowance = parseInt(
+        await contracts["USDT"].allowance(account, contracts.Main.address),
+        10
+      );
+      setAll(allowance);
     };
 
     const getETHBalance = async () => {
@@ -163,9 +168,9 @@ function PresalePurchasingPopup({
       console.log("fatto");
     };
     const getTokenBalances = async (token) => {
-      console.log(token, " getting balance");
-      const balance = await contracts[token].balanceOf(account);
-      const decimals = (await contracts[token].decimals()).toNumber();
+      console.log("USDT", " getting balance");
+      const balance = await contracts["USDT"].balanceOf(account);
+      const decimals = (await contracts["USDT"].decimals()).toNumber();
       const aaaa = parseInt(
         await contracts["USDT"].allowance(account, contracts.Main.address),
         10
@@ -182,13 +187,13 @@ function PresalePurchasingPopup({
 
     const getAllBalances = async () => {
       const balances = { ETH: await getETHBalance() };
-      for (const token of TokenList) {
-        balances[token] = await getTokenBalances(token);
-      }
+      balances["USDT"] = await getTokenBalances("USDT");
+
       setBalances(balances);
     };
 
     getDeelance();
+    getAllowan();
     getAllBalances();
     getSomeState();
 
@@ -227,6 +232,11 @@ function PresalePurchasingPopup({
     }
     const nftAmount = nftAmountElement.current.value;
 
+    if (secondInputValue == 0) {
+      alert("$DLANCE to buy, can't be 0!");
+      setTransactionLoading(false);
+      return;
+    }
     try {
       let transaction = null;
       const xx = await contracts.Main.salePrice();
@@ -258,28 +268,31 @@ function PresalePurchasingPopup({
         const requiredTokenAmount = tokenAmount.toString();
 
         if (allowance < 1) {
-
           const transaction = await contracts["USDT"].approve(
             contracts.Main.address,
             "10000000000000000000000000000000000000000000000000000000000"
           );
-       
+
           if (await transaction.wait()) {
-            alert("Allowance it's ok now! You can continue purchase!")
+            alert("Allowance it's ok now! You can continue purchase!");
             const allowance = parseInt(
-              await contracts["USDT"].allowance(account, contracts.Main.address),
+              await contracts["USDT"].allowance(
+                account,
+                contracts.Main.address
+              ),
               10
             );
             setTransactionLoading(false);
-            setAll(allowance)
-            setSomeState(!somestate)
+            setAll(allowance);
+            setSomeState(!somestate);
             return;
           } else {
-            alert("Something wrong with allowance... try to revoke allowance and try again!")
+            alert(
+              "Something wrong with allowance... try to revoke allowance and try again!"
+            );
             setTransactionLoading(false);
-          return;
+            return;
           }
-
         } else {
           console.log("SIIII", nftAmount.toString());
           transaction = await contracts.Main.buyWithUSD(nftAmount, 0);
@@ -290,14 +303,14 @@ function PresalePurchasingPopup({
           };
 
           window.dataLayer.push({
-            event:"workflowStep",
+            event: "workflowStep",
             workflowName: "swap",
             workflowStepNumber: 2,
             workflowStepName: "confirmTransaction",
             workflowCompleteFlag: 0,
             workflowErrorCode: errorCode,
             walletAddress: xxff.a,
-                        });
+          });
         }
       }
       const currentUrl = window.location.href;
@@ -334,7 +347,7 @@ function PresalePurchasingPopup({
       };
 
       window.dataLayer.push({
-        event:"workflowStep",
+        event: "workflowStep",
         workflowName: "swap",
         workflowStepNumber: 3,
         workflowStepName: "swapSuccessful",
@@ -346,8 +359,8 @@ function PresalePurchasingPopup({
         swapFromValue: how,
         swapToCurrency: "$DLANCE",
         swapToValue: nftAmount.toString(),
-                    });
-                    
+      });
+
       setPurchasingModalType(null);
       console.log("transaction", tx_result.transactionHash);
 
@@ -537,9 +550,7 @@ function PresalePurchasingPopup({
               style={{ width: "100%" }}
               className="text-center justify-content-center"
             >
-              {token === "USDT" && all < 1
-                ? t("Approve")
-                : t("Convert")}
+              {token === "USDT" && all < 1 ? t("Approve") : t("Convert")}
             </LoadingButton>
           </main>
         </div>
