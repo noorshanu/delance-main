@@ -716,7 +716,7 @@ function PresaleVersion2() {
         <div className="mt-3">
           <p className="text-center white fs-16px mb-1">{t("Launch Price")}</p>
           <p className="text-center white fs-16px mb-0">
-            1 {tokenDetails.symbol} = $0.033 USDT
+            1 {tokenDetails.symbol} = $0.035 USDT
           </p>
         </div>
       )}
