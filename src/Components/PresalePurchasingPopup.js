@@ -515,10 +515,9 @@ function PresalePurchasingPopup({
   const OnMaxClick = async (e) => {
     e.preventDefault();
     console.log("PROVA", selectedToken);
+
     if (token === "ETH") {
-      maxa.current.value = ethers.utils.formatEther(
-        Math.max(allBalances[token])
-      );
+      maxa.current.value = ethers.utils.formatEther(allBalances[token]);
     } else {
       maxa.current.value = allBalances[token] / usdtDecimals;
     }
