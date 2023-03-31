@@ -14,6 +14,9 @@ function ConnectWalletBtn({ onClick, setShowMediaIcons, normal = false }) {
       className={`${styles.btn} ${normal ? styles.normal : ""}`}
       onClick={() => {
         open();
+        if (onClick) {
+          onClick();
+        }
         if (setShowMediaIcons) {
           setShowMediaIcons(false);
         }

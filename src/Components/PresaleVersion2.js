@@ -5,7 +5,7 @@ import Bullet from "assets/de.webp";
 import { useTranslation } from "react-i18next";
 import tokenDetails from "Constants/tokenDetails";
 import ConnectWalletBtn from "./ConnectWalletBtn";
-import { useAccount } from "wagmi";
+import { useAccount, useContractRead } from "wagmi";
 import BaseButton from "./BaseButton";
 import PresalePurchasingPopup from "./PresalePurchasingPopup";
 import modalType from "Constants/modalType";
@@ -14,12 +14,13 @@ import OnRamp from "Components/Presale/onRamp";
 import { Link } from "react-router-dom";
 import UserContext from "../UserContext";
 import { ethers } from "ethers";
-import { TokenList } from "../Constants/Constants";
-import { getProvider } from "@wagmi/core";
+import { ContractAddr, TokenList } from "../Constants/Constants";
+import { getProvider, fetchBalance } from "@wagmi/core";
 import axios from "axios";
 import TransactionSuccesfullPopup from "./TransactionSuccesfullPopup";
 import ReferralLinkPopup from "./ReferralLinkPopup";
 import { to } from "utils/RouterUtils";
+import { BigNFTABI } from "Constants/ABI";
 
 const Input = ({ referralLink, children, icon, ...props }) => {
   const { t } = useTranslation("common");
@@ -223,7 +224,7 @@ const Timer = ({ account, somestate }) => {
   );
 };
 
-function PresaleVersion2() {
+const PresaleVersion2 = () => {
   const [percantage, setPercantage] = useState(0);
   const { t } = useTranslation("common");
   const { address } = useAccount();
@@ -249,6 +250,8 @@ function PresaleVersion2() {
   const [isTransactionSuccesfull, setTransactionSuccessfull] = useState(false);
   const [referralPopupOpen, setReferralPopupOpen] = useState(false);
 
+  const ethDecimals = 1000000000000000000;
+
   // console.log("presale version 2, re-rendering");
 
   const handleConnectWalletClick = async () => {
@@ -256,7 +259,7 @@ function PresaleVersion2() {
       await connectWallet();
       setSomeState(!somestate);
       getSaleProgress();
-      getDeelance();
+      // getDeelance();
       getAllBalances();
       getTokenBalances();
       getETHBalance();
@@ -334,10 +337,11 @@ function PresaleVersion2() {
       console.error("Error sending payload:", error);
     }
   };
+
   const getETHBalance = async () => {
-    const provider = getProvider();
+    // const provider = getProvider();
     const balance = await provider.getBalance(account);
-    console.log("ETH BALANCE", ethers.utils.formatEther(balance))
+    console.log("ETH BALANCE", ethers.utils.formatEther(balance));
     return ethers.utils.formatEther(balance);
   };
 
@@ -350,18 +354,31 @@ function PresaleVersion2() {
       10
     );
     console.log("CIAO", aaaa);
-    if (aaaa < 0) {
-      setCondition(true);
-    } else {
-      setCondition(false);
-    }
+    // if (aaaa < 0) {
+    //   setCondition(true);
+    // } else {
+    //   setCondition(false);
+    // }
     console.log("success");
     return balance.div("1" + "0".repeat(decimals)).toNumber();
   };
+
   const getAllBalances = async () => {
-    const balances = { ETH: await getETHBalance() };
-      balances["USDT"] = await getTokenBalances("USDT");
-    setBalances(balances);
+    const balance = await fetchBalance({
+      address: address,
+      token: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      formatUnits: "gwei",
+    });
+
+    const balanceETH = await fetchBalance({
+      address: address,
+      formatUnits: "gwei",
+    });
+
+    setBalances({
+      ETH: balanceETH.value.toString(),
+      USDT: balance.value.toString(),
+    });
   };
 
   const getDeelance = async () => {
@@ -371,6 +388,14 @@ function PresaleVersion2() {
     console.log("Account balance deelance", pric);
     setDeelance(pric);
   };
+
+  const { data: userDeposites, errorAllowance } = useContractRead({
+    address: ContractAddr.Main,
+    abi: BigNFTABI,
+    functionName: "userDeposits",
+    args: [address],
+    watch: true,
+  });
 
   const getSaleProgress = async () => {
     const pri = await contracts.Main.salePrice();
@@ -386,6 +411,12 @@ function PresaleVersion2() {
     setInSale(sa);
     setTotal(xa);
     setPercantage((((xa - sa) / xa) * 100).toFixed(2));
+  };
+
+  const getSomeState = async () => {
+    setSomeState(true);
+    // getDeelance();
+    console.log("fatto");
   };
 
   useEffect(() => {
@@ -407,6 +438,7 @@ function PresaleVersion2() {
         setTotal(xa);
         setPercantage((((xa - sa) / xa) * 100).toFixed(2));
       };
+
       getPr();
     } else {
       const errorCode = 0; // No error
@@ -431,19 +463,13 @@ function PresaleVersion2() {
         return ethers.utils.formatEther(balance);
       }; */
 
-      const getSomeState = async () => {
-        setSomeState(true);
-        getDeelance();
-        console.log("fatto");
-      };
-
-      const getDeelance = async () => {
-        console.log("Account wallet", account);
-        const sa = await contracts.Main.userDeposits(account);
-        const pric = sa / 1000000000000000000;
-        console.log("Account balance deelance", pric);
-        setDeelance(pric);
-      };
+      // const getDeelance = async () => {
+      //   console.log("Account wallet", account);
+      //   const sa = await contracts.Main.userDeposits(account);
+      //   const pric = sa / 1000000000000000000;
+      //   console.log("Account balance deelance", pric);
+      //   setDeelance(pric);
+      // };
 
       /*       const getClaimStatus = async () => {
         const sa = await contracts.Main.claimStart();
@@ -505,18 +531,22 @@ function PresaleVersion2() {
  */
       const handlePopupClose = () => {
         getSaleProgress();
-        getDeelance();
+        // getDeelance();
         getSomeState();
       };
 
       /*    getAllBalances();
       getTokenBalances(); */
       getSaleProgress();
-      getDeelance();
+      // getDeelance();
       getSomeState();
       /* getClaimStatus(); */
     }
   }, [account, somestate]);
+
+  useEffect(() => {
+    getAllBalances();
+  });
 
   const generateReferralLink = async (walletAddress, iid) => {
     await sendingConnection(
@@ -578,8 +608,6 @@ function PresaleVersion2() {
     }
   };
 
-  console.log("re-rendering");
-
   return (
     <div className={styles.wrapper}>
       <p className="white text-center weight-700 fs-16px mb-2 logo-plus-title">
@@ -613,7 +641,7 @@ function PresaleVersion2() {
         </p>
       </div>
       <PorgressBar
-        percantage={percantage}
+        percantage={parseInt(percantage)}
         total={total}
         inSale={inSale}
         t={t}
@@ -632,7 +660,7 @@ function PresaleVersion2() {
           <p className="fs-16px white weight-700 text-center mb-4">
             {t("Your purchased")}{" "}
             <span className="green-light">{tokenDetails.symbol}</span> ={" "}
-            {deelance}
+            {userDeposites ? userDeposites / ethDecimals : 0}
           </p>
 
           <div
@@ -764,6 +792,7 @@ function PresaleVersion2() {
         onClose={handlePopupClose}
         isTransactionSuccesfull={isTransactionSuccesfull}
         setTransactionSuccessfull={setTransactionSuccessfull}
+        allBalances={balances}
       />
 
       <TransactionSuccesfullPopup
@@ -789,6 +818,6 @@ function PresaleVersion2() {
       {isModal2 && <OnRamp setIsModal2={setIsModal2} />}
     </div>
   );
-}
+};
 
 export default PresaleVersion2;

@@ -51,7 +51,11 @@ function TransactionSuccesfullPopup({ open, setOpen, data }) {
           {t("tokens will be available for you to claim once the presale ends")}
         </p>
 
-        <BaseButton style={{ width: "100%" }} onClick={handleViewTransaction}>
+        <BaseButton
+          style={{ width: "100%" }}
+          className="text-center justify-content-center"
+          onClick={handleViewTransaction}
+        >
           {t("View Transaction")}
         </BaseButton>
       </div>
