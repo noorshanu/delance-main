@@ -55,7 +55,7 @@ function App() {
         provider
       );
       contracts["USDT"] = new ethers.Contract(
-        "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+        ContractAddr.USDT,
         BEP20ABI,
         provider
       );
@@ -66,7 +66,7 @@ function App() {
         signer
       );
       contracts["USDT"] = new ethers.Contract(
-        "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+        ContractAddr.USDT,
         BEP20ABI,
         signer
       );

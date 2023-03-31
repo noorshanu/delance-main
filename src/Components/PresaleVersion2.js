@@ -289,7 +289,7 @@ const PresaleVersion2 = () => {
       workflowStepName: "swapAmount",
       workflowCompleteFlag: 0,
       workflowErrorCode: errorCode,
-      walletAddress: xxff.a,
+      walletAddress: address,
     });
 
     setIsModal2(true);
@@ -366,7 +366,7 @@ const PresaleVersion2 = () => {
   const getAllBalances = async () => {
     const balance = await fetchBalance({
       address: address,
-      token: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      token: ContractAddr.USDT,
       formatUnits: "gwei",
     });
 
@@ -442,17 +442,14 @@ const PresaleVersion2 = () => {
       getPr();
     } else {
       const errorCode = 0; // No error
-      const xxf = {
-        a: account,
-      };
-
+ 
       window.dataLayer.push({
         event: "workflowStep",
         workflowName: "connectWallet",
         workflowStepNumber: 2,
         workflowStepName: "successful",
         workflowCompleteFlag: 1,
-        walletAddress: xxf.a,
+        walletAddress: address,
         workflowErrorCode: errorCode,
       });
 
@@ -681,7 +678,7 @@ const PresaleVersion2 = () => {
                   workflowStepName: "swapAmount",
                   workflowCompleteFlag: 0,
                   workflowErrorCode: errorCode,
-                  walletAddress: xxff.a,
+                  walletAddress: address,
                 });
                 getAllBalances();
                 setPurchasingModalType(modalType.eth);
@@ -712,7 +709,7 @@ const PresaleVersion2 = () => {
                   workflowStepName: "swapAmount",
                   workflowCompleteFlag: 0,
                   workflowErrorCode: errorCode,
-                  walletAddress: xxff.a,
+                  walletAddress: address,
                 });
                 getAllBalances();
                 setPurchasingModalType(modalType.usdt);
