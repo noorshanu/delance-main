@@ -12,7 +12,6 @@ import withReactContent from "sweetalert2-react-content";
 import Fire from "../../assets/fire.webp";
 import Bullet from "../../assets/de.webp";
 import ConnectWalletBtn from "Components/ConnectWalletBtn";
-import PresaleRemainingTimer from "Components/PresaleRemainingTimer";
 import { getProvider } from "@wagmi/core";
 
 const MySwal = withReactContent(Swal);

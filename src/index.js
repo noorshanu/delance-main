@@ -6,7 +6,6 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { configureChains, createClient, WagmiConfig } from "wagmi";
 import { publicProvider } from "wagmi/providers/public";
-
 import { mainnet } from "wagmi/chains";
 import { Web3Modal } from "@web3modal/react";
 import {
@@ -15,6 +14,8 @@ import {
   w3mProvider,
 } from "@web3modal/ethereum";
 import { infuraProvider } from "wagmi/providers/infura";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -52,9 +53,22 @@ root.render(
       <App />
     </WagmiConfig>
     <Web3Modal
-      themeZIndex={100000000}
+      themeVariables={{ "--w3m-z-index": 1000000000000 }}
       projectId={PROJECT_ID}
       ethereumClient={ethereumClient}
+    />
+    <ToastContainer
+      style={{ zIndex: 100000000000000 }}
+      position="top-right"
+      autoClose={2000}
+      hideProgressBar={false}
+      newestOnTop={false}
+      closeOnClick
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+      theme="dark"
     />
   </React.StrictMode>
 );

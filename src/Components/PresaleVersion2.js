@@ -12,15 +12,14 @@ import modalType from "Constants/modalType";
 import useMediaQuery from "hooks/useMediaQuery";
 import OnRamp from "Components/Presale/onRamp";
 import { Link } from "react-router-dom";
-import UserContext from "../UserContext";
 import { ethers } from "ethers";
-import { ContractAddr, TokenList } from "../Constants/Constants";
-import { getProvider, fetchBalance } from "@wagmi/core";
+import { ContractAddr } from "../Constants/Constants";
 import axios from "axios";
 import TransactionSuccesfullPopup from "./TransactionSuccesfullPopup";
 import ReferralLinkPopup from "./ReferralLinkPopup";
 import { to } from "utils/RouterUtils";
 import { BEP20ABI, BigNFTABI } from "Constants/ABI";
+import { useWeb3Modal } from "@web3modal/react";
 
 const Input = ({ referralLink, children, icon, ...props }) => {
   const { t } = useTranslation("common");
@@ -31,6 +30,7 @@ const Input = ({ referralLink, children, icon, ...props }) => {
     </div>
   );
 };
+
 const Button = ({ children, icon, ...props }) => {
   const isBellow768px = useMediaQuery("(max-width : 768px)");
 
@@ -105,7 +105,7 @@ const Button2 = ({ children, icon, ...props }) => {
   );
 };
 
-const PorgressBar = ({ percantage, total, inSale, t }) => {
+const PorgressBar = ({ percantage }) => {
   return (
     <div>
       <div className="fill-bar mb-3">
@@ -135,69 +135,76 @@ const PorgressBar = ({ percantage, total, inSale, t }) => {
   );
 };
 
-const Timer = ({ account, somestate }) => {
+const Timer = ({ somestate }) => {
   const [days, setDays] = useState(0);
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
+  const { address } = useAccount();
 
   useEffect(() => {
-    if (!account) {
-      const countdownDate = new Date("2023-04-16T00:00:00").getTime();
+    const countdownDate = new Date("2023-04-16T00:00:00").getTime();
 
-      const interval = setInterval(() => {
-        const now = new Date().getTime();
-        const distance = countdownDate - now;
+    const interval = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = countdownDate - now;
 
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(
-          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        setDays(days);
-        setHours(hours);
-        setMinutes(minutes);
-        setSeconds(seconds);
+      setDays(days);
+      setHours(hours);
+      setMinutes(minutes);
+      setSeconds(seconds);
 
-        if (distance < 0) {
-          clearInterval(interval);
-          setDays(0);
-          setHours(0);
-          setMinutes(0);
-          setSeconds(0);
-        }
-      }, 1000);
-    } else {
-      const countdownDate = new Date("2023-04-16T00:00:00").getTime();
+      if (distance < 0) {
+        clearInterval(interval);
+        setDays(0);
+        setHours(0);
+        setMinutes(0);
+        setSeconds(0);
+      }
+    }, 1000);
 
-      const interval = setInterval(() => {
-        const now = new Date().getTime();
-        const distance = countdownDate - now;
+    // if (!account) {
 
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(
-          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    // } else {
+    //   const countdownDate = new Date("2023-04-16T00:00:00").getTime();
 
-        setDays(days);
-        setHours(hours);
-        setMinutes(minutes);
-        setSeconds(seconds);
+    //   const interval = setInterval(() => {
+    //     const now = new Date().getTime();
+    //     const distance = countdownDate - now;
 
-        if (distance < 0) {
-          clearInterval(interval);
-          setDays(0);
-          setHours(0);
-          setMinutes(0);
-          setSeconds(0);
-        }
-      }, 1000);
-    }
-  }, [account, somestate]);
+    //     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    //     const hours = Math.floor(
+    //       (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    //     );
+    //     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    //     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    //     setDays(days);
+    //     setHours(hours);
+    //     setMinutes(minutes);
+    //     setSeconds(seconds);
+
+    //     if (distance < 0) {
+    //       clearInterval(interval);
+    //       setDays(0);
+    //       setHours(0);
+    //       setMinutes(0);
+    //       setSeconds(0);
+    //     }
+    //   }, 1000);
+    // }
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [address, somestate]);
 
   return (
     <div className="white presale-timer">
@@ -225,30 +232,26 @@ const Timer = ({ account, somestate }) => {
 };
 
 const PresaleVersion2 = () => {
-  const [percantage, setPercantage] = useState(0);
   const { t } = useTranslation("common");
   const { address } = useAccount();
-
-  const [total, setTotal] = useState(0);
-  const [inSale, setInSale] = useState(0);
   const [purchasingModalType, setPurchasingModalType] = useState(null);
   const [isModal2, setIsModal2] = useState(false);
-  const provider = getProvider();
+  const { open } = useWeb3Modal();
 
-  const { connectWallet, contracts, account } = useContext(UserContext);
-  const [balances, setBalances] = useState({ ETH: 0, USDT: 0 });
-  const [prices, setPrices] = useState(0);
-  const [nextprices, setPricesnext] = useState(0);
-  const [deelance, setDeelance] = useState(0);
-  const [round, setRound] = useState(0);
-  const [alertShown, setAlertShown] = useState(false);
+  // const [balances, setBalances] = useState({ ETH: 0, USDT: 0 });
+  // const [prices, setPrices] = useState(0);
+  // const [nextprices, setPricesnext] = useState(0);
+  // const [deelance, setDeelance] = useState(0);
+  // const [round, setRound] = useState(0);
+  // const [alertShown, setAlertShown] = useState(false);
   const [somestate, setSomeState] = useState(false);
-  const [aa, setNetwork] = useState();
-  const [claimDisabled, setClaimDisabled] = useState(true);
-  const [condition, setCondition] = useState({ condition: true });
+  // const [aa, setNetwork] = useState();
+  // const [claimDisabled, setClaimDisabled] = useState(true);
+  // const [condition, setCondition] = useState({ condition: true });
   const [referralLink, setReferralLink] = useState("");
   const [isTransactionSuccesfull, setTransactionSuccessfull] = useState(false);
   const [referralPopupOpen, setReferralPopupOpen] = useState(false);
+
   const { data: ETHBalance } = useBalance({
     address,
     formatUnits: "ether",
@@ -270,7 +273,7 @@ const PresaleVersion2 = () => {
 
   const handleConnectWalletClick = async () => {
     try {
-      await connectWallet();
+      await open();
       setSomeState(!somestate);
       // getSaleProgress();
       // getDeelance();
@@ -294,7 +297,7 @@ const PresaleVersion2 = () => {
   const buyCard = async (e) => {
     const errorCode = 0; // Define the errorCode variable here (change its value if needed)
     const xxff = {
-      a: account,
+      a: address,
     };
     window.dataLayer.push({
       event: "workflowStep",
@@ -403,13 +406,30 @@ const PresaleVersion2 = () => {
   //   setDeelance(pric);
   // };
 
-  const { data: userDeposites, errorDeposites } = useContractRead({
+  const {
+    data: userDeposites,
+    errorDeposites,
+    isLoading: userDepositesLoading,
+  } = useContractRead({
     address: ContractAddr.Main,
     abi: BigNFTABI,
     functionName: "userDeposits",
     args: [address],
     watch: true,
+    enabled: address ? true : false,
   });
+
+  // const {
+  //   data: userDeposites,
+  //   errorDeposites,
+  //   isLoading: userDepositesLoading,
+  // } = useContractRead({
+  //   address: ContractAddr.Main,
+  //   abi: BigNFTABI,
+  //   functionName: "userDeposits",
+  //   args: [address],
+  //   watch: true,
+  // });
 
   // const getSaleProgress = async () => {
   //   const pri = await contracts.Main.salePrice();
@@ -510,45 +530,44 @@ const PresaleVersion2 = () => {
     functionName: "hardcapsizeUSD",
   });
 
-  const getSaleProgress = async () => {
-    const pri = await contracts.Main.salePrice();
-    const prinext = await contracts.Main.nextPrice();
-    const myString = ethers.utils.formatEther(pri);
-    const myStringnext = ethers.utils.formatEther(prinext);
-    const a = Number(myString).toFixed(3);
-    const b = Number(myStringnext).toFixed(3);
-    const sa = ethers.utils.formatEther(await contracts.Main.inSaleUSDvalue());
-    const xa = await contracts.Main.hardcapsizeUSD();
-    setPrices(a);
-    setPricesnext(b);
-    setInSale(sa);
-    setTotal(xa);
-    setPercantage((((xa - sa) / xa) * 100).toFixed(2));
-  };
+  // const getSaleProgress = async () => {
+  //   const pri = await contracts.Main.salePrice();
+  //   const prinext = await contracts.Main.nextPrice();
+  //   const myString = ethers.utils.formatEther(pri);
+  //   const myStringnext = ethers.utils.formatEther(prinext);
+  //   const a = Number(myString).toFixed(3);
+  //   const b = Number(myStringnext).toFixed(3);
+  //   const sa = ethers.utils.formatEther(await contracts.Main.inSaleUSDvalue());
+  //   const xa = await contracts.Main.hardcapsizeUSD();
+  //   setPrices(a);
+  //   setPricesnext(b);
+  //   setInSale(sa);
+  //   setTotal(xa);
+  //   setPercantage((((xa - sa) / xa) * 100).toFixed(2));
+  // };
 
   useEffect(() => {
     // getSaleProgress();
 
     if (!address) {
-      const getPr = async () => {
-        const pri = await contracts.Main.salePrice();
-        const prinext = await contracts.Main.nextPrice();
-        const myString = ethers.utils.formatEther(pri);
-        const myStringnext = ethers.utils.formatEther(prinext);
-        const a = Number(myString).toFixed(3);
-        const b = Number(myStringnext).toFixed(3);
-        const sa = ethers.utils.formatEther(
-          await contracts.Main.inSaleUSDvalue()
-        );
-        const xa = await contracts.Main.hardcapsizeUSD();
-        setPrices(a);
-        setPricesnext(b);
-        setInSale(sa);
-        setTotal(xa);
-        setPercantage((((xa - sa) / xa) * 100).toFixed(2));
-      };
-
-      getPr();
+      // const getPr = async () => {
+      //   const pri = await contracts.Main.salePrice();
+      //   const prinext = await contracts.Main.nextPrice();
+      //   const myString = ethers.utils.formatEther(pri);
+      //   const myStringnext = ethers.utils.formatEther(prinext);
+      //   const a = Number(myString).toFixed(3);
+      //   const b = Number(myStringnext).toFixed(3);
+      //   const sa = ethers.utils.formatEther(
+      //     await contracts.Main.inSaleUSDvalue()
+      //   );
+      //   const xa = await contracts.Main.hardcapsizeUSD();
+      //   setPrices(a);
+      //   setPricesnext(b);
+      //   setInSale(sa);
+      //   setTotal(xa);
+      //   setPercantage((((xa - sa) / xa) * 100).toFixed(2));
+      // };
+      // getPr();
     } else {
       const errorCode = 0; // No error
 
@@ -558,7 +577,7 @@ const PresaleVersion2 = () => {
         workflowStepNumber: 2,
         workflowStepName: "successful",
         workflowCompleteFlag: 1,
-        walletAddress: address,
+        walletAddress: address ? address : "",
         workflowErrorCode: errorCode,
       });
 
@@ -622,7 +641,7 @@ const PresaleVersion2 = () => {
       getSomeState();
       /* getClaimStatus(); */
     }
-  }, [address, account, somestate]);
+  }, [address, somestate]);
 
   useEffect(() => {
     // getSaleProgress();
@@ -681,7 +700,7 @@ const PresaleVersion2 = () => {
       </p>
       <div className="mb-4">
         <div className="mb-4">
-          <Timer account={address} somestate={somestate} />
+          <Timer somestate={somestate} />
         </div>
 
         <p className="text-center white weight-700 fs-16px">
@@ -694,11 +713,15 @@ const PresaleVersion2 = () => {
           USDT
         </p>
       </div>
+
       <PorgressBar
-        percantage={parseInt(percantage)}
-        total={total}
-        inSale={inSale}
-        t={t}
+        percantage={
+          hardcapsizeUSD && inSaleUSDvalue
+            ? ((hardcapsizeUSD - ethers.utils.formatEther(inSaleUSDvalue)) /
+                hardcapsizeUSD) *
+              100
+            : 0
+        }
       />
       {!address ? (
         <div className="mt-4 d-flex justify-content-center">
@@ -726,7 +749,7 @@ const PresaleVersion2 = () => {
               onClick={() => {
                 const errorCode = 0; // Define the errorCode variable here (change its value if needed)
                 const xxff = {
-                  a: account,
+                  a: address ? address : "0x",
                 };
                 window.dataLayer.push({
                   event: "workflowStep",
@@ -735,7 +758,7 @@ const PresaleVersion2 = () => {
                   workflowStepName: "swapAmount",
                   workflowCompleteFlag: 0,
                   workflowErrorCode: errorCode,
-                  walletAddress: address,
+                  walletAddress: address ? address : "0x",
                 });
                 // getAllBalances();
                 setPurchasingModalType(modalType.eth);
@@ -757,7 +780,7 @@ const PresaleVersion2 = () => {
               onClick={() => {
                 const errorCode = 0; // Define the errorCode variable here (change its value if needed)
                 const xxff = {
-                  a: account,
+                  a: address ? address : "0x",
                 };
                 window.dataLayer.push({
                   event: "workflowStep",
@@ -766,7 +789,7 @@ const PresaleVersion2 = () => {
                   workflowStepName: "swapAmount",
                   workflowCompleteFlag: 0,
                   workflowErrorCode: errorCode,
-                  walletAddress: address,
+                  walletAddress: address ? address : "0x",
                 });
                 // getAllBalances();
                 setPurchasingModalType(modalType.usdt);
@@ -840,31 +863,35 @@ const PresaleVersion2 = () => {
         </Link>{" "}
       </div>
 
-      <PresalePurchasingPopup
-        purchasingModalType={purchasingModalType}
-        setPurchasingModalType={setPurchasingModalType}
-        onClose={handlePopupClose}
-        isTransactionSuccesfull={isTransactionSuccesfull}
-        setTransactionSuccessfull={setTransactionSuccessfull}
-        USDTBalance={USDTBalance}
-        ETHBalance={ETHBalance}
-        salePrice={salePrice}
-        nextPrice={nextPrice}
-        inSaleUSDvalue={inSaleUSDvalue}
-        hardcapsizeUSD={hardcapsizeUSD}
-      />
+      {address && (
+        <>
+          <PresalePurchasingPopup
+            purchasingModalType={purchasingModalType}
+            setPurchasingModalType={setPurchasingModalType}
+            onClose={handlePopupClose}
+            isTransactionSuccesfull={isTransactionSuccesfull}
+            setTransactionSuccessfull={setTransactionSuccessfull}
+            USDTBalance={USDTBalance}
+            ETHBalance={ETHBalance}
+            salePrice={salePrice}
+            nextPrice={nextPrice}
+            inSaleUSDvalue={inSaleUSDvalue}
+            hardcapsizeUSD={hardcapsizeUSD}
+          />
 
-      <TransactionSuccesfullPopup
-        open={Boolean(isTransactionSuccesfull)}
-        data={isTransactionSuccesfull}
-        setOpen={setTransactionSuccessfull}
-      />
+          <TransactionSuccesfullPopup
+            open={Boolean(isTransactionSuccesfull)}
+            data={isTransactionSuccesfull}
+            setOpen={setTransactionSuccessfull}
+          />
 
-      <ReferralLinkPopup
-        open={referralPopupOpen}
-        setOpen={setReferralPopupOpen}
-        referralLink={referralLink}
-      />
+          <ReferralLinkPopup
+            open={referralPopupOpen}
+            setOpen={setReferralPopupOpen}
+            referralLink={referralLink}
+          />
+        </>
+      )}
 
       {!address && (
         <div className="mt-3">

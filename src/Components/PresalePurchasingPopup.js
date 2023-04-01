@@ -1,30 +1,19 @@
-import React, { useState, useContext, useEffect, useRef } from "react";
-import { IoClose } from "react-icons/io5";
 import "CSS/PresalePurchasingPopup.css";
+import React, { useState, useEffect, useRef } from "react";
+import { IoClose } from "react-icons/io5";
 import BaseButton from "./BaseButton";
 import tokenDetails from "Constants/tokenDetails";
-import useDelayUnmount from "hooks/useDelayUnmount";
-import OutsideClickDetector from "hooks/OutsideClickDetector";
 import modalType, { tokenSymbols } from "Constants/modalType";
-import { BigNumber, ethers } from "ethers";
-import { ContractAddr, TokenList } from "../Constants/Constants";
-import { getProvider, mainnet } from "@wagmi/core";
-import UserContext from "../UserContext";
+import { ethers } from "ethers";
+import { ContractAddr } from "../Constants/Constants";
+import { mainnet } from "@wagmi/core";
 import { useTranslation } from "react-i18next";
 import axios from "axios";
 import TransitionWrapper from "./TransitionWrapper";
-import TransactionSuccesfullPopup from "./TransactionSuccesfullPopup";
 import LoadingButton from "./LoadingButton";
-import {
-  useAccount,
-  useBalance,
-  useContractRead,
-  useContractWrite,
-  usePrepareContractWrite,
-  useSigner,
-  useWaitForTransaction,
-} from "wagmi";
+import { useAccount, useContractRead, useContractWrite } from "wagmi";
 import { BEP20ABI, BigNFTABI } from "Constants/ABI";
+import { toast } from "react-toastify";
 
 const Input = ({ OnMaxClick, handleFirstInputChange, maxa, disabled }) => {
   const { t } = useTranslation("common");
@@ -109,34 +98,20 @@ function PresalePurchasingPopup({
   purchasingModalType,
   setPurchasingModalType,
   onClose,
-  isTransactionSuccesfull,
   setTransactionSuccessfull,
-  // allBalances,
   USDTBalance,
   ETHBalance,
   salePrice,
-  nextPrice,
-  inSaleUSDvalue,
-  hardcapsizeUSD,
 }) {
   const { t } = useTranslation("common");
 
   const [lastSymbol, setLastSymbol] = useState();
-  const { connectWallet, contracts, account } = useContext(UserContext);
   const { address } = useAccount();
-  const [balances, setBalances] = useState({ ETH: null, USDT: null });
-  const [bb, setBB] = useState(0);
   const nftAmountElement = useRef();
-  const [somestate, setSomeState] = useState(false);
-  const [selectedToken, setSelectedToken] = useState("ETH");
   const maxa = useRef();
-  const [secondInputValue, setSecondInputValue] = useState(0);
   const [thirdInputValue, setThirdInputValue] = useState(0);
   const [token, setToken] = useState();
-  const [showApprove, setShowApprove] = useState(false);
-  // const [deelance, setDeelance] = useState(0);
   const [p, setP] = useState();
-  const [salePriceInEth, setSalePriceInEth] = useState(null);
   const usdtDecimals = 10 ** 6;
 
   const { data: deelance } = useContractRead({
@@ -163,34 +138,29 @@ function PresalePurchasingPopup({
   //   setAll(allowance);
   // };
 
-  const getETHBalance = async () => {
-    const provider = getProvider();
-    const balance = await provider.getBalance(account);
-    return ethers.utils.formatEther(balance);
-  };
+  // const getETHBalance = async () => {
+  //   const provider = getProvider();
+  //   const balance = await provider.getBalance(account);
+  //   return ethers.utils.formatEther(balance);
+  // };
 
-  const getSomeState = async () => {
-    setSomeState(true);
-    console.log("fatto");
-  };
+  // const getTokenBalances = async (token) => {
+  //   console.log("USDT", " getting balance");
+  //   const balance = await contracts["USDT"].balanceOf(account);
+  //   const decimals = (await contracts["USDT"].decimals()).toNumber();
+  //   const aaaa = parseInt(
+  //     await contracts["USDT"].allowance(account, contracts.Main.address),
+  //     10
+  //   );
+  //   console.log("CIAO", aaaa);
+  //   console.log("success");
 
-  const getTokenBalances = async (token) => {
-    console.log("USDT", " getting balance");
-    const balance = await contracts["USDT"].balanceOf(account);
-    const decimals = (await contracts["USDT"].decimals()).toNumber();
-    const aaaa = parseInt(
-      await contracts["USDT"].allowance(account, contracts.Main.address),
-      10
-    );
-    console.log("CIAO", aaaa);
-    console.log("success");
+  //   if (token === "USDT") {
+  //     setShowApprove(aaaa < 5 * 10 ** decimals);
+  //   }
 
-    if (token === "USDT") {
-      setShowApprove(aaaa < 5 * 10 ** decimals);
-    }
-
-    return balance.div("1" + "0".repeat(decimals)).toNumber();
-  };
+  //   return balance.div("1" + "0".repeat(decimals)).toNumber();
+  // };
 
   // const getAllBalances = async () => {
   //   const balances = { ETH: await getETHBalance() };
@@ -270,11 +240,35 @@ function PresalePurchasingPopup({
   //   // signerOrProvider: signer,
   // });
 
+  const onError = (err, variables) => {
+    const errorTypes = {
+      rejected: "User rejected request",
+      rejected2: "UserRejectedRequestError",
+      invalid: "invalid BigNumber",
+    };
+
+    if (err.message?.includes(errorTypes.rejected)) {
+      toast("Transaction Cancelled", { type: "error" });
+      return;
+    }
+
+    if (err.message?.includes(errorTypes.rejected2)) {
+      toast("Transaction Cancelled", { type: "error" });
+      return;
+    }
+
+    if (err.message?.includes(errorTypes.invalid)) {
+      toast("Invalid value, try again", { type: "info" });
+      return;
+    }
+
+    toast("Unexpected error, try again", { type: "error" });
+  };
+
   const {
-    data: buyWithETHData,
     write: buyWithETH,
-    error: buyWithETH_ERROR,
     isLoading: isBuyWithETHLoading,
+    status,
   } = useContractWrite({
     // ...depositConfig,
     address: ContractAddr.Main,
@@ -332,111 +326,107 @@ function PresalePurchasingPopup({
       });
       setPurchasingModalType(null);
     },
-    onError: (err) => {
-      // alert("buyWithUSD ERROR");
-      // alert(err.message);
-      alert(`You'r transaction is failed, reason: ${err.message}`);
-    },
+    onError: (...props) => onError(...props),
+    // onError: (err) => {
+    //   // alert("buyWithUSD ERROR");
+    //   // alert(err.message);
+    //   alert(`You'r transaction is failed, reason: ${err.message}`);
+    // },
     // overrides: {
     //   gasLimit: 210000,
     // },
   });
 
-  const {
-    data: buyWithUSDData,
-    write: buyWithUSD,
-    error: buyWithUSD_ERROR,
-    isLoading: isBuyWithUSDLoading,
-  } = useContractWrite({
-    // ...depositConfig,
-    address: ContractAddr.Main,
+  const { write: buyWithUSD, isLoading: isBuyWithUSDLoading } =
+    useContractWrite({
+      // ...depositConfig,
+      address: ContractAddr.Main,
 
-    abi: BigNFTABI,
-    // signer: signData,
-    functionName: "buyWithUSD",
-    chainId: mainnet.id,
-    onSuccess: async (data, variable) => {
-      // const txDetails = await data.wait(1);
+      abi: BigNFTABI,
+      // signer: signData,
+      functionName: "buyWithUSD",
+      chainId: mainnet.id,
+      onSuccess: async (data, variable) => {
+        // const txDetails = await data.wait(1);
 
-      const currentUrl = window.location.href;
-      const clickId = getClickIdFromUrl(currentUrl);
-      console.log("clickId");
-      console.log(clickId);
+        const currentUrl = window.location.href;
+        const clickId = getClickIdFromUrl(currentUrl);
+        console.log("clickId");
+        console.log(clickId);
 
-      const ev = deelance === 0 ? "conversion" : "revenue";
+        const ev = deelance === 0 ? "conversion" : "revenue";
 
-      await sendPayload(
-        address, // walletAddress
-        token, // purchaseType
-        variable.args[0], // secondInputValue?.toString(),
-        thirdInputValue, // how, // purchaseTypeAmount
-        thirdInputValue, // purchaseUsdAmount
-        "826", // iid - replace with the appropriate value
-        ev, // event
-        clickId // clickId - replace with the appropriate value
-      );
+        await sendPayload(
+          address, // walletAddress
+          token, // purchaseType
+          variable.args[0], // secondInputValue?.toString(),
+          thirdInputValue, // how, // purchaseTypeAmount
+          thirdInputValue, // purchaseUsdAmount
+          "826", // iid - replace with the appropriate value
+          ev, // event
+          clickId // clickId - replace with the appropriate value
+        );
 
-      /*  console.log("ethers.utils.formatEther(variable.overrides.value)");
+        /*  console.log("ethers.utils.formatEther(variable.overrides.value)");
       console.log(ethers.utils.formatEther(variable.overrides.value)); */
 
-      // console.log("txDetails");
-      // console.log(txDetails);
-      // console.log("variable");
-      // console.log(variable);
+        // console.log("txDetails");
+        // console.log(txDetails);
+        // console.log("variable");
+        // console.log(variable);
 
-      const errorCode = 0; // Define the errorCode variable here (change its value if needed)
-      window.dataLayer.push({
-        event: "workflowStep",
-        workflowName: "swap",
-        workflowStepNumber: 2,
-        workflowStepName: "confirmTransaction",
-        workflowCompleteFlag: 0,
-        workflowErrorCode: errorCode,
-        walletAddress: address,
-      });
+        const errorCode = 0; // Define the errorCode variable here (change its value if needed)
+        window.dataLayer.push({
+          event: "workflowStep",
+          workflowName: "swap",
+          workflowStepNumber: 2,
+          workflowStepName: "confirmTransaction",
+          workflowCompleteFlag: 0,
+          workflowErrorCode: errorCode,
+          walletAddress: address,
+        });
 
-      setTransactionSuccessfull({
-        transactionHash: data.hash,
-        amount: variable.args[0],
-        txResult: "txDetails",
-      });
+        setTransactionSuccessfull({
+          transactionHash: data.hash,
+          amount: variable.args[0],
+          txResult: "txDetails",
+        });
 
-      setPurchasingModalType(null);
-    },
+        setPurchasingModalType(null);
+      },
+      onError: (...props) => onError(...props),
 
-    onError: (err) => {
-      alert(`You'r transaction is failed, reason: ${err.message}`);
-    },
-    // overrides: {
-    //   gasLimit: 210000,
-    // },
-  });
+      // onError: (err) => {
+      //   alert(`You'r transaction is failed, reason: ${err.message}`);
+      // },
+      // overrides: {
+      //   gasLimit: 210000,
+      // },
+    });
 
-  const {
-    data: approveUSDTdata,
-    write: approveUSDT,
-    error: approveUSDT_error,
-    isLoading: approve_USDTloading,
-  } = useContractWrite({
-    // ...depositConfig,
-    address: ContractAddr.USDT,
+  const { write: approveUSDT, isLoading: approve_USDTloading } =
+    useContractWrite({
+      // ...depositConfig,
+      address: ContractAddr.USDT,
 
-    abi: BEP20ABI,
-    // signer: signData,
-    functionName: "approve",
-    chainId: mainnet.id,
-    onSuccess: (data, variabile) => {
-      alert("Ok, you can now buy your $DLANCE tokens!");
-    },
-    onError: (err) => {
-      // alert("approveUSDT ERROR");
-      // alert(err.message);
-      alert(`You'r transaction is failed, reason: ${err.message}`);
-    },
-    // overrides: {
-    //   gasLimit: 210000,
-    // },
-  });
+      abi: BEP20ABI,
+      // signer: signData,
+      functionName: "approve",
+      chainId: mainnet.id,
+      onSuccess: (data, variabile) => {
+        alert("Ok, you can now buy your $DLANCE tokens!");
+      },
+      onError: (...props) => onError(...props),
+
+      // onError: (err) => {
+      //   // alert("approveUSDT ERROR");
+      //   // alert(err.message);
+      //   alert(`You'r transaction is failed, reason: ${err.message}`);
+      // },
+      // overrides: {
+      //   gasLimit: 210000,
+      // },
+    });
 
   // const { isLoading: isBuyLoadingUSDT, isSuccess: isBuyGotSuccessUSDT } =
   //   useWaitForTransaction({
@@ -526,7 +516,6 @@ function PresalePurchasingPopup({
 
   const OnMaxClick = async (e) => {
     e.preventDefault();
-    console.log("PROVA", selectedToken);
 
     if (token === "ETH") {
       maxa.current.value = +ETHBalance?.formatted;
@@ -537,7 +526,6 @@ function PresalePurchasingPopup({
   };
 
   const chiudi = (e) => {
-    setSecondInputValue(0);
     setPurchasingModalType(null);
     onClose();
   };
@@ -556,11 +544,6 @@ function PresalePurchasingPopup({
       return null;
     }
   };
-
-  useEffect(() => {
-    // getAllowan();
-    getSomeState();
-  }, []);
 
   useEffect(() => {
     // getDeelance();
@@ -588,8 +571,12 @@ function PresalePurchasingPopup({
   //   setBB(balances[token]);
   // });
 
-  const isPurchaseLoading =
-    isBuyWithETHLoading | isBuyWithUSDLoading | approve_USDTloading;
+  var isPurchaseLoading =
+    purchasingModalType === modalType.eth
+      ? isBuyWithETHLoading
+      : token === "USDT" && +getUSDTallowance?.toString() < 1
+      ? approve_USDTloading
+      : isBuyWithUSDLoading;
 
   return (
     <>
@@ -682,7 +669,7 @@ function PresalePurchasingPopup({
                       nftAmountElement.current.value,
                     ],
                     recklesslySetUnpreparedOverrides: {
-                      value: getETHAmount?.toString(),
+                      value: getETHAmount ? getETHAmount?.toString() : "0",
                       gasLimit: 131000,
                       // value: ethers.utils.parseEther("0.02"),
                     },

@@ -24,7 +24,7 @@ function Hero() {
     },
   };
 
-  console.log("re-rednering parent");
+  // console.log("re-rednering parent");
 
   return (
     <>
