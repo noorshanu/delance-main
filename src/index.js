@@ -5,6 +5,7 @@ import "./boilerplate.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { configureChains, createClient, WagmiConfig } from "wagmi";
+import { publicProvider } from "wagmi/providers/public";
 
 import { mainnet } from "wagmi/chains";
 import { Web3Modal } from "@web3modal/react";
@@ -25,12 +26,14 @@ const { provider } = configureChains(
   [mainnet],
   [
     infuraProvider({ apiKey: "7b50cd907db34540b993f3209ba55488" }),
+    publicProvider(),
   ]
 );
 
 //console.log("provider", provider)
 const wagmiClient = createClient({
   autoConnect: true,
+
   connectors: w3mConnectors({
     projectId: PROJECT_ID,
     version: "2", // or "2"

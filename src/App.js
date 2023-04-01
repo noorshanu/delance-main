@@ -33,6 +33,9 @@ function App() {
   const { address: account } = useAccount();
   const [contracts, setContracts] = useState({});
 
+  console.log("provider 😀😀😀");
+  console.log(provider);
+
   useEffect(() => {
     if (!signer?.provider) return;
     const contracts = {};
@@ -47,37 +50,39 @@ function App() {
     setContracts(contracts);
   }, [signer]);
 
-  if (account) {
-    if (!signer) {
-      contracts.Main = new ethers.Contract(
-        ContractAddr.Main,
-        BigNFTABI,
-        provider
-      );
-      contracts["USDT"] = new ethers.Contract(
-        ContractAddr.USDT,
-        BEP20ABI,
-        provider
-      );
+  useEffect(() => {
+    if (account) {
+      if (!signer) {
+        contracts.Main = new ethers.Contract(
+          ContractAddr.Main,
+          BigNFTABI
+          // provider
+        );
+        contracts["USDT"] = new ethers.Contract(
+          ContractAddr.USDT,
+          BEP20ABI
+          // provider
+        );
+      } else {
+        contracts.Main = new ethers.Contract(
+          ContractAddr.Main,
+          BigNFTABI,
+          signer
+        );
+        contracts["USDT"] = new ethers.Contract(
+          ContractAddr.USDT,
+          BEP20ABI,
+          signer
+        );
+      }
     } else {
       contracts.Main = new ethers.Contract(
         ContractAddr.Main,
         BigNFTABI,
-        signer
-      );
-      contracts["USDT"] = new ethers.Contract(
-        ContractAddr.USDT,
-        BEP20ABI,
-        signer
+        provider
       );
     }
-  } else {
-    contracts.Main = new ethers.Contract(
-      ContractAddr.Main,
-      BigNFTABI,
-      provider
-    );
-  }
+  }, [account, signer, provider]);
 
   useEffect(() => {
     setLoading(false);

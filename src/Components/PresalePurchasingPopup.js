@@ -111,7 +111,13 @@ function PresalePurchasingPopup({
   onClose,
   isTransactionSuccesfull,
   setTransactionSuccessfull,
-  allBalances,
+  // allBalances,
+  USDTBalance,
+  ETHBalance,
+  salePrice,
+  nextPrice,
+  inSaleUSDvalue,
+  hardcapsizeUSD,
 }) {
   const { t } = useTranslation("common");
 
@@ -130,7 +136,6 @@ function PresalePurchasingPopup({
   const [showApprove, setShowApprove] = useState(false);
   // const [deelance, setDeelance] = useState(0);
   const [p, setP] = useState();
-  const [salePrice, setSalePrice] = useState(null);
   const [salePriceInEth, setSalePriceInEth] = useState(null);
   const usdtDecimals = 10 ** 6;
 
@@ -207,17 +212,24 @@ function PresalePurchasingPopup({
   //   setDeelance(pric);
   // };
 
-  useEffect(() => {
-    (async function getSalePrice() {
-      console.log("running....getSalePrice");
+  const { data: getETHLatestPrice } = useContractRead({
+    address: ContractAddr.Main,
+    abi: BigNFTABI,
+    watch: true,
+    functionName: "getETHLatestPrice",
+  });
 
-      const pri = await contracts.Main.salePrice();
-      const prezzo_ETH = await contracts.Main.getETHLatestPrice();
+  // useEffect(() => {
+  //   (async function getSalePrice() {
+  //     console.log("running....getSalePrice");
 
-      setSalePriceInEth(prezzo_ETH);
-      setSalePrice(pri);
-    })();
-  }, [purchasingModalType]);
+  //     const pri = await contracts.Main.salePrice();
+  //     const prezzo_ETH = await contracts.Main.getETHLatestPrice();
+
+  //     setSalePriceInEth(prezzo_ETH);
+  //     // setSalePrice(pri);
+  //   })();
+  // }, [purchasingModalType]);
 
   //
   //
@@ -227,8 +239,8 @@ function PresalePurchasingPopup({
     functionName: "getETHAmount",
     args: [
       ethers.utils
-        .parseUnits((nftAmountElement?.current?.value | 0).toString(), "wei")
-        .toString(),
+        .parseUnits((nftAmountElement?.current?.value | 0)?.toString(), "wei")
+        ?.toString(),
     ],
     // watch: true,
   });
@@ -296,7 +308,7 @@ function PresalePurchasingPopup({
       await sendPayload(
         address, // walletAddress
         token, // purchaseType
-        variable.args[0], // secondInputValue.toString(),
+        variable.args[0], // secondInputValue?.toString(),
         ethers.utils.formatEther(variable.overrides.value), // how, // purchaseTypeAmount
         thirdInputValue, // purchaseUsdAmount
         "826", // iid - replace with the appropriate value
@@ -356,7 +368,7 @@ function PresalePurchasingPopup({
       await sendPayload(
         address, // walletAddress
         token, // purchaseType
-        variable.args[0], // secondInputValue.toString(),
+        variable.args[0], // secondInputValue?.toString(),
         thirdInputValue, // how, // purchaseTypeAmount
         thirdInputValue, // purchaseUsdAmount
         "826", // iid - replace with the appropriate value
@@ -455,7 +467,7 @@ function PresalePurchasingPopup({
     } else {
       const inputValue = event.target.value;
       const prezzo = ethers.utils.formatEther(salePrice);
-      const prezzo_ETH_formattato = ethers.utils.formatEther(salePriceInEth);
+      const prezzo_ETH_formattato = ethers.utils.formatEther(getETHLatestPrice);
       const mio_valore = inputValue * prezzo_ETH_formattato;
       const finale = parseInt(mio_valore / prezzo, 10);
       console.log(finale);
@@ -517,9 +529,9 @@ function PresalePurchasingPopup({
     console.log("PROVA", selectedToken);
 
     if (token === "ETH") {
-      maxa.current.value = ethers.utils.formatEther(allBalances[token]);
+      maxa.current.value = +ETHBalance?.formatted;
     } else {
-      maxa.current.value = allBalances[token] / usdtDecimals;
+      maxa.current.value = +USDTBalance?.toString() / usdtDecimals;
     }
     handleFirstInputChange({ target: { value: maxa.current.value } });
   };
@@ -568,9 +580,9 @@ function PresalePurchasingPopup({
     }
   }, [lastSymbol, purchasingModalType]);
 
-  useEffect(() => {
-    setBB(allBalances[token]);
-  }, [balances, purchasingModalType, token, allBalances]);
+  // useEffect(() => {
+  //   setBB(allBalances[token]);
+  // }, [balances, purchasingModalType, token, allBalances]);
 
   // useEffect(() => {
   //   setBB(balances[token]);
@@ -615,8 +627,8 @@ function PresalePurchasingPopup({
                 {lastSymbol} {t("Balance")}:{" "}
                 {/* {(+ethers.utils.formatEther(bb ? bb : "0")).toFixed(4)} */}
                 {lastSymbol === tokenSymbols.usdt
-                  ? (bb / usdtDecimals).toString()
-                  : (+ethers.utils.formatEther(bb ? bb : "0")).toFixed(4)}
+                  ? (+USDTBalance?.toString() / usdtDecimals)?.toString()
+                  : (+ETHBalance?.formatted).toFixed(4)}
               </p>
             </div>
 
@@ -647,7 +659,7 @@ function PresalePurchasingPopup({
                     type="number"
                     // value={secondInputValue}
                     ref={nftAmountElement}
-                    required
+                    // required
                     disabled={isPurchaseLoading}
                     readOnly={true}
                   />
@@ -670,7 +682,7 @@ function PresalePurchasingPopup({
                       nftAmountElement.current.value,
                     ],
                     recklesslySetUnpreparedOverrides: {
-                      value: getETHAmount.toString(),
+                      value: getETHAmount?.toString(),
                       gasLimit: 131000,
                       // value: ethers.utils.parseEther("0.02"),
                     },
@@ -679,18 +691,18 @@ function PresalePurchasingPopup({
                   //We need to add here the popup @Abdullah
                   /* setTransactionSuccessfull({
                       transactionHash: tx_result.transactionHash,
-                      amount: nftAmount.toString(),
+                      amount: nftAmount?.toString(),
                       txResult: "transaction result",
                     }); */
                 } else {
                   //USDT
                   //approve function and allowance
-                  console.log("ALLOWANCE:", getUSDTallowance.toString());
+                  console.log("ALLOWANCE:", getUSDTallowance?.toString());
                   console.log(
-                    ethers.utils.parseEther(getUSDTallowance.toString())
+                    ethers.utils.parseEther(getUSDTallowance?.toString())
                   );
 
-                  if (+getUSDTallowance.toString() < 1) {
+                  if (+getUSDTallowance?.toString() < 1) {
                     approveUSDT({
                       recklesslySetUnpreparedArgs: [
                         ContractAddr.Main,
@@ -718,7 +730,7 @@ function PresalePurchasingPopup({
                 }
               }}
             >
-              {token === "USDT" && +getUSDTallowance.toString() < 1
+              {token === "USDT" && +getUSDTallowance?.toString() < 1
                 ? t("Approve")
                 : t("Convert")}
             </LoadingButton>

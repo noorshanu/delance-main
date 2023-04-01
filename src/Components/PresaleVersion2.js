@@ -5,7 +5,7 @@ import Bullet from "assets/de.webp";
 import { useTranslation } from "react-i18next";
 import tokenDetails from "Constants/tokenDetails";
 import ConnectWalletBtn from "./ConnectWalletBtn";
-import { useAccount, useContractRead } from "wagmi";
+import { useAccount, useBalance, useContractRead } from "wagmi";
 import BaseButton from "./BaseButton";
 import PresalePurchasingPopup from "./PresalePurchasingPopup";
 import modalType from "Constants/modalType";
@@ -20,7 +20,7 @@ import axios from "axios";
 import TransactionSuccesfullPopup from "./TransactionSuccesfullPopup";
 import ReferralLinkPopup from "./ReferralLinkPopup";
 import { to } from "utils/RouterUtils";
-import { BigNFTABI } from "Constants/ABI";
+import { BEP20ABI, BigNFTABI } from "Constants/ABI";
 
 const Input = ({ referralLink, children, icon, ...props }) => {
   const { t } = useTranslation("common");
@@ -249,6 +249,20 @@ const PresaleVersion2 = () => {
   const [referralLink, setReferralLink] = useState("");
   const [isTransactionSuccesfull, setTransactionSuccessfull] = useState(false);
   const [referralPopupOpen, setReferralPopupOpen] = useState(false);
+  const { data: ETHBalance } = useBalance({
+    address,
+    formatUnits: "ether",
+    watch: true,
+    enabled: address ? true : false,
+  });
+  const { data: USDTBalance } = useContractRead({
+    address: ContractAddr.USDT,
+    abi: BEP20ABI,
+    functionName: "balanceOf",
+    args: [address],
+    watch: true,
+    enabled: address ? true : false,
+  });
 
   const ethDecimals = 1000000000000000000;
 
@@ -258,11 +272,11 @@ const PresaleVersion2 = () => {
     try {
       await connectWallet();
       setSomeState(!somestate);
-      getSaleProgress();
+      // getSaleProgress();
       // getDeelance();
-      getAllBalances();
-      getTokenBalances();
-      getETHBalance();
+      // getAllBalances();
+      // getTokenBalances();
+      // getETHBalance();
       const errorCode = 0; // Define the errorCode variable here (change its value if needed)
       window.dataLayer.push({
         event: "workflowStep",
@@ -299,102 +313,201 @@ const PresaleVersion2 = () => {
     setSomeState(!somestate);
   };
 
-  const sendingConnection = async (walletAddress, iid) => {
-    const event = "lead_success";
-    const currentUrl = window.location.href;
-    const clickId = getClickIdFromUrl(currentUrl);
-    const payload = {
-      walletAddress,
-      iid,
-      event,
-      clickId,
-    };
+  // const sendingConnection = async (walletAddress, iid) => {
+  //   const event = "lead_success";
+  //   const currentUrl = window.location.href;
+  //   const clickId = getClickIdFromUrl(currentUrl);
+  //   const payload = {
+  //     walletAddress,
+  //     iid,
+  //     event,
+  //     clickId,
+  //   };
 
-    console.log("SENDING CONNECTION");
-    console.log("PAYLOAD PER SENDING", payload);
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: "Bearer 8c204353f83140b34023c4c6474491fe",
-      },
-    };
+  //   console.log("SENDING CONNECTION");
+  //   console.log("PAYLOAD PER SENDING", payload);
+  //   const config = {
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       Authorization: "Bearer 8c204353f83140b34023c4c6474491fe",
+  //     },
+  //   };
 
-    try {
-      const response = await axios.post(
-        "https://api.dashfx.net/api/postback/presale",
-        payload,
-        config
-      );
+  //   try {
+  //     const response = await axios.post(
+  //       "https://api.dashfx.net/api/postback/presale",
+  //       payload,
+  //       config
+  //     );
 
-      if (response.status !== 200) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
+  //     if (response.status !== 200) {
+  //       throw new Error(`HTTP error! status: ${response.status}`);
+  //     }
 
-      const data = response.data;
-      console.log("FUNZIONA");
-      console.log("API response SENDING:", data);
-    } catch (error) {
-      console.error("Error sending payload:", error);
-    }
-  };
+  //     const data = response.data;
+  //     console.log("FUNZIONA");
+  //     console.log("API response SENDING:", data);
+  //   } catch (error) {
+  //     console.error("Error sending payload:", error);
+  //   }
+  // };
 
-  const getETHBalance = async () => {
-    // const provider = getProvider();
-    const balance = await provider.getBalance(account);
-    console.log("ETH BALANCE", ethers.utils.formatEther(balance));
-    return ethers.utils.formatEther(balance);
-  };
+  // const getETHBalance = async () => {
+  //   // const provider = getProvider();
+  //   const balance = await provider.getBalance(account);
+  //   console.log("ETH BALANCE", ethers.utils.formatEther(balance));
+  //   return ethers.utils.formatEther(balance);
+  // };
 
-  const getTokenBalances = async (token) => {
-    console.log(token, " getting balance");
-    const balance = await contracts["USDT"].balanceOf(account);
-    const decimals = (await contracts["USDT"].decimals()).toNumber();
-    const aaaa = parseInt(
-      await contracts["USDT"].allowance(account, contracts.Main.address),
-      10
-    );
-    console.log("CIAO", aaaa);
-    // if (aaaa < 0) {
-    //   setCondition(true);
-    // } else {
-    //   setCondition(false);
-    // }
-    console.log("success");
-    return balance.div("1" + "0".repeat(decimals)).toNumber();
-  };
+  // const getTokenBalances = async (token) => {
+  //   console.log(token, " getting balance");
+  //   const balance = await contracts["USDT"].balanceOf(account);
+  //   const decimals = (await contracts["USDT"].decimals()).toNumber();
+  //   const aaaa = parseInt(
+  //     await contracts["USDT"].allowance(account, contracts.Main.address),
+  //     10
+  //   );
+  //   console.log("CIAO", aaaa);
+  //   // if (aaaa < 0) {
+  //   //   setCondition(true);
+  //   // } else {
+  //   //   setCondition(false);
+  //   // }
+  //   console.log("success");
+  //   return balance.div("1" + "0".repeat(decimals)).toNumber();
+  // };
 
-  const getAllBalances = async () => {
-    const balance = await fetchBalance({
-      address: address,
-      token: ContractAddr.USDT,
-      formatUnits: "gwei",
-    });
+  // const getAllBalances = async () => {
+  //   const balance = await fetchBalance({
+  //     address: address,
+  //     token: ContractAddr.USDT,
+  //     formatUnits: "gwei",
+  //   });
 
-    const balanceETH = await fetchBalance({
-      address: address,
-      formatUnits: "gwei",
-    });
+  //   const balanceETH = await fetchBalance({
+  //     address: address,
+  //     formatUnits: "gwei",
+  //   });
 
-    setBalances({
-      ETH: balanceETH.value.toString(),
-      USDT: balance.value.toString(),
-    });
-  };
+  //   setBalances({
+  //     ETH: balanceETH.value.toString(),
+  //     USDT: balance.value.toString(),
+  //   });
+  // };
 
-  const getDeelance = async () => {
-    console.log("Account wallet", account);
-    const sa = await contracts.Main.userDeposits(account);
-    const pric = sa / 1000000000000000000;
-    console.log("Account balance deelance", pric);
-    setDeelance(pric);
-  };
+  // const getDeelance = async () => {
+  //   console.log("Account wallet", account);
+  //   const sa = await contracts.Main.userDeposits(account);
+  //   const pric = sa / 1000000000000000000;
+  //   console.log("Account balance deelance", pric);
+  //   setDeelance(pric);
+  // };
 
-  const { data: userDeposites, errorAllowance } = useContractRead({
+  const { data: userDeposites, errorDeposites } = useContractRead({
     address: ContractAddr.Main,
     abi: BigNFTABI,
     functionName: "userDeposits",
     args: [address],
     watch: true,
+  });
+
+  // const getSaleProgress = async () => {
+  //   const pri = await contracts.Main.salePrice();
+  //   const prinext = await contracts.Main.nextPrice();
+  //   const myString = ethers.utils.formatEther(pri);
+  //   const myStringnext = ethers.utils.formatEther(prinext);
+  //   const a = Number(myString).toFixed(3); // Number(ethers.utils.formatEther(salePrice)).toFixed(3)
+  //   const b = Number(myStringnext).toFixed(3);
+  //   const sa = ethers.utils.formatEther(await contracts.Main.inSaleUSDvalue());
+  //   const xa = await contracts.Main.hardcapsizeUSD();
+  //   setPrices(a);
+  //   setPricesnext(b);
+  //   setInSale(sa);
+  //   setTotal(xa);
+  //   setPercantage((((xa - sa) / xa) * 100).toFixed(2));
+  // };
+
+  const getSomeState = async () => {
+    setSomeState(true);
+    // getDeelance();
+    console.log("fatto");
+  };
+
+  const generateReferralLink = async (walletAddress, iid) => {
+    // await sendingConnection(
+    //   walletAddress, // walletAddress
+    //   iid
+    // );
+
+    const apiDomain = "https://api.dashfx.net";
+    const apiUrl = "/api/publisher/presale";
+    const apiToken = "8c204353f83140b34023c4c6474491fe";
+
+    const config = {
+      headers: {
+        Authorization: `Bearer ${apiToken}`,
+      },
+    };
+
+    const payload = {
+      walletAddress,
+      iid,
+    };
+
+    console.log("Payload:", payload); // Log the payload to verify the values
+
+    try {
+      const response = await axios.post(apiDomain + apiUrl, payload, config);
+      const url = response.data.data.url;
+      console.log("LINK FOR REF", url);
+      console.log("RESPONSE FOR REF", response);
+      setReferralLink(url);
+    } catch (error) {
+      console.error("Error generating referral link:", error);
+    }
+  };
+
+  // const getClickIdFromUrl = (url) => {
+  //   // Aggiornamento dell'espressione regolare per cercare "clickId=" seguito dal pattern desiderato
+  //   const regex = /clickId=(fx_b\d+_\w+_\d+)/;
+  //   const match = url.match(regex);
+
+  //   if (match) {
+  //     const clickId = match[1]; // Ora la variabile 'clickId' contiene il valore corrispondente al pattern
+
+  //     return clickId;
+  //   } else {
+  //     // In caso di mancata corrispondenza, restituisci un valore predefinito o gestisci l'errore come desideri
+  //     return null;
+  //   }
+  // };
+
+  const { data: salePrice } = useContractRead({
+    address: ContractAddr.Main,
+    abi: BigNFTABI,
+    watch: true,
+    functionName: "salePrice",
+  });
+
+  const { data: nextPrice } = useContractRead({
+    address: ContractAddr.Main,
+    abi: BigNFTABI,
+    watch: true,
+    functionName: "nextPrice",
+  });
+
+  const { data: inSaleUSDvalue } = useContractRead({
+    address: ContractAddr.Main,
+    abi: BigNFTABI,
+    watch: true,
+    functionName: "inSaleUSDvalue",
+  });
+
+  const { data: hardcapsizeUSD } = useContractRead({
+    address: ContractAddr.Main,
+    abi: BigNFTABI,
+    watch: true,
+    functionName: "hardcapsizeUSD",
   });
 
   const getSaleProgress = async () => {
@@ -413,14 +526,10 @@ const PresaleVersion2 = () => {
     setPercantage((((xa - sa) / xa) * 100).toFixed(2));
   };
 
-  const getSomeState = async () => {
-    setSomeState(true);
-    // getDeelance();
-    console.log("fatto");
-  };
-
   useEffect(() => {
-    if (!account) {
+    // getSaleProgress();
+
+    if (!address) {
       const getPr = async () => {
         const pri = await contracts.Main.salePrice();
         const prinext = await contracts.Main.nextPrice();
@@ -442,7 +551,7 @@ const PresaleVersion2 = () => {
       getPr();
     } else {
       const errorCode = 0; // No error
- 
+
       window.dataLayer.push({
         event: "workflowStep",
         workflowName: "connectWallet",
@@ -452,8 +561,6 @@ const PresaleVersion2 = () => {
         walletAddress: address,
         workflowErrorCode: errorCode,
       });
-
-      handleClickReferralLink();
 
       /*       const getETHBalance = async () => {
         const balance = await provider.getBalance(account);
@@ -476,24 +583,6 @@ const PresaleVersion2 = () => {
           setClaimDisabled(false);
         }
       }; */
-
-      const getSaleProgress = async () => {
-        const pri = await contracts.Main.salePrice();
-        const prinext = await contracts.Main.nextPrice();
-        const myString = ethers.utils.formatEther(pri);
-        const myStringnext = ethers.utils.formatEther(prinext);
-        const a = Number(myString).toFixed(3);
-        const b = Number(myStringnext).toFixed(3);
-        const sa = ethers.utils.formatEther(
-          await contracts.Main.inSaleUSDvalue()
-        );
-        const xa = await contracts.Main.hardcapsizeUSD();
-        setPrices(a);
-        setPricesnext(b);
-        setInSale(sa);
-        setTotal(xa);
-        setPercantage((((xa - sa) / xa) * 100).toFixed(2));
-      };
 
       /*   const getETHBalance = async () => {
         const provider = getProvider();
@@ -526,91 +615,45 @@ const PresaleVersion2 = () => {
         setBalances(balances);
       }; 
  */
-      const handlePopupClose = () => {
-        getSaleProgress();
-        // getDeelance();
-        getSomeState();
-      };
 
       /*    getAllBalances();
       getTokenBalances(); */
-      getSaleProgress();
       // getDeelance();
       getSomeState();
       /* getClaimStatus(); */
     }
-  }, [account, somestate]);
+  }, [address, account, somestate]);
 
   useEffect(() => {
-    getAllBalances();
-  });
+    // getSaleProgress();
 
-  const generateReferralLink = async (walletAddress, iid) => {
-    await sendingConnection(
-      walletAddress, // walletAddress
-      iid
-    );
-
-    const apiDomain = "https://api.dashfx.net";
-    const apiUrl = "/api/publisher/presale";
-    const apiToken = "8c204353f83140b34023c4c6474491fe";
-
-    const config = {
-      headers: {
-        Authorization: `Bearer ${apiToken}`,
-      },
-    };
-
-    const payload = {
-      walletAddress,
-      iid,
-    };
-
-    console.log("Payload:", payload); // Log the payload to verify the values
-
-    try {
-      const response = await axios.post(apiDomain + apiUrl, payload, config);
-      const url = response.data.data.url;
-      console.log("LINK FOR REF", url);
-      console.log("RESPONSE FOR REF", response);
-      setReferralLink(url);
-    } catch (error) {
-      console.error("Error generating referral link:", error);
+    if (address) {
+      generateReferralLink(address, "826");
     }
-  };
+  }, [address]);
 
-  const handleClickReferralLink = () => {
-    const xx = {
-      a: account,
-    };
-    const walletAddress = xx.a; // Replace with the desired walletAddress
-    const iid = "826"; // Replace with the desired iid
-    console.log("ACCOUNT IN HANDLE", account);
-    generateReferralLink(walletAddress, iid);
-    sendingConnection(walletAddress, iid);
-  };
+  // useEffect(() => {
+  //   getSaleProgress();
+  // }, []);
 
-  const getClickIdFromUrl = (url) => {
-    // Aggiornamento dell'espressione regolare per cercare "clickId=" seguito dal pattern desiderato
-    const regex = /clickId=(fx_b\d+_\w+_\d+)/;
-    const match = url.match(regex);
+  // useEffect(() => {
+  //   getAllBalances();
+  // });
 
-    if (match) {
-      const clickId = match[1]; // Ora la variabile 'clickId' contiene il valore corrispondente al pattern
-
-      return clickId;
-    } else {
-      // In caso di mancata corrispondenza, restituisci un valore predefinito o gestisci l'errore come desideri
-      return null;
-    }
-  };
+  // LAG ISSUE
 
   return (
     <div className={styles.wrapper}>
       <p className="white text-center weight-700 fs-16px mb-2 logo-plus-title">
         <img src="images/deelance-logo.png" alt="img" className="dee-logo" />
         <span>
-          1 {tokenDetails.symbol} = ${prices.toLocaleString("en-US")} USDT
+          1 {tokenDetails.symbol} = $
+          {salePrice
+            ? Number(ethers.utils.formatEther(salePrice))
+                .toFixed(3)
+                .toLocaleString("en-US")
+            : 0}{" "}
+          USDT
         </span>
         <img src="images/etheruem-logo.png" alt="img" className="presale-eth" />
       </p>
@@ -619,21 +662,35 @@ const PresaleVersion2 = () => {
         style={{ marginBottom: "2em" }}
       >
         {t("USDT Raised")}{" "}
-        <span className="green-light">
-          {(parseFloat(total - inSale).toFixed(2) * 1).toLocaleString("en-US")}
-        </span>{" "}
+        {hardcapsizeUSD && inSaleUSDvalue ? (
+          <span className="green-light">
+            {(
+              parseFloat(
+                hardcapsizeUSD - ethers.utils.formatEther(inSaleUSDvalue)
+              ).toFixed(2) * 1
+            ).toLocaleString("en-US")}
+          </span>
+        ) : null}{" "}
         /{" "}
         <span className="green-light">
-          ${parseInt(total).toLocaleString("en-US")}
+          $
+          {parseInt(hardcapsizeUSD ? hardcapsizeUSD : 0).toLocaleString(
+            "en-US"
+          )}
         </span>
       </p>
       <div className="mb-4">
         <div className="mb-4">
-          <Timer account={account} somestate={somestate} />
+          <Timer account={address} somestate={somestate} />
         </div>
 
         <p className="text-center white weight-700 fs-16px">
-          {t("Until Price Increase To")} ${nextprices.toLocaleString("en-US")}{" "}
+          {t("Until Price Increase To")} $
+          {nextPrice
+            ? Number(ethers.utils.formatEther(nextPrice))
+                .toFixed(3)
+                .toLocaleString("en-US")
+            : 0}{" "}
           USDT
         </p>
       </div>
@@ -680,7 +737,7 @@ const PresaleVersion2 = () => {
                   workflowErrorCode: errorCode,
                   walletAddress: address,
                 });
-                getAllBalances();
+                // getAllBalances();
                 setPurchasingModalType(modalType.eth);
                 handlePopupClose();
               }}
@@ -711,7 +768,7 @@ const PresaleVersion2 = () => {
                   workflowErrorCode: errorCode,
                   walletAddress: address,
                 });
-                getAllBalances();
+                // getAllBalances();
                 setPurchasingModalType(modalType.usdt);
                 handlePopupClose();
               }}
@@ -789,7 +846,12 @@ const PresaleVersion2 = () => {
         onClose={handlePopupClose}
         isTransactionSuccesfull={isTransactionSuccesfull}
         setTransactionSuccessfull={setTransactionSuccessfull}
-        allBalances={balances}
+        USDTBalance={USDTBalance}
+        ETHBalance={ETHBalance}
+        salePrice={salePrice}
+        nextPrice={nextPrice}
+        inSaleUSDvalue={inSaleUSDvalue}
+        hardcapsizeUSD={hardcapsizeUSD}
       />
 
       <TransactionSuccesfullPopup
