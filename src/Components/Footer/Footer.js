@@ -1,17 +1,8 @@
 import React from "react";
-import {
-  FaTwitter,
-  FaFacebookSquare,
-  FaMedium,
-  FaTelegramPlane,
-  FaLinkedin,
-  FaDiscord,
-  FaInstagram,
-  FaYoutube,
-} from "react-icons/fa";
+
 import { NavLink, useLocation } from "react-router-dom";
 import "./Footer.css";
-import NavLogo from "../../assets/main-logo.svg";
+
 import { useTranslation } from "react-i18next";
 import SocialLinks from "Components/SocialLinks";
 import { to } from "utils/RouterUtils";
@@ -29,7 +20,11 @@ function Footer() {
             <div className="footer-stack">
               <div>
                 <NavLink to={to("")}>
-                  <img src={NavLogo} className="footer-logo" alt="foot-logo" />
+                  <img
+                    src={"/images/logos/logo-white-1.svg"}
+                    className="footer-logo"
+                    alt="foot-logo"
+                  />
                 </NavLink>
 
                 <p style={{ maxWidth: "28rem" }} className="mb-0 white fs-16px">

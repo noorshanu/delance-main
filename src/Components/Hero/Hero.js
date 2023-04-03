@@ -12,9 +12,12 @@ import BaseButton from "Components/BaseButton";
 import SignUpButtonWithModal from "Components/SignUpButtonWithModal";
 import PresaleVersion2 from "Components/PresaleVersion2";
 import SocialLinks from "Components/SocialLinks";
+import { useAccount } from "wagmi";
+import { scroller } from "react-scroll";
 
 function Hero() {
   const { t } = useTranslation("common");
+  const { address } = useAccount();
   const defaultOptions = {
     loop: true,
     autoplay: true,

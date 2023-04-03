@@ -67,7 +67,12 @@ function Navbar() {
             <nav className="main-nav">
               <div className="main-nav-left">
                 <NavLink to={to("")}>
-                  <img src={NavLogo} alt="" className="logo" />
+                  {/* <img src={NavLogo} alt="" className="logo" /> */}
+                  <img
+                    src="/images/logos/logo-white-1.svg"
+                    alt=""
+                    className="logo"
+                  />
                 </NavLink>
               </div>
               <div

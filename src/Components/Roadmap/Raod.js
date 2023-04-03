@@ -12,6 +12,7 @@ const data = [
     className: "box-road-1",
     question: "Q4 2022",
     duration: "Nov - Dec",
+    showInDesktop: true,
     points: [
       "Initial Project Plan",
       "Website Design",
@@ -23,23 +24,24 @@ const data = [
     className: "box-road-2",
     question: "Q1 2023",
     duration: "Jan - Mar",
+    showInDesktop: true,
     points: [
-      "PreSale",
+      "Presale Sale",
       "Contract Testing",
       "Project Prototype",
       "Metaverse Demo (Alpha)",
-      "CMC and CG Listing",
     ],
   },
   {
     className: "box-road-3",
     question: "Q2 2023",
     duration: "April - June",
+    showInDesktop: true,
     points: [
+      "Pre-Listing CMC and CG Listing",
       "Token Launch",
-      "NFT Launch",
-      "NFT Marketplace",
-      "Freelance Platform Launch (Beta Version)",
+      "Dex Listing NFT Launch",
+      "Main Listing CMC & CG",
       "Exchanges Listing",
       "Metaverse Development",
     ],
@@ -48,9 +50,24 @@ const data = [
     className: "box-road-4",
     question: "Q3 2023",
     duration: "July - Sep",
+    showInDesktop: true,
     points: [
-      "App Development",
-      "Metaverse Integration (Beta version)",
+      "NFT Launch",
+      "Freelance Platform Launch ( Beta Version )",
+      "NFT MarketPlace",
+      "Marketing to reach vider Audiences",
+      "Partnerships ",
+    ],
+  },
+  {
+    className: "box-road-4",
+    question: "Q4 2023",
+    duration: "Oct - Dec",
+
+    showInDesktop: false,
+    points: [
+      "App development",
+      "Metaverse Integration ( Beta version )",
       "Further Development",
     ],
   },
@@ -70,25 +87,28 @@ export default function Raod() {
           </div>
 
           <div className="grid-road">
-            {data.map((item, i) => (
-              <div className={item.className} key={i}>
-                <div className="text-center rb-img">
-                  <img src={DotLine} alt="" style={{ width: "auto" }} />
-                </div>
-                <div className="text-center">
-                  <h1>{t(item.question)}</h1>
-                  <p>({t(item.duration)})</p>
-                </div>
+            {data.map(
+              (item, i) =>
+                item.showInDesktop && (
+                  <div className={item.className} key={i}>
+                    <div className="text-center rb-img">
+                      <img src={DotLine} alt="" style={{ width: "auto" }} />
+                    </div>
+                    <div className="text-center">
+                      <h1>{t(item.question)}</h1>
+                      <p>({t(item.duration)})</p>
+                    </div>
 
-                <div className="rd-b">
-                  {item.points.map((point, i) => (
-                    <p key={i}>
-                      <GoPrimitiveDot /> {t(point)}{" "}
-                    </p>
-                  ))}
-                </div>
-              </div>
-            ))}
+                    <div className="rd-b">
+                      {item.points.map((point, i) => (
+                        <p key={i}>
+                          <GoPrimitiveDot /> {t(point)}{" "}
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+                )
+            )}
 
             {/* <div className="box-road-2">
               <div className="text-center rb-img">

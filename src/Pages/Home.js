@@ -40,6 +40,7 @@ jobs hiring near me,work from home jobs,jobs available near me,nft marketplace,n
           name="description"
           content="  DeeLance is a Web3 based freelancing & recruitment platform that brings security, quickness and seamlessness using the power of blockchain technology.  SEO Description 155 chars PC  DeeLance is a next-gen freelancing platform based on blockchain. It resolves the challenges of copyright infringement, scams, delay in payments, etc.  SEO Description 120 chars Mobile  DeeLance is a Web3 freelancing and recruitment platform that solves challenges faced by current freelancing space."
         />
+        <meta http-equiv="Content-Type" content="text/html"/>
         <title>Home</title>
       </Helmet>
       <div>

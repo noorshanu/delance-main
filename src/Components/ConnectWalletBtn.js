@@ -1,19 +1,27 @@
 import { useWeb3Modal } from "@web3modal/react";
-import React from "react";
+import React, { useEffect } from "react";
 import { useAccount } from "wagmi";
 import styles from "CSS/ConnectWalletBtn.module.css";
 import { useTranslation } from "react-i18next";
+import { scroller } from "react-scroll";
 
 function ConnectWalletBtn({ onClick, setShowMediaIcons, normal = false }) {
   const { open } = useWeb3Modal();
   const { address } = useAccount();
   const { t } = useTranslation("common");
 
+  useEffect(() => {
+    if (address) {
+      scroller.scrollTo("presale-atm", { offset: -100 });
+    }
+  }, [address]);
+
   return (
     <button
       className={`${styles.btn} ${normal ? styles.normal : ""}`}
       onClick={() => {
         open();
+
         if (onClick) {
           onClick();
         }
