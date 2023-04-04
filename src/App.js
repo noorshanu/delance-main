@@ -12,6 +12,7 @@ import { I18nextProvider } from "react-i18next";
 import i18next from "./i18n";
 import NestedApp from "layouts/NestedApp";
 import ScrollToTop from "Components/ScrollToTop ";
+import OneSignal from "react-onesignal";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -22,6 +23,7 @@ function App() {
   // const provider = getProvider();
   // const { address: account } = useAccount();
   // const [contracts, setContracts] = useState({});
+
 
   // console.log("provider 😀😀😀");
   // console.log(provider);
@@ -77,6 +79,15 @@ function App() {
   useEffect(() => {
     setLoading(false);
   }, []);
+
+  useEffect (() => {
+    OneSignal.init({
+      // appId: "4adb1626-9939-4d4c-8f5c-92cce7be454a",
+      appId: "4adb1626-9939-4d4c-8f5c-92cce7be454a",
+    
+    });
+  })
+
 
   if (loading) {
     return (
