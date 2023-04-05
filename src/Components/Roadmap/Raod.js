@@ -40,7 +40,7 @@ const data = [
     points: [
       "Pre-Listing CMC and CG Listing",
       "Token Launch",
-      "Dex Listing NFT Launch",
+      "Dex Listing",
       "Main Listing CMC & CG",
       "Exchanges Listing",
       "Metaverse Development",
@@ -55,8 +55,8 @@ const data = [
       "NFT Launch",
       "Freelance Platform Launch ( Beta Version )",
       "NFT MarketPlace",
-      "Marketing to reach vider Audiences",
-      "Partnerships ",
+      "Marketing to reach wider Audiences",
+      "Partnerships",
     ],
   },
   {

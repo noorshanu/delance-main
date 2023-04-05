@@ -101,8 +101,12 @@
   align-items: center;
   margin-top: 1rem;
 }
-.audit-images img {
+.audit-img-wrapper {
+  display: flex;
   height: 1.8rem;
+}
+.audit-img-wrapper img {
+  height: 100%;
 }
 .audit-images > *:not(:last-child) {
   margin-right: 1.4rem;
@@ -284,7 +288,7 @@
     padding: 0.6rem 0.8rem;
     border-radius: 0.4rem;
   }
-  .audit-images img {
+  .audit-img-wrapper {
     height: 1.7rem;
   }
 

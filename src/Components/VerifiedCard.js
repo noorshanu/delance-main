@@ -12,14 +12,28 @@ function VerifiedCard() {
         </p>
       </div>
       <div className="audit-images">
-        <img src="images/logo1.png" alt="" />
+        <a
+          className="audit-img-wrapper"
+          href="https://app.solidproof.io/projects/deelance?audit_id=326"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src="images/logo1.png" alt="" />
+        </a>
         <div
           style={{
             height: "20px",
             border: "1px solid rgba(255,255,255,.3)",
           }}
         ></div>
-        <img src="images/coinsult-logo.svg" alt="" />
+        <a
+          className="audit-img-wrapper"
+          href="https://coinsult.net/projects/deelance/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src="images/coinsult-logo.svg" alt="" />
+        </a>
       </div>
     </div>
   );
