@@ -117,20 +117,7 @@ const PorgressBar = ({ percantage }) => {
         </div>
       </div>
 
-      {/* <p className="text-center white mb-0">
-        <span>
-          {t("Progress")} {percantage}%
-        </span>{" "}
-        <span className="white">
-          {" "}
-          (
-          <span className="green">
-            {" "}
-            $ {(total - inSale).toLocaleString("en-US")}{" "}
-          </span>{" "}
-          / $ {total.toLocaleString("en-US")} ){" "}
-        </span>
-      </p> */}
+      { }
     </div>
   );
 };
@@ -170,36 +157,6 @@ const Timer = ({ somestate }) => {
       }
     }, 1000);
 
-    // if (!account) {
-
-    // } else {
-    //   const countdownDate = new Date("2023-04-16T00:00:00").getTime();
-
-    //   const interval = setInterval(() => {
-    //     const now = new Date().getTime();
-    //     const distance = countdownDate - now;
-
-    //     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    //     const hours = Math.floor(
-    //       (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-    //     );
-    //     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    //     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    //     setDays(days);
-    //     setHours(hours);
-    //     setMinutes(minutes);
-    //     setSeconds(seconds);
-
-    //     if (distance < 0) {
-    //       clearInterval(interval);
-    //       setDays(0);
-    //       setHours(0);
-    //       setMinutes(0);
-    //       setSeconds(0);
-    //     }
-    //   }, 1000);
-    // }
 
     return () => {
       clearInterval(interval);
@@ -237,17 +194,7 @@ const PresaleVersion2 = () => {
   const [purchasingModalType, setPurchasingModalType] = useState(null);
   const [isModal2, setIsModal2] = useState(false);
   const { open } = useWeb3Modal();
-
-  // const [balances, setBalances] = useState({ ETH: 0, USDT: 0 });
-  // const [prices, setPrices] = useState(0);
-  // const [nextprices, setPricesnext] = useState(0);
-  // const [deelance, setDeelance] = useState(0);
-  // const [round, setRound] = useState(0);
-  // const [alertShown, setAlertShown] = useState(false);
   const [somestate, setSomeState] = useState(false);
-  // const [aa, setNetwork] = useState();
-  // const [claimDisabled, setClaimDisabled] = useState(true);
-  // const [condition, setCondition] = useState({ condition: true });
   const [referralLink, setReferralLink] = useState("");
   const [isTransactionSuccesfull, setTransactionSuccessfull] = useState(false);
   const [referralPopupOpen, setReferralPopupOpen] = useState(false);
@@ -316,96 +263,7 @@ const PresaleVersion2 = () => {
     setSomeState(!somestate);
   };
 
-  // const sendingConnection = async (walletAddress, iid) => {
-  //   const event = "lead_success";
-  //   const currentUrl = window.location.href;
-  //   const clickId = getClickIdFromUrl(currentUrl);
-  //   const payload = {
-  //     walletAddress,
-  //     iid,
-  //     event,
-  //     clickId,
-  //   };
-
-  //   console.log("SENDING CONNECTION");
-  //   console.log("PAYLOAD PER SENDING", payload);
-  //   const config = {
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //       Authorization: "Bearer 8c204353f83140b34023c4c6474491fe",
-  //     },
-  //   };
-
-  //   try {
-  //     const response = await axios.post(
-  //       "https://api.dashfx.net/api/postback/presale",
-  //       payload,
-  //       config
-  //     );
-
-  //     if (response.status !== 200) {
-  //       throw new Error(`HTTP error! status: ${response.status}`);
-  //     }
-
-  //     const data = response.data;
-  //     console.log("FUNZIONA");
-  //     console.log("API response SENDING:", data);
-  //   } catch (error) {
-  //     console.error("Error sending payload:", error);
-  //   }
-  // };
-
-  // const getETHBalance = async () => {
-  //   // const provider = getProvider();
-  //   const balance = await provider.getBalance(account);
-  //   console.log("ETH BALANCE", ethers.utils.formatEther(balance));
-  //   return ethers.utils.formatEther(balance);
-  // };
-
-  // const getTokenBalances = async (token) => {
-  //   console.log(token, " getting balance");
-  //   const balance = await contracts["USDT"].balanceOf(account);
-  //   const decimals = (await contracts["USDT"].decimals()).toNumber();
-  //   const aaaa = parseInt(
-  //     await contracts["USDT"].allowance(account, contracts.Main.address),
-  //     10
-  //   );
-  //   console.log("CIAO", aaaa);
-  //   // if (aaaa < 0) {
-  //   //   setCondition(true);
-  //   // } else {
-  //   //   setCondition(false);
-  //   // }
-  //   console.log("success");
-  //   return balance.div("1" + "0".repeat(decimals)).toNumber();
-  // };
-
-  // const getAllBalances = async () => {
-  //   const balance = await fetchBalance({
-  //     address: address,
-  //     token: ContractAddr.USDT,
-  //     formatUnits: "gwei",
-  //   });
-
-  //   const balanceETH = await fetchBalance({
-  //     address: address,
-  //     formatUnits: "gwei",
-  //   });
-
-  //   setBalances({
-  //     ETH: balanceETH.value.toString(),
-  //     USDT: balance.value.toString(),
-  //   });
-  // };
-
-  // const getDeelance = async () => {
-  //   console.log("Account wallet", account);
-  //   const sa = await contracts.Main.userDeposits(account);
-  //   const pric = sa / 1000000000000000000;
-  //   console.log("Account balance deelance", pric);
-  //   setDeelance(pric);
-  // };
-
+ 
   const {
     data: userDeposites,
     errorDeposites,
@@ -419,33 +277,6 @@ const PresaleVersion2 = () => {
     enabled: address ? true : false,
   });
 
-  // const {
-  //   data: userDeposites,
-  //   errorDeposites,
-  //   isLoading: userDepositesLoading,
-  // } = useContractRead({
-  //   address: ContractAddr.Main,
-  //   abi: BigNFTABI,
-  //   functionName: "userDeposits",
-  //   args: [address],
-  //   watch: true,
-  // });
-
-  // const getSaleProgress = async () => {
-  //   const pri = await contracts.Main.salePrice();
-  //   const prinext = await contracts.Main.nextPrice();
-  //   const myString = ethers.utils.formatEther(pri);
-  //   const myStringnext = ethers.utils.formatEther(prinext);
-  //   const a = Number(myString).toFixed(3); // Number(ethers.utils.formatEther(salePrice)).toFixed(3)
-  //   const b = Number(myStringnext).toFixed(3);
-  //   const sa = ethers.utils.formatEther(await contracts.Main.inSaleUSDvalue());
-  //   const xa = await contracts.Main.hardcapsizeUSD();
-  //   setPrices(a);
-  //   setPricesnext(b);
-  //   setInSale(sa);
-  //   setTotal(xa);
-  //   setPercantage((((xa - sa) / xa) * 100).toFixed(2));
-  // };
 
   const getSomeState = async () => {
     setSomeState(true);
@@ -846,10 +677,7 @@ const PresaleVersion2 = () => {
             </Button2> */}
           </div>
 
-          {/*   <p className="fs-16px white weight-700 text-center">
-            Next Stage:{" "}
-            <span className="green-light">{tokenDetails.symbol}</span> = ${prices.toLocaleString("en-US")} USDT
-          </p> */}
+          {}
         </div>
       )}
       <div className="d-flex justify-content-center mt-3">

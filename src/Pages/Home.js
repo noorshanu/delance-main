@@ -18,6 +18,7 @@ import PageLayout from "layouts/PageLayout";
 import NewToCrypto from "Components/NewToCrypto";
 import TransactionSuccesfullPopup from "Components/TransactionSuccesfullPopup";
 import WhitepaperBanner from "sections/Home/WhitepaperBanner";
+import SpecialPowers from "Components/SpecialPowers";
 
 function Home() {
   return (
@@ -25,22 +26,23 @@ function Home() {
       <Helmet>
         <meta
           name="title"
-          content=" DeeLance is a Web3 based freelancing & recruitment platform that brings security, quickness and seamlessness using the power of blockchain technology.  SEO Description 155 chars PC  DeeLance is a next-gen freelancing platform based on blockchain. It resolves the challenges of copyright infringement, scams, delay in payments, etc.  SEO Description 120 chars Mobile  DeeLance is a Web3 freelancing and recruitment platform that solves challenges faced by current freelancing space."
+          content=" DeeLance is a Web3 based freelancing & recruitment platform that brings security, quickness and seamlessness 
+          using the power of blockchain technology. "
         />
         <meta
           name="keywords"
           content="Freelance, fiver , upwork , jobs , NFT , content , marketing, freelancers, works , metaverse, web3, Binance,DeeLance,
-    freelancer,upwork freelancer,Fiver,freelancer website,freelancer affiliate program,freelancer accounting jobs,freelancer app developer,account freelancer,best freelancer sites,become a freelancer on fiverr,freelancer customer service,freelance content writer,canva freelancer,freelancer digital marketer ,freelancer earning, 
-jobs,indeed jobs, 
-jobs near me, 
-jobs hiring near me,work from home jobs,jobs available near me,nft marketplace,nft marketplace list,nft marketplace ranking,nft marketplace crypto,nft marketplace github,nft marketplace website,nft marketplace aggregator,nft marketplace as a service,metaverse,metaverse meaning,facebook metaverse,mark zuckerberg metaverse,sandbox metaverse,how to invest in metaverse,metaverse game
-,digital marketing,blockchain developer"
+                freelancer,upwork freelancer,Fiver,freelancer website,freelancer affiliate program,freelancer accounting jobs,freelancer app developer,account freelancer,best freelancer sites,become a freelancer on fiverr,freelancer customer service,freelance content writer,canva freelancer,freelancer digital marketer ,freelancer earning, 
+                 jobs,indeed jobs, 
+                  jobs near me, 
+                jobs hiring near me,work from home jobs,jobs available near me,nft marketplace,nft marketplace list,nft marketplace ranking,nft marketplace crypto,nft marketplace github,nft marketplace website,nft marketplace aggregator,nft marketplace as a service,metaverse,metaverse meaning,facebook metaverse,mark zuckerberg metaverse,sandbox metaverse,how to invest in metaverse,metaverse game
+                ,digital marketing,blockchain developer"
         />
         <meta
           name="description"
-          content="  DeeLance is a Web3 based freelancing & recruitment platform that brings security, quickness and seamlessness using the power of blockchain technology.  SEO Description 155 chars PC  DeeLance is a next-gen freelancing platform based on blockchain. It resolves the challenges of copyright infringement, scams, delay in payments, etc.  SEO Description 120 chars Mobile  DeeLance is a Web3 freelancing and recruitment platform that solves challenges faced by current freelancing space."
+          content=" DeeLance is a next-gen freelancing platform based on blockchain. It resolves the challenges of copyright infringement, scams, delay in payments, etc. "
         />
-        <meta http-equiv="Content-Type" content="text/html"/>
+        <meta http-equiv="Content-Type" content="text/html" />
         <title>Home</title>
       </Helmet>
       <div>
@@ -48,6 +50,10 @@ jobs hiring near me,work from home jobs,jobs available near me,nft marketplace,n
           <div className="mb-80px">
             <Hero />
           </div>
+          {/* 
+          <div className="mb-100px">
+            <SpecialPowers />
+          </div> */}
 
           <div className="mb-80px">
             <SeenOn />

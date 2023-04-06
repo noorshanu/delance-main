@@ -8,11 +8,7 @@ import { configureChains, createClient, WagmiConfig } from "wagmi";
 import { publicProvider } from "wagmi/providers/public";
 import { mainnet } from "wagmi/chains";
 import { Web3Modal } from "@web3modal/react";
-import {
-  EthereumClient,
-  w3mConnectors,
-  w3mProvider,
-} from "@web3modal/ethereum";
+import { EthereumClient, w3mConnectors } from "@web3modal/ethereum";
 import { infuraProvider } from "wagmi/providers/infura";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -60,7 +56,7 @@ root.render(
     <ToastContainer
       style={{ zIndex: 100000000000000 }}
       position="top-right"
-      autoClose={2000}
+      autoClose={5000}
       hideProgressBar={false}
       newestOnTop={false}
       closeOnClick
