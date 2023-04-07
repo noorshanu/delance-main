@@ -11,12 +11,7 @@ import { useTranslation } from "react-i18next";
 import axios from "axios";
 import TransitionWrapper from "./TransitionWrapper";
 import LoadingButton from "./LoadingButton";
-import {
-  useAccount,
-  useContractRead,
-  useContractWrite,
-  useFeeData,
-} from "wagmi";
+import { useAccount, useContractRead, useContractWrite, useFeeData } from "wagmi";
 import { BEP20ABI, BigNFTABI } from "Constants/ABI";
 import { toast } from "react-toastify";
 
@@ -118,6 +113,7 @@ function PresalePurchasingPopup({
   const [token, setToken] = useState();
   const [p, setP] = useState();
   const usdtDecimals = 10 ** 6;
+  const [gas, setGas] = useState();
 
   const { data: deelance } = useContractRead({
     address: ContractAddr.Main,
@@ -127,12 +123,15 @@ function PresalePurchasingPopup({
     watch: true,
   });
 
+  
+
   const { data: getETHLatestPrice } = useContractRead({
     address: ContractAddr.Main,
     abi: BigNFTABI,
     watch: true,
     functionName: "getETHLatestPrice",
   });
+
 
   const { data: getETHAmount, error } = useContractRead({
     address: ContractAddr.Main,
@@ -153,6 +152,7 @@ function PresalePurchasingPopup({
     args: [address, ContractAddr.Main],
     watch: true,
   });
+
 
   const onError = (err, variables) => {
     const errorTypes = {
@@ -240,7 +240,7 @@ function PresalePurchasingPopup({
       });
 
       window.dataLayer.push({
-        event: "workflowStep",
+        event:"workflowStep",
         workflowName: "swap",
         workflowStepNumber: 3,
         workflowStepName: "swapSuccessful",
@@ -249,10 +249,10 @@ function PresalePurchasingPopup({
         walletAddress: address,
         transactionId: data.hash,
         swapFromCurrency: "$DLANCE",
-        swapFromValue: variable.args[0],
+        swapFromValue:  variable.args[0],
         swapToCurrency: "ETH",
         swapToValue: ethers.utils.formatEther(variable.overrides.value),
-      });
+                    });
 
       setPurchasingModalType(null);
     },
@@ -323,7 +323,7 @@ function PresalePurchasingPopup({
         });
 
         window.dataLayer.push({
-          event: "workflowStep",
+          event:"workflowStep",
           workflowName: "swap",
           workflowStepNumber: 3,
           workflowStepName: "swapSuccessful",
@@ -332,11 +332,11 @@ function PresalePurchasingPopup({
           walletAddress: address,
           transactionId: data.hash,
           swapFromCurrency: "$DLANCE",
-          swapFromValue: variable.args[0],
+          swapFromValue:  variable.args[0],
           swapToCurrency: "USDT",
           swapToValue: thirdInputValue,
-        });
-
+                      });
+  
         setPurchasingModalType(null);
       },
       onError: (...props) => onError(...props),
@@ -362,6 +362,7 @@ function PresalePurchasingPopup({
         alert("Ok, you can now buy your $DLANCE tokens!");
       },
       onError: (...props) => onError(...props),
+
     });
 
   const handleFirstInputChange = (event) => {
@@ -435,27 +436,30 @@ function PresalePurchasingPopup({
     }
   };
 
-  const { dataFee, isErrorFee, isLoadingFee } = useFeeData();
+  const { data, isErrorFee, isLoadingFee } = useFeeData();
+
+  const feeData = useFeeData({
+    watch: true,
+    onSuccess(data) {
+      setGas(data.maxFeePerGas)
+    },
+  
+  })
 
   const OnMaxClick = async (e) => {
     e.preventDefault();
 
     if (token === "ETH") {
-      maxa.current.value =
-        +ETHBalance?.formatted -
-        parseFloat(JSON.stringify(dataFee?.formatted.gasPrice));
+      let gass = (ethers.utils.formatEther(gas) * 131000);
+      maxa.current.value = +ETHBalance?.formatted - gass;
+      console.log("ETH GASFEE", gass)
       if (maxa.current.value > 0) {
-        toast(
-          "We have reduced the ETH needed, to allow you to purchase the $DLANCE Tokens based on the gasFee price.",
-          { type: "info" }
-        );
+        toast(`We have reduced of ${gass} the ETH needed, to allow you to purchase the $DLANCE tokens based on the gasFee price.`, { type: "info" });
+
       }
       if (maxa.current.value <= 0) {
-        maxa.current.value = +ETHBalance?.formatted;
-        toast(
-          "You don't have enough gasfee to use all your balance, the transaction could fail!",
-          { type: "info" }
-        );
+      maxa.current.value = +ETHBalance?.formatted;
+      toast("You don't have enough gasfee to use all your balance, the transaction could fail!", { type: "info" });
       }
     } else {
       maxa.current.value = +USDTBalance?.toString() / usdtDecimals;
@@ -484,6 +488,7 @@ function PresalePurchasingPopup({
   };
 
   useEffect(() => {
+
     if (purchasingModalType === modalType.eth) {
       setToken("ETH");
       // setBB(balances[token]);
@@ -496,6 +501,8 @@ function PresalePurchasingPopup({
       setLastSymbol((val) => val);
     }
   }, [lastSymbol, purchasingModalType]);
+
+
 
   var isPurchaseLoading =
     purchasingModalType === modalType.eth
@@ -600,6 +607,7 @@ function PresalePurchasingPopup({
                       // value: ethers.utils.parseEther("0.02"),
                     },
                   });
+
                 } else {
                   //USDT
                   //approve function and allowance
